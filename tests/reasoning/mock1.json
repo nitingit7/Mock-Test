@@ -1,0 +1,126 @@
+{
+  "title": "RRB Clerk Prelims: Reasoning (Puzzles & Seating) 1",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Study the following information: Eight friends A, B, C, D, E, F, G, and H are sitting around a circular table facing the center. A sits third to the left of C. Only one person sits between A and G. E sits second to the right of G. F is an immediate neighbor of E. Only one person sits between F and B. H sits second to the left of B. \n\nWho sits to the immediate right of H?",
+      "options": ["C", "D", "A", "G", "E"],
+      "correctIndex": 3,
+      "solution": "Arrangement (Clockwise from A): A, F, E, B, C, H, G, D. H sits between C and G. Immediate right of H is G."
+    },
+    {
+      "text": "Based on the circular arrangement in Q1: How many people sit between C and E when counted from the left of C?",
+      "options": ["Two", "Three", "One", "Four", "None"],
+      "correctIndex": 0,
+      "solution": "Counting left from C: B, E. Two people sit between them."
+    },
+    {
+      "text": "Based on the circular arrangement in Q1: Who sits opposite to F?",
+      "options": ["G", "C", "D", "H", "B"],
+      "correctIndex": 3,
+      "solution": "Opposite to F is H."
+    },
+    {
+      "text": "Based on the circular arrangement in Q1: Which of the following statements is TRUE?",
+      "options": ["B sits immediate left of E", "D sits opposite A", "Only two people sit between G and F", "C is an immediate neighbor of B", "None is true"],
+      "correctIndex": 3,
+      "solution": "C is to the immediate left of B. So 'C is an immediate neighbor of B' is true."
+    },
+    {
+      "text": "Based on the circular arrangement in Q1: Find the odd one out.",
+      "options": ["AE", "BC", "HG", "DF", "EB"],
+      "correctIndex": 3,
+      "solution": "In AE, BC, HG, and EB, the distance is either immediate or 1 gap. However, D and F are sitting opposite to each other. DF is the odd one."
+    },
+    {
+      "text": "Study the following information: Seven persons P, Q, R, S, T, U, and V live on 7 different floors. The bottommost floor is 1 and top is 7. V lives on an odd numbered floor but not on floor 3. Only two persons live between V and S. P lives immediately below S. Q lives on an even numbered floor immediately above U. R lives above T.\n\nWho lives on the topmost floor?",
+      "options": ["Q", "V", "R", "S", "T"],
+      "correctIndex": 0,
+      "solution": "Arrangement: 7-Q, 6-U, 5-V, 4-R, 3-T, 2-S, 1-P. Q lives on floor 7."
+    },
+    {
+      "text": "Based on the floor puzzle in Q6: How many people live between U and T?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 1,
+      "solution": "U is on 6, T is on 3. Between them are floors 5 and 4 (V and R). So, Two."
+    },
+    {
+      "text": "Based on the floor puzzle in Q6: Who lives immediately above V?",
+      "options": ["Q", "U", "S", "R", "P"],
+      "correctIndex": 1,
+      "solution": "V is on 5. U is on 6. So U lives immediately above V."
+    },
+    {
+      "text": "Based on the floor puzzle in Q6: Which of the following combinations is correct?",
+      "options": ["Floor 4 - S", "Floor 2 - P", "Floor 6 - Q", "Floor 3 - T", "Floor 1 - V"],
+      "correctIndex": 3,
+      "solution": "Floor 3 is occupied by T. This is correct."
+    },
+    {
+      "text": "Based on the floor puzzle in Q6: If all persons are arranged alphabetically from top to bottom, how many remain in same position?",
+      "options": ["One", "Two", "Three", "None", "More than three"],
+      "correctIndex": 0,
+      "solution": "Original: Q, U, V, R, T, S, P. Alphabetical: P, Q, R, S, T, U, V. Only T remains at the same position (5th form top/floor 3)."
+    },
+    {
+      "text": "Study the following information: Eight people J, K, L, M, N, O, P, Q are sitting in a linear row facing North. J sits second from one of the extreme ends. Only three people sit between J and O. L sits second to the right of O. L is an immediate neighbor of K and N. K is not an neighbor of O. P sits to the immediate right of J. M sits at one of the ends.\n\nWho sits at the extreme right end?",
+      "options": ["M", "Q", "N", "K", "L"],
+      "correctIndex": 3,
+      "solution": "Arrangement: M, J, P, O, Q, N, L, K. Right end is K."
+    },
+    {
+      "text": "Based on the linear row in Q11: How many persons sit to the left of Q?",
+      "options": ["Three", "Four", "Five", "Two", "One"],
+      "correctIndex": 1,
+      "solution": "Q is at 5th position from left. So 4 people (M, J, P, O) sit to the left."
+    },
+    {
+      "text": "Based on the linear row in Q11: Who sits exactly between P and N?",
+      "options": ["J", "O", "Q", "Both O and Q", "L"],
+      "correctIndex": 3,
+      "solution": "Between P and N are O and Q."
+    },
+    {
+      "text": "Based on the linear row in Q11: What is the position of M with respect to O?",
+      "options": ["Third to the left", "Fourth to the left", "Third to the right", "Fourth to the right", "Second to the left"],
+      "correctIndex": 0,
+      "solution": "O is 4th from left. M is 1st. M is third to the left of O."
+    },
+    {
+      "text": "Based on the linear row in Q11: Which pair consists of immediate neighbors?",
+      "options": ["MJ", "QN", "LP", "OK", "JQ"],
+      "correctIndex": 1,
+      "solution": "Q and N are immediate neighbors."
+    },
+    {
+      "text": "Study the following information: Seven friends A, B, C, D, E, F, G have exams on different days of the week starting from Monday to Sunday. A has exam on Wednesday. Only two people have exams between A and D. C has exam immediately before B. E has exam on Friday. G has exam after F.\n\nOn which day does F have the exam?",
+      "options": ["Monday", "Tuesday", "Thursday", "Saturday", "Sunday"],
+      "correctIndex": 2,
+      "solution": "Arrangement: Mon-C, Tue-B, Wed-A, Thu-F, Fri-E, Sat-D, Sun-G. F has exam on Thursday."
+    },
+    {
+      "text": "Based on the schedule in Q16: Who has the exam on Sunday?",
+      "options": ["G", "D", "B", "F", "C"],
+      "correctIndex": 0,
+      "solution": "G has the exam on Sunday."
+    },
+    {
+      "text": "Based on the schedule in Q16: How many people have exams between B and E?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 1,
+      "solution": "B is Tue, E is Fri. Between them are A and F. Two people."
+    },
+    {
+      "text": "Based on the schedule in Q16: Who has the exam immediately before D?",
+      "options": ["A", "E", "F", "G", "B"],
+      "correctIndex": 1,
+      "solution": "D is on Saturday. E is on Friday. So E is immediately before D."
+    },
+    {
+      "text": "Based on the schedule in Q16: Which of the following statements is FALSE?",
+      "options": ["C has exam on Monday", "F has exam on Thursday", "B has exam immediately after C", "D has exam on Sunday", "A has exam before E"],
+      "correctIndex": 3,
+      "solution": "D has exam on Saturday, not Sunday. So this statement is false."
+    }
+  ]
+    }
