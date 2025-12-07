@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Banking Mock Test</title>
+    <title>Banking Mock Test (Fail Safe)</title>
     
-    <!-- Crash Detector: This catches errors immediately -->
-    <script>
-        window.onerror = function(msg, url, line) {
-            alert("SYSTEM ERROR:\n" + msg + "\nLine: " + line);
-            return true;
-        };
-    </script>
-
-    <!-- KaTeX -->
+    <!-- KaTeX for Math -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
 
     <style>
-        /* STYLES */
-        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --dark: #343a40; }
+        /* CSS RESET */
+        :root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --dark: #343a40; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         body { margin: 0; padding: 0; font-family: sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
 
         .view { display: none; width: 100%; height: 100%; flex-direction: column; }
         .view.active { display: flex; }
 
-        /* CARDS */
+        /* HOME */
         #view-home { align-items: center; padding: 20px; overflow-y: auto; }
         .subject-card { background: white; width: 100%; max-width: 500px; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-left: 5px solid transparent; }
         .subject-card:active { background: #eee; }
 
-        /* EXAM UI */
+        /* LIST */
+        #view-list { align-items: center; padding: 20px; }
+        .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+
+        /* EXAM */
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
         .timer { font-family: monospace; font-size: 18px; font-weight: bold; background: #555; padding: 5px 10px; border-radius: 4px; }
+        .btn-header { padding: 5px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; margin-left: 5px; }
         
         .exam-body { display: flex; flex: 1; overflow: hidden; position: relative; }
         .q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: white; }
@@ -45,25 +42,30 @@
         .opt-row.selected { background: #e3f2fd; border-color: var(--blue); border-width: 2px; }
         .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
         .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
-
+        
         .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
 
-        /* SIDEBAR */
         #sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
         #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.2); }
         .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
         .pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; }
+        
         .p-ans { background: var(--green); color: white; border: none; }
         .p-not { background: var(--red); color: white; border: none; }
         .p-rev { background: #6f42c1; color: white; border: none; }
+
+        /* PAUSE & RESULT */
+        #pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 100; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        #view-result { justify-content: center; align-items: center; background: white; }
+        .score-card { text-align: center; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 10px; width: 90%; max-width: 400px; }
 
         .btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
         .btn-green { background: var(--green); }
         .btn-red { background: var(--red); }
         .btn-blue { background: var(--blue); }
+        .btn-orange { background: #fd7e14; }
         .btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
-        
-        .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
+        .katex { font-size: 1.1em; }
     </style>
 </head>
 <body>
@@ -71,21 +73,23 @@
     <!-- HOME -->
     <div id="view-home" class="view active">
         <h2 style="color: #333; margin-bottom: 30px;">Banking Mock Tests</h2>
-        
-        <div class="subject-card" id="card-quant">
+        <div style="margin-bottom:20px; color:green; font-size:0.9em;">System: <strong>Ready</strong></div>
+
+        <!-- Inline OnClick for 100% Reliability -->
+        <div class="subject-card" onclick="showList('quant')">
             <div><strong>Quantitative Aptitude</strong></div> <span>➜</span>
         </div>
-        <div class="subject-card" id="card-reasoning">
+        <div class="subject-card" onclick="showList('reasoning')">
             <div><strong>Reasoning Ability</strong></div> <span>➜</span>
         </div>
-        <div class="subject-card" id="card-english">
+        <div class="subject-card" onclick="showList('english')">
             <div><strong>English Language</strong></div> <span>➜</span>
         </div>
     </div>
 
     <!-- LIST -->
     <div id="view-list" class="view">
-        <div style="padding:10px; cursor:pointer; color:blue; font-weight:bold;" id="btn-back-home">← Back</div>
+        <div style="padding:10px; cursor:pointer; color:blue; font-weight:bold;" onclick="switchView('view-home')">← Back</div>
         <h2 id="list-title" style="padding:0 20px;">Select Test</h2>
         <div id="test-container" style="padding:20px;"></div>
     </div>
@@ -93,11 +97,12 @@
     <!-- EXAM -->
     <div id="view-exam" class="view">
         <header>
-            <div id="exam-title" style="max-width: 150px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Mock Test</div>
-            <div style="display: flex; gap: 5px; align-items: center;">
+            <div id="exam-title" style="font-weight:bold; max-width:50%;">Mock Test</div>
+            <div style="display:flex; align-items:center;">
                 <div class="timer" id="timer-display">00:00</div>
-                <button style="padding:5px;" onclick="togglePause()">⏸</button>
-                <button style="padding:5px; background:red; color:white; border:none;" onclick="exitTest()">✖</button>
+                <button class="btn-header" style="background:#ffc107;" onclick="togglePause()">⏸</button>
+                <button class="btn-header" style="background:#dc3545; color:white;" onclick="exitTest()">✖</button>
+                <button class="btn-outline" style="background:white; padding:5px 10px; margin-left:5px;" onclick="toggleSidebar()">☰</button>
             </div>
         </header>
         <div class="exam-body">
@@ -115,7 +120,7 @@
                 </div>
                 <div class="q-footer" id="exam-footer">
                     <button class="btn btn-red" onclick="clearResponse()">Clear</button>
-                    <button class="btn" style="background:#6f42c1;" onclick="markReview()">Review</button>
+                    <button class="btn" style="background:#6f42c1; color:white;" onclick="markReview()">Review</button>
                     <button class="btn btn-green" onclick="saveNext()">Save & Next</button>
                 </div>
                 <div class="q-footer" id="review-footer" style="display:none;">
@@ -136,11 +141,19 @@
         </div>
     </div>
 
+    <!-- PAUSE -->
+    <div id="pause-overlay">
+        <h1>Test Paused</h1>
+        <p style="margin-bottom:30px;">Timer stopped.</p>
+        <button class="btn btn-green" style="padding:15px 30px;" onclick="togglePause()">RESUME</button>
+        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" onclick="exitTest()">Quit Test</button>
+    </div>
+
     <!-- RESULT -->
     <div id="view-result" class="view">
-        <div style="text-align:center; padding: 40px;">
+        <div class="score-card">
             <h2>Test Result</h2>
-            <div id="feedback-badge" style="display:inline-block; padding:8px 16px; background:#ccc; color:white; border-radius:20px; margin-bottom:15px;">Processing...</div>
+            <div id="feedback-badge" class="feedback-badge" style="display:inline-block; padding:8px 16px; background:#ccc; color:white; border-radius:20px; margin-bottom:15px;">Processing...</div>
             <div style="font-size:3rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
             <p>Total Marks</p>
             <hr style="border:0; border-top:1px solid #eee; margin:15px 0;">
@@ -149,48 +162,51 @@
                 <span style="color:red;">Wrong: <b id="final-wrong">0</b></span>
                 <span>Unatt: <b id="final-unatt">0</b></span>
             </div>
+            <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" onclick="reattemptTest()">Re-attempt Test</button>
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" onclick="startReviewMode()">Review Solutions</button>
             <button class="btn btn-outline" style="width:100%;" onclick="location.reload()">Back to Home</button>
         </div>
     </div>
 
     <script>
-    // --- GLOBAL VARIABLES (No App Object) ---
-    var BASE_URL = "https://nitingit7.github.io/Mock-Test/";
-    var GITHUB_FILES = {
+    // --- 1. CONFIGURATION ---
+    // Using simple relative paths. Ensure folders 'tests', 'quant' etc exist on GitHub.
+    var FILES = {
         'quant': [
-            { name: "Quant Mock 1", file: BASE_URL + "tests/quant/mock1.json" },
-            { name: "Quant Mock 2", file: BASE_URL + "tests/quant/mock2.json" }
+            { name: "Quant Mock 1", file: "./tests/quant/mock1.json" },
+            { name: "Quant Mock 2", file: "./tests/quant/mock2.json" }
         ],
         'reasoning': [
-            { name: "Reasoning Mock 1", file: BASE_URL + "tests/reasoning/mock1.json" }
+            { name: "Reasoning Mock 1", file: "./tests/reasoning/mock1.json" }
         ],
         'english': [
-            { name: "English Mock 1", file: BASE_URL + "tests/english/mock1.json" }
+            { name: "English Mock 1", file: "./tests/english/mock1.json" }
         ]
     };
 
-    var currentData = null;
+    // --- 2. FALLBACK DATA (Used if Fetch Fails) ---
+    var DUMMY_DATA = {
+        title: "Demo Test (Server Error)",
+        timeLimit: 10,
+        questions: [
+            { text: "Could not load file. This is a demo question.", options: ["OK", "Retry", "Exit"], correctIndex: 0, solution: "File path error on GitHub." }
+        ]
+    };
+
+    // --- 3. GLOBAL STATE ---
+    var data = null;
     var responses = {};
-    var currentQ = 0;
-    var timerInterval = null;
+    var currQ = 0;
+    var timer = null;
     var timeLeft = 0;
     var isReview = false;
     var isPaused = false;
     var currentUrl = "";
 
-    // --- SETUP LISTENERS ---
-    window.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('card-quant').onclick = function() { showList('quant'); };
-        document.getElementById('card-reasoning').onclick = function() { showList('reasoning'); };
-        document.getElementById('card-english').onclick = function() { showList('english'); };
-        document.getElementById('btn-back-home').onclick = function() { switchView('view-home'); };
-    });
+    // --- 4. FUNCTIONS ---
 
-    // --- NAVIGATION ---
     function switchView(id) {
-        var views = document.querySelectorAll('.view');
-        for(var i=0; i<views.length; i++) { views[i].classList.remove('active'); }
+        document.querySelectorAll('.view').forEach(function(el) { el.classList.remove('active'); });
         document.getElementById(id).classList.add('active');
     }
 
@@ -199,27 +215,34 @@
         list.innerHTML = "";
         document.getElementById('list-title').innerText = subj.toUpperCase();
         
-        var files = GITHUB_FILES[subj] || [];
-        if(files.length === 0) list.innerHTML = "<p>No files found.</p>";
+        var items = FILES[subj] || [];
+        if(items.length === 0) list.innerHTML = "<p>No tests found.</p>";
         
-        files.forEach(function(f) {
+        items.forEach(function(item) {
             var div = document.createElement('div');
             div.className = 'test-item';
-            
-            var saved = localStorage.getItem(f.file);
-            var btnText = saved ? "Result" : "Start";
-            var btnClass = saved ? "btn btn-blue" : "btn btn-green";
-            
+            div.style.padding = "15px"; 
+            div.style.border = "1px solid #ddd"; 
+            div.style.marginBottom = "10px";
+            div.style.display = "flex"; 
+            div.style.justifyContent = "space-between";
+            div.style.alignItems = "center";
+
+            var saved = localStorage.getItem(item.file);
             var btn = document.createElement('button');
-            btn.className = btnClass;
-            btn.innerText = btnText;
-            btn.onclick = function() {
-                if(saved) showStoredResult(f.file);
-                else fetchTest(f.file);
-            };
+            
+            if (saved) {
+                btn.className = 'btn btn-blue';
+                btn.innerText = "Result";
+                btn.onclick = function() { showStoredResult(item.file); };
+            } else {
+                btn.className = 'btn btn-green';
+                btn.innerText = "Start";
+                btn.onclick = function() { fetchTest(item.file); };
+            }
 
             var span = document.createElement('span');
-            span.innerText = f.name;
+            span.innerText = item.name;
 
             div.appendChild(span);
             div.appendChild(btn);
@@ -228,83 +251,86 @@
         switchView('view-list');
     }
 
-    // --- DATA FETCHING ---
     function fetchTest(url) {
-        var cleanUrl = url + "?v=" + new Date().getTime();
+        var cleanUrl = url + "?t=" + new Date().getTime(); // Prevent Cache
+        
         fetch(cleanUrl)
-            .then(function(res) { 
-                if(!res.ok) throw new Error("File not found"); 
-                return res.json(); 
+            .then(function(res) {
+                if(!res.ok) throw new Error("HTTP " + res.status);
+                return res.json();
             })
             .then(function(json) { startExam(json, url); })
-            .catch(function(err) { alert("Error: " + err.message + "\nURL: " + url); });
+            .catch(function(err) { 
+                console.warn("Fetch failed, using dummy data.", err);
+                alert("⚠️ Error loading file from GitHub!\nStarting Demo Mode instead.\n\nDetails: " + err.message);
+                startExam(DUMMY_DATA, "demo"); 
+            });
     }
 
-    function startExam(json, url) {
-        currentData = json;
+    function startExam(jsonObj, url) {
+        data = jsonObj;
         responses = {};
-        currentQ = 0;
+        currQ = 0;
         isReview = false;
         isPaused = false;
         currentUrl = url;
         
-        if(!currentData.questions) { alert("Invalid JSON"); return; }
+        if(!data.questions) { alert("Invalid JSON format"); return; }
 
-        for(var i=0; i<currentData.questions.length; i++) {
+        for(var i=0; i<data.questions.length; i++) {
             responses[i] = { sel: null, status: 'not-visited' };
         }
         
-        timeLeft = (currentData.timeLimit || 20) * 60;
+        timeLeft = (data.timeLimit || 20) * 60;
         startTimer();
         
-        var titleEl = document.getElementById('exam-title');
-        if(titleEl) titleEl.innerText = currentData.title || "Mock Test";
-        
+        document.getElementById('exam-title').innerText = data.title || "Mock Test";
         document.getElementById('exam-footer').style.display = 'flex';
         document.getElementById('review-footer').style.display = 'none';
+        document.getElementById('pause-overlay').style.display = 'none';
         
         switchView('view-exam');
         loadQ();
     }
 
-    // --- TIMER ---
     function startTimer() {
-        if(timerInterval) clearInterval(timerInterval);
+        if(timer) clearInterval(timer);
         var disp = document.getElementById('timer-display');
-        timerInterval = setInterval(function() {
+        timer = setInterval(function() {
             if(isPaused) return;
             if(timeLeft <= 0) {
-                clearInterval(timerInterval);
+                clearInterval(timer);
                 submitTest(true);
                 return;
             }
             timeLeft--;
-            var m = Math.floor(timeLeft / 60);
-            var s = timeLeft % 60;
-            disp.innerText = m + ":" + (s < 10 ? "0"+s : s);
+            var m = Math.floor(timeLeft / 60).toString().padStart(2,'0');
+            var s = (timeLeft % 60).toString().padStart(2,'0');
+            disp.innerText = m + ":" + s;
         }, 1000);
     }
 
     function togglePause() {
         isPaused = !isPaused;
-        alert(isPaused ? "PAUSED. Click OK to Resume." : "Resumed.");
-        isPaused = false; // Auto resume after alert click
+        var el = document.getElementById('pause-overlay');
+        el.style.display = isPaused ? 'flex' : 'none';
     }
 
     function exitTest() {
-        if(confirm("Exit Test?")) {
-            clearInterval(timerInterval);
+        if(confirm("Exit Test? Progress will be lost.")) {
+            clearInterval(timer);
             switchView('view-home');
+            document.getElementById('pause-overlay').style.display = 'none';
         }
     }
 
-    // --- QUESTION LOGIC ---
     function loadQ() {
-        var q = currentData.questions[currentQ];
-        var r = responses[currentQ];
+        var q = data.questions[currQ];
+        var r = responses[currQ];
+        
         if(!isReview && r.status === 'not-visited') r.status = 'not-answered';
         
-        document.getElementById('q-number').innerText = "Q" + (currentQ + 1);
+        document.getElementById('q-number').innerText = "Q" + (currQ + 1);
         document.getElementById('q-text').innerText = q.text;
         
         var box = document.getElementById('options-box');
@@ -313,7 +339,6 @@
         q.options.forEach(function(opt, idx) {
             var row = document.createElement('div');
             row.className = 'opt-row';
-            
             if(isReview) {
                 if(idx === q.correctIndex) row.style.background = "#d4edda";
                 if(r.sel === idx && idx !== q.correctIndex) row.style.background = "#f8d7da";
@@ -324,16 +349,16 @@
                     loadQ();
                 };
             }
-            row.innerHTML = "<b>" + ['A','B','C','D','E'][idx] + "</b> &nbsp;" + opt;
+            row.innerHTML = "<b>" + ['A','B','C','D','E'][idx] + "</b> &nbsp; " + opt;
             box.appendChild(row);
         });
 
-        var solBox = document.getElementById('solution-box');
+        var sol = document.getElementById('solution-box');
         if(isReview) {
-            solBox.style.display = 'block';
+            sol.style.display = "block";
             document.getElementById('sol-text').innerText = q.solution || "No solution.";
         } else {
-            solBox.style.display = 'none';
+            sol.style.display = "none";
         }
         
         renderPalette();
@@ -341,33 +366,33 @@
     }
 
     function saveNext() {
-        var r = responses[currentQ];
+        var r = responses[currQ];
         if(r.sel !== null) r.status = 'ans';
         else r.status = 'not-answered';
         
-        if(currentQ < currentData.questions.length - 1) {
-            currentQ++;
+        if(currQ < data.questions.length - 1) {
+            currQ++;
             loadQ();
         } else {
-            if(confirm("Submit Test?")) submitTest(false);
+            if(confirm("End of questions. Submit Test?")) submitTest(false);
         }
     }
 
     function clearResponse() {
-        responses[currentQ].sel = null;
-        responses[currentQ].status = 'not-answered';
+        responses[currQ].sel = null;
+        responses[currQ].status = 'not-answered';
         loadQ();
     }
 
     function markReview() {
-        var r = responses[currentQ];
+        var r = responses[currQ];
         if(r.sel !== null) r.status = 'ans-rev';
         else r.status = 'rev';
-        if(currentQ < currentData.questions.length - 1) { currentQ++; loadQ(); }
+        if(currQ < data.questions.length - 1) { currQ++; loadQ(); }
     }
 
-    function prevQ() { if(currentQ > 0) { currentQ--; loadQ(); } }
-    function nextQ() { if(currentQ < currentData.questions.length - 1) { currentQ++; loadQ(); } }
+    function prevQ() { if(currQ > 0) { currQ--; loadQ(); } }
+    function nextQ() { if(currQ < data.questions.length - 1) { currQ++; loadQ(); } }
 
     function toggleSidebar() {
         var s = document.getElementById('sidebar');
@@ -375,43 +400,14 @@
         else s.style.transform = "translateX(0px)";
     }
 
-    function renderPalette() {
-        var p = document.getElementById('palette-grid');
-        p.innerHTML = "";
-        for(var i=0; i<currentData.questions.length; i++) {
-            (function(idx){
-                var btn = document.createElement('div');
-                btn.className = 'pal-btn';
-                btn.innerText = idx + 1;
-                var s = responses[idx].status;
-                
-                if(isReview) {
-                    var r = responses[idx];
-                    if(r.sel === currentData.questions[idx].correctIndex) btn.style.background = "#28a745";
-                    else if(r.sel !== null) btn.style.background = "#dc3545";
-                    else btn.style.background = "#ccc";
-                    btn.style.color = "white";
-                } else {
-                    if(s === 'ans' || s === 'ans-rev') { btn.style.background = "#28a745"; btn.style.color="white"; }
-                    else if(s === 'not-answered') { btn.style.background = "#dc3545"; btn.style.color="white"; }
-                    else if(s === 'rev') { btn.style.background = "#6f42c1"; btn.style.color="white"; }
-                }
-                
-                if(idx === currentQ) btn.style.border = "2px solid black";
-                btn.onclick = function() { currentQ = idx; loadQ(); toggleSidebar(); };
-                p.appendChild(btn);
-            })(i);
-        }
-    }
-
     function submitTest(force) {
         if(!force && !confirm("Submit Test?")) return;
-        clearInterval(timerInterval);
+        clearInterval(timer);
         
         var score = 0, corr = 0, wrong = 0, unatt = 0;
-        var total = currentData.questions.length;
+        var total = data.questions.length;
         
-        currentData.questions.forEach(function(q, i) {
+        data.questions.forEach(function(q, i) {
             var r = responses[i];
             if(r.sel !== null) {
                 if(r.sel === q.correctIndex) { score += 1; corr++; }
@@ -419,9 +415,8 @@
             } else unatt++;
         });
 
-        // Save
-        if(currentUrl) {
-            var res = { score: score, corr: corr, wrong: wrong, unatt: unatt, total: total, data: currentData, responses: responses };
+        if(currentUrl && currentUrl !== "demo") {
+            var res = { score: score, corr: corr, wrong: wrong, unatt: unatt, total: total, data: data, responses: responses };
             localStorage.setItem(currentUrl, JSON.stringify(res));
         }
 
@@ -431,8 +426,9 @@
     function showStoredResult(url) {
         var saved = JSON.parse(localStorage.getItem(url));
         if(!saved) return;
-        currentData = saved.data;
+        data = saved.data;
         responses = saved.responses;
+        currentUrl = url;
         renderResult(saved.score, saved.corr, saved.wrong, saved.unatt, saved.total);
     }
 
@@ -442,9 +438,39 @@
         document.querySelectorAll('#view-result span b')[1].innerText = wrong;
         document.querySelectorAll('#view-result span b')[2].innerText = unatt;
 
-        // Feedback
         var pct = (score/total)*100;
-        var msg = "Keep Practicing";
-        var color = "#666";
+        var msg = "", color = "";
+        if(pct < 40) { msg = "Try Again"; color = "#dc3545"; }
+        else if(pct < 70) { msg = "Room for Improvement"; color = "#fd7e14"; }
+        else if(pct < 80) { msg = "Good"; color = "#ffc107"; }
+        else if(pct < 90) { msg = "Very Good"; color = "#28a745"; }
+        else { msg = "Excellent"; color = "#20c997"; }
         
-        if (pct < 40) { msg = 
+        var badge = document.getElementById('feedback-badge');
+        badge.innerText = msg;
+        badge.style.background = color;
+
+        switchView('view-result');
+    }
+
+    function reattemptTest() {
+        if(confirm("Clear history and re-attempt?")) {
+            localStorage.removeItem(currentUrl);
+            fetchTest(currentUrl);
+        }
+    }
+
+    function startReviewMode() {
+        isReview = true;
+        currQ = 0;
+        document.getElementById('exam-footer').style.display = 'none';
+        document.getElementById('review-footer').style.display = 'flex';
+        switchView('view-exam');
+        loadQ();
+    }
+
+    function exitReview() { switchView('view-result'); }
+
+    </script>
+</body>
+</html>
