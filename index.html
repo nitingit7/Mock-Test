@@ -83,7 +83,25 @@
         .btn-purple { background: var(--purple); }
         .btn-orange { background: #fd7e14; }
         .btn-outline { background: transparent; border: 1px solid #ccc; color: #333; }
-        .back-btn { margin-bottom: 20px; cursor: pointer; color: var(--blue); font-weight: bold; display: block; }
+        .back-btn {
+            display: block;
+            background-color: var(--blue); /* Blue Box */
+            color: white;                  /* White Text */
+            padding: 15px;                 /* Big spacing inside */
+            font-size: 1.2rem;             /* Larger text */
+            font-weight: bold; 
+            text-align: center;            /* Center the text */
+            border-radius: 8px;            /* Rounded corners */
+            margin-bottom: 20px;           /* Space below the button */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Slight shadow for 3D look */
+        }
+
+         /* Optional: Click effect */
+        .back-btn:active {
+            transform: scale(0.98); 
+            opacity: 0.9;
+        }
         .katex { font-size: 1.1em; }
     </style>
 </head>
@@ -599,6 +617,7 @@
     </script>
 </body>
 </html>
+
 
 
 
