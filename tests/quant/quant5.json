@@ -231,7 +231,7 @@
       "solution": "Total distance = 400m.\nSpeed = $$400/20 = 20$$ m/s.\nkm/hr = $$20 \\times 18/5 = 72$$ km/hr."
     },
     {
-      "text": "A retailer sells 40 pens at the marked price of 36 pens. Find the discount percentage given to the retailer if he buys from wholesaler? (Wait, wording is ambiguous).\nCorrect Wording: A wholesaler sells 40 pens at the marked price of 36 pens. Find loss%? No.\nStandard type: A shopkeeper sells an article at a loss of 10%. If he had sold it for Rs. 50 more, he would have gained 15%. Find CP.",
+      "text": "A shopkeeper sells an article at a loss of 10%. If he had sold it for Rs. 50 more, he would have gained 15%. Find CP.",
       "options": ["Rs. 250", "Rs. 200", "Rs. 300", "Rs. 150", "Rs. 180"],
       "correctIndex": 1,
       "solution": "Gap = $$10\\% + 15\\% = 25\\%$$\n$$25\\% = 50$$\n$$100\\% = 200$$"
