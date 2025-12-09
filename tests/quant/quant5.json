@@ -17,8 +17,8 @@
     {
       "text": "What value should come in the place of question mark (?) in the following question?\n$$\\sqrt{1521} \\times 4 + (13)^{2} - 65 = ? \\times 5$$",
       "options": ["56", "58", "60", "64", "52"],
-      "correctIndex": 0,
-      "solution": "$$39 \\times 4 = 156$$\n$$156 + 169 - 65 = 260$$\n$$260 = 5x \\implies x = 52$$. Wait, calculation: $$156 + 169 = 325$$. $$325 - 65 = 260$$. $$260/5 = 52$$. Correct option index is 4."
+      "correctIndex": 4,
+      "solution": "$$39 \\times 4 = $$156 + 169 = 325$$. $$325 - 65 = 260$$. $$260/5 = 52$$."
     },
     {
       "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$24.98\\% \\text{ of } 599.98 + 14.02 \\times 12.99 = ? + \\sqrt{399}$$",
@@ -29,8 +29,8 @@
     {
       "text": "What value should come in the place of question mark (?) in the following question?\n$$2\\frac{3}{7} + 3\\frac{1}{6} - 1\\frac{1}{2} + 2\\frac{1}{21} = ?$$",
       "options": ["$$6\\frac{3}{14}$$", "$$6\\frac{9}{14}$$", "$$5\\frac{11}{14}$$", "$$6\\frac{5}{14}$$", "$$6\\frac{1}{7}$$"],
-      "correctIndex": 1,
-      "solution": "$$(2+3-1+2) = 6$$\n$$\\frac{3}{7} + \\frac{1}{6} - \\frac{1}{2} + \\frac{1}{21}$$\n$$LCM = 42$$\n$$\\frac{18 + 7 - 21 + 2}{42} = \\frac{6}{42} = \\frac{1}{7}$$\n$$6 + \\frac{1}{7}$$. Wait, let me recheck options. Options are mostly $$x/14$$. $$1/7 = 2/14$$. Option indices are messy. \nLet's re-calculate: $$2 + 3 - 1 + 2 = 6$$. Fraction part: $$\\frac{3}{7} + \\frac{1}{6} - \\frac{1}{2} + \\frac{1}{21}$$. $$\\frac{18 + 7 - 21 + 2}{42} = \\frac{6}{42} = \\frac{1}{7}$$. Total $$6 \\frac{1}{7}$$. Option 5 fits."
+      "correctIndex": 4,
+      "solution": "$$2 + 3 - 1 + 2 = 6$$. Fraction part: $$\\frac{3}{7} + \\frac{1}{6} - \\frac{1}{2} + \\frac{1}{21}$$. $$\\frac{18 + 7 - 21 + 2}{42} = \\frac{6}{42} = \\frac{1}{7}$$. Total $$6 \\frac{1}{7}$$. Option 5 fits."
     },
     {
       "text": "What value should come in the place of question mark (?) in the following question?\n$$(320 \\div 8) \\times \\sqrt{81} - 15 \\times 12 = ?$$",
@@ -41,13 +41,13 @@
     {
       "text": "What value should come in the place of question mark (?) in the following question?\n$$65\\% \\text{ of } 400 + \\sqrt{? } = 44\\% \\text{ of } 800 - 12$$",
       "options": ["6400", "5625", "6084", "6724", "7056"],
-      "correctIndex": 1,
+      "correctIndex": 0,
       "solution": "$$65\\% \\text{ of } 400 = 260$$\n$$44\\% \\text{ of } 800 = 352$$\n$$260 + \\sqrt{?} = 352 - 12 = 340$$\n$$\\sqrt{?} = 80$$\n$$? = 6400$$"
     },
     {
-      "text": "What value should come in the place of question mark (?) in the following question?\n$$343^{1/3} \\times 14 + 120\\% \\text{ of } 60 = ?^{2} + 50$$",
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$343^{1/3} \\times 14 + 120\\% \\text{ of } 60 = ?^{2} + 49$$",
       "options": ["12", "11", "10", "14", "13"],
-      "correctIndex": 2,
+      "correctIndex": 1,
       "solution": "$$7 \\times 14 = 98$$\n$$1.2 \\times 60 = 72$$\n$$98 + 72 = 170$$\n$$170 = ?^{2} + 50 \\implies ?^{2} = 120$$ (Not integer). Let's recheck. $$7 \\times 14 = 98$$. $$120\\% \\text{ of } 60 = 72$$. Sum 170. Minus 50 is 120. Closest square 121 (11). \nAdjustment: Change 120% of 60 to 120% of 50 = 60. Then $$98+60 = 158$$. Minus 50 = 108. Still not square.\nAdjustment 2: Change equation to $$343^{1/3} \\times 8 = 56$$. $$120\\% \\text{ of } 80 = 96$$. $$56+96=152$$. $$-52 = 100$$. Square is 10. \nNew Equation: $$343^{1/3} \\times 8 + 120\\% \\text{ of } 80 = ?^{2} + 52$$\nSolution: $$7 \\times 8 = 56$$. $$96 + 56 = 152$$. $$152 - 52 = 100$$. $$? = 10$$."
     },
     {
@@ -59,8 +59,8 @@
     {
       "text": "What value should come in the place of question mark (?) in the following question?\n$$(0.64)^{2} \\div (0.512)^{1/3} \\times (0.8)^{4} = (0.8)^{? + 3}$$",
       "options": ["2", "3", "1", "4", "0"],
-      "correctIndex": 0,
-      "solution": "Base 0.8: $$(0.8^2)^2 \\div (0.8^3)^{1/3} \\times (0.8)^4 = (0.8)^{?+3}$$\n$$0.8^4 \\div 0.8^1 \\times 0.8^4 = 0.8^{4-1+4} = 0.8^7$$\n$$7 = ? + 3 \\implies ? = 4$$. \nWait, check index. Option 4 is index 3. Correct answer 4."
+      "correctIndex": 3,
+      "solution": "Base 0.8: $$(0.8^2)^2 \\div (0.8^3)^{1/3} \\times (0.8)^4 = (0.8)^{?+3}$$\n$$0.8^4 \\div 0.8^1 \\times 0.8^4 = 0.8^{4-1+4} = 0.8^7$$\n$$7 = ? + 3 \\implies ? = 4$$."
     },
     {
       "text": "Find the missing number in the series:\n18, 26, 53, 117, 242, ?",
@@ -70,9 +70,9 @@
     },
     {
       "text": "Find the missing number in the series:\n12, 13, 22, 47, 96, ?",
-      "options": ["217", "207", "197", "227", "187"],
+      "options": ["177", "187", "197", "167", "157"],
       "correctIndex": 0,
-      "solution": "Diff: 1, 9, 25, 49. (Squares of odd numbers: $$1^2, 3^2, 5^2, 7^2$$).\nNext: $$9^2 = 81$$.\n$$96 + 81 = 177$$. \nWait, calculations. $$12+1=13$$, $$13+9=22$$, $$22+25=47$$, $$47+49=96$$. $$96+81=177$$. \nOptions don't match. Let me check double diff. \nDiffs: 1, 9, 25, 49. Gaps: 8, 16, 24. Next gap 32. $$49+32=81$$. \nOkay, logic holds. Let me change options to include 177 or change the last term. Let's change options. \nNew Options: 177, 187, 197, 167, 157."
+      "solution": "Diff: 1, 9, 25, 49. (Squares of odd numbers: $$1^2, 3^2, 5^2, 7^2$$).\nNext: $$9^2 = 81$$.\n$$96 + 81 = 177$$."
     },
     {
       "text": "Find the wrong number in the series:\n5, 6, 14, 45, 184, 920",
@@ -95,14 +95,14 @@
     {
       "text": "Solve for x and y:\nI. $$2x^{2} - 17x + 36 = 0$$\nII. $$3y^{2} - 19y + 30 = 0$$",
       "options": ["x > y", "x < y", "x ≥ y", "x ≤ y", "x = y or no relation"],
-      "correctIndex": 4,
+      "correctIndex": 0,
       "solution": "I. $$2x^2 - 8x - 9x + 36 = 0 \\implies x = 4, 4.5$$\nII. $$3y^2 - 9y - 10y + 30 = 0 \\implies y = 3, 3.33$$\n$$x$$ (4, 4.5) > $$y$$ (3, 3.33). Answer: $$x > y$$."
     },
     {
       "text": "Solve for x and y:\nI. $$x^{2} = 196$$\nII. $$y^{2} - 26y + 169 = 0$$",
       "options": ["x > y", "x < y", "x ≥ y", "x ≤ y", "x = y or no relation"],
-      "correctIndex": 3,
-      "solution": "I. $$x = 14, -14$$\nII. $$(y-13)^2 = 0 \\implies y = 13$$\n14 > 13 but -14 < 13. Relationship cannot be determined? Wait. \n$$14 > 13$$, $$-14 < 13$$. No relation. Correct index 4."
+      "correctIndex": 4,
+      "solution": "I. $$x = 14, -14$$\nII. $$(y-13)^2 = 0 \\implies y = 13$$\n14 > 13 but -14 < 13. Relationship cannot be determined? Wait. \n$$14 > 13$$, $$-14 < 13$$. No relation."
     },
     {
       "text": "Solve for x and y:\nI. $$x^{2} - 5x - 24 = 0$$\nII. $$y^{2} + 3y - 18 = 0$$",
@@ -119,8 +119,8 @@
     {
       "text": "Solve for x and y:\nI. $$x^{2} - 15x + 56 = 0$$\nII. $$y = \\sqrt{64}$$",
       "options": ["x > y", "x < y", "x ≥ y", "x ≤ y", "x = y or no relation"],
-      "correctIndex": 2,
-      "solution": "I. $$x = 7, 8$$\nII. $$y = 8$$ (Principal root only)\n$$x \\le y$$. Or rather, 7 < 8 and 8 = 8. So $$x \\le y$$. Correct index 3."
+      "correctIndex": 3,
+      "solution": "I. $$x = 7, 8$$\nII. $$y = 8$$ (Principal root only)\n$$x \\le y$$. Or rather, 7 < 8 and 8 = 8. So $$x \\le y$$."
     },
     {
       "text": "Directions: Study the data given below and answer the following questions.\nThere are three companies A, B, and C. The total employees in A are 20% more than in B. The ratio of Males to Females in B is 3:2. Number of females in A is 40% of the total employees in A. Total employees in C is 450, which is 10% less than employees in B.\n\nFind the number of males in Company A.",
@@ -167,8 +167,8 @@
     {
       "text": "A can do a piece of work in 20 days and B in 30 days. They started working together but A left 5 days before the work was completed. Find the total number of days taken to complete the work.",
       "options": ["14 days", "15 days", "16 days", "18 days", "12 days"],
-      "correctIndex": 0,
-      "solution": "Let total days = T.\nA worked for T-5, B worked for T.\n$$\\frac{T-5}{20} + \\frac{T}{30} = 1$$\n$$3(T-5) + 2T = 60$$\n$$3T - 15 + 2T = 60$$\n$$5T = 75 \\implies T = 15$$.\nCorrect answer is 15. Correct index 1."
+      "correctIndex": 1,
+      "solution": "Let total days = T.\nA worked for T-5, B worked for T.\n$$\\frac{T-5}{20} + \\frac{T}{30} = 1$$\n$$3(T-5) + 2T = 60$$\n$$3T - 15 + 2T = 60$$\n$$5T = 75 \\implies T = 15$$.\nCorrect answer is 15."
     },
     {
       "text": "A sum of money becomes Rs. 10,800 in 2 years and Rs. 13,500 in 3 years at Compound Interest. Find the rate of interest.",
@@ -201,10 +201,10 @@
       "solution": "$$\\pi r^2 = 616 \\implies \\frac{22}{7} r^2 = 616 \\implies r^2 = 196 \\implies r = 14$$.\nCircumference = $$2 \\times \\frac{22}{7} \\times 14 = 88$$ cm.\n$$4a = 88 \\implies a = 22$$.\nArea = $$22^2 = 484$$."
     },
     {
-      "text": "A boat covers 36 km upstream and 48 km downstream in 6 hours. If the speed of the current is 3 km/hr, find the speed of the boat in still water.",
+      "text": "A boat covers 36 km upstream and 48 km downstream in 10 hours. If the speed of the current is 3 km/hr, find the speed of the boat in still water.",
       "options": ["9 km/hr", "12 km/hr", "15 km/hr", "10 km/hr", "18 km/hr"],
-      "correctIndex": 2,
-      "solution": "Let Boat speed = B.\n$$\\frac{36}{B-3} + \\frac{48}{B+3} = 6$$\n$$\\frac{6}{B-3} + \\frac{8}{B+3} = 1$$\nTry options. If B=15: $$\\frac{6}{12} + \\frac{8}{18}$$ (Not integer). \nTry B=9: $$\\frac{6}{6} + \\frac{8}{12}$$ (Not 1).\nLet's check math.\n$$6(B+3) + 8(B-3) = B^2 - 9$$\n$$6B + 18 + 8B - 24 = B^2 - 9$$\n$$14B - 6 = B^2 - 9$$\n$$B^2 - 14B - 3 = 0$$. Roots irrational. \nLet's adjust question values for integer solution. \nSet $$B=15$$. $$U=12, D=18$$. Time = $$\\frac{36}{12} + \\frac{48}{18} = 3 + 2.66$$ (No).\nSet $$B=9$$. $$U=6, D=12$$. Time = $$\\frac{36}{6} + \\frac{48}{12} = 6 + 4 = 10$$. \nQuestion Text Adjustment: \"A boat covers 36 km upstream and 48 km downstream in 10 hours.\"\nSolution: B=9. Option 0."
+      "correctIndex": 0,
+      "solution": "$$\\frac{36}{v-3} + frac{48}{v+3} = 10$$. \nBy putting values from option we get 9 satisfied. \nSolution:=9."
     },
     {
       "text": "Pipe A can fill a tank in 12 hours, Pipe B in 15 hours. Pipe C can empty it in 20 hours. If all three are opened together, how long will it take to fill the tank?",
@@ -219,8 +219,8 @@
       "solution": "$$Total_{new} = 21 \\times 46 = 966$$\n$$Total_{old} = 20 \\times 45 = 900$$\nTeacher = 66 kg.\nShortcut: $$45 + 21 \\times 1 = 66$$."
     },
     {
-      "text": "A invested Rs. 5000 and B invested Rs. 8000. After 4 months, A added Rs. 3000 and B withdrew Rs. 2000. Find the profit share of A out of a total profit of Rs. 4600.",
-      "options": ["Rs. 2200", "Rs. 2400", "Rs. 2000", "Rs. 2600", "Rs. 1800"],
+      "text": "A invested Rs. 5000 and B invested Rs. 8000. After 4 months, A added Rs. 3000 and B withdrew Rs. 2000. Find the profit share of A at the end of a year out of a total profit of Rs. 4200.",
+      "options": ["Rs. 2100", "Rs. 2400", "Rs. 2000", "Rs. 2600", "Rs. 1800"],
       "correctIndex": 0,
       "solution": "A: $$5000 \\times 4 + 8000 \\times 8 = 20k + 64k = 84k$$\nB: $$8000 \\times 4 + 6000 \\times 8 = 32k + 48k = 80k$$\nRatio $$A:B = 84:80 = 21:20$$\nTotal = 41. Profit = 4600? Not integer divisible. \nLet's check ratio calculation. $$5000 \\times 4 = 20000$$. Added 3000 => 8000. $$8000 \\times 8 = 64000$$. Sum = 84000.\nB: $$8000 \\times 4 = 32000$$. Withdrew 2000 => 6000. $$6000 \\times 8 = 48000$$. Sum = 80000.\nRatio $$84:80 = 21:20$$. Sum = 41. \nAdjust profit to Rs. 4100.\nA's Share = $$2100$$."
     },
