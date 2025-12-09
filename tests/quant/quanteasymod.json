@@ -183,6 +183,8 @@
       "solution": "Speed = $$300/15 = 20$$ m/s. $$20 \\times 18/5 = 72$$ km/hr."
     },
     {
+      "Direction": "Refer to the given DI below",
+      "infoHtml": "<table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>Shop</th><th>Mon</th><th>Tue</th><th>Wed</th></tr><tr><td>P</td><td>150</td><td>120</td><td>180</td></tr><tr><td>Q</td><td>200</td><td>160</td><td>140</td></tr><tr><td>R</td><td>180</td><td>220</td><td>200</td></tr></table><table border='1' style='width: 70%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Total Students</th><th>Boys:Girls</th></tr><tr><td>School A</td><td>500</td><td>3 : 2</td></tr><tr><td>School B</td><td>800</td><td>5 : 3</td></tr></table>",
       "text": "DI Set 1: Total students in School A = 500, B = 800. Ratio of Boys:Girls in A is 3:2 and in B is 5:3. Find total Boys.",
       "options": ["750", "800", "700", "850", "650"],
       "correctIndex": 1,
