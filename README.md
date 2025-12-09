@@ -1,2 +1,2 @@
 # Mock-Test
-Mock Test Series
+Free and open source mock tests for Banking  Exams
