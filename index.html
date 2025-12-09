@@ -58,16 +58,16 @@
         
         .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
         
-        /* REVIEW TIME BADGE */
-        .review-time-badge {
+        /* REVIEW BADGES */
+        .review-badges-container { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+        .review-badge {
             display: inline-block;
             background: #e2e6ea;
             color: #495057;
             font-size: 0.85rem;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 15px;
             font-weight: bold;
-            margin-bottom: 10px;
             border: 1px solid #ccc;
         }
 
@@ -162,7 +162,10 @@
                         <span style="font-size:0.8rem; background:#eee; padding:2px 6px; border-radius:4px;">Marks: +1 / -0.25</span>
                     </div>
                     
-                    <div id="review-time-badge" class="review-time-badge" style="display:none;"></div>
+                    <div id="review-badges" class="review-badges-container" style="display:none;">
+                        <div id="review-status-badge" class="review-badge"></div>
+                        <div id="review-time-badge" class="review-badge"></div>
+                    </div>
 
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
                     <div id="options-box"></div>
@@ -412,7 +415,7 @@
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('pause-overlay').style.display = 'none';
-            document.getElementById('review-time-badge').style.display = 'none'; // Hide by default
+            document.getElementById('review-badges').style.display = 'none'; // Hide by default
             
             this.switchView('view-exam');
             this.loadQ();
@@ -506,26 +509,45 @@
             this.setText('q-number', "Q" + (this.currQ + 1));
             this.setText('q-text', q.text);
             
-            // --- REVIEW MODE TIME DISPLAY ---
+            // --- REVIEW MODE BADGES (Status + Time) ---
+            var badgeContainer = document.getElementById('review-badges');
             var timeBadge = document.getElementById('review-time-badge');
+            var statusBadge = document.getElementById('review-status-badge');
+
             if (this.isReview) {
+                badgeContainer.style.display = 'flex';
+                
+                // 1. STATUS BADGE
+                if (r.sel === null) {
+                    statusBadge.innerText = "Skipped";
+                    statusBadge.style.background = "#e2e6ea"; // Gray
+                    statusBadge.style.color = "#495057";
+                    statusBadge.style.border = "1px solid #ced4da";
+                } else if (r.sel === q.correctIndex) {
+                    statusBadge.innerText = "Correct";
+                    statusBadge.style.background = "#d4edda"; // Green
+                    statusBadge.style.color = "#155724";
+                    statusBadge.style.border = "1px solid #c3e6cb";
+                } else {
+                    statusBadge.innerText = "Wrong";
+                    statusBadge.style.background = "#f8d7da"; // Red
+                    statusBadge.style.color = "#721c24";
+                    statusBadge.style.border = "1px solid #f5c6cb";
+                }
+
+                // 2. TIME BADGE
                 var spent = r.timeSpent || 0;
-                // Format: 1m 22s or 45s
                 var tm = Math.floor(spent / 60);
                 var ts = Math.floor(spent % 60);
                 var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
-                
-                timeBadge.innerText = "Time Taken: " + timeStr;
-                timeBadge.style.display = 'inline-block';
+                timeBadge.innerText = "Time: " + timeStr;
                 
                 // Color coding for time
-                if (spent > 120) timeBadge.style.background = "#f8d7da"; // Reddish if > 2 mins
-                else if (spent > 60) timeBadge.style.background = "#fff3cd"; // Yellowish if > 1 min
-                else timeBadge.style.background = "#d4edda"; // Greenish if fast
-                timeBadge.style.color = "#333";
-                
+                if (spent > 120) { timeBadge.style.background = "#fff3cd"; timeBadge.style.color = "#856404"; } // Warning
+                else { timeBadge.style.background = "#e2e6ea"; timeBadge.style.color = "#495057"; } // Normal
+
             } else {
-                timeBadge.style.display = 'none';
+                badgeContainer.style.display = 'none';
             }
             // --------------------------------
 
