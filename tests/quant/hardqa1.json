@@ -107,13 +107,13 @@
     {
       "text": "Quadratic: I. $$ x^2 - 15x + 56 = 0 $$ II. $$ y = \\sqrt{64} $$",
       "options": ["x > y", "x < y", "x >= y", "x <= y", "Relationship cannot be established"],
-      "correctIndex": 4,
+      "correctIndex": 3,
       "solution": "I. $$ x = 7, 8 $$. II. $$ y = 8 $$ (Principal root). $$ 7 < 8, 8 = 8 $$. So $$ x \\le y $$."
     },
     {
       "text": "Quadratic: I. $$ 6x^2 + 7x - 3 = 0 $$ II. $$ 2y^2 + 9y + 9 = 0 $$",
       "options": ["x > y", "x < y", "x >= y", "x <= y", "Relationship cannot be established"],
-      "correctIndex": 0,
+      "correctIndex": 2,
       "solution": "I. $$ +9, -2 \\rightarrow x = -9/6, 2/6 \\rightarrow -1.5, 0.33 $$. Wait, factors of -18 sum to 7: +9, -2. Signs flip: -1.5, +0.33. II. $$ +6, +3 \\rightarrow y = -6/2, -3/2 \\rightarrow -3, -1.5 $$. $$ -1.5 > -3, -1.5 = -1.5 $$. $$ 0.33 > -3, 0.33 > -1.5 $$. So $$ x \\ge y $$."
     },
     {
