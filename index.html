@@ -35,7 +35,7 @@
         header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
         #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
-        /* TIMER IMPROVED */
+        /* TIMER */
         .timer-box { display: flex; align-items: center; gap: 8px; }
         .timer { font-family: monospace; font-size: 1.1rem; font-weight: bold; background: #222; color: #fff; padding: 6px 10px; border-radius: 4px; border: 1px solid #555; }
         .timer.warning { background: #c00; border-color: #f00; animation: blink 1s infinite; }
@@ -51,6 +51,10 @@
         .q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; }
         .q-footer { padding: 10px; background: #f8f9fa; border-top: 1px solid #ddd; display: flex; justify-content: space-between; }
 
+        /* DI / GRAPH STYLES (NEW) */
+        .q-direction { font-style: italic; color: #555; margin-bottom: 15px; border-left: 3px solid var(--blue); padding-left: 10px; font-size: 0.95rem; }
+        .q-image { max-width: 100%; height: auto; display: block; margin: 10px auto 20px auto; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
         .opt-row { display: flex; padding: 12px; border: 1px solid #ccc; margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; }
         .opt-row.selected { background: #e3f2fd; border-color: var(--blue); border-width: 2px; }
         .opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; }
@@ -59,17 +63,8 @@
         .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
         
         /* REVIEW BADGES */
-        .review-badges-container { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-        .review-badge {
-            display: inline-block;
-            background: #e2e6ea;
-            color: #495057;
-            font-size: 0.85rem;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-weight: bold;
-            border: 1px solid #ccc;
-        }
+        .review-badges-container { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .review-badge { display: inline-block; background: #e2e6ea; color: #495057; font-size: 0.85rem; padding: 4px 12px; border-radius: 15px; font-weight: bold; border: 1px solid #ccc; }
 
         /* SIDEBAR */
         #sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
@@ -166,6 +161,8 @@
                         <div id="review-status-badge" class="review-badge"></div>
                         <div id="review-time-badge" class="review-badge"></div>
                     </div>
+
+                    <div id="q-extra-info"></div>
 
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
                     <div id="options-box"></div>
@@ -508,6 +505,32 @@
             
             this.setText('q-number', "Q" + (this.currQ + 1));
             this.setText('q-text', q.text);
+
+            // --- DI/GRAPH LOGIC ---
+            var extra = document.getElementById('q-extra-info');
+            extra.innerHTML = ''; // Clear prev
+
+            if (q.direction) {
+                var d = document.createElement('div');
+                d.className = 'q-direction';
+                d.innerHTML = "<b>Direction:</b> " + q.direction;
+                extra.appendChild(d);
+            }
+            if (q.image) {
+                var img = document.createElement('img');
+                img.src = q.image;
+                img.className = 'q-image';
+                img.alt = "Graph/Chart";
+                extra.appendChild(img);
+            }
+            if (q.infoHtml) {
+                var div = document.createElement('div');
+                div.innerHTML = q.infoHtml;
+                div.style.marginBottom = "20px";
+                div.style.overflowX = "auto";
+                extra.appendChild(div);
+            }
+            // ----------------------
             
             // --- REVIEW MODE BADGES (Status + Time) ---
             var badgeContainer = document.getElementById('review-badges');
