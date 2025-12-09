@@ -196,8 +196,10 @@
     },
     {
       "direction": "Study the following graph carefully and answer the question.",
-      "image": "https://github.com/nitingit7/Mock-Test/blob/f191d44eb96ffde8ec3be96cb042b6469da34d2f/tests/quant/DI/hardqa1(Bar).png?raw=true",
-      "image": "https://github.com/nitingit7/Mock-Test/blob/f191d44eb96ffde8ec3be96cb042b6469da34d2f/tests/quant/DI/hardqa1(Pie).png?raw=true",
+      "images": [
+        "https://nitingit7.github.io/Mock-Test/tests/quant/DI/hardqa1(Bar).png",
+        "https://nitingit7.github.io/Mock-Test/tests/quant/DI/hardqa1(Pie).png"
+      ],
       "text": "DI Set 1: School A, B, C. Total students 1000, 1500, 1200. Passed % are 60%, 50%, 70%. Find total passed students.",
       "options": ["2100", "2200", "2190", "2150", "2250"],
       "correctIndex": 2,
