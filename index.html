@@ -32,28 +32,16 @@
         .test-item { background: white; width: 100%; max-width: 500px; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd; display: flex; justify-content: space-between; align-items: center; }
 
         /* EXAM HEADER */
-        header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; flex-shrink: 0; }
+        header { height: 60px; background: var(--dark); color: white; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; }
         #exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         
-        /* TIMER STYLES - INCREASED VISIBILITY */
-        .timer-box { display: flex; align-items: center; gap: 10px; }
-        .timer { 
-            font-family: monospace; 
-            font-size: 1.2rem; /* Bigger Font */
-            font-weight: bold; 
-            background: #222; 
-            color: #fff;
-            padding: 8px 12px; 
-            border-radius: 6px; 
-            min-width: 80px;
-            text-align: center;
-            border: 1px solid #555;
-            transition: background 0.3s;
-        }
-        .timer.warning { background: #d32f2f; border-color: #ff5252; animation: pulse 1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.8; } 100% { opacity: 1; } }
+        /* TIMER IMPROVED */
+        .timer-box { display: flex; align-items: center; gap: 8px; }
+        .timer { font-family: monospace; font-size: 1.1rem; font-weight: bold; background: #222; color: #fff; padding: 6px 10px; border-radius: 4px; border: 1px solid #555; }
+        .timer.warning { background: #c00; border-color: #f00; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.7; } }
 
-        .btn-header { padding: 8px 12px; font-size: 14px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
+        .btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; }
         .btn-pause { background: var(--yellow); color: #222; }
         .btn-exit { background: var(--red); color: white; }
 
@@ -69,6 +57,19 @@
         .opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; }
         
         .solution-box { background: #fff3cd; padding: 15px; border: 1px solid #ffeeba; margin-top: 20px; border-radius: 5px; display: none; }
+        
+        /* REVIEW TIME BADGE */
+        .review-time-badge {
+            display: inline-block;
+            background: #e2e6ea;
+            color: #495057;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
 
         /* SIDEBAR */
         #sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: white; border-left: 1px solid #ccc; transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; }
@@ -156,10 +157,13 @@
         <div class="exam-body">
             <main class="q-area">
                 <div class="q-content">
-                    <div style="display:flex; justify-content:space-between; margin-bottom:15px;">
+                    <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:15px;">
                         <strong style="color:var(--blue);" id="q-number">Q1</strong>
                         <span style="font-size:0.8rem; background:#eee; padding:2px 6px; border-radius:4px;">Marks: +1 / -0.25</span>
                     </div>
+                    
+                    <div id="review-time-badge" class="review-time-badge" style="display:none;"></div>
+
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
                     <div id="options-box"></div>
                     <div id="solution-box" class="solution-box">
@@ -265,6 +269,9 @@
         startTime: 0,
         accumulatedPauseTime: 0,
         pauseStartTimestamp: 0,
+        
+        // Per Question Timer
+        questionStartTime: 0,
 
         isReview: false, isPaused: false, currentFileUrl: "",
 
@@ -294,7 +301,7 @@
             this.safeBind('btn-view-sols', () => this.startReviewMode());
             this.safeBind('btn-reattempt', () => this.reattemptTest());
 
-            // FIX: Add Visibility Listener to prevent stuck timer when tab changes
+            // FIX: Add Visibility Listener to prevent stuck timer
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden && this.timerInterval && !this.isPaused) {
                     this.updateTimerDisplay(); // Force immediate update
@@ -380,7 +387,8 @@
             if(!this.data.questions) { alert("Invalid JSON"); return; }
 
             for(var i=0; i<this.data.questions.length; i++) {
-                this.responses[i] = { sel: null, status: 'not-visited' };
+                // Initialize timeSpent to 0 for every question
+                this.responses[i] = { sel: null, status: 'not-visited', timeSpent: 0 };
             }
             
             // --- TIMER SETUP ---
@@ -389,12 +397,16 @@
             this.accumulatedPauseTime = 0;
             this.startTimer();
             // -------------------
+
+            // Initialize Question Timer
+            this.questionStartTime = Date.now();
             
             this.setText('exam-title', this.data.title || "Mock Test");
             
             document.getElementById('exam-footer').style.display = 'flex';
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('pause-overlay').style.display = 'none';
+            document.getElementById('review-time-badge').style.display = 'none'; // Hide by default
             
             this.switchView('view-exam');
             this.loadQ();
@@ -402,14 +414,12 @@
 
         startTimer: function() {
             if(this.timerInterval) clearInterval(this.timerInterval);
-            
             var self = this;
             this.updateTimerDisplay(); // Immediate update
-            
             this.timerInterval = setInterval(function() {
                 if(self.isPaused) return;
                 self.updateTimerDisplay();
-            }, 500); // Check every 500ms
+            }, 500); 
         },
 
         updateTimerDisplay: function() {
@@ -426,7 +436,6 @@
                 this.submitTest(true);
             }
 
-            // VISUAL: Red Warning if less than 1 minute
             if(remaining < 60) disp.classList.add('warning');
             else disp.classList.remove('warning');
 
@@ -435,20 +444,42 @@
             disp.innerText = m + ":" + s;
         },
 
+        // --- NEW FUNCTION: CAPTURE TIME SPENT ON CURRENT QUESTION ---
+        captureQuestionTime: function() {
+            if (this.isReview || this.isPaused) return; 
+            
+            var now = Date.now();
+            var diffSeconds = (now - this.questionStartTime) / 1000;
+            
+            // Add to the cumulative time for this question
+            if (this.responses[this.currQ]) {
+                this.responses[this.currQ].timeSpent += diffSeconds;
+            }
+            
+            // Reset start time for the next question/action
+            this.questionStartTime = now;
+        },
+
         togglePause: function() {
             this.isPaused = !this.isPaused;
             var el = document.getElementById('pause-overlay');
             
             if (this.isPaused) {
-                // START PAUSE
+                // START PAUSE: Capture time spent so far on this question
+                this.captureQuestionTime(); 
+                
                 this.pauseStartTimestamp = Date.now();
                 el.style.display = 'flex';
             } else {
                 // END PAUSE
                 var pauseDuration = Date.now() - this.pauseStartTimestamp;
                 this.accumulatedPauseTime += pauseDuration;
+                
+                // Reset Question Start Time so we don't count the pause duration
+                this.questionStartTime = Date.now();
+                
                 el.style.display = 'none';
-                this.updateTimerDisplay(); // Instant update on resume
+                this.updateTimerDisplay(); 
             }
         },
 
@@ -469,6 +500,29 @@
             this.setText('q-number', "Q" + (this.currQ + 1));
             this.setText('q-text', q.text);
             
+            // --- REVIEW MODE TIME DISPLAY ---
+            var timeBadge = document.getElementById('review-time-badge');
+            if (this.isReview) {
+                var spent = r.timeSpent || 0;
+                // Format: 1m 22s or 45s
+                var tm = Math.floor(spent / 60);
+                var ts = Math.floor(spent % 60);
+                var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
+                
+                timeBadge.innerText = "Time Taken: " + timeStr;
+                timeBadge.style.display = 'inline-block';
+                
+                // Color coding for time
+                if (spent > 120) timeBadge.style.background = "#f8d7da"; // Reddish if > 2 mins
+                else if (spent > 60) timeBadge.style.background = "#fff3cd"; // Yellowish if > 1 min
+                else timeBadge.style.background = "#d4edda"; // Greenish if fast
+                timeBadge.style.color = "#333";
+                
+            } else {
+                timeBadge.style.display = 'none';
+            }
+            // --------------------------------
+
             var box = document.getElementById('options-box');
             if(box) {
                 box.innerHTML = '';
@@ -507,16 +561,23 @@
         },
 
         saveNext: function() {
+            this.captureQuestionTime(); // Save time before moving
+            
             var r = this.responses[this.currQ];
             if(r.sel !== null) r.status = 'ans';
             else r.status = 'not-answered';
-            if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); }
-            else {
+            
+            if(this.currQ < this.data.questions.length - 1) { 
+                this.currQ++; 
+                this.loadQ(); 
+            } else {
                 if(confirm("End of questions. Submit Test?")) { this.submitTest(false); }
             }
         },
 
         markReview: function() {
+            this.captureQuestionTime(); // Save time before moving
+            
             var r = this.responses[this.currQ];
             if(r.sel !== null) r.status = 'ans-rev';
             else r.status = 'rev';
@@ -524,13 +585,27 @@
         },
 
         clearResponse: function() {
+            // Note: We don't reset time when clearing response, as user still spent time thinking
             this.responses[this.currQ].sel = null;
             this.responses[this.currQ].status = 'not-answered';
             this.loadQ();
         },
 
-        prevQ: function() { if(this.currQ > 0) { this.currQ--; this.loadQ(); } },
-        nextQ: function() { if(this.currQ < this.data.questions.length - 1) { this.currQ++; this.loadQ(); } },
+        prevQ: function() { 
+            if(this.currQ > 0) { 
+                this.captureQuestionTime(); // Save time
+                this.currQ--; 
+                this.loadQ(); 
+            } 
+        },
+        
+        nextQ: function() { 
+            if(this.currQ < this.data.questions.length - 1) { 
+                this.captureQuestionTime(); // Save time
+                this.currQ++; 
+                this.loadQ(); 
+            } 
+        },
 
         renderPalette: function() {
             var grid = document.getElementById('palette-grid');
@@ -560,7 +635,14 @@
                         if(s === 'ans-rev') { btn.style.border = "2px solid #28a745"; }
                     }
                     if(idx === self.currQ) btn.style.border = '2px solid black';
-                    btn.onclick = function() { self.currQ = idx; self.loadQ(); self.toggleSidebar(); };
+                    btn.onclick = function() { 
+                        // If taking test, save time before jumping
+                        if(!self.isReview) self.captureQuestionTime();
+                        
+                        self.currQ = idx; 
+                        self.loadQ(); 
+                        self.toggleSidebar(); 
+                    };
                     grid.appendChild(btn);
                 })(i);
             }
@@ -576,9 +658,13 @@
         
         submitTest: function(force) {
             if(!force && !confirm("Submit Test?")) return;
+            
+            // Capture time for the very last question user was on
+            this.captureQuestionTime();
+            
             if(this.timerInterval) clearInterval(this.timerInterval);
             
-            // Calc actual time spent
+            // Calc total actual time
             var now = Date.now();
             var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
             if(elapsedSeconds > this.totalTimeSeconds) elapsedSeconds = this.totalTimeSeconds;
@@ -627,9 +713,7 @@
             
             var m = Math.floor(timeSpent / 60);
             var s = timeSpent % 60;
-            var timeString = "";
-            if(m > 0) timeString += m + "m ";
-            timeString += s + "s";
+            var timeString = (m > 0 ? m + "m " : "") + s + "s";
             
             this.setText('time-taken-box', 'Time Taken: ' + timeString);
             
