@@ -168,7 +168,7 @@
     {
       "id": "Q24",
       "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>",
-      "text": "DI Set 1: What is the ratio of Boys in School A to Girls in School C?",
+      "text": "What is the ratio of Boys in School A to Girls in School C?",
       "options": ["1:1", "2:3", "5:4", "1:2", "5:6"],
       "correctIndex": 0,
       "solution": "$$250 : 250 = 1 : 1$$."
@@ -176,7 +176,7 @@
     {
       "id": "Q25",
       "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>",
-      "text": "DI Set 1: Girls in School B are what percent of Boys in School B?",
+      "text": "Girls in School B are what percent of Boys in School B?",
       "options": ["60%", "66.66%", "75%", "50%", "80%"],
       "correctIndex": 1,
       "solution": "$$(200/300) \\times 100 = 66.66\\%$$."
@@ -184,7 +184,7 @@
     {
       "id": "Q26",
       "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>",
-      "text": "DI Set 1: Find the average number of Boys in all three schools.",
+      "text": "Find the average number of Boys in all three schools.",
       "options": ["200", "250", "300", "225", "275"],
       "correctIndex": 1,
       "solution": "$$(250 + 300 + 200) / 3 = 750 / 3 = 250$$."
@@ -192,14 +192,14 @@
     {
       "id": "Q27",
       "infoHtml": "<table border='1' style='width: 85%; border-collapse: collapse; margin: auto;'><tr><th>School</th><th>Boys</th><th>Girls</th></tr><tr><td>A</td><td>250</td><td>150</td></tr><tr><td>B</td><td>300</td><td>200</td></tr><tr><td>C</td><td>200</td><td>250</td></tr></table>",
-      "text": "DI Set 1: Total students in School A are what percent more/less than total students in School C?",
+      "text": "Total students in School A are what percent more/less than total students in School C?",
       "options": ["10% less", "11.11% less", "12.5% less", "15% less", "No Difference"],
       "correctIndex": 1,
       "solution": "A = 400, C = 450. Diff = 50. $$(50/450) \\times 100 = 11.11\\%$$ less."
     },
     {
       "id": "Q28",
-      "Direction": "Bar graph shows production of cars (in '000s)."
+      "Direction": "Bar graph shows production of cars (in '000s).",
       "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
       "text": "What is the total production of cars by A and C?",
       "options": ["80", "90", "100", "110", "120"],
@@ -296,4 +296,5 @@
     }
   ]
 }
+
 
