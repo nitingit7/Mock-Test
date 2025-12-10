@@ -1,7 +1,18 @@
 /* css/style.css */
 @import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
 
-:root { --blue: #007bff; --green: #28a745; --red: #dc3545; --yellow: #ffc107; --purple: #6f42c1; --dark: #343a40; --light: #f8f9fa; }
+:root { 
+    /* YOUR NEW PALETTE */
+    --blue:   #E83C91;  /* Primary Action (Save & Next, Start) */
+    --yellow: #FF8FB7;  /* Secondary Action (Pause) */
+    --dark:   #43334C;  /* Header Background & Main Text */
+    --light:  #F8F4EC;  /* App Background */
+    
+    /* SEMANTIC COLORS (Keep these for Right/Wrong feedback) */
+    --green:  #28a745;  
+    --red:    #dc3545;  
+    --purple: #6f42c1;  /* Review Button */
+}
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
 
