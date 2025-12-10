@@ -199,13 +199,16 @@
     },
     {
       "id": "Q28",
-      "text": "DI Set 2: Bar graph shows production of cars (in '000s). A=40, B=60, C=50, D=80.\n\nQ28. What is the total production of cars by A and C?",
+      "Direction": "Bar graph shows production of cars (in '000s)."
+      "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
+      "text": "What is the total production of cars by A and C?",
       "options": ["80", "90", "100", "110", "120"],
       "correctIndex": 1,
       "solution": "$$40 + 50 = 90$$ ('000s)."
     },
     {
       "id": "Q29",
+      "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
       "text": "DI Set 2: Production of B is what percent of production of D?",
       "options": ["60%", "70%", "75%", "80%", "85%"],
       "correctIndex": 2,
@@ -213,6 +216,7 @@
     },
     {
       "id": "Q30",
+      "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
       "text": "DI Set 2: What is the average production of all 4 companies?",
       "options": ["55.5", "57.5", "52.5", "60.5", "50.5"],
       "correctIndex": 1,
@@ -220,6 +224,7 @@
     },
     {
       "id": "Q31",
+      "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
       "text": "DI Set 2: What is the ratio of production of A and B together to C and D together?",
       "options": ["10:13", "5:6", "1:1", "13:10", "9:14"],
       "correctIndex": 0,
@@ -227,6 +232,7 @@
     },
     {
       "id": "Q32",
+      "image": "https://github.com/nitingit7/Mock-Test/blob/main/tests/quant/DI/BarForSpeedMath.png?raw=true",
       "text": "DI Set 2: If production of D increases by 20%, what is the new production?",
       "options": ["90", "92", "96", "100", "88"],
       "correctIndex": 2,
@@ -290,3 +296,4 @@
     }
   ]
 }
+
