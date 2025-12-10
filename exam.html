@@ -104,66 +104,76 @@
         questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
 
         init: function() {
-            var params = new URLSearchParams(window.location.search);
-            this.currentFileUrl = params.get('file');
-            var showResult = params.get('showResult');
+        var params = new URLSearchParams(window.location.search);
+        this.currentFileUrl = params.get('file');
+        var showResult = params.get('showResult');
 
-            if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
+        if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
-            // --- NEW: BACK BUTTON CONFIRMATION LOGIC ---
-            // 1. Push a "dummy" state so the back button has something to pop
+        // --- FIXED BACK BUTTON TRAP ---
+        // 1. Insert a "dummy" history state immediately when test loads
+        history.pushState(null, null, location.href);
+
+        // 2. Listen for the back button
+        window.onpopstate = () => {
+            // A. If viewing results, allow user to leave normally
+            if (document.getElementById('view-result').classList.contains('active')) {
+                return; // Allow the back action to proceed
+            }
+
+            // B. If test is running:
+            // IMMEDIATELY push the state back to reset the trap.
+            // This ensures the trap works 2nd, 3rd, and 4th time.
             history.pushState(null, null, location.href);
 
-            // 2. Listen for the back button (popstate event)
-            window.onpopstate = () => {
-                // If we are currently viewing results, allow going back normally
-                if (document.getElementById('view-result').classList.contains('active')) {
-                    history.go(-1); // Go back for real
-                    return;
-                }
-
-                // If test is active, show confirmation
-                if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
-                    // User clicked OK: Quit the test
-                    if(this.timerInterval) clearInterval(this.timerInterval);
-                    location.href = "index.html"; // Send them Home
-                } else {
-                    // User clicked Cancel: Stay on page
-                    // We must push the state AGAIN to reset the trap
-                    history.pushState(null, null, location.href);
-                }
-            };
-            // ---------------------------------------------
-
-            // Binds
-            this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
-            this.bind('btn-close-sidebar', () => this.toggleSidebar());
-            this.bind('btn-pause', () => this.togglePause());
-            this.bind('btn-exit', () => this.exitTest());
-            this.bind('btn-save', () => this.saveNext());
-            this.bind('btn-clear', () => this.clearResponse());
-            this.bind('btn-review', () => this.markReview());
-            this.bind('btn-submit', () => this.submitTest(false));
-            this.bind('btn-prev', () => this.prevQ());
-            this.bind('btn-next', () => this.nextQ());
-            this.bind('btn-exit-review', () => this.exitReview());
-            this.bind('btn-resume', () => this.togglePause());
-            this.bind('btn-quit', () => this.exitTest());
-            this.bind('btn-view-sols', () => this.startReviewMode());
-            this.bind('btn-reattempt', () => this.reattemptTest());
-            this.bind('btn-report', () => this.reportIssue());
-
-            document.addEventListener('visibilitychange', () => {
-                if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
-            });
-
-            // Decide to show result or start test
-            if(showResult === "true") {
-                this.showStoredResult(this.currentFileUrl);
-            } else {
-                this.fetchTest(this.currentFileUrl);
+            // Now ask the question
+            if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
+                // If YES: Manually force them to leave
+                window.onbeforeunload = null; 
+                if(this.timerInterval) clearInterval(this.timerInterval);
+                location.href = "index.html"; 
             }
-        },
+            // If NO: We already pushed the state back above, so we do nothing.
+        };
+        // ------------------------------
+
+        // --- REFRESH / CLOSE TAB BLOCKER ---
+        window.onbeforeunload = function (e) {
+            if (!document.getElementById('view-result').classList.contains('active')) {
+                e.preventDefault();
+                e.returnValue = ''; 
+                return ''; 
+            }
+        };
+
+        // Binds
+        this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
+        this.bind('btn-close-sidebar', () => this.toggleSidebar());
+        this.bind('btn-pause', () => this.togglePause());
+        this.bind('btn-exit', () => this.exitTest());
+        this.bind('btn-save', () => this.saveNext());
+        this.bind('btn-clear', () => this.clearResponse());
+        this.bind('btn-review', () => this.markReview());
+        this.bind('btn-submit', () => this.submitTest(false));
+        this.bind('btn-prev', () => this.prevQ());
+        this.bind('btn-next', () => this.nextQ());
+        this.bind('btn-exit-review', () => this.exitReview());
+        this.bind('btn-resume', () => this.togglePause());
+        this.bind('btn-quit', () => this.exitTest());
+        this.bind('btn-view-sols', () => this.startReviewMode());
+        this.bind('btn-reattempt', () => this.reattemptTest());
+        this.bind('btn-report', () => this.reportIssue());
+
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
+        });
+
+        if(showResult === "true") {
+            this.showStoredResult(this.currentFileUrl);
+        } else {
+            this.fetchTest(this.currentFileUrl);
+        }
+    },
 
         bind: function(id, func) {
             var el = document.getElementById(id);
