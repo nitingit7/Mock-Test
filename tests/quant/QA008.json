@@ -1,0 +1,126 @@
+{
+  "title": "IBPS RRB Clerk Prelims: Speed Math QA008",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$125\\% \\text{ of } 320 - \\sqrt{1600} = ? \\times 12$$",
+      "options": ["25", "35", "30", "40", "20"],
+      "correctIndex": 2,
+      "solution": "$$125\\% \\text{ of } 320 = \\frac{5}{4} \\times 320 = 5 \\times 80 = 400$$\n$$\\sqrt{1600} = 40$$\n$$400 - 40 = 360$$\n$$360 = 12x \\implies x = 30$$"
+    },
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$24.98\\% \\text{ of } 399.99 + \\sqrt{624.99} \\times 4.01 = ?$$",
+      "options": ["180", "200", "220", "250", "150"],
+      "correctIndex": 1,
+      "solution": "$$25\\% \\text{ of } 400 = 100$$\n$$\\sqrt{625} \\times 4 = 25 \\times 4 = 100$$\n$$100 + 100 = 200$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$(16 \\times 4)^{3} \\div (8^{2} \\times 2)^{2} \\times 4 = 2^{?}$$",
+      "options": ["4", "5", "6", "8", "3"],
+      "correctIndex": 2,
+      "solution": "$$(2^{4} \\times 2^{2})^{3} = (2^{6})^{3} = 2^{18}$$\n$$(2^{6} \\times 2^{1})^{2} = (2^{7})^{2} = 2^{14}$$\n$$2^{18} \\div 2^{14} \\times 2^{2} = 2^{18-14+2} = 2^{6}$$\n$$? = 6$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$180 \\div 9 + 12 \\times 5 - 35 = ?$$",
+      "options": ["35", "55", "45", "40", "50"],
+      "correctIndex": 2,
+      "solution": "$$180 \\div 9 = 20$$\n$$12 \\times 5 = 60$$\n$$20 + 60 - 35 = 80 - 35 = 45$$"
+    },
+    {
+      "text": "What approximate value should come in the place of question mark (?) in the following question?\n$$13.02^{2} - 24.99\\% \\text{ of } 480.01 + 143.99 = ?$$",
+      "options": ["200", "180", "193", "210", "175"],
+      "correctIndex": 2,
+      "solution": "$$13^{2} = 169$$\n$$25\\% \\text{ of } 480 = 120$$\n$$169 - 120 + 144 = 49 + 144 = 193$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$3\\frac{1}{4} + 2\\frac{1}{2} - 1\\frac{5}{8} = ?$$",
+      "options": ["$$4\\frac{1}{8}$$", "$$3\\frac{7}{8}$$", "$$4\\frac{3}{8}$$", "$$3\\frac{1}{2}$$", "$$4\\frac{1}{4}$$"],
+      "correctIndex": 0,
+      "solution": "Integers: $$3 + 2 - 1 = 4$$\nFractions: $$\\frac{1}{4} + \\frac{1}{2} - \\frac{5}{8} = \\frac{2+4-5}{8} = \\frac{1}{8}$$\nTotal: $$4\\frac{1}{8}$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$\\sqrt{576} \\div \\sqrt{16} \\times 15 = ? + 45$$",
+      "options": ["35", "55", "40", "60", "45"],
+      "correctIndex": 4,
+      "solution": "$$24 \\div 4 \\times 15 = 6 \\times 15 = 90$$\n$$90 = ? + 45 \\implies ? = 45$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$60\\% \\text{ of } 500 \\div 3 + ? = 145$$",
+      "options": ["55", "35", "45", "65", "25"],
+      "correctIndex": 2,
+      "solution": "$$300 \\div 3 = 100$$\n$$100 + ? = 145 \\implies ? = 45$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$\\sqrt[3]{1728} \\times \\sqrt[3]{3375} \\div 6 = ?$$",
+      "options": ["20", "30", "25", "35", "40"],
+      "correctIndex": 1,
+      "solution": "$$12 \\times 15 \\div 6$$\n$$180 \\div 6 = 30$$"
+    },
+    {
+      "text": "What value should come in the place of question mark (?) in the following question?\n$$?^{2} + 115 = 25 \\times 15 - 116$$",
+      "options": ["14", "11", "13", "12", "15"],
+      "correctIndex": 3,
+      "solution": "$$25 \\times 15 = 375$$\n$$375 - 116 = 259$$\n$$?^{2} = 259 - 115 = 144$$\n$$? = 12$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n12, 12, 18, 45, 180, ?",
+      "options": ["1080", "1100", "900", "1260", "980"],
+      "correctIndex": 0,
+      "solution": "$$12 \\times 1 = 12$$\n$$12 \\times 1.5 = 18$$\n$$18 \\times 2.5 = 45$$\n$$45 \\times 4 = 180$$\n(Multipliers diff: 0.5, 1.0, 1.5. Next diff 2.0. Next mult 6)\n$$180 \\times 6 = 1080$$"
+    },
+    {
+      "text": "Find the wrong number in the series:\n100, 115, 135, 162, 190, 225",
+      "options": ["115", "135", "162", "190", "225"],
+      "correctIndex": 2,
+      "solution": "Diffs: $$15, 20, 27, 28, 35$$\nPattern should be $$15, 20, 25, 30, 35$$\n$$135 + 25 = 160$$ (Not 162)\n$$160 + 30 = 190$$ (Matches)\nWrong number is 162."
+    },
+    {
+      "text": "Find the missing number in the series:\n5, 6, 14, 45, ?",
+      "options": ["182", "184", "180", "176", "188"],
+      "correctIndex": 1,
+      "solution": "$$5 \\times 1 + 1 = 6$$\n$$6 \\times 2 + 2 = 14$$\n$$14 \\times 3 + 3 = 45$$\n$$45 \\times 4 + 4 = 184$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n4, 18, 48, 100, 180, ?",
+      "options": ["294", "284", "274", "300", "290"],
+      "correctIndex": 0,
+      "solution": "$$2^{3} - 2^{2} = 4$$\n$$3^{3} - 3^{2} = 18$$\n$$4^{3} - 4^{2} = 48$$\n$$5^{3} - 5^{2} = 100$$\n$$6^{3} - 6^{2} = 180$$\n$$7^{3} - 7^{2} = 343 - 49 = 294$$"
+    },
+    {
+      "text": "Find the missing number in the series:\n8, 9, 20, 63, 256, ?",
+      "options": ["1280", "1255", "1285", "1290", "1265"],
+      "correctIndex": 2,
+      "solution": "$$8 \\times 1 + 1 = 9$$\n$$9 \\times 2 + 2 = 20$$\n$$20 \\times 3 + 3 = 63$$\n$$63 \\times 4 + 4 = 256$$\n$$256 \\times 5 + 5 = 1285$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x^{2} - 11x + 30 = 0$$\nII. $$y^{2} - 15y + 56 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 1,
+      "solution": "I. Factors of 30 sum to 11: 5, 6. $$x = 5, 6$$\nII. Factors of 56 sum to 15: 7, 8. $$y = 7, 8$$\n$$5 < 7, 5 < 8$$\n$$6 < 7, 6 < 8$$\nResult: $$x < y$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$2x^{2} + 9x + 10 = 0$$\nII. $$2y^{2} + 13y + 20 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 2,
+      "solution": "I. Sum -9, Prod 20: -4, -5. Divide by 2: $$x = -2, -2.5$$\nII. Sum -13, Prod 40: -8, -5. Divide by 2: $$y = -4, -2.5$$\nComparison:\n$$-2 > -4, -2 > -2.5$$\n$$-2.5 > -4, -2.5 = -2.5$$\nResult: $$x \\ge y$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x^{2} = 81$$\nII. $$y^{2} - 18y + 81 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 3,
+      "solution": "I. $$x = 9, -9$$\nII. $$(y-9)^{2} = 0 \\implies y = 9$$\nComparison: $$9 = 9, -9 < 9$$\nResult: $$x \\le y$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$3x^{2} - 13x - 10 = 0$$\nII. $$y^{2} + 4y + 4 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 0,
+      "solution": "I. Sum +13, Prod -30: 15, -2. Divide by 3: $$x = 5, -0.66$$\nII. $$(y+2)^{2} = 0 \\implies y = -2$$\nComparison: $$5 > -2, -0.66 > -2$$\nResult: $$x > y$$"
+    },
+    {
+      "text": "Solve for x and y:\nI. $$x^{2} + 5x - 6 = 0$$\nII. $$y^{2} - 3y - 4 = 0$$",
+      "options": ["$$x > y$$", "$$x < y$$", "$$x \\ge y$$", "$$x \\le y$$", "$$x = y$$ or CND"],
+      "correctIndex": 4,
+      "solution": "I. Factors of -6 sum to 5: 6, -1. $$x = -6, 1$$\nII. Factors of -4 sum to -3: -4, 1. $$y = 4, -1$$\nComparison:\n$$-6 < 4, -6 < -1$$\n$$1 < 4, 1 > -1$$\nSigns mixed ($$<$ and $$>$$)\nResult: CND"
+    }
+  ]
+    }
