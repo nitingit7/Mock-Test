@@ -1,12 +1,12 @@
 {
   "title": "RRB Clerk Prelims Quant (7th Dec Shift 1) #QA014",
-  "timeLimit": 20,
+  "timeLimit": 15,
   "questions": [
     {
       "text": "A mixture contains milk and water in the ratio 2:1. The total quantity of the mixture is 30 liters. If x liters of water are added to the mixture, the ratio of milk to water becomes 2:3. Find the value of x.",
       "options": ["10", "20", "30", "15", "5"],
       "correctIndex": 1,
-      [cite_start]"solution": "Milk = $$\\frac{2}{3} \\times 30 = 20$$ liters. Water = 10 liters. New ratio 2:3 $$\\rightarrow \\frac{20}{10+x} = \\frac{2}{3} \\rightarrow 60 = 20 + 2x \\rightarrow 2x = 40 \\rightarrow x = 20$$. [cite: 4327-4340]"
+      "solution": "Milk = $$\\frac{2}{3} \\times 30 = 20$$ liters. Water = 10 liters. New ratio 2:3 $$\\rightarrow \\frac{20}{10+x} = \\frac{2}{3} \\rightarrow 60 = 20 + 2x \\rightarrow 2x = 40 \\rightarrow x = 20$$. [cite: 4327-4340]"
     },
     {
       "text": "P and Q started a business by investing Rs. 8,000 and Rs. 6,000 respectively. After x months, Q withdrew his investment. At the end of the year, Q's share of profit was Rs. 2,000 out of a total profit of Rs. 6,000. Find the value of x.",
@@ -24,7 +24,7 @@
       "text": "The principal amount is Rs. 8,000, and the rate of interest is 10% per annum. If the simple interest earned is Rs. 2,000, find the time period (in years).",
       "options": ["4.5", "4", "2", "2.5", "3"],
       "correctIndex": 3,
-      [cite_start]"solution": "$$SI = \\frac{P \\times R \\times T}{100} \\rightarrow 2000 = \\frac{8000 \\times 10 \\times T}{100} \\rightarrow 2000 = 800T \\rightarrow T = 2.5$$. [cite: 4380-4395]"
+      "solution": "$$SI = \\frac{P \\times R \\times T}{100} \\rightarrow 2000 = \\frac{8000 \\times 10 \\times T}{100} \\rightarrow 2000 = 800T \\rightarrow T = 2.5$$. [cite: 4380-4395]"
     },
     {
       "text": "The downstream speed of a boat is 18 km/h, and the speed of the stream is 3 km/h. Find the time taken (in hours) by the boat to cover a distance of 30 km upstream.",
@@ -48,7 +48,7 @@
       "text": "A man invested Rs. P at a rate of 20% per annum compounded annually for 2 years. If the amount at the end of 2 years is Rs. 10,800, find the amount he invested (in Rs).",
       "options": ["7500", "8000", "8500", "9000", "45000"],
       "correctIndex": 0,
-      [cite_start]"solution": "$$10800 = P(1 + \\frac{20}{100})^2 \\rightarrow 10800 = P(1.2)^2 \\rightarrow 10800 = 1.44P \\rightarrow P = 7500$$. [cite: 4442-4464]"
+      "solution": "$$10800 = P(1 + \\frac{20}{100})^2 \\rightarrow 10800 = P(1.2)^2 \\rightarrow 10800 = 1.44P \\rightarrow P = 7500$$. [cite: 4442-4464]"
     },
     {
       "text": "A shopkeeper marks up the price of an article by 40% above its cost price and allows a 10% discount on the marked price. If he earns a profit of Rs. 104 on the article, find the cost price of the article (in Rs).",
@@ -102,7 +102,7 @@
       "text": "What should come in place of (?): $$1217 + 841 - 724 + 819 = ? + 1843$$",
       "options": ["210", "310", "360", "270", "410"],
       "correctIndex": 1,
-      [cite_start]"solution": "$$1217 + 841 + 819 - 724 - 1843 = 310$$. [cite: 4562-4565]"
+      "solution": "$$1217 + 841 + 819 - 724 - 1843 = 310$$. [cite: 4562-4565]"
     },
     {
       "text": "What should come in place of (?): $$0.06 \\times 0.84 = ? \\times 1.2 \\times 0.015$$",
@@ -120,13 +120,13 @@
       "text": "What should come in place of (?): $$616 + 472 - 811 + 317 = ? + 576$$",
       "options": ["28", "16", "24", "18", "14"],
       "correctIndex": 3,
-      [cite_start]"solution": "$$594 - 576 = 18$$. [cite: 4571-4573]"
+      "solution": "$$594 - 576 = 18$$. [cite: 4571-4573]"
     },
     {
       "text": "What should come in place of (?): $$12.5 \\times 80 + 37.5 \\times 16 - 6.25 \\times 112 = ?$$",
       "options": ["1000", "900", "2300", "600", "1300"],
       "correctIndex": 1,
-      [cite_start]"solution": "$$(\\frac{100}{8} \\times 80) + (\\frac{300}{8} \\times 16) - (\\frac{100}{16} \\times 112) = 1000 + 600 - 700 = 900$$. [cite: 4575-4578]"
+      "solution": "$$(\\frac{100}{8} \\times 80) + (\\frac{300}{8} \\times 16) - (\\frac{100}{16} \\times 112) = 1000 + 600 - 700 = 900$$. [cite: 4575-4578]"
     },
     {
       "text": "What should come in place of (?): $$3025 - \\sqrt{2116} = ?^2$$",
@@ -150,7 +150,7 @@
       "text": "What should come in place of (?): $$(1.2)^2 + (1.5)^2 + (2.1)^2 - (1.9)^2 = ?$$",
       "options": ["4.99", "5.69", "3.69", "6.79", "4.49"],
       "correctIndex": 4,
-      [cite_start]"solution": "$$1.44 + 2.25 + 4.41 - 3.61 = 4.49$$. [cite: 4594-4596]"
+      "solution": "$$1.44 + 2.25 + 4.41 - 3.61 = 4.49$$. [cite: 4594-4596]"
     },
     {
       "text": "What should come in place of (?): $$\\sqrt{484} \\div \\frac{11^2}{8} + ? = \\frac{38}{11}$$",
@@ -168,7 +168,7 @@
       "text": "What should come in place of (?): $$\\frac{32}{35} \\div \\frac{1}{5} \\times \\frac{7}{8} \\div \\frac{2}{35} = ?$$",
       "options": ["60", "80", "75", "90", "70"],
       "correctIndex": 4,
-      [cite_start]"solution": "$$\\frac{32}{35} \\times 5 \\times \\frac{7}{8} \\times \\frac{35}{2} = 70$$. [cite: 4606]"
+      "solution": "$$\\frac{32}{35} \\times 5 \\times \\frac{7}{8} \\times \\frac{35}{2} = 70$$. [cite: 4606]"
     },
     {
       "text": "What should come in place of (?): $$\\frac{15}{100} \\times \\frac{200}{700} \\times ? = 240$$",
