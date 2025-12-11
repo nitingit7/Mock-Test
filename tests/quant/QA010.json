@@ -1,0 +1,126 @@
+{
+  "title": "Quant Speed Maths: Peed Math [Moderate] #QA010",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "text": "Simplify: $$45\\% \\text{ of } 1600 - 34\\% \\text{ of } 850 = ?$$",
+      "options": ["421", "441", "431", "411", "451"],
+      "correctIndex": 2,
+      "solution": "$$45\\% \\text{ of } 1600 = \\frac{45}{100} \\times 1600 = 45 \\times 16 = 720$$. \n$$34\\% \\text{ of } 850 = \\frac{17}{50} \\times 850 = 17 \\times 17 = 289$$ (Or use $$17\\% \\text{ of } 1700$$). \n$$720 - 289 = 431$$."
+    },
+    {
+      "text": "Find the missing term: 12, 13, 22, 47, 96, ?",
+      "options": ["177", "196", "185", "217", "165"],
+      "correctIndex": 0,
+      "solution": "Differences are: \n$$13 - 12 = 1$$ ($$1^2$$) \n$$22 - 13 = 9$$ ($$3^2$$) \n$$47 - 22 = 25$$ ($$5^2$$) \n$$96 - 47 = 49$$ ($$7^2$$) \nNext difference should be $$9^2 = 81$$. \n$$96 + 81 = 177$$."
+    },
+    {
+      "text": "Simplify: $$\\sqrt{576} \\div 12 \\times 15 + 25\\% \\text{ of } 480 = ?$$",
+      "options": ["140", "160", "150", "130", "170"],
+      "correctIndex": 2,
+      "solution": "$$\\sqrt{576} = 24$$. \n$$24 \\div 12 = 2$$. \n$$2 \\times 15 = 30$$. \n$$25\\% \\text{ of } 480 = \\frac{1}{4} \\times 480 = 120$$. \n$$30 + 120 = 150$$."
+    },
+    {
+      "text": "Find the missing term: 6, 7, 16, 51, 208, ?",
+      "options": ["1045", "1040", "1035", "1050", "1055"],
+      "correctIndex": 0,
+      "solution": "Pattern is $$\\times 1 + 1$$, $$\\times 2 + 2$$, $$\\times 3 + 3$$, $$\\times 4 + 4$$, $$\\times 5 + 5$$. \n$$6 \\times 1 + 1 = 7$$ \n$$7 \\times 2 + 2 = 16$$ \n$$16 \\times 3 + 3 = 51$$ \n$$51 \\times 4 + 4 = 208$$ \n$$208 \\times 5 + 5 = 1040 + 5 = 1045$$."
+    },
+    {
+      "text": "Simplify: $$7 \\frac{1}{2} + 4 \\frac{3}{4} - 2 \\frac{1}{8} = ?$$",
+      "options": ["10 \\frac{3}{8}", "10 \\frac{1}{8}", "9 \\frac{7}{8}", "9 \\frac{5}{8}", "10 \\frac{5}{8}"],
+      "correctIndex": 1,
+      "solution": "Integer parts: $$7 + 4 - 2 = 9$$. \nFraction parts: $$\\frac{1}{2} + \\frac{3}{4} - \\frac{1}{8}$$ \nLCM is 8: $$\\frac{4}{8} + \\frac{6}{8} - \\frac{1}{8} = \\frac{9}{8} = 1 \\frac{1}{8}$$. \nTotal: $$9 + 1 \\frac{1}{8} = 10 \\frac{1}{8}$$."
+    },
+    {
+      "text": "Find the missing term: 100, 108, 92, 116, 84, ?",
+      "options": ["120", "124", "128", "132", "118"],
+      "correctIndex": 1,
+      "solution": "Pattern: Alternating addition and subtraction of multiples of 8. \n$$+8$$, $$-16$$, $$+24$$, $$-32$$. \nNext is $$+40$$. \n$$84 + 40 = 124$$."
+    },
+    {
+      "text": "Simplify: $$56\\% \\text{ of } 250 + 25\\% \\text{ of } 560 = ?$$",
+      "options": ["240", "260", "300", "280", "320"],
+      "correctIndex": 3,
+      "solution": "Use the property $$A\\% \\text{ of } B = B\\% \\text{ of } A$$. \n$$56\\% \\text{ of } 250 = 250\\% \\text{ of } 56 = 2.5 \\times 56 = 140$$. \n$$25\\% \\text{ of } 560 = \\frac{1}{4} \\times 560 = 140$$. \n$$140 + 140 = 280$$."
+    },
+    {
+      "text": "Find the missing term: 4, 2, 2, 3, 6, 15, ?",
+      "options": ["40", "50", "45", "35", "60"],
+      "correctIndex": 2,
+      "solution": "Pattern: Decimal multiplication. \n$$4 \\times 0.5 = 2$$ \n$$2 \\times 1 = 2$$ \n$$2 \\times 1.5 = 3$$ \n$$3 \\times 2 = 6$$ \n$$6 \\times 2.5 = 15$$ \n$$15 \\times 3 = 45$$."
+    },
+    {
+      "text": "Simplify: $$(360 \\div 24) \\times 12 + 15^2 = ?$$",
+      "options": ["405", "395", "415", "385", "425"],
+      "correctIndex": 0,
+      "solution": "$$360 \\div 24 = 15$$. \n$$15 \\times 12 = 180$$. \n$$15^2 = 225$$. \n$$180 + 225 = 405$$."
+    },
+    {
+      "text": "Find the missing term: 12, 14, 31, 97, 393, ?",
+      "options": ["1961", "1971", "1951", "1981", "1941"],
+      "correctIndex": 1,
+      "solution": "Pattern: $$\\times n + (n+1)$$. \n$$12 \\times 1 + 2 = 14$$ \n$$14 \\times 2 + 3 = 31$$ \n$$31 \\times 3 + 4 = 97$$ \n$$97 \\times 4 + 5 = 393$$ \n$$393 \\times 5 + 6 = 1965 + 6 = 1971$$."
+    },
+    {
+      "text": "Simplify: $$13^2 - 8^2 + 5^3 = ?$$",
+      "options": ["220", "240", "230", "210", "250"],
+      "correctIndex": 2,
+      "solution": "$$13^2 = 169$$. \n$$8^2 = 64$$. \n$$5^3 = 125$$. \n$$169 - 64 + 125 = 105 + 125 = 230$$."
+    },
+    {
+      "text": "Find the missing term: 50, 54, 45, 61, 36, ?",
+      "options": ["72", "75", "68", "82", "66"],
+      "correctIndex": 0,
+      "solution": "Pattern: Squares added/subtracted. \n$$50 + 2^2 (4) = 54$$ \n$$54 - 3^2 (9) = 45$$ \n$$45 + 4^2 (16) = 61$$ \n$$61 - 5^2 (25) = 36$$ \n$$36 + 6^2 (36) = 72$$."
+    },
+    {
+      "text": "Simplify: $$450 \\div 15 \\times 4 - 35\\% \\text{ of } 200 = ?$$",
+      "options": ["60", "40", "50", "70", "30"],
+      "correctIndex": 2,
+      "solution": "$$450 \\div 15 = 30$$. \n$$30 \\times 4 = 120$$. \n$$35\\% \\text{ of } 200 = 70$$. \n$$120 - 70 = 50$$."
+    },
+    {
+      "text": "Approximation: $$(24.01 \\times 14.99) \\div 5.98 + 11.99^2 = ?$$",
+      "options": ["214", "204", "194", "224", "184"],
+      "correctIndex": 1,
+      "solution": "$$24 \\times 15 = 360$$. \n$$360 \\div 6 = 60$$. \n$$12^2 = 144$$. \n$$60 + 144 = 204$$."
+    },
+    {
+      "text": "Find the missing term: 10, 14, 23, 39, 64, ?",
+      "options": ["98", "102", "100", "110", "105"],
+      "correctIndex": 2,
+      "solution": "Differences: 4, 9, 16, 25 (Squares). \nNext difference: $$36$$. \n$$64 + 36 = 100$$."
+    },
+    {
+      "text": "Simplify: $$125\\% \\text{ of } 64 + 37.5\\% \\text{ of } 120 = ?$$",
+      "options": ["115", "125", "135", "105", "145"],
+      "correctIndex": 1,
+      "solution": "$$125\\% = 5/4$$. $$\\frac{5}{4} \\times 64 = 5 \\times 16 = 80$$. \n$$37.5\\% = 3/8$$. $$\\frac{3}{8} \\times 120 = 3 \\times 15 = 45$$. \n$$80 + 45 = 125$$."
+    },
+    {
+      "text": "Approximation: $$\\sqrt{1445} \\times \\sqrt{15.99} \\div 2.01 = ?$$",
+      "options": ["72", "76", "78", "80", "74"],
+      "correctIndex": 1,
+      "solution": "$$\\sqrt{1445} \\approx 38$$ (since $$38^2 = 1444$$). \n$$\\sqrt{16} = 4$$. \n$$38 \\times 4 = 152$$. \n$$152 \\div 2 = 76$$."
+    },
+    {
+      "text": "Simplify: $$(42 \\times 15) \\div 9 + ? = 110$$",
+      "options": ["30", "40", "50", "20", "60"],
+      "correctIndex": 1,
+      "solution": "$$42 \\times 15 = 630$$. \n$$630 \\div 9 = 70$$. \n$$70 + ? = 110$$. \n$$? = 40$$."
+    },
+    {
+      "text": "Find the missing term: 2, 3, 7, 25, 121, ?",
+      "options": ["721", "720", "727", "601", "700"],
+      "correctIndex": 0,
+      "solution": "Pattern: $$\\times 1 + 1$$, $$\\times 2 + 1$$, $$\\times 3 + 4$$, $$\\times 4 + 21$$... No, let's re-evaluate. \nTry: $$\\times 1 + 1 = 3$$ \n$$3 \\times 2 + 1 = 7$$ \n$$7 \\times 3 + 4 = 25$$ (Doesn't fit well). \nTry: $$2 \\times 2 - 1 = 3$$ \n$$3 \\times 3 - 2 = 7$$ \n$$7 \\times 4 - 3 = 25$$ \n$$25 \\times 5 - 4 = 121$$ \n$$121 \\times 6 - 5 = 726 - 5 = 721$$. This pattern works."
+    },
+    {
+      "text": "Simplify: $$65\\% \\text{ of } 1200 \\div 13 + 12 = ?$$",
+      "options": ["70", "72", "68", "75", "65"],
+      "correctIndex": 1,
+      "solution": "$$65\\% \\text{ of } 1200 = 65 \\times 12 = 780$$. \n$$780 \\div 13 = 60$$. \n$$60 + 12 = 72$$."
+    }
+  ]
+    }
