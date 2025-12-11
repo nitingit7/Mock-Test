@@ -1,0 +1,246 @@
+{
+  "title": "RRB Clerk Prelims: Quant [Moderate] #QA012",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "text": "Simplify: $$40\\% \\text{ of } 250 + 50\\% \\text{ of } 120 = ?$$",
+      "options": ["150", "160", "170", "140", "180"],
+      "correctIndex": 1,
+      "solution": "40% of 250 = 100. 50% of 120 = 60. 100 + 60 = 160."
+    },
+    {
+      "text": "Simplify: $$15^2 - 8^2 + 5^3 = ?$$",
+      "options": ["276", "296", "286", "266", "256"],
+      "correctIndex": 2,
+      "solution": "225 - 64 + 125 = 161 + 125 = 286."
+    },
+    {
+      "text": "Simplify: $$\\sqrt{961} + \\sqrt{784} - 12 = ?$$",
+      "options": ["45", "49", "47", "51", "43"],
+      "correctIndex": 2,
+      "solution": "31 + 28 - 12 = 59 - 12 = 47."
+    },
+    {
+      "text": "Simplify: $$12 \\times 15 \\div 4 + 20 = ?$$",
+      "options": ["60", "70", "65", "55", "75"],
+      "correctIndex": 2,
+      "solution": "12 * 15 = 180. 180 / 4 = 45. 45 + 20 = 65."
+    },
+    {
+      "text": "Simplify: $$2400 \\div 12 \\div 5 = ?$$",
+      "options": ["40", "50", "30", "60", "20"],
+      "correctIndex": 0,
+      "solution": "2400 / 12 = 200. 200 / 5 = 40."
+    },
+    {
+      "text": "Simplify: $$65\\% \\text{ of } 800 - 30\\% \\text{ of } 500 = ?$$",
+      "options": ["350", "360", "370", "380", "390"],
+      "correctIndex": 2,
+      "solution": "65% of 800 = 520. 30% of 500 = 150. 520 - 150 = 370."
+    },
+    {
+      "text": "Simplify: $$2\\frac{1}{2} + 3\\frac{1}{4} + 1\\frac{1}{4} = ?$$",
+      "options": ["6", "8", "7", "7.5", "6.5"],
+      "correctIndex": 2,
+      "solution": "Integers: 2+3+1 = 6. Fractions: 1/2 + 1/4 + 1/4 = 1/2 + 1/2 = 1. Total = 7."
+    },
+    {
+      "text": "Simplify: $$18 \\times 20 - 15 \\times 10 = ?$$",
+      "options": ["200", "220", "210", "230", "190"],
+      "correctIndex": 2,
+      "solution": "360 - 150 = 210."
+    },
+    {
+      "text": "Simplify: $$13^3 \\div 13 \\div 13 = ?$$",
+      "options": ["1", "13", "169", "26", "0"],
+      "correctIndex": 1,
+      "solution": "13^3 / 13 = 13^2 = 169. 169 / 13 = 13."
+    },
+    {
+      "text": "Simplify: $$\\sqrt{144} \\times 5 + 12 = ?$$",
+      "options": ["70", "72", "74", "68", "76"],
+      "correctIndex": 1,
+      "solution": "12 * 5 = 60. 60 + 12 = 72."
+    },
+    {
+      "text": "Simplify: $$450 \\div 9 \\times 4 = ?$$",
+      "options": ["180", "220", "200", "160", "240"],
+      "correctIndex": 2,
+      "solution": "450 / 9 = 50. 50 * 4 = 200."
+    },
+    {
+      "text": "Simplify: $$120\\% \\text{ of } 60 + 10\\% \\text{ of } 500 = ?$$",
+      "options": ["112", "132", "122", "142", "102"],
+      "correctIndex": 2,
+      "solution": "1.2 * 60 = 72. 0.1 * 500 = 50. 72 + 50 = 122."
+    },
+    {
+      "text": "Simplify: $$(250 \\div 5) + (180 \\div 6) = ?$$",
+      "options": ["70", "90", "80", "60", "100"],
+      "correctIndex": 2,
+      "solution": "50 + 30 = 80."
+    },
+    {
+      "text": "Simplify: $$14 \\times 14 - \\sqrt{196} = ?$$",
+      "options": ["186", "172", "182", "192", "162"],
+      "correctIndex": 2,
+      "solution": "196 - 14 = 182."
+    },
+    {
+      "text": "Simplify: $$500 \\times 0.2 + 200 \\times 0.5 = ?$$",
+      "options": ["150", "250", "200", "300", "100"],
+      "correctIndex": 2,
+      "solution": "100 + 100 = 200."
+    },
+    {
+      "text": "Find the next term: 6, 12, 24, 48, 96, ?",
+      "options": ["182", "192", "172", "202", "162"],
+      "correctIndex": 1,
+      "solution": "Double the previous number. 96 * 2 = 192."
+    },
+    {
+      "text": "Find the next term: 10, 15, 25, 40, 60, ?",
+      "options": ["80", "90", "85", "95", "75"],
+      "correctIndex": 2,
+      "solution": "Differences: 5, 10, 15, 20. Next difference is 25. 60 + 25 = 85."
+    },
+    {
+      "text": "Find the next term: 5, 6, 10, 19, 35, ?",
+      "options": ["50", "60", "55", "65", "70"],
+      "correctIndex": 1,
+      "solution": "Differences: 1, 4, 9, 16 (Squares). Next diff is 25. 35 + 25 = 60."
+    },
+    {
+      "text": "Find the missing term: 100, 90, 80, 70, ?, 50",
+      "options": ["65", "55", "60", "58", "62"],
+      "correctIndex": 2,
+      "solution": "Subtract 10 pattern. 70 - 10 = 60."
+    },
+    {
+      "text": "Find the next term: 2, 3, 5, 8, 12, ?",
+      "options": ["16", "18", "17", "15", "19"],
+      "correctIndex": 2,
+      "solution": "Diffs: +1, +2, +3, +4. Next is +5. 12 + 5 = 17."
+    },
+    {
+      "text": "The average of 5 numbers is 20. Find the sum of the numbers.",
+      "options": ["80", "120", "100", "90", "110"],
+      "correctIndex": 2,
+      "solution": "Sum = Average * Count = 20 * 5 = 100."
+    },
+    {
+      "text": "A can do a work in 10 days and B in 15 days. In how many days can they complete it together?",
+      "options": ["5 days", "7 days", "6 days", "8 days", "4 days"],
+      "correctIndex": 2,
+      "solution": "(10 * 15) / (10 + 15) = 150 / 25 = 6 days."
+    },
+    {
+      "text": "The Cost Price of an article is Rs. 500. If it is sold at a profit of 10%, find the Selling Price.",
+      "options": ["Rs. 540", "Rs. 550", "Rs. 560", "Rs. 520", "Rs. 530"],
+      "correctIndex": 1,
+      "solution": "Profit = 10% of 500 = 50. SP = 500 + 50 = 550."
+    },
+    {
+      "text": "A train 100m long is running at 36 km/h. How long will it take to cross a pole?",
+      "options": ["12 sec", "8 sec", "10 sec", "15 sec", "20 sec"],
+      "correctIndex": 2,
+      "solution": "Speed = 36 * 5/18 = 10 m/s. Time = Distance/Speed = 100/10 = 10 sec."
+    },
+    {
+      "text": "Two persons A and B invest money in the ratio 2:3. If the total profit is Rs. 500, find A's share.",
+      "options": ["Rs. 150", "Rs. 250", "Rs. 200", "Rs. 300", "Rs. 100"],
+      "correctIndex": 2,
+      "solution": "Total parts = 5. 1 part = 100. A's share = 2 * 100 = 200."
+    },
+    {
+      "text": "Find the Simple Interest on Rs. 1000 for 2 years at 5% per annum.",
+      "options": ["Rs. 110", "Rs. 90", "Rs. 100", "Rs. 120", "Rs. 80"],
+      "correctIndex": 2,
+      "solution": "(1000 * 2 * 5) / 100 = 100."
+    },
+    {
+      "text": "Find the perimeter of a rectangle with length 10 cm and breadth 20 cm.",
+      "options": ["50 cm", "80 cm", "60 cm", "40 cm", "70 cm"],
+      "correctIndex": 2,
+      "solution": "Perimeter = 2 * (L + B) = 2 * (10 + 20) = 2 * 30 = 60."
+    },
+    {
+      "text": "A boat travels 20 km downstream in 2 hours. Find the downstream speed.",
+      "options": ["12 km/h", "15 km/h", "10 km/h", "8 km/h", "18 km/h"],
+      "correctIndex": 2,
+      "solution": "Speed = Distance / Time = 20 / 2 = 10 km/h."
+    },
+    {
+      "text": "The ratio of ages of Ram and Shyam is 4:5. If the sum of their ages is 45 years, find the difference between their ages.",
+      "options": ["3 years", "4 years", "5 years", "6 years", "2 years"],
+      "correctIndex": 2,
+      "solution": "9x = 45 => x = 5. Ages are 20 and 25. Difference = 5."
+    },
+    {
+      "text": "If 20% of a number is 40, find the number.",
+      "options": ["150", "250", "200", "180", "300"],
+      "correctIndex": 2,
+      "solution": "0.20 * x = 40 => x = 40 / 0.20 = 200."
+    },
+    {
+      "text": "DI Table Q31: Total students in School A (Boys: 200, Girls: 150) is?",
+      "options": ["300", "350", "400", "250", "450"],
+      "correctIndex": 1,
+      "solution": "200 + 150 = 350."
+    },
+    {
+      "text": "DI Table Q32: Ratio of Boys in School A (200) to Girls in School B (Girls: 200) is?",
+      "options": ["1:2", "2:1", "1:1", "3:2", "2:3"],
+      "correctIndex": 2,
+      "solution": "200 : 200 = 1 : 1."
+    },
+    {
+      "text": "DI Table Q33: Find the average number of Boys in School A (200), B (100), and C (150).",
+      "options": ["140", "160", "150", "130", "170"],
+      "correctIndex": 2,
+      "solution": "(200 + 100 + 150) / 3 = 450 / 3 = 150."
+    },
+    {
+      "text": "DI Table Q34: Girls in School C (150) is what percent of Boys in School B (100)?",
+      "options": ["100%", "120%", "150%", "200%", "50%"],
+      "correctIndex": 2,
+      "solution": "(150 / 100) * 100 = 150%."
+    },
+    {
+      "text": "DI Table Q35: Find the total number of students in all three schools (A: 350, B: 300, C: 300).",
+      "options": ["900", "1000", "950", "850", "1050"],
+      "correctIndex": 2,
+      "solution": "350 + (100+200) + (150+150) = 350 + 300 + 300 = 950."
+    },
+    {
+      "text": "DI Bar Graph Q36: If Jan sales are 50 Pens and 40 Pencils, find total items sold in Jan.",
+      "options": ["80", "100", "90", "110", "70"],
+      "correctIndex": 2,
+      "solution": "50 + 40 = 90."
+    },
+    {
+      "text": "DI Bar Graph Q37: Find the difference between Pencil sales in March (70) and Jan (40).",
+      "options": ["20", "40", "30", "50", "10"],
+      "correctIndex": 2,
+      "solution": "70 - 40 = 30."
+    },
+    {
+      "text": "DI Bar Graph Q38: Find the average Pencil sales over Jan (40), Feb (50), and Mar (70).",
+      "options": ["50", "55.33", "53.33", "60", "45.33"],
+      "correctIndex": 2,
+      "solution": "(40 + 50 + 70) / 3 = 160 / 3 = 53.33."
+    },
+    {
+      "text": "DI Bar Graph Q39: Find the ratio of Pens sold in Jan (50) to Pencils sold in Feb (50).",
+      "options": ["2:1", "1:2", "1:1", "3:2", "2:3"],
+      "correctIndex": 2,
+      "solution": "50 : 50 = 1 : 1."
+    },
+    {
+      "text": "DI Bar Graph Q40: Find total items sold in Feb (Pen: 60, Pencil: 50).",
+      "options": ["100", "120", "110", "130", "90"],
+      "correctIndex": 2,
+      "solution": "60 + 50 = 110."
+    }
+  ]
+        }
