@@ -1,0 +1,186 @@
+{
+  "title": "RRB Clerk Prelims Quant (7th Dec Shift 1) #QA014",
+  "timeLimit": 20,
+  "questions": [
+    {
+      "text": "A mixture contains milk and water in the ratio 2:1. The total quantity of the mixture is 30 liters. If x liters of water are added to the mixture, the ratio of milk to water becomes 2:3. Find the value of x.",
+      "options": ["10", "20", "30", "15", "5"],
+      "correctIndex": 1,
+      [cite_start]"solution": "Milk = $$\\frac{2}{3} \\times 30 = 20$$ liters. Water = 10 liters. New ratio 2:3 $$\\rightarrow \\frac{20}{10+x} = \\frac{2}{3} \\rightarrow 60 = 20 + 2x \\rightarrow 2x = 40 \\rightarrow x = 20$$. [cite: 4327-4340]"
+    },
+    {
+      "text": "P and Q started a business by investing Rs. 8,000 and Rs. 6,000 respectively. After x months, Q withdrew his investment. At the end of the year, Q's share of profit was Rs. 2,000 out of a total profit of Rs. 6,000. Find the value of x.",
+      "options": ["8", "9", "6", "4", "5"],
+      "correctIndex": 0,
+      "solution": "P's profit = $$6000 - 2000 = 4000$$. Ratio P:Q = 4000:2000 = 2:1. Ratio of Investment $$\times$$ Time: $$(8000 \\times 12) : (6000 \\times x) = 96000 : 6000x$$. [cite_start]$$\\frac{96000}{6000x} = \\frac{2}{1} \\rightarrow \\frac{16}{x} = 2 \\rightarrow x = 8$$. [cite: 4342-4360]"
+    },
+    {
+      "text": "The present ages of A and B are in the ratio 4:3 respectively. Three years ago, the ratio of their ages was 7:5. Find the age of A after 4 years from now (in years).",
+      "options": ["20", "25", "32", "24", "28"],
+      "correctIndex": 4,
+      "solution": "Present ages 4x, 3x. $$\\frac{4x-3}{3x-3} = \\frac{7}{5} \\rightarrow 20x - 15 = 21x - 21 \\rightarrow x = 6$$. [cite_start]A's present age = 24. Age after 4 years = 28. [cite: 4361-4377]"
+    },
+    {
+      "text": "The principal amount is Rs. 8,000, and the rate of interest is 10% per annum. If the simple interest earned is Rs. 2,000, find the time period (in years).",
+      "options": ["4.5", "4", "2", "2.5", "3"],
+      "correctIndex": 3,
+      [cite_start]"solution": "$$SI = \\frac{P \\times R \\times T}{100} \\rightarrow 2000 = \\frac{8000 \\times 10 \\times T}{100} \\rightarrow 2000 = 800T \\rightarrow T = 2.5$$. [cite: 4380-4395]"
+    },
+    {
+      "text": "The downstream speed of a boat is 18 km/h, and the speed of the stream is 3 km/h. Find the time taken (in hours) by the boat to cover a distance of 30 km upstream.",
+      "options": ["3.5", "2", "2.5", "4.5", "4"],
+      "correctIndex": 2,
+      "solution": "Boat speed in still water = $$18 - 3 = 15$$ km/h. Upstream speed = $$15 - 3 = 12$$ km/h. [cite_start]Time = $$\\frac{30}{12} = 2.5$$ hours. [cite: 4396-4409]"
+    },
+    {
+      "text": "A train of length 180 meters crosses a pole in 9 seconds. Find the time taken (in seconds) by the train to cross a bridge of length 270 meters.",
+      "options": ["18.5", "20", "22.5", "14.5", "15.5"],
+      "correctIndex": 2,
+      "solution": "Speed = $$\\frac{180}{9} = 20$$ m/s. Total distance = $$180 + 270 = 450$$ m. [cite_start]Time = $$\\frac{450}{20} = 22.5$$ seconds. [cite: 4410-4425]"
+    },
+    {
+      "text": "A man spends 25% of his monthly salary on rent. Out of the remaining amount, he spends 15% on clothes, and after that, he spends 20% on travelling. He saves the rest. If his savings amount to Rs. 6,120, find his monthly salary (in Rs).",
+      "options": ["17500", "10000", "11500", "14000", "12000"],
+      "correctIndex": 4,
+      "solution": "Remaining sequence: $$x \\times 0.75 \\times 0.85 \\times 0.80 = 6120$$. [cite_start]$$\\rightarrow x \\times 0.51 = 6120 \\rightarrow x = 12000$$. [cite: 4426-4441]"
+    },
+    {
+      "text": "A man invested Rs. P at a rate of 20% per annum compounded annually for 2 years. If the amount at the end of 2 years is Rs. 10,800, find the amount he invested (in Rs).",
+      "options": ["7500", "8000", "8500", "9000", "45000"],
+      "correctIndex": 0,
+      [cite_start]"solution": "$$10800 = P(1 + \\frac{20}{100})^2 \\rightarrow 10800 = P(1.2)^2 \\rightarrow 10800 = 1.44P \\rightarrow P = 7500$$. [cite: 4442-4464]"
+    },
+    {
+      "text": "A shopkeeper marks up the price of an article by 40% above its cost price and allows a 10% discount on the marked price. If he earns a profit of Rs. 104 on the article, find the cost price of the article (in Rs).",
+      "options": ["100", "200", "400", "600", "500"],
+      "correctIndex": 2,
+      "solution": "Let CP = 100x. MP = 140x. SP after 10% discount = $$140x \\times 0.9 = 126x$$. Profit = $$126x - 100x = 26x$$. $$26x = 104 \\rightarrow x = 4$$. [cite_start]CP = 400. [cite: 4465-4482]"
+    },
+    {
+      "text": "A and B together can complete a piece of work in 12 days, and A alone can complete it in 20 days. Find the time taken (in days) by B alone to complete 60% of the work.",
+      "options": ["15", "14", "18", "16", "20"],
+      "correctIndex": 2,
+      "solution": "Efficiency: A+B = 5, A = 3 $$\\rightarrow$$ B = 2 (Total work 60). 60% of work = 36 units. [cite_start]Time for B = $$\\frac{36}{2} = 18$$ days. [cite: 4483-4497]"
+    },
+    {
+      "text": "Find out the wrong number: 34, 15, 15, 22.5, 45, 112.5, 337.5",
+      "options": ["34", "15", "22.5", "45", "112.5"],
+      "correctIndex": 0,
+      "solution": "Pattern is $$\\times 0.5, \\times 1, \\times 1.5, \\times 2...$$ Starting with 30 would fit ($$30 \\times 0.5 = 15$$). [cite_start]34 is wrong. [cite: 4499-4513]"
+    },
+    {
+      "text": "Find out the wrong number: 56, 60, 71, 91, 131, 211, 371",
+      "options": ["56", "60", "71", "91", "211"],
+      "correctIndex": 1,
+      "solution": "Differences: 4, 11, 20, 40, 80, 160. Pattern should be $$5, 10, 20, 40...$$ ($$\\times 2$$). [cite_start]The difference 4 and 11 are incorrect, pointing to 60 being wrong. [cite: 4514-4527]"
+    },
+    {
+      "text": "Find out the wrong number: 105, 108, 111, 114, 117, 120, 122",
+      "options": ["105", "114", "122", "111", "117"],
+      "correctIndex": 2,
+      "solution": "The series is increasing by 3. $$120 + 3 = 123$$. [cite_start]122 is wrong. [cite: 4529-4530]"
+    },
+    {
+      "text": "Find out the wrong number: 201, 199, 206, 190, 215, 179, 228",
+      "options": ["228", "215", "199", "201", "190"],
+      "correctIndex": 2,
+      "solution": "Pattern: $$-2^2, +3^2, -4^2, +5^2, -6^2...$$ i.e., $$-4, +9, -16...$$ $$201 - 4 = 197$$. [cite_start]199 is wrong. [cite: 4530]"
+    },
+    {
+      "text": "Find out the wrong number: 6, 12, 28, 59, 120, 241",
+      "options": ["120", "241", "12", "6", "28"],
+      "correctIndex": 3,
+      "solution": "Pattern: $$\\times 2 + 5, \\times 2 + 4, \\times 2 + 3...$$ Working backwards from 241 ($$120 \\times 2 + 1$$), $$59 \\times 2 + 2 = 120$$, $$28 \\times 2 + 3 = 59$$, $$12 \\times 2 + 4 = 28$$. First term should be $$3.5$$ ($$3.5 \\times 2 + 5 = 12$$). [cite_start]6 is wrong. [cite: 4530]"
+    },
+    {
+      "text": "What should come in place of (?): $$4769 - (3267 + 2425 - 961) = ?$$",
+      "options": ["35", "48", "43", "38", "47"],
+      "correctIndex": 3,
+      "solution": "$$3267 + 2425 - 961 = 4731$$. [cite_start]$$4769 - 4731 = 38$$. [cite: 4559-4561]"
+    },
+    {
+      "text": "What should come in place of (?): $$1217 + 841 - 724 + 819 = ? + 1843$$",
+      "options": ["210", "310", "360", "270", "410"],
+      "correctIndex": 1,
+      [cite_start]"solution": "$$1217 + 841 + 819 - 724 - 1843 = 310$$. [cite: 4562-4565]"
+    },
+    {
+      "text": "What should come in place of (?): $$0.06 \\times 0.84 = ? \\times 1.2 \\times 0.015$$",
+      "options": ["8.2", "6.4", "2.6", "3.8", "2.8"],
+      "correctIndex": 4,
+      "solution": "$$? [cite_start]= \\frac{0.06 \\times 0.84}{1.2 \\times 0.015} = 2.8$$. [cite: 4566-4568]"
+    },
+    {
+      "text": "What should come in place of (?): $$8.41 + 6.25 + 0.79 = ? - 0.55$$",
+      "options": ["17", "14.9", "13.9", "16", "14.7"],
+      "correctIndex": 3,
+      "solution": "$$? [cite_start]= 15.45 + 0.55 = 16$$. [cite: 4569-4570]"
+    },
+    {
+      "text": "What should come in place of (?): $$616 + 472 - 811 + 317 = ? + 576$$",
+      "options": ["28", "16", "24", "18", "14"],
+      "correctIndex": 3,
+      [cite_start]"solution": "$$594 - 576 = 18$$. [cite: 4571-4573]"
+    },
+    {
+      "text": "What should come in place of (?): $$12.5 \\times 80 + 37.5 \\times 16 - 6.25 \\times 112 = ?$$",
+      "options": ["1000", "900", "2300", "600", "1300"],
+      "correctIndex": 1,
+      [cite_start]"solution": "$$(\\frac{100}{8} \\times 80) + (\\frac{300}{8} \\times 16) - (\\frac{100}{16} \\times 112) = 1000 + 600 - 700 = 900$$. [cite: 4575-4578]"
+    },
+    {
+      "text": "What should come in place of (?): $$3025 - \\sqrt{2116} = ?^2$$",
+      "options": ["81", "9", "3", "27", "729"],
+      "correctIndex": 2,
+      "solution": "Assuming typo in PDF source (3025 is typically a square, but here likely a number): $$55 - 46 = 9$$. $$?^2 = 9 \\rightarrow ? = 3$$. (Note: Source text has 3025, but solution uses 55, implying $$\\sqrt{3025}$$)[cite_start]. [cite: 4579-4582]"
+    },
+    {
+      "text": "What should come in place of (?): $$\\sqrt{?} + \\sqrt{324} + \\sqrt{361} = \\frac{1}{5} \\text{ of } 290$$",
+      "options": ["400", "441", "361", "484", "289"],
+      "correctIndex": 1,
+      "solution": "$$\\sqrt{?} + 18 + 19 = 58 \\rightarrow \\sqrt{?} = 58 - 37 = 21 \\rightarrow ? [cite_start]= 441$$. [cite: 4583-4587]"
+    },
+    {
+      "text": "What should come in place of (?): $$1674 \\div 27 \\times 9 + 18 = ?^2$$",
+      "options": ["26", "23", "24", "35", "18"],
+      "correctIndex": 2,
+      "solution": "$$62 \\times 9 + 18 = 558 + 18 = 576$$. $$?^2 = 576 \\rightarrow ? [cite_start]= 24$$. [cite: 4589-4593]"
+    },
+    {
+      "text": "What should come in place of (?): $$(1.2)^2 + (1.5)^2 + (2.1)^2 - (1.9)^2 = ?$$",
+      "options": ["4.99", "5.69", "3.69", "6.79", "4.49"],
+      "correctIndex": 4,
+      [cite_start]"solution": "$$1.44 + 2.25 + 4.41 - 3.61 = 4.49$$. [cite: 4594-4596]"
+    },
+    {
+      "text": "What should come in place of (?): $$\\sqrt{484} \\div \\frac{11^2}{8} + ? = \\frac{38}{11}$$",
+      "options": ["22", "2", "1", "11", "4"],
+      "correctIndex": 1,
+      "solution": "$$22 \\times \\frac{8}{121} + ? = \\frac{38}{11} \\rightarrow \\frac{16}{11} + ? = \\frac{38}{11} \\rightarrow ? [cite_start]= \\frac{22}{11} = 2$$. [cite: 4597-4600]"
+    },
+    {
+      "text": "What should come in place of (?): $$\\frac{(12+44)}{8} \\times 28 = ?^2$$",
+      "options": ["13", "16", "17", "14", "19"],
+      "correctIndex": 3,
+      "solution": "$$\\frac{56}{8} \\times 28 = 7 \\times 28 = 196$$. $$?^2 = 196 \\rightarrow ? [cite_start]= 14$$. [cite: 4601-4605]"
+    },
+    {
+      "text": "What should come in place of (?): $$\\frac{32}{35} \\div \\frac{1}{5} \\times \\frac{7}{8} \\div \\frac{2}{35} = ?$$",
+      "options": ["60", "80", "75", "90", "70"],
+      "correctIndex": 4,
+      [cite_start]"solution": "$$\\frac{32}{35} \\times 5 \\times \\frac{7}{8} \\times \\frac{35}{2} = 70$$. [cite: 4606]"
+    },
+    {
+      "text": "What should come in place of (?): $$\\frac{15}{100} \\times \\frac{200}{700} \\times ? = 240$$",
+      "options": ["5800", "6300", "6100", "5600", "5300"],
+      "correctIndex": 3,
+      "solution": "$$? [cite_start]= 240 \\times \\frac{700}{200} \\times \\frac{100}{15} = 240 \\times 3.5 \\times 6.66... = 5600$$. [cite: 4607-4608]"
+    },
+    {
+      "text": "What should come in place of (?): $$23 \\div 48 \\times 576 = ? \\times \\frac{3}{2}$$",
+      "options": ["148", "194", "176", "154", "184"],
+      "correctIndex": 4,
+      "solution": "$$23 \\times \\frac{1}{48} \\times 576 = 23 \\times 12 = 276$$. [cite_start]$$276 \\times \\frac{2}{3} = 184$$. [cite: 4609-4612]"
+    }
+  ]
+    }
