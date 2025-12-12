@@ -1,0 +1,286 @@
+{
+  "title": "RRB Clerk Prelims: Reasoning (7th Dec Shift 2) #RA005",
+  "timeLimit": 25,
+  "questions": [
+    {
+      "id": "1",
+      "text": "Which element is 12th from the left end?",
+      "options": ["A", "9", "8", "$", "6"],
+      "correctIndex": 3,
+      "solution": "Based on the given series: T % 7 Q B @ 3 A M & 9 $ Z 8 R ! 6 # T 2 ^ K 9 L $ C. Counting 12th from left gives $. [Source: S1 Solution]"
+    },
+    {
+      "id": "2",
+      "text": "How many digits are there in the series that are immediately followed by a symbol and preceded by letter?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 0,
+      "solution": "The condition is Letter -> Digit -> Symbol. There is one such pair: T2^. [Source: S2 Solution]"
+    },
+    {
+      "id": "3",
+      "text": "Which element is 4th to the right of the 3rd digit from left end?",
+      "options": ["8", "K", "6", "#", "R"],
+      "correctIndex": 4,
+      "solution": "3rd digit from left is 9. 4th element to the right of 9 is R. [Source: S3 Solution]"
+    },
+    {
+      "id": "4",
+      "text": "If all the symbols are dropped from the series, then which element is sixth from the left end?",
+      "options": ["A", "M", "3", "B", "K"],
+      "correctIndex": 0,
+      "solution": "Series without symbols: T 7 Q B 3 A M 9 Z 8 R 6 T 2 K 9 L C. 6th from left is A. [Source: S4 Solution]"
+    },
+    {
+      "id": "5",
+      "text": "How many letters in the series are immediately preceded by a symbol and immediately followed by a letter?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 4,
+      "solution": "Condition: Symbol -> Letter -> Letter. No such combination is found. [Source: S5 Solution]"
+    },
+    {
+      "id": "6",
+      "text": "Who was born three persons after G?",
+      "options": ["A", "E", "F", "G", "D"],
+      "correctIndex": 2,
+      "solution": "Based on the arrangement: Mon-G, Tue-D, Wed-C, Thu-F, Fri-A, Sat-E, Sun-B. Three persons after G (Monday) is F (Thursday). [Source: S6 Solution]"
+    },
+    {
+      "id": "7",
+      "text": "How many persons were born between E and F?",
+      "options": ["One", "Two", "Three", "None", "Four"],
+      "correctIndex": 0,
+      "solution": "E is born on Saturday, F on Thursday. Person between them is A (Friday). Total 1. [Source: S7 Solution]"
+    },
+    {
+      "id": "8",
+      "text": "Which of the following combinations is correct?",
+      "options": ["E - Tuesday", "F - Wednesday", "D - Friday", "A - Saturday", "G - Monday"],
+      "correctIndex": 4,
+      "solution": "From the solution table, G is born on Monday. [Source: S8 Solution]"
+    },
+    {
+      "id": "9",
+      "text": "Who was born on Sunday?",
+      "options": ["A", "B", "D", "E", "F"],
+      "correctIndex": 1,
+      "solution": "From the solution table, B was born on Sunday. [Source: S9 Solution]"
+    },
+    {
+      "id": "10",
+      "text": "Which of the following statements is/are not true? I. Three persons was born before A. II. F was born on Thursday. III. No person was born between G and C.",
+      "options": ["Both I and III", "Only III", "Only II", "Both I and II", "All I, II and III"],
+      "correctIndex": 0,
+      "solution": "I is false (4 born before A). III is false (D born between G and C). II is true. Thus, not true are I and III. [Source: S10 Solution]"
+    },
+    {
+      "id": "11",
+      "text": "Statements: P < Q > J >= R = K < T < U. Conclusions: I. Q > T II. U > R",
+      "options": ["Only conclusion I is true", "Only conclusion II is true", "Either conclusion I or II is true", "Neither conclusion I nor II is true", "Both conclusions I and II are true"],
+      "correctIndex": 1,
+      "solution": "I. Q > T is False. II. U > R is True (as R = K < T < U). [Source: S11 Solution]"
+    },
+    {
+      "id": "12",
+      "text": "Statements: A >= E > N = O <= S < G = I. Conclusions: I. E > G II. A < S",
+      "options": ["Only conclusion I is true", "Only conclusion II is true", "Either conclusion I or II is true", "Neither conclusion I nor II is true", "Both conclusions I and II are true"],
+      "correctIndex": 3,
+      "solution": "I. E > G is False. II. A < S is False. [Source: S12 Solution]"
+    },
+    {
+      "id": "13",
+      "text": "In the word 'CHANGE', how many pairs of the letters have the same number of letters between them (both forward and backward direction) as in the English alphabet?",
+      "options": ["Three", "None", "One", "Two", "Four"],
+      "correctIndex": 3,
+      "solution": "The correct answer is Two pairs. [Source: S13 Solution]"
+    },
+    {
+      "id": "14",
+      "text": "If 'Service sector' is coded as 'ot qr' then what is the code for boost?",
+      "options": ["mj", "ta", "zu", "lx", "yt"],
+      "correctIndex": 4,
+      "solution": "From the solution table, 'Service/Boost' is 'qr/yt'. If 'Service' is 'qr' (given in Q), then 'Boost' is 'yt'. [Source: S14 Solution]"
+    },
+    {
+      "id": "15",
+      "text": "Which word is coded as 'pm rp'?",
+      "options": ["goods improve", "market goods", "service new", "New goods", "Cannot be determined"],
+      "correctIndex": 3,
+      "solution": "'Goods' is 'pm' and 'New' is 'rp'. So 'pm rp' is 'New goods'. [Source: S15 Solution]"
+    },
+    {
+      "id": "16",
+      "text": "Which of the following statement(s) is/are definitely correct?",
+      "options": ["That - zu", "Market -lx", "Needs -vo", "supply - rp", "All are correct"],
+      "correctIndex": 2,
+      "solution": "'Needs' is coded as 'vo'. [Source: S16 Solution]"
+    },
+    {
+      "id": "17",
+      "text": "What is the code for 'Supply'?",
+      "options": ["mj", "pm", "ta", "vo", "ke"],
+      "correctIndex": 4,
+      "solution": "'Supply' is coded as 'ke'. [Source: S17 Solution]"
+    },
+    {
+      "id": "18",
+      "text": "Which among the following is coded as 'That Utility'?",
+      "options": ["zu ta", "ta lx", "ke zu", "mj zu", "ta pm"],
+      "correctIndex": 1,
+      "solution": "'Utility' is 'ta', 'That' is 'lx'. Answer is 'ta lx'. [Source: S18 Solution]"
+    },
+    {
+      "id": "19",
+      "text": "How is H related to B?",
+      "options": ["Daughter", "Nephew", "Son", "Father", "Son-in-law"],
+      "correctIndex": 2,
+      "solution": "Based on family tree, H is the son of B. [Source: S19 Solution]"
+    },
+    {
+      "id": "20",
+      "text": "How many female members are there in the family?",
+      "options": ["Three", "Four", "Five", "Two", "Cannot be determined"],
+      "correctIndex": 2,
+      "solution": "There are 5 female members. [Source: S20 Solution]"
+    },
+    {
+      "id": "21",
+      "text": "If M is married to F, then how M is related to B?",
+      "options": ["Father", "Brother", "Uncle", "Brother-in-law", "Can't be determined"],
+      "correctIndex": 3,
+      "solution": "M would be Brother-in-law to B. [Source: S21 Solution]"
+    },
+    {
+      "id": "22",
+      "text": "Who among the following was born on 15 December?",
+      "options": ["E", "C", "D", "F", "B"],
+      "correctIndex": 1,
+      "solution": "According to the solution table, C was born on 15 December. [Source: S22 Solution]"
+    },
+    {
+      "id": "23",
+      "text": "How many persons were born before D?",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 2,
+      "solution": "Before D (Sep 22), 3 persons were born: E, A, B. [Source: S23 Solution]"
+    },
+    {
+      "id": "24",
+      "text": "F was born on which of the following date?",
+      "options": ["22 June", "15 December", "15 September", "22 September", "22 December"],
+      "correctIndex": 4,
+      "solution": "F was born on 22 December. [Source: S24 Solution]"
+    },
+    {
+      "id": "25",
+      "text": "Four of the following five are similar in a certain manner and form a group, which among the following is not related to the group?",
+      "options": ["F-E", "A-B", "B-D", "D-C", "C-F"],
+      "correctIndex": 0,
+      "solution": "Except F-E, both persons in the pair were born adjacent to each other. [Source: S25 Solution]"
+    },
+    {
+      "id": "26",
+      "text": "Who among the following was born immediately after A?",
+      "options": ["F", "C", "E", "B", "D"],
+      "correctIndex": 3,
+      "solution": "A born June 22. Immediately after is B (Sep 15). [Source: S26 Solution]"
+    },
+    {
+      "id": "27",
+      "text": "Which of the following will be the next element in the given series: AC4 BD7 CE10 DF13 EG16 ?",
+      "options": ["IH19", "H120", "FG19", "FH19", "FH18"],
+      "correctIndex": 3,
+      "solution": "Pattern: First letter +1, Second letter +1, Number +3. E->F, G->H, 16->19. Result FH19. [Source: S27 Solution]"
+    },
+    {
+      "id": "28",
+      "text": "What is the direction of point B with respect to point H?",
+      "options": ["North", "South-west", "North-east", "South-east", "North-west"],
+      "correctIndex": 2,
+      "solution": "Based on diagram, B is North-east of H. [Source: S28 Solution]"
+    },
+    {
+      "id": "29",
+      "text": "What is shortest distance between point H and point F?",
+      "options": ["5m", "17m", "12m", "sqrt(218m)", "sqrt(61m)"],
+      "correctIndex": 0,
+      "solution": "Based on diagram, shortest distance is 5m. [Source: S29 Solution]"
+    },
+    {
+      "id": "30",
+      "text": "Four of the following five are similar in a certain manner and form a group, which of the following is not related to the group?",
+      "options": ["A-H", "C-F", "B-E", "B-G", "F-D"],
+      "correctIndex": 4,
+      "solution": "F-D is the odd one out. [Source: S30 Solution]"
+    },
+    {
+      "id": "31",
+      "text": "Statements: Only a few managers are leaders. All leaders are planners. Conclusions: I. Some managers are planners II. Some leaders are not managers",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 0,
+      "solution": "Conclusion I follows. [Source: S31 Solution]"
+    },
+    {
+      "id": "32",
+      "text": "Statements: Only a few crate are jug. No box is jug. Conclusions: I. All box are crate II. No box are crate",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 3,
+      "solution": "Neither conclusion follows. [Source: S32 Solution]"
+    },
+    {
+      "id": "33",
+      "text": "Statements: Only a few writers are poets. All poets are critics. Some critics are lecturers. Conclusions: I. Some writers are lecturers II. No writers are lecturers",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 2,
+      "solution": "Either I or II follows. [Source: S33 Solution]"
+    },
+    {
+      "id": "34",
+      "text": "Statements: Only a few chefs are bakers. Some bakers are cooks. No cooks are authors. Conclusions: I. Some chefs are cooks II. Some bakers are not authors",
+      "options": ["If only conclusion I follows", "If only conclusion II follows", "If either conclusion I or II follows", "If neither conclusion I nor II follows", "If both conclusions I and II follow"],
+      "correctIndex": 1,
+      "solution": "Only conclusion II follows. [Source: S34 Solution]"
+    },
+    {
+      "id": "35",
+      "text": "In the word 'INTRODUCE', if the letters are arranged in alphabetical order from left, then which letter will be the 6th letter from left end?",
+      "options": ["I", "O", "R", "N", "T"],
+      "correctIndex": 1,
+      "solution": "INTRODUCE -> CDEINORTU. 6th letter is O. [Source: S35 Solution]"
+    },
+    {
+      "id": "36",
+      "text": "Four of the following five are similar in a certain manner and form a group. Who among the following is not related to the group?",
+      "options": ["A", "B", "H", "G", "F"],
+      "correctIndex": 0,
+      "solution": "A sits in the middle (facing out) while others sit at corners (facing in). [Source: S36 Solution]"
+    },
+    {
+      "id": "37",
+      "text": "What is the position of B with respect to H?",
+      "options": ["Fourth to the right", "Third to the right", "Immediate left", "Second to the left", "Second to the right"],
+      "correctIndex": 3,
+      "solution": "B is second to the left of H. [Source: S37 Solution]"
+    },
+    {
+      "id": "38",
+      "text": "Who among the following sits immediate left of C?",
+      "options": ["E", "G", "F", "B", "H"],
+      "correctIndex": 2,
+      "solution": "F sits immediate left of C. [Source: S38 Solution]"
+    },
+    {
+      "id": "39",
+      "text": "How many persons sit between G and E, when counted from the left of G?",
+      "options": ["None", "Four", "Three", "Two", "One"],
+      "correctIndex": 3,
+      "solution": "Two persons sit between G and E counted from left of G. [Source: S39 Solution]"
+    },
+    {
+      "id": "40",
+      "text": "Which among the following statement is true?",
+      "options": ["E faces inside", "H and G are immediate neighbors", "F sits opposite to H", "D sits second to the right of G", "All the statements are true"],
+      "correctIndex": 2,
+      "solution": "F sits opposite to H is the true statement. [Source: S40 Solution]"
+    }
+  ]
+    }
