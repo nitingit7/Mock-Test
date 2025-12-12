@@ -27,7 +27,8 @@ var GITHUB_FILES = {
         { name: "RRB Clerk Reasoning: Sectional 1", file: BASE_URL + "tests/reasoning/reas2.json" },
         { name: "RRB Clerk Reasoning: Marathon", file: BASE_URL + "tests/reasoning/puzzlemarathon.json" },
         { name: "RRB Clerk Prelims: Reasoning Ability [Moderate]", file: BASE_URL + "tests/reasoning/RA004.json" },
-        { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 2)", file: BASE_URL + "tests/reasoning/RA005.json" }
+        { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 2)", file: BASE_URL + "tests/reasoning/RA005.json" },
+        { name: "RRB Clerk Prelims: Reasoning (7th Dec Shift 1)", file: BASE_URL + "tests/reasoning/RA006.json" }
     ],
     'english': [
         { name: "COMING SOON....", file: BASE_URL + "tests/english/mock1.json" }
