@@ -1,0 +1,186 @@
+{
+  "title": "RRB Clerk Prelims: Quant (6th Dec Shift 2) #QA016",
+  "timeLimit": 15,
+  "questions": [
+    {
+      "text": "A 42-liter mixture contains milk and water in the ratio 2:5, respectively. After adding some quantity of milk, the ratio of water to milk becomes 1:4. Find the quantity of milk added (in liters).",
+      "options": ["120", "108", "90", "85", "112"],
+      "correctIndex": 1,
+      "solution": "Milk = (2/7)*42 = 12L. Water = (5/7)*42 = 30L. New Ratio Water:Milk = 1:4. 30/(12+x) = 1/4 => 120 = 12+x => x = 108."
+    },
+    {
+      "text": "A and B together can complete a piece of work in 15 days, while B alone can complete it in 36 days. If both A and B start working together, but B leaves 6 days before the work is finished, find the total time taken by A to complete the remaining work.",
+      "options": ["12.5", "17.5", "15.5", "11.5", "19.5"],
+      "correctIndex": 1,
+      "solution": "LCM(15,36)=180. A+B=12, B=5, A=7. Let total time be T. A works T days, B works T-6 days. 7T + 5(T-6) = 180 => 12T = 210 => T = 17.5 days. (Note: Question wording suggests total duration)."
+    },
+    {
+      "text": "The breadth of a rectangle is 25% less than the length of the rectangle. If the perimeter of the rectangle is 70 cm, then find the area of the rectangle (in cm²).",
+      "options": ["300", "450", "320", "280", "480"],
+      "correctIndex": 0,
+      "solution": "B = 0.75L. 2(L + 0.75L) = 70 => 1.75L = 35 => L=20. B=15. Area = 300."
+    },
+    {
+      "text": "A shopkeeper allowed a 20% discount off the marked price of an article. If he earned a profit of Rs 450 and the difference between the cost price and marked price of the article is Rs 1900, then find the cost price of the article (in Rs).",
+      "options": ["5650", "5850", "5350", "5550", "5150"],
+      "correctIndex": 2,
+      "solution": "MP = CP + 1900. SP = 0.8(CP + 1900). Profit = SP - CP = 450. 0.8CP + 1520 - CP = 450 => 0.2CP = 1070 => CP = 5350."
+    },
+    {
+      "text": "A can travel 54 km in 2 hours. If the speed of A is 20% more than the speed of B, then how many km are travelled by B in 4 hours (in km)?",
+      "options": ["100", "80", "90", "75", "120"],
+      "correctIndex": 2,
+      "solution": "Speed A = 27 km/h. 27 = 1.2 * Speed B => Speed B = 22.5 km/h. Distance = 22.5 * 4 = 90 km."
+    },
+    {
+      "text": "The upstream speed of a boat is 6 km/hr, and the speed of a stream is 2 km/hr Find the time taken by the boat to cover 80 km downstream (in hours).",
+      "options": ["12", "7", "5", "10", "8"],
+      "correctIndex": 4,
+      "solution": "Upstream = B - S = 6. S = 2 => B = 8. Downstream = B + S = 10. Time = 80/10 = 8."
+    },
+    {
+      "text": "A, B, and C started a business with investments of Rs 2800, Rs 5400, and Rs 3600, respectively. After 8 months, A left the business, and at the end of the year, the profit share of B is Rs 2430. Find the total profit (in Rs).",
+      "options": ["4080", "4480", "4980", "4890", "4908"],
+      "correctIndex": 3,
+      "solution": "Ratio (2800*8) : (5400*12) : (3600*12) => 224 : 648 : 432 => 28 : 81 : 54. B's share (81u) = 2430 => 1u = 30. Total (163u) = 4890."
+    },
+    {
+      "text": "A man invested Rs X in compound interest at 10% p.a. for three years and received interest of Rs 1324. If he invested Rs (X+500) in simple interest for two years at 15% p.a., then find the simple interest he received (in Rs).",
+      "options": ["1800", "1250", "1550", "1400", "1350"],
+      "correctIndex": 4,
+      "solution": "33.1% of X = 1324 => X = 4000. New Principal = 4500. SI = 4500 * 15 * 2 / 100 = 1350."
+    },
+    {
+      "text": "Pipe A can fill a tank in 15 hours and Pipe B can fill it in 20 hours. Both pipes are opened together, but after 4 hours, Pipe A is closed. Find the total time (in hours) taken to fill the tank.",
+      "options": ["14 2/3", "14 1/3", "16 2/3", "12 2/3", "15 1/3"],
+      "correctIndex": 0,
+      "solution": "Work = 60. A=4, B=3. 4 hrs (A+B) = 28. Rem = 32. Time B = 32/3 = 10 2/3. Total = 4 + 10 2/3 = 14 2/3."
+    },
+    {
+      "text": "Two trains of lengths 180 m and 120 m are moving in opposite directions at speeds of 54 km/h and 72 km/h respectively. How long will they take to completely cross each other (in seconds)?",
+      "options": ["40/7", "60/7", "44/7", "66/7", "70/7"],
+      "correctIndex": 1,
+      "solution": "Rel Speed = 126 km/h = 35 m/s. Dist = 300m. Time = 300/35 = 60/7 sec."
+    },
+    {
+      "text": "Find the missing term: 2, 4, 12, ?, 240, 1440",
+      "options": ["24", "48", "60", "72", "84"],
+      "correctIndex": 1,
+      "solution": "x2, x3, x4, x5... 12 x 4 = 48."
+    },
+    {
+      "text": "Find the missing term: 1200, 300, 150, 112.5, ?, 140.625",
+      "options": ["128", "112.5", "225", "227.5", "126.5"],
+      "correctIndex": 1,
+      "solution": "x0.25, x0.5, x0.75, x1... 112.5 x 1 = 112.5."
+    },
+    {
+      "text": "Find the missing term: 1600, 1088, 1039, 823, 798, ?",
+      "options": ["754", "714", "704", "724", "734"],
+      "correctIndex": 4,
+      "solution": "Diffs: -512 (8^3), -49 (7^2), -216 (6^3), -25 (5^2). Next -64 (4^3). 798 - 64 = 734."
+    },
+    {
+      "text": "Find the missing term: 147, ?, 111, 88, 59, 28",
+      "options": ["130", "126", "128", "133", "116"],
+      "correctIndex": 0,
+      "solution": "Diffs from right: 31, 29, 23, 19, 17 (Primes). 111+19=130."
+    },
+    {
+      "text": "Find the missing term: 148, ?, 203, 243, 294, 358, 437",
+      "options": ["172", "162", "150", "160", "182"],
+      "correctIndex": 0,
+      "solution": "Double diff series logic leads to 172."
+    },
+    {
+      "text": "What will come in place of (?): 50 - 45 + 145 = 2.5 * ?",
+      "options": ["50", "60", "30", "20", "10"],
+      "correctIndex": 1,
+      "solution": "150 = 2.5 * ? => ? = 60."
+    },
+    {
+      "text": "What will come in place of (?): Sqrt(225)/Sqrt(25) * 6 = ?% of 200",
+      "options": ["6", "9", "12", "4", "15"],
+      "correctIndex": 1,
+      "solution": "(15/5)*6 = 18. 18 = 2x => x=9."
+    },
+    {
+      "text": "What will come in place of (?): 16 * 25 + 280 - 25^2 = 25% of ?",
+      "options": ["180", "260", "220", "240", "300"],
+      "correctIndex": 2,
+      "solution": "400 + 280 - 625 = 55. 55 = 1/4 * ? => ? = 220."
+    },
+    {
+      "text": "What will come in place of (?): Sqrt(49 * Sqrt(196)) + 430 = ?^2 - 48",
+      "options": ["34", "14", "16", "26", "24"],
+      "correctIndex": 4,
+      "solution": "Sqrt(49*14) + 430 = ?^2 - 48. Assuming typo in source, logic led to 576 = ?^2 => 24."
+    },
+    {
+      "text": "What will come in place of (?): 118 + Sqrt(484) + 6/13 * 260 + ? = 17^2",
+      "options": ["29", "31", "27", "39", "19"],
+      "correctIndex": 0,
+      "solution": "118 + 22 + 120 + ? = 289 => 260 + ? = 289 => ? = 29."
+    },
+    {
+      "text": "What will come in place of (?): 108/3 * 5 - 225/9 * 4 = 400% of ?",
+      "options": ["50", "10", "30", "20", "40"],
+      "correctIndex": 3,
+      "solution": "36*5 - 25*4 = 4*? => 180 - 100 = 80 => 4*? = 80 => ? = 20."
+    },
+    {
+      "text": "What will come in place of (?): 40% of 825 = 16.66% of 1260 + ?",
+      "options": ["120", "140", "160", "100", "180"],
+      "correctIndex": 0,
+      "solution": "330 = 210 + ? => ? = 120."
+    },
+    {
+      "text": "What will come in place of (?): 18/1.5 + 153/17 + Sqrt(256) = 629/?",
+      "options": ["9", "19", "27", "7", "17"],
+      "correctIndex": 4,
+      "solution": "12 + 9 + 16 = 37. 629/37 = 17."
+    },
+    {
+      "text": "What will come in place of (?): (110 + 70 - Sqrt(6400))/25 + ? = 4^2",
+      "options": ["24", "14", "12", "22", "None of these"],
+      "correctIndex": 2,
+      "solution": "(180-80)/25 + ? = 16 => 4 + ? = 16 => ? = 12."
+    },
+    {
+      "text": "What will come in place of (?): (25% of 680) / (50% of 340) = ?",
+      "options": ["5", "4", "3", "2", "1"],
+      "correctIndex": 4,
+      "solution": "170 / 170 = 1."
+    },
+    {
+      "text": "What will come in place of (?): 15% of 60 of 36000 = 12 * ?^3",
+      "options": ["25", "40", "10", "20", "30"],
+      "correctIndex": 4,
+      "solution": "324000 / 12 = 27000 => 30."
+    },
+    {
+      "text": "What will come in place of (?): (170/34) / (25/5) / (742/2226) = ?",
+      "options": ["7", "5", "4", "2", "3"],
+      "correctIndex": 4,
+      "solution": "5 / 5 / (1/3) = 1 * 3 = 3."
+    },
+    {
+      "text": "What will come in place of (?): (4/10.5) * Sqrt(441) - Sqrt(25) = Sqrt(?)",
+      "options": ["81", "9", "1", "25", "49"],
+      "correctIndex": 1,
+      "solution": "8 - 5 = 3 = Sqrt(?) => ? = 9."
+    },
+    {
+      "text": "What will come in place of (?): 12.5% of 400 = ? - 60% of 1800",
+      "options": ["1150", "1160", "1170", "1190", "1130"],
+      "correctIndex": 4,
+      "solution": "50 = ? - 1080 => ? = 1130."
+    },
+    {
+      "text": "What will come in place of (?): (36^0.5 + 169^0.5) * ? = 95",
+      "options": ["5", "4", "3", "2", "1"],
+      "correctIndex": 0,
+      "solution": "(6+13)*? = 95 => 19*? = 95 => ? = 5."
+    }
+  ]
+    }
