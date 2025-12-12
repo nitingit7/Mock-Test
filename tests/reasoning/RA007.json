@@ -1,0 +1,286 @@
+{
+  "title": "RRB Clerk Prelims: Reasoning (6th Dec Shift 2) #RA007",
+  "timeLimit": 25,
+  "questions": [
+    {
+      "id": "1",
+      "text": "Directions (1-5): Read the given information carefully and answer the related question:\nEight persons A, B, C, D, E, F, G and H sit around a square table but not in same order as given. Four persons sit at corner of the table facing inside and three sits at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ1. What is the position of C with respect to F?",
+      "options": ["Fourth to the left", "Second to the left", "Third to the left", "Immediate right", "Third to the right"],
+      "correctIndex": 4,
+      "solution": "Arrangement (Clockwise starting from A): A (Middle/Corner depending on case, A is 3rd left/right of B), F (imm right A), D, G, E, B, H, C.\nFinal Arrangement: B (Corner), H (Middle), C (Corner), A (Middle), F (Corner), D (Middle), G (Corner), E (Middle).\nPosition of C with respect to F: C is third to the right of F. (Ans: e)"
+    },
+    {
+      "id": "2",
+      "text": "Directions (1-5): Read the given information carefully and answer the related question:\nEight persons A, B, C, D, E, F, G and H sit around a square table but not in same order as given. Four persons sit at corner of the table facing inside and three sits at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ2. How many persons sit between E and H (when counted from the right of H)?",
+      "options": ["Three", "None", "Two", "Four", "One"],
+      "correctIndex": 2,
+      "solution": "From the arrangement: H, C, A, F, D, G, E. Counting from right of H: C, A, F, D, G, E. Wait, right of H (facing out) is B, E... \nLet's recheck orientation. H is between B and C. If H faces out (Middle), Right is Anti-Clockwise. B, E. Two persons. (Ans: c)"
+    },
+    {
+      "id": "3",
+      "text": "Directions (1-5): Read the given information carefully and answer the related question:\nEight persons A, B, C, D, E, F, G and H sit around a square table but not in same order as given. Four persons sit at corner of the table facing inside and three sits at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ3. Who among the following sits immediate left of G?",
+      "options": ["A", "F", "B", "H", "C"],
+      "correctIndex": 3,
+      "solution": "In the arrangement, H sits immediate left of G. (Ans: d)"
+    },
+    {
+      "id": "4",
+      "text": "Directions (1-5): Read the given information carefully and answer the related question:\nEight persons A, B, C, D, E, F, G and H sit around a square table but not in same order as given. Four persons sit at corner of the table facing inside and three sits at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ4. Four of the following five are similar in a certain manner and form a group, who among the following is not related to the group?",
+      "options": ["E", "B", "G", "D", "F"],
+      "correctIndex": 3,
+      "solution": "E, G, F, B sit at corners/middle in a pattern where D is the odd one out (likely D faces differently or sits in the specific 'missing' middle spot mentioned in the ambiguous instructions, but based on solution key D is the odd one). (Ans: d)"
+    },
+    {
+      "id": "5",
+      "text": "Directions (1-5): Read the given information carefully and answer the related question:\nEight persons A, B, C, D, E, F, G and H sit around a square table but not in same order as given. Four persons sit at corner of the table facing inside and three sits at the middle of each side facing outside. Two persons sit between A and B. B faces inside. F sits immediate right of A. D sits adjacent to F and G. C sits second to the right of H.\n\nQ5. If all the persons are asked to sit in alphabetical order, starting from A, in clockwise direction, then how many persons will remain same on their position (excluding A)?",
+      "options": ["Two", "None", "Three", "One", "Four"],
+      "correctIndex": 1,
+      "solution": "Original: A, F, D, G, E, B, H, C.\nAlphabetical: A, B, C, D, E, F, G, H.\nMatches: None. (Ans: b)"
+    },
+    {
+      "id": "6",
+      "text": "Directions (6-10): Read the given information carefully and answer the related question:\nIn a certain code language:\n\"Apple farmers supply fruits\" is coded as 'kl zu rt mw'\n\"Fresh mango supply today\" is coded as 'rt ds pq ne'\n\"Farmers sell apple today\" is coded as 'zu kl ne tx'\n\"Mango fruits taste sweet\" is coded as 'ds mw jy ab'\n\nQ6. What is the code for 'sell'?",
+      "options": ["tx", "kl", "ab", "zu", "ne"],
+      "correctIndex": 0,
+      "solution": "From sentences 1 and 3: 'Farmers' and 'Apple' are 'zu' and 'kl'.\nFrom sentences 2 and 3: 'Today' is 'ne'.\nIn sentence 3 ('Farmers sell apple today'), remaining word is 'sell' and remaining code is 'tx'. (Ans: a)"
+    },
+    {
+      "id": "7",
+      "text": "Directions (6-10): Read the given information carefully and answer the related question:\nIn a certain code language:\n\"Apple farmers supply fruits\" is coded as 'kl zu rt mw'\n\"Fresh mango supply today\" is coded as 'rt ds pq ne'\n\"Farmers sell apple today\" is coded as 'zu kl ne tx'\n\"Mango fruits taste sweet\" is coded as 'ds mw jy ab'\n\nQ7. What will be the code for 'fruits supply'?",
+      "options": ["mw ab", "ds tx", "mw rt", "jy rt", "ne tx"],
+      "correctIndex": 2,
+      "solution": "'Fruits' appears in 1 and 4. Common code is 'mw'.\n'Supply' appears in 1 and 2. Common code is 'rt'.\nCode is 'mw rt'. (Ans: c)"
+    },
+    {
+      "id": "8",
+      "text": "Directions (6-10): Read the given information carefully and answer the related question:\nIn a certain code language:\n\"Apple farmers supply fruits\" is coded as 'kl zu rt mw'\n\"Fresh mango supply today\" is coded as 'rt ds pq ne'\n\"Farmers sell apple today\" is coded as 'zu kl ne tx'\n\"Mango fruits taste sweet\" is coded as 'ds mw jy ab'\n\nQ8. Which of the following word is coded as 'kl'?",
+      "options": ["Sell", "Today", "Farmers", "Apple", "Can't be determined"],
+      "correctIndex": 4,
+      "solution": "'kl' appears in sentences 1 and 3 along with 'zu'. The words 'Apple' and 'Farmers' also appear in both. We cannot distinguish which is 'kl' and which is 'zu'. (Ans: e)"
+    },
+    {
+      "id": "9",
+      "text": "Directions (6-10): Read the given information carefully and answer the related question:\nIn a certain code language:\n\"Apple farmers supply fruits\" is coded as 'kl zu rt mw'\n\"Fresh mango supply today\" is coded as 'rt ds pq ne'\n\"Farmers sell apple today\" is coded as 'zu kl ne tx'\n\"Mango fruits taste sweet\" is coded as 'ds mw jy ab'\n\nQ9. If 'sweet corn' is coded as 'jy hm', then what will be the code for 'Taste'?",
+      "options": ["st", "mw", "ds", "ab", "Can't be determined"],
+      "correctIndex": 3,
+      "solution": "In sentence 4, 'Mango'='ds', 'fruits'='mw'. Remaining codes for 'taste sweet' are 'jy ab'. If 'sweet'='jy', then 'Taste'='ab'. (Ans: d)"
+    },
+    {
+      "id": "10",
+      "text": "Directions (6-10): Read the given information carefully and answer the related question:\nIn a certain code language:\n\"Apple farmers supply fruits\" is coded as 'kl zu rt mw'\n\"Fresh mango supply today\" is coded as 'rt ds pq ne'\n\"Farmers sell apple today\" is coded as 'zu kl ne tx'\n\"Mango fruits taste sweet\" is coded as 'ds mw jy ab'\n\nQ10. What may be the code for 'mango juice today'?",
+      "options": ["ds jy ne", "ds op ne", "rt op ne", "ds op pq", "mw tx ab"],
+      "correctIndex": 1,
+      "solution": "'Mango' is 'ds'. 'Today' is 'ne'. 'Juice' is a new word requiring a new code. 'op' is a potential new code. (Ans: b)"
+    },
+    {
+      "id": "11",
+      "text": "Directions (11-13): In the question below, relation between some elements is shown in the statements, followed by two conclusions. Read it carefully and choose which conclusion is true as per the statement.\n\nQ11. Statements: K > R >= T = W < J <= B = F\nConclusions:\nI. R < J\nII. T >= F",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
+      "correctIndex": 4,
+      "solution": "I. R >= T = W < J. The relationship involves opposing signs (>= and <), so no definite relation. False.\nII. T = W < J <= B = F. T < F. So T >= F is False.\nAnswer: Neither conclusion follows. (Ans: e)"
+    },
+    {
+      "id": "12",
+      "text": "Directions (11-13): In the question below, relation between some elements is shown in the statements, followed by two conclusions. Read it carefully and choose which conclusion is true as per the statement.\n\nQ12. Statements: Z >= K < P = V <= R <= T < Y\nConclusions:\nI. K < Y\nII. Z > R",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
+      "correctIndex": 0,
+      "solution": "I. K < P = V <= R <= T < Y. So K < Y holds True.\nII. Z >= K < P ... No definite relation between Z and R due to opposing signs. False.\nAnswer: Only I is true. (Ans: a)"
+    },
+    {
+      "id": "13",
+      "text": "Directions (11-13): In the question below, relation between some elements is shown in the statements, followed by two conclusions. Read it carefully and choose which conclusion is true as per the statement.\n\nQ13. Statements: H = X <= L < N; D >= L\nConclusions:\nI. L < N\nII. D >= H",
+      "options": ["If only conclusion I is true", "If only conclusion II is true", "If either conclusion I or II is true", "If both conclusion I and II are true", "If neither conclusion I nor II is true"],
+      "correctIndex": 3,
+      "solution": "I. L < N is directly given in the statement. True.\nII. D >= L and L >= X = H. So D >= H is True.\nAnswer: Both I and II are true. (Ans: d)"
+    },
+    {
+      "id": "14",
+      "text": "Q14. How many pairs of letters are in the word 'MISTAKE', each of which have as many letters between them as they have between them according to English alphabetical order? (both forward and backward direction)",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 0,
+      "solution": "The pair is S and T (ST). They are consecutive in word and alphabet. (Ans: a)"
+    },
+    {
+      "id": "15",
+      "text": "Directions (15-19): Read the given information carefully and answer the related question:\nSeven boxes A, B, C, D, E, F and G are placed one above the other in a stack, but not in same order as given. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ15. Which box is placed third from the topmost position?",
+      "options": ["Box F", "Box C", "Box D", "Box E", "Box A"],
+      "correctIndex": 0,
+      "solution": "Arrangement (Top to Bottom): C, G, F, E, D, A, B. \n3rd from top is Box F. (Ans: a)"
+    },
+    {
+      "id": "16",
+      "text": "Directions (15-19): Read the given information carefully and answer the related question:\nSeven boxes A, B, C, D, E, F and G are placed one above the other in a stack, but not in same order as given. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ16. How many boxes are placed below box D?",
+      "options": ["One", "Two", "Three", "Four", "Five"],
+      "correctIndex": 1,
+      "solution": "Below Box D (3rd from bottom) are Box A and Box B. Total 2 boxes. (Ans: b)"
+    },
+    {
+      "id": "17",
+      "text": "Directions (15-19): Read the given information carefully and answer the related question:\nSeven boxes A, B, C, D, E, F and G are placed one above the other in a stack, but not in same order as given. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ17. If all the boxes are rearranged in alphabetical order from bottom to top, then how many boxes will remain same at their position?",
+      "options": ["One", "Four", "Three", "Two", "None"],
+      "correctIndex": 4,
+      "solution": "Original (Bottom up): B, A, D, E, F, G, C.\nAlphabetical (Bottom up): A, B, C, D, E, F, G.\nNone match. (Ans: e)"
+    },
+    {
+      "id": "18",
+      "text": "Directions (15-19): Read the given information carefully and answer the related question:\nSeven boxes A, B, C, D, E, F and G are placed one above the other in a stack, but not in same order as given. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ18. If box C is related to box G, in the similar way box F is related to box E, then which box is related to box B?",
+      "options": ["Box C", "Box D", "Box A", "Box F", "Box E"],
+      "correctIndex": 2,
+      "solution": "Relation is 'Immediately Below'. C->G, F->E. Who is related to B? (Box immediately above B, which is A, assuming the relation works upwards or the question implies Box A -> Box B). Based on PDF solution S18 Ans(c) is Box A. (Ans: c)"
+    },
+    {
+      "id": "19",
+      "text": "Directions (15-19): Read the given information carefully and answer the related question:\nSeven boxes A, B, C, D, E, F and G are placed one above the other in a stack, but not in same order as given. Four boxes are placed between box G and box B. Box D is placed two boxes above box B. Box A is placed immediately below box D. Box C is placed two boxes above box F.\n\nQ19. Which box is placed immediately below box E?",
+      "options": ["Box A", "Box G", "Box B", "Box D", "Box F"],
+      "correctIndex": 3,
+      "solution": "Immediately below Box E is Box D. (Ans: d)"
+    },
+    {
+      "id": "20",
+      "text": "Q20. Find the odd one out.",
+      "options": ["PSV", "EHK", "ILN", "MPS", "RUX"],
+      "correctIndex": 2,
+      "solution": "P(+3)S(+3)V. E(+3)H(+3)K. M(+3)P(+3)S. R(+3)U(+3)X. \nI(+3)L(+2)N. ILN is the odd one out. (Ans: c)"
+    },
+    {
+      "id": "21",
+      "text": "Directions (21-22): Study the following information carefully and answer the questions given below:\nPoint K is 11m north of point B, which is 12m east of point O. Point C is 13m south of point B. Point H is 24m south of point D. Point C is 11m west of point H and 5m east of point S. Point D is 2m east of Point A.\n\nQ21. Four of the following five are alike in a certain way and thus form a group. Find the one pair of points which does NOT belong to the group?",
+      "options": ["K-O", "B-S", "D-C", "K-H", "D-O"],
+      "correctIndex": 3,
+      "solution": "K-H represents North-West direction relative to each other, while others represent North-East. (Ans: d)"
+    },
+    {
+      "id": "22",
+      "text": "Directions (21-22): Study the following information carefully and answer the questions given below:\nPoint K is 11m north of point B, which is 12m east of point O. Point C is 13m south of point B. Point H is 24m south of point D. Point C is 11m west of point H and 5m east of point S. Point D is 2m east of Point A.\n\nQ22. In which direction is point K with respect to point A?",
+      "options": ["North-west", "South-east", "West", "North-east", "East"],
+      "correctIndex": 2,
+      "solution": "Point K is to the West of Point A. (Ans: c)"
+    },
+    {
+      "id": "23",
+      "text": "Directions (23-26): In each question below, some statements are given followed by two conclusions numbered I and II. Assume the statements are true... Decide which conclusion logically follows.\nStatements: Some play are games. Only a few games are indoor.\nConclusions:\nI. Some games are not indoor\nII. All play is indoor",
+      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
+      "correctIndex": 0,
+      "solution": "I. True (Because 'Only a few' implies 'Some are' and 'Some are not').\nII. False (No definite relation). (Ans: a)"
+    },
+    {
+      "id": "24",
+      "text": "Directions (23-26): In each question below, some statements are given followed by two conclusions numbered I and II. Assume the statements are true... Decide which conclusion logically follows.\nStatements: All apple are fruits. Some fruits are not banana.\nConclusions:\nI. Some banana is definitely not apples\nII. No fruits are banana",
+      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
+      "correctIndex": 3,
+      "solution": "I. False. II. False. Neither follows. (Ans: d)"
+    },
+    {
+      "id": "25",
+      "text": "Directions (23-26): In each question below, some statements are given followed by two conclusions numbered I and II. Assume the statements are true... Decide which conclusion logically follows.\nStatements: No pattern is visual. Only a few cluster is visual.\nConclusions:\nI. Some pattern is cluster\nII. No pattern is cluster",
+      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
+      "correctIndex": 2,
+      "solution": "Some/No pair with same elements -> Either I or II follows. (Ans: c)"
+    },
+    {
+      "id": "26",
+      "text": "Directions (23-26): In each question below, some statements are given followed by two conclusions numbered I and II. Assume the statements are true... Decide which conclusion logically follows.\nStatements: Only a few river is blue. Some blue is ocean. No ocean is pond.\nConclusions:\nI. Some blue is not pond\nII. No river being pond is a possibility",
+      "options": ["Only conclusion I follows", "Only conclusion II follows", "Either conclusion I or II follows", "Neither conclusion I nor II follows", "Both conclusions I and II follow"],
+      "correctIndex": 4,
+      "solution": "I. True (Blue intersecting Ocean cannot be Pond). II. True (Possibility exists). Both follow. (Ans: e)"
+    },
+    {
+      "id": "27",
+      "text": "Directions (27-29): Read the given information carefully and answer the related questions:\nSix pencils A, B, C, D, E and F are of different length (in cm). Two pencils are longer than B. One pencil is in between B and C. E is just shorter than C which is not the longest pencil. F is longer than A but shorter than D. The third longest pencil is of 7cm.\n\nQ27. Which of the following pencil is 2nd shortest?",
+      "options": ["C", "F", "E", "D", "A"],
+      "correctIndex": 0,
+      "solution": "Arrangement (Tallest to Shortest): D > F > B > A > C > E. 2nd shortest is C. (Ans: a)"
+    },
+    {
+      "id": "28",
+      "text": "Directions (27-29): Read the given information carefully and answer the related questions:\nSix pencils A, B, C, D, E and F are of different length (in cm). Two pencils are longer than B. One pencil is in between B and C. E is just shorter than C which is not the longest pencil. F is longer than A but shorter than D. The third longest pencil is of 7cm.\n\nQ28. How many pencils are longer than A?",
+      "options": ["Two", "Three", "Four", "Five", "None"],
+      "correctIndex": 1,
+      "solution": "D, F, and B are longer than A. (Ans: b)"
+    },
+    {
+      "id": "29",
+      "text": "Directions (27-29): Read the given information carefully and answer the related questions:\nSix pencils A, B, C, D, E and F are of different length (in cm). Two pencils are longer than B. One pencil is in between B and C. E is just shorter than C which is not the longest pencil. F is longer than A but shorter than D. The third longest pencil is of 7cm.\n\nQ29. If total length of pencil D and B is 16 cm, then what will be the possible height of pencil F?",
+      "options": ["11 cm", "10 cm", "9 cm", "8 cm", "None of the above"],
+      "correctIndex": 3,
+      "solution": "B=7. D+B=16 => D=9. F is between D and B (9 and 7). Possible height 8cm. (Ans: d)"
+    },
+    {
+      "id": "30",
+      "text": "Q30. If it is possible to make a four-letter meaningful word with the 2nd, 4th, 7th and 8th letter (from left) of the word 'ALTERNATES', which would be the second letter of the word from left? If more than one such meaningful word can be formed then give 'Z' as your answer. If no such meaningful word can be formed, give 'Y' as your answer.",
+      "options": ["E", "T", "L", "Z", "Y"],
+      "correctIndex": 3,
+      "solution": "Letters: L, E, A, T. Words: LATE, TALE, TEAL. Multiple words -> Z. (Ans: d)"
+    },
+    {
+      "id": "31",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ31. If all the words are arranged in dictionary order from left, then which word will become 3rd from the right end?",
+      "options": ["KEY", "LOG", "CAT", "WIN", "JAM"],
+      "correctIndex": 0,
+      "solution": "Order: CAT, JAM, KEY, LOG, WIN. 3rd from right is KEY. (Ans: a)"
+    },
+    {
+      "id": "32",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ32. If 3rd letter is changed to its next letter as per alphabetical series, then how many words will have more than one vowel?",
+      "options": ["None", "One", "Three", "Four", "Two"],
+      "correctIndex": 4,
+      "solution": "WIN->WIO, KEY->KEZ, JAM->JAN, LOG->LOH, CAT->CAU. Words with >1 vowel: WIO, CAU. (Ans: e)"
+    },
+    {
+      "id": "33",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ33. If letter 'D' is added at the end of each word, then how many meaningful words will be formed?",
+      "options": ["Two", "None", "One", "Four", "Three"],
+      "correctIndex": 2,
+      "solution": "WIND is a word. (Ans: c)"
+    },
+    {
+      "id": "34",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ34. How many letters are between 'first letter of second word from left end' and 'third letter of third word from right end', as per English alphabet?",
+      "options": ["Seven", "One", "Two", "Ten", "Three"],
+      "correctIndex": 1,
+      "solution": "First letter of 2nd word (KEY) is K. Third letter of 3rd word from right (JAM) is M. Between K and M is L (1 letter). (Ans: b)"
+    },
+    {
+      "id": "35",
+      "text": "Directions (31-35): Read the given word-series carefully and answer the related question:\nWIN KEY JAM LOG CAT\n\nQ35. If all letters are arranged in dictionary order from left within each word, then how many words will start with vowel?",
+      "options": ["One", "Three", "Four", "Five", "Two"],
+      "correctIndex": 2,
+      "solution": "INW, EKY, AJM, GLO, ACT. 4 words start with vowel. (Ans: c)"
+    },
+    {
+      "id": "36",
+      "text": "Directions (36-40): Read the given information carefully and answer the related questions:\nSix persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ36. G was born on which of the following day?",
+      "options": ["Friday", "Wednesday", "Monday", "Tuesday", "Thursday"],
+      "correctIndex": 1,
+      "solution": "Arrangement: F(Mon), D(Tue), G(Wed), E(Thu), B(Fri), C(Sat). G born on Wednesday. (Ans: b)"
+    },
+    {
+      "id": "37",
+      "text": "Directions (36-40): Read the given information carefully and answer the related questions:\nSix persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ37. Who among the following was born on Saturday?",
+      "options": ["F", "D", "E", "B", "C"],
+      "correctIndex": 4,
+      "solution": "C was born on Saturday. (Ans: e)"
+    },
+    {
+      "id": "38",
+      "text": "Directions (36-40): Read the given information carefully and answer the related questions:\nSix persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ38. Which of the following combination is correct?",
+      "options": ["B - Saturday", "D - Thursday", "C - Friday", "F - Monday", "E - Wednesday"],
+      "correctIndex": 3,
+      "solution": "F - Monday is the correct combination. (Ans: d)"
+    },
+    {
+      "id": "39",
+      "text": "Directions (36-40): Read the given information carefully and answer the related questions:\nSix persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ39. How many persons were born before E?",
+      "options": ["Four", "None", "Three", "One", "Two"],
+      "correctIndex": 2,
+      "solution": "E born on Thursday. F, D, G born before E. Total 3. (Ans: c)"
+    },
+    {
+      "id": "40",
+      "text": "Directions (36-40): Read the given information carefully and answer the related questions:\nSix persons B, C, D, E, F and G were born (but not in same order as given) on different days of a week starting from Monday to Saturday. B was born after Thursday. Three persons were born between B and F. Number of persons born before F is same as the number of persons born after C. One person was born between D and E. G was born immediately before E.\n\nQ40. Which of the following statement is correct?\nI. One person was born between F and G\nII. E was born on Thursday\nIII. D was born before F",
+      "options": ["Only II", "Only I and II", "Only I and III", "Only I", "Only III"],
+      "correctIndex": 1,
+      "solution": "I (True), II (True), III (False - D is after F). Answer: I and II. (Ans: b)"
+    }
+  ]
+    }
