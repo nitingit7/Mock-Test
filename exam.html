@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Exam</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7815860020388842"
-     crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -115,29 +113,17 @@
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
             // --- FIXED BACK BUTTON TRAP ---
-            // 1. Insert a "dummy" history state immediately when test loads
             history.pushState(null, null, location.href);
-
-            // 2. Listen for the back button
             window.onpopstate = () => {
-                // If viewing results, allow user to leave normally
                 if (document.getElementById('view-result').classList.contains('active')) {
                     return; 
                 }
-
-                // If test is running:
-                // IMMEDIATELY push the state back to reset the trap.
-                // This ensures the trap works 2nd, 3rd, and 4th time.
                 history.pushState(null, null, location.href);
-
-                // Now ask the question
                 if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
-                    // If YES: Manually force them to leave
                     window.onbeforeunload = null; 
                     if(this.timerInterval) clearInterval(this.timerInterval);
                     location.href = "index.html"; 
                 }
-                // If NO: We already pushed the state back above, so we do nothing.
             };
 
             // --- REFRESH / CLOSE TAB BLOCKER ---
@@ -171,9 +157,14 @@
                 if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
             });
 
-            if(showResult === "true") {
+            // --- SMART LOAD LOGIC (Fixes the "Loading..." bug) ---
+            var savedData = localStorage.getItem(this.currentFileUrl);
+            
+            // Only show result if URL asks for it AND data actually exists
+            if(showResult === "true" && savedData) {
                 this.showStoredResult(this.currentFileUrl);
             } else {
+                // Otherwise start fresh (even if URL says showResult=true)
                 this.fetchTest(this.currentFileUrl);
             }
         },
@@ -503,7 +494,9 @@
 
         reattemptTest: function() {
             if(confirm("Clear previous result and re-attempt?")) {
-                localStorage.removeItem(this.currentFileUrl); location.reload();
+                localStorage.removeItem(this.currentFileUrl);
+                // Fix: Reload URL without the showResult parameter
+                location.href = "exam.html?file=" + encodeURIComponent(this.currentFileUrl);
             }
         },
 
