@@ -511,13 +511,21 @@
 
         reattemptTest: function() {
             if(confirm("Clear previous result and re-attempt?")) {
-                localStorage.removeItem(this.currentFileUrl); 
-                
-                // FIX: Use replace() to SWAP the page. 
-                // This prevents "Home -> Test 1 -> Test 2"
-                // It ensures the stack stays "Home -> Test"
+                localStorage.removeItem(this.currentFileUrl);
                 var newUrl = "exam.html?file=" + this.currentFileUrl;
-                location.replace(newUrl);
+
+                // --- MAGIC FIX FOR HISTORY STACK ---
+                // 1. Go back one step first. 
+                // This removes the "Trap" layer so we are sitting on the real exam page.
+                history.back();
+
+                // 2. Wait 50 milliseconds for the back action to finish.
+                setTimeout(function() {
+                    // 3. Now overwrite the current page with the new test.
+                    // This prevents "Home -> Test 1 -> Test 2".
+                    // It forces "Home -> Test 2".
+                    location.replace(newUrl);
+                }, 50);
             }
         },
 
