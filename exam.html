@@ -40,6 +40,14 @@
                         <div id="review-time-badge" class="review-badge"></div>
                     </div>
 
+                    <div id="practice-toggle-box" class="switch-container" style="display:none;">
+                        <label class="switch">
+                            <input type="checkbox" id="btn-practice-mode">
+                            <span class="slider"></span>
+                        </label>
+                        span class="practice-label">Re-attempt Mode (Hide Solution)</span>
+                    </div>
+
                     <div id="q-extra-info" class="q-extra-info"></div>
 
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
@@ -103,7 +111,8 @@
     <script>
     // --- EXAM ENGINE ---
     window.app = {
-        data: null, responses: {}, currQ: 0, timerInterval: null, 
+        data: null, responses: {}, currQ: 0, timerInterval: null,
+        reviewGuesses: {},
         totalTimeSeconds: 0, startTime: 0, accumulatedPauseTime: 0, pauseStartTimestamp: 0,
         questionStartTime: 0, isReview: false, isPaused: false, currentFileUrl: "",
 
@@ -127,6 +136,15 @@
                 if (this.isReview) {
                     this.exitReview(); // Go back to Result screen
                     return;
+                }
+
+                // NEW: Bind the Practice Mode Toggle
+                var practiceBtn = document.getElementById('btn-practice-mode');
+                if(practiceBtn) {
+                    practiceBtn.addEventListener('change', () => {
+                        // Reload the current question to apply the new mode immediately
+                        this.loadQ();
+                    });
                 }
 
                 // FIX: Browser Back Button Logic
@@ -311,12 +329,19 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
             
+            // 1. CHECK PRACTICE MODE STATUS
+            var isPractice = false;
+            var toggle = document.getElementById('btn-practice-mode');
+            if(this.isReview && toggle && toggle.checked) {
+                isPractice = true;
+            }
+
             if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
             
             document.getElementById('q-number').innerText = "Q" + (this.currQ + 1);
             document.getElementById('q-text').innerText = q.text;
 
-            // -- DI/GRAPH Logic --
+            // -- DI/GRAPH Logic (Keep exactly as before) --
             var extra = document.getElementById('q-extra-info');
             extra.innerHTML = ''; 
             if (q.direction) {
@@ -342,14 +367,14 @@
                 extra.appendChild(div);
             }
             
-            // -- Review Mode Badges --
+            // -- Badges Logic --
             var badgeContainer = document.getElementById('review-badges');
-            var timeBadge = document.getElementById('review-time-badge');
-            var statusBadge = document.getElementById('review-status-badge');
-
-            if (this.isReview) {
+            // Hide badges in practice mode to keep it clean, OR show them. 
+            // Let's hide them in practice mode so user doesn't see "Correct/Wrong" immediately
+            if (this.isReview && !isPractice) {
                 badgeContainer.style.display = 'flex';
-                // Status Badge
+                // ... (Keep existing badge logic) ...
+                var statusBadge = document.getElementById('review-status-badge');
                 if (r.sel === null) {
                     statusBadge.innerText = "Skipped"; statusBadge.style.background = "#e2e6ea"; statusBadge.style.color = "#495057"; statusBadge.style.border = "1px solid #ced4da";
                 } else if (r.sel === q.correctIndex) {
@@ -357,37 +382,92 @@
                 } else {
                     statusBadge.innerText = "Wrong"; statusBadge.style.background = "#f8d7da"; statusBadge.style.color = "#721c24"; statusBadge.style.border = "1px solid #f5c6cb";
                 }
-                // Time Badge
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
-                var timeStr = (tm > 0 ? tm + "m " : "") + ts + "s";
-                timeBadge.innerText = "Time: " + timeStr;
+                document.getElementById('review-time-badge').innerText = "Time: " + (tm > 0 ? tm + "m " : "") + ts + "s";
             } else {
                 badgeContainer.style.display = 'none';
             }
 
+            // -- OPTIONS LOGIC (MODIFIED) --
             var box = document.getElementById('options-box');
             if(box) {
                 box.innerHTML = '';
                 var self = this;
+                
+                // Determine which answer to show (Original Attempt vs Practice Attempt)
+                var userSelected = null;
+                var showSolution = false;
+
+                if (isPractice) {
+                    // In Practice Mode: Use the "Guess" for this session
+                    if (self.reviewGuesses[self.currQ] !== undefined) {
+                        userSelected = self.reviewGuesses[self.currQ];
+                        showSolution = true; // Show solution only AFTER they guess
+                    } else {
+                        showSolution = false; // Hide solution initially
+                    }
+                } else if (self.isReview) {
+                    // Normal Review: Use the original exam response
+                    userSelected = r.sel;
+                    showSolution = true;
+                } else {
+                    // Taking Exam
+                    userSelected = r.sel;
+                    showSolution = false;
+                }
+
                 q.options.forEach(function(opt, i) {
                     var row = document.createElement('div');
                     row.className = 'opt-row';
-                    if(self.isReview) {
-                        row.style.pointerEvents = 'none';
-                        if(i === q.correctIndex) row.classList.add('correct');
-                        if(r.sel === i && i !== q.correctIndex) row.classList.add('wrong');
+                    
+                    if (self.isReview) {
+                        if (isPractice) {
+                            // PRACTICE MODE INTERACTION
+                            if (showSolution) {
+                                // 1. User has guessed. Show Right/Wrong.
+                                row.style.pointerEvents = 'none'; // Lock options
+                                if (i === q.correctIndex) row.classList.add('correct'); // Always show Green
+                                if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong'); // Show Red if wrong
+                            } else {
+                                // 2. User has NOT guessed yet. Clean UI.
+                                row.style.pointerEvents = 'auto'; // Allow clicking
+                                row.style.cursor = 'pointer';
+                                row.onclick = function() {
+                                    // Save the guess
+                                    self.reviewGuesses[self.currQ] = i;
+                                    // Reload to reveal answer
+                                    self.loadQ();
+                                };
+                            }
+                        } else {
+                            // NORMAL REVIEW (Original Logic)
+                            row.style.pointerEvents = 'none';
+                            if (i === q.correctIndex) row.classList.add('correct');
+                            if (userSelected === i && i !== q.correctIndex) row.classList.add('wrong');
+                        }
                     } else {
-                        if(r.sel === i) row.classList.add('selected');
+                        // EXAM MODE
+                        if (userSelected === i) row.classList.add('selected');
                         row.onclick = function() { r.sel = i; self.loadQ(); };
                     }
+                    
                     row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
                     box.appendChild(row);
                 });
             }
 
+            // -- SOLUTION BOX LOGIC --
             var solBox = document.getElementById('solution-box');
-            if(this.isReview) {
+            
+            // Only show solution if we are in Review AND (Standard Mode OR (Practice Mode + Guessed))
+            var shouldDisplaySol = false;
+            if (this.isReview) {
+                if (!isPractice) shouldDisplaySol = true; // Always show in normal review
+                else if (isPractice && this.reviewGuesses[this.currQ] !== undefined) shouldDisplaySol = true; // Show only after guess
+            }
+
+            if(shouldDisplaySol) {
                 solBox.style.display = 'block';
                 document.getElementById('sol-text').innerText = q.solution || "No solution.";
             } else {
@@ -544,10 +624,17 @@
 
         startReviewMode: function() {
             this.isReview = true; this.currQ = 0;
+            // NEW: Reset practice data
+            this.reviewGuesses = {}; 
+            // Reset the switch to OFF by default (optional, or keep user preference)
+            document.getElementById('btn-practice-mode').checked = false;
+            // NEW: Show the Practice Toggle
+            document.getElementById('practice-toggle-box').style.display = 'flex';
             // FIX: Disable the "Unsaved Changes" warning.
             // We don't need protection in review mode because the test is over.
             window.onbeforeunload = null;
             // HIDE HEADER ELEMENTS
+            document.getElementById('timer-display').style.display = 'none';
             document.getElementById('timer-display').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
             document.getElementById('btn-exit').style.display = 'none';
