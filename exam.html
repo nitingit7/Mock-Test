@@ -544,6 +544,9 @@
 
         startReviewMode: function() {
             this.isReview = true; this.currQ = 0;
+            // FIX: Disable the "Unsaved Changes" warning.
+            // We don't need protection in review mode because the test is over.
+            window.onbeforeunload = null;
             // HIDE HEADER ELEMENTS
             document.getElementById('timer-display').style.display = 'none';
             document.getElementById('btn-pause').style.display = 'none';
