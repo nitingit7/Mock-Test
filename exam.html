@@ -121,10 +121,11 @@
                     return; 
                 }
                 history.pushState(null, null, location.href);
+                // this line prevent the back after landing the home page
                 if (confirm("⚠️ Do you want to quit the test? Your progress will be lost.")) {
                     window.onbeforeunload = null; 
                     if(this.timerInterval) clearInterval(this.timerInterval);
-                    location.href = "index.html"; 
+                    location.replace("index.html"); // <--- NEW LINE (Use this)
                 }
             };
 
