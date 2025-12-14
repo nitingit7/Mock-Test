@@ -123,6 +123,11 @@
                 if (document.getElementById('view-result').classList.contains('active')) {
                     return; 
                 }
+                // 2. FIX: If we are in REVIEW MODE, exit review without warning
+                if (this.isReview) {
+                    this.exitReview(); // Go back to Result screen
+                    return;
+                }
 
                 // FIX: Browser Back Button Logic
                 // The browser has ALREADY popped the trap.
