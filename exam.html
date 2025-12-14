@@ -19,7 +19,8 @@
                 <div class="timer" id="timer-display">00:00</div>
                 <button class="btn-header btn-pause" id="btn-pause" title="Pause">⏸</button>
                 <button class="btn-header btn-exit" id="btn-exit" title="Exit Test">✖</button>
-                <button class="btn-outline" style="background:white; padding: 5px 10px;" id="btn-toggle-sidebar">☰</button>
+                
+                <button class="btn-header btn-outline" id="btn-toggle-sidebar">☰</button>
             </div>
         </header>
         <div class="exam-body">
@@ -30,7 +31,8 @@
                             <strong style="color:var(--blue);" id="q-number">Q1</strong>
                             <span id="btn-report" class="report-link">Report Error</span>
                         </div>
-                        <span style="font-size:0.8rem; background:#eee; padding:2px 6px; border-radius:4px;">Marks: +1 / -0.25</span>
+                        
+                        <span class="marks-badge">Marks: +1 / -0.25</span>
                     </div>
                     
                     <div id="review-badges" class="review-badges-container" style="display:none;">
@@ -68,7 +70,7 @@
                 </div>
             </main>
             <aside id="sidebar">
-                <div style="padding:10px; font-weight:bold; border-bottom:1px solid #eee;">
+                <div style="padding:10px; font-weight:bold; border-bottom:1px solid var(--border-color);">
                     Palette <span style="float:right; cursor:pointer;" id="btn-close-sidebar">✖</span>
                 </div>
                 <div class="palette-grid" id="palette-grid"></div>
@@ -83,15 +85,15 @@
         <h1>Test Paused</h1>
         <p style="margin-bottom:30px;">Timer stopped.</p>
         <button class="btn btn-green" style="padding:15px 30px;" id="btn-resume">RESUME</button>
-        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #555;" id="btn-quit">Quit Test</button>
+        <button class="btn btn-red" style="margin-top:20px; background:transparent; border:1px solid #aaa;" id="btn-quit">Quit Test</button>
     </div>
 
     <div id="view-result" class="view-result">
         <div class="score-card">
-            <h2 style="color:#333;">Result</h2>
+            <h2>Test Result</h2>
             <div id="feedback-badge" class="feedback-badge">Processing...</div>
             <div style="font-size:3.5rem; font-weight:bold; color:var(--blue);" id="final-score">0</div>
-            <p style="color:#666; margin-bottom:10px;">Total Marks</p>
+            <p style="margin-bottom:10px;">Total Marks</p>
             <div id="time-taken-box" class="time-badge">Time: 0s</div>
             
             <div class="stat-grid">
@@ -102,14 +104,13 @@
             
             <button class="btn btn-orange" style="width:100%; margin-bottom:10px;" id="btn-reattempt">Re-attempt Test</button>
             <button class="btn btn-blue" style="width:100%; margin-bottom:10px;" id="btn-view-sols">Review Solutions</button>
-            <button class="btn btn-outline" style="width:100%;" onclick="location.href='index.html'">Back to Home</button>
+            <button class="btn btn-outline" style="width:100%;" onclick="history.go(-2)">Back to Home</button>
         </div>
     </div>
-
+    
     <script>
-    // --- EXAM ENGINE ---
-    window.app = {
-        // FIX 1: Add 'reviewGuesses' here so we don't get an error
+       /* ... KEEP YOUR JS AS IS ... */
+       window.app = {
         data: null, responses: {}, currQ: 0, timerInterval: null, 
         reviewGuesses: {}, 
         totalTimeSeconds: 0, startTime: 0, accumulatedPauseTime: 0, pauseStartTimestamp: 0,
@@ -122,16 +123,15 @@
 
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
-            // --- 1. SET THE TRAP ---
+            // TRAP
             history.pushState(null, null, location.href);
 
-            // --- 2. LISTEN FOR BACK BUTTON ---
+            // BACK BUTTON LOGIC
             window.onpopstate = () => {
                 if (document.getElementById('view-result').classList.contains('active')) {
                     return; 
                 }
                 
-                // If in Review, just exit review without warning
                 if (this.isReview) {
                     this.exitReview(); 
                     return;
@@ -146,16 +146,7 @@
                 }
             };
 
-            // FIX 2: BIND THE SLIDER SWITCH LISTENER
-            // This makes the page update immediately when you flip the switch
-            var practiceBtn = document.getElementById('btn-practice-mode');
-            if(practiceBtn) {
-                practiceBtn.addEventListener('change', () => {
-                    this.loadQ(); // Reloads the question with new mode
-                });
-            }
-
-            // Binds
+            // BINDINGS
             this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
             this.bind('btn-close-sidebar', () => this.toggleSidebar());
             this.bind('btn-pause', () => this.togglePause());
@@ -172,6 +163,11 @@
             this.bind('btn-view-sols', () => this.startReviewMode());
             this.bind('btn-reattempt', () => this.reattemptTest());
             this.bind('btn-report', () => this.reportIssue());
+
+            var practiceBtn = document.getElementById('btn-practice-mode');
+            if(practiceBtn) {
+                practiceBtn.addEventListener('change', () => { this.loadQ(); });
+            }
 
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden && this.timerInterval && !this.isPaused) this.updateTimerDisplay();
@@ -224,7 +220,6 @@
             document.getElementById('review-footer').style.display = 'none';
             document.getElementById('review-badges').style.display = 'none';
             
-            // Hide practice toggle in exam mode
             var pToggle = document.getElementById('practice-toggle-box');
             if(pToggle) pToggle.style.display = 'none';
 
@@ -309,7 +304,6 @@
             var q = this.data.questions[this.currQ];
             var r = this.responses[this.currQ];
             
-            // FIX 3: CHECK PRACTICE MODE STATUS
             var isPractice = false;
             var toggle = document.getElementById('btn-practice-mode');
             if(this.isReview && toggle && toggle.checked) {
@@ -346,9 +340,7 @@
                 extra.appendChild(div);
             }
             
-            // -- Badges --
             var badgeContainer = document.getElementById('review-badges');
-            // Hide badges in practice mode
             if (this.isReview && !isPractice) {
                 badgeContainer.style.display = 'flex';
                 var statusBadge = document.getElementById('review-status-badge');
@@ -366,7 +358,6 @@
                 badgeContainer.style.display = 'none';
             }
 
-            // -- OPTIONS LOGIC --
             var box = document.getElementById('options-box');
             if(box) {
                 box.innerHTML = '';
@@ -376,15 +367,11 @@
                 var showSolution = false;
 
                 if (isPractice) {
-                    // Initialize if missing
                     if(!self.reviewGuesses) self.reviewGuesses = {}; 
-                    
                     if (self.reviewGuesses[self.currQ] !== undefined) {
                         userSelected = self.reviewGuesses[self.currQ];
                         showSolution = true; 
-                    } else {
-                        showSolution = false; 
-                    }
+                    } else { showSolution = false; }
                 } else if (self.isReview) {
                     userSelected = r.sel;
                     showSolution = true;
@@ -425,7 +412,6 @@
                 });
             }
 
-            // -- SOLUTION BOX --
             var solBox = document.getElementById('solution-box');
             var shouldDisplaySol = false;
             
@@ -544,6 +530,9 @@
         },
 
         renderResultScreen: function(score, corr, wrong, unatt, total, timeSpent) {
+            // FIX: HIDE PAUSE OVERLAY if it is visible
+            document.getElementById('pause-overlay').style.display = 'none';
+
             document.getElementById('final-score').innerText = score.toFixed(2);
             document.getElementById('res-correct').innerText = corr; 
             document.getElementById('res-wrong').innerText = wrong; 
@@ -580,7 +569,6 @@
         startReviewMode: function() {
             this.isReview = true; this.currQ = 0;
             
-            // FIX 4: RESET PRACTICE DATA
             this.reviewGuesses = {}; 
             var pBtn = document.getElementById('btn-practice-mode');
             if(pBtn) pBtn.checked = false; 
