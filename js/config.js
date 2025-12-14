@@ -41,29 +41,26 @@ var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcBe23FbEQkCmH2
 // --- THEME MANAGER (Global Definition) ---
 
 // 1. Define this function GLOBALLY (outside any blocks)
-window.toggleTheme = function() {
-    var body = document.body;
-    if(!body) return; // Safety check
 
-    // Toggle class
-    var isDark = body.classList.toggle('dark-mode');
+// window.toggleTheme = function() {
+//     var body = document.body;
+//     if(!body) return; // Safety check
+
+//     // Toggle class
+//     var isDark = body.classList.toggle('dark-mode');
     
-    // Save to storage
-    localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
+//     // Save to storage
+//     localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
     
-    // Update button text
-    var btn = document.getElementById('theme-toggle-btn');
-    if(btn) btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
-};
+//     // Update button text
+//     var btn = document.getElementById('theme-toggle-btn');
+//     if(btn) btn.innerText = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+// };
 
 // 2. Initialize Theme on Load (Wait for HTML to be ready)
 document.addEventListener("DOMContentLoaded", function() {
     var savedTheme = localStorage.getItem('site-theme');
-    
-    // If saved theme is dark, apply it
     if(savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
-        var btn = document.getElementById('theme-toggle-btn');
-        if(btn) btn.innerText = "☀️ Light Mode";
     }
 });
