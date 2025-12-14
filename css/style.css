@@ -153,3 +153,73 @@ input:checked + .slider:before {
     color: #495057;
     font-size: 0.95rem;
 }
+
+/* --- DARK THEME VARIABLES --- */
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #ddd;
+    --header-bg: #ffffff;
+    --shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* When body has class="dark-mode" */
+body.dark-mode {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --border-color: #333;
+    --header-bg: #1e1e1e;
+    --shadow: 0 4px 10px rgba(0,0,0,0.5);
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* --- APPLY DARK THEME TO ELEMENTS --- */
+body.dark-mode .container, 
+body.dark-mode .view,
+body.dark-mode .view-result,
+body.dark-mode .score-card,
+body.dark-mode .exam-body,
+body.dark-mode header,
+body.dark-mode #sidebar,
+body.dark-mode .test-item,
+body.dark-mode .timer-box {
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+    box-shadow: var(--shadow);
+}
+
+/* Fix specific text elements in Dark Mode */
+body.dark-mode h2, 
+body.dark-mode h1, 
+body.dark-mode strong,
+body.dark-mode .stat-label {
+    color: var(--text-color) !important;
+}
+
+body.dark-mode .opt-row {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+body.dark-mode .opt-row:hover {
+    background-color: #3d3d3d;
+}
+
+/* Toggle Button Style (For Index Page) */
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+}
