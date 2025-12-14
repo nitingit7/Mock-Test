@@ -514,7 +514,14 @@
 
         reattemptTest: function() {
             if(confirm("Clear previous result and re-attempt?")) {
-                localStorage.removeItem(this.currentFileUrl); location.reload();
+                // 1. Delete the saved score
+                localStorage.removeItem(this.currentFileUrl); 
+                
+                // 2. Force the browser to load the "Start Test" URL (without showResult)
+                // We manually construct the URL to ensure it starts fresh
+                var newUrl = "exam.html?file=" + this.currentFileUrl;
+                
+                location.replace(newUrl);
             }
         },
 
