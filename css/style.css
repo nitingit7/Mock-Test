@@ -1,148 +1,114 @@
-/* =========================================
-   1. GLOBAL THEME & VARIABLES
-   ========================================= */
+/* css/style.css */
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+
 :root {
-    /* Light Theme Defaults */
-    --bg-body: #f4f6f8;
-    --bg-container: #ffffff;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --border-color: #eeeeee;
-    --shadow: 0 2px 10px rgba(0,0,0,0.1);
-    --blue-btn: #007bff;
-    --header-bg: #343a40;
-    --header-text: #fff;
+    /* --- BRAND COLORS --- */
+    --blue:   #3F72AF;
+    --yellow: #DBE2EF;
+    --dark:   #112D4E;
+    --light:  #F9F7F7;
+    --green:  #28a745;
+    --red:    #dc3545;
+    --purple: #6f42c1;
 
-    /* Exam Status Colors */
-    --red: #dc3545;   /* Not Answered */
-    --green: #28a745; /* Answered */
-    --purple: #6f42c1; /* Marked */
-    --white: #ffffff; /* Not Visited */
+    /* --- LIGHT THEME (Default) --- */
+    --bg-color: #ebf4ff;
+    --card-bg: #ffffff;
+    --text-primary: #112D4E;
+    --text-secondary: #555555;
+    --border-color: #d0d7de;
+    --header-bg: #112D4E;
+    --hover-bg: #f3f4f6;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --inst-bg: #ffffff; /* Specific for instruction container */
 }
 
-/* Dark Theme (Auto-detect) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-body: #121212;
-        --bg-container: #1e1e1e;
-        --text-primary: #ffffff;
-        --text-secondary: #aaaaaa;
-        --border-color: #333333;
-        --shadow: 0 2px 10px rgba(0,0,0,0.5);
-        --header-bg: #000000;
-    }
+/* --- DARK THEME OVERRIDES --- */
+body.dark-mode {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --header-bg: #010409;
+    --hover-bg: #21262d;
+    --shadow: none;
+    --inst-bg: #161b22;
 }
 
-body {
-    background-color: var(--bg-body);
-    color: var(--text-primary);
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; transition: background 0.3s, color 0.3s; }
 
-a { text-decoration: none; color: inherit; }
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6, strong, b { color: var(--text-primary) !important; }
+.stat-label, p { color: var(--text-secondary) !important; }
 
-/* =========================================
-   2. HOME PAGE (DASHBOARD)
-   ========================================= */
-.dash-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
+/* HEADER */
+header { height: 60px; background: var(--header-bg); color: white !important; display: flex; justify-content: space-between; align-items: center; padding: 0 10px; flex-shrink: 0; border-bottom: 1px solid var(--border-color); }
+#exam-title { font-weight: bold; font-size: 1.1rem; max-width: 35%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: white !important; }
+.btn-header { padding: 6px 10px; font-size: 12px; border-radius: 4px; border: none; cursor: pointer; font-weight: bold; margin-left: 5px; }
+.btn-pause { background: var(--yellow); color: #112D4E; }
+.btn-exit { background: var(--red); color: white; }
+.btn-header-outline { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white !important; }
+.marks-badge { font-size: 0.8rem; background: rgba(255,255,255,0.15); color: white !important; padding: 5px 12px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.3); font-weight: bold; white-space: nowrap; }
 
-.app-title { font-size: 32px; font-weight: 800; margin-bottom: 40px; }
-.app-title span { color: var(--blue-btn); font-size: 0.6em; vertical-align: super; background: rgba(0, 123, 255, 0.1); padding: 2px 8px; border-radius: 12px; }
+/* BUTTONS */
+.btn { padding: 10px 20px; border: none; border-radius: 4px; color: white; font-weight: bold; cursor: pointer; }
+.btn-green { background: var(--green); }
+.btn-red { background: var(--red); }
+.btn-blue { background: var(--blue); }
+.btn-purple { background: var(--purple); }
+.btn-orange { background: #fd7e14; }
+.btn-outline { background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); font-weight: bold; }
 
-.subject-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.subject-card { background: var(--bg-container); padding: 25px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; transition: 0.2s; }
-.subject-card:hover { transform: translateY(-5px); border-color: var(--blue-btn); }
-.subject-icon { font-size: 40px; margin-bottom: 15px; }
-.subject-title { font-size: 18px; font-weight: bold; }
+/* HOME & LIST */
+.container { width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+.subject-card { background: var(--card-bg); width: 100%; padding: 25px; margin-bottom: 15px; border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border-color); cursor: pointer; display: flex; align-items: center; justify-content: space-between; color: var(--text-primary); }
+.icon { font-size: 24px; margin-right: 15px; color: var(--blue); }
+.test-item { background: var(--card-bg); width: 100%; padding: 15px; margin-bottom: 10px; border-radius: 8px; border: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; color: var(--text-primary); }
+.back-btn { display: inline-flex; align-items: center; justify-content: center; background-color: transparent; border: 2px solid var(--blue); color: var(--blue); padding: 8px 16px; font-size: 1rem; font-weight: bold; border-radius: 8px; margin-bottom: 20px; cursor: pointer; }
+body.dark-mode .back-btn { border-color: var(--text-primary); color: var(--text-primary); }
 
-/* =========================================
-   3. LIST PAGE (For list.html)
-   ========================================= */
-.list-header {
-    background: var(--header-bg);
-    color: var(--header-text);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.btn-back { background: transparent; border: 1px solid #666; color: white; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+/* --- INSTRUCTION PAGE STYLES (ADDED HERE) --- */
+.inst-container { background: var(--inst-bg); max-width: 95%; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: var(--shadow); border: 1px solid var(--border-color); color: var(--text-primary); }
+.inst-header { border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+.inst-content { height: 60vh; overflow-y: auto; padding-right: 10px; border: 1px solid var(--border-color); padding: 15px; margin-bottom: 20px; background: var(--bg-color); }
+.legend-row { display: flex; align-items: center; margin-bottom: 12px; }
+.legend-icon { width: 30px; height: 30px; display: flex; justify-content: center; align-items: center; border-radius: 50%; border: 1px solid #ccc; margin-right: 15px; font-size: 12px; font-weight: bold; flex-shrink: 0; }
+.l-not-visit { background: #e2e6ea; color: black; border-radius: 4px; }
+.l-not-ans { background: var(--red); color: white; border: none; }
+.l-ans { background: var(--green); color: white; border: none; }
+.l-mark { background: var(--purple); color: white; border: none; }
+.l-ans-mark { background: var(--purple); color: white; border: none; position: relative; }
+.l-ans-mark::after { content: '✔'; position: absolute; bottom: -2px; right: -2px; font-size: 10px; background: var(--green); color: white; border-radius: 50%; padding: 1px; }
+.footer-box { border-top: 1px solid var(--border-color); padding-top: 20px; }
+.chk-label { display: flex; align-items: center; cursor: pointer; font-weight: bold; user-select: none; color: var(--text-primary); }
+.chk-input { width: 18px; height: 18px; margin-right: 10px; }
+.btn-start { width: 100%; margin-top: 15px; opacity: 0.5; pointer-events: none; transition: 0.3s; background: var(--blue); color: white; }
+.btn-start.active { opacity: 1; pointer-events: auto; }
 
-.list-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-}
+/* EXAM UI */
+.exam-body { display: flex; flex: 1; overflow: hidden; position: relative; background: var(--bg-color); }
+.q-area { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: var(--card-bg); }
+.q-content { flex: 1; padding: 20px; overflow-y: auto; font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); }
+.q-footer { padding: 10px; background: var(--bg-color); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; }
+.opt-row { display: flex; padding: 12px; border: 1px solid var(--border-color); background: var(--bg-color); margin-bottom: 10px; border-radius: 5px; cursor: pointer; align-items: center; color: var(--text-primary); }
+.opt-row.selected { background: var(--yellow); border-color: var(--blue); border-width: 2px; color: #333 !important; }
+body.dark-mode .opt-row.selected { background: rgba(31, 111, 235, 0.25); border-color: #58a6ff; color: #fff !important; }
+.opt-row.correct { background: #d4edda !important; border-color: var(--green) !important; color: #155724 !important; }
+.opt-row.wrong { background: #f8d7da !important; border-color: var(--red) !important; color: #721c24 !important; }
+.solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
 
-.exam-item {
-    background: var(--bg-container);
-    border: 1px solid var(--border-color);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: var(--shadow);
-}
-.exam-name { font-weight: bold; }
-.btn-action {
-    background-color: var(--blue-btn);
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.btn-result { background-color: var(--green); }
-
-/* =========================================
-   4. INSTRUCTION & EXAM PAGE
-   ========================================= */
-.inst-container { background: var(--bg-container); max-width: 90%; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: var(--shadow); }
-.inst-header h2 { font-weight: 800; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
-
-/* Exam Layout */
-.exam-wrapper { display: flex; height: 100vh; flex-direction: column; }
-.exam-top-bar { background: var(--header-bg); color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
-.timer-box { font-weight: bold; font-size: 18px; background: #222; padding: 5px 10px; border-radius: 4px; }
-
-.exam-body { display: flex; flex: 1; overflow: hidden; }
-.question-area { flex: 1; padding: 20px; overflow-y: auto; background: var(--bg-container); }
-.question-text { font-size: 18px; margin-bottom: 20px; line-height: 1.6; }
-.option-row { padding: 10px; border: 1px solid var(--border-color); margin-bottom: 10px; border-radius: 5px; cursor: pointer; }
-.option-row:hover { background: var(--bg-body); }
-
-/* Palette (Right Side) */
-.palette-area { width: 300px; background: var(--bg-body); border-left: 1px solid var(--border-color); display: flex; flex-direction: column; }
-.palette-grid { padding: 10px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; overflow-y: auto; flex: 1; }
-.p-btn {
-    height: 40px; width: 40px; border-radius: 50%; border: none; font-weight: bold; cursor: pointer;
-    display: flex; justify-content: center; align-items: center;
-}
-
-/* Palette Colors */
-.p-not-visit { background: #e0e0e0; color: black; }
-.p-not-ans { background: var(--red); color: white; }
-.p-ans { background: var(--green); color: white; }
-.p-mark { background: var(--purple); color: white; }
-
-/* Footer Buttons */
-.exam-footer { padding: 15px; background: var(--bg-container); border-top: 1px solid var(--border-color); display: flex; gap: 10px; }
-.btn-save { background: var(--green); color: white; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
-.btn-review { background: var(--purple); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-.btn-clear { background: var(--red); color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
-
-/* Instructions Legend Colors */
-.l-not-visit { background: #e0e0e0; color: black; }
-.l-not-ans { background: var(--red); color: white; }
-.l-ans { background: var(--green); color: white; }
-.l-mark { background: var(--purple); color: white; }
-.l-ans-mark { background: var(--purple); color: white; position: relative; }
+/* SIDEBAR & RESULT */
+#sidebar { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: var(--card-bg); border-left: 1px solid var(--border-color); transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex; flex-direction: column; color: var(--text-primary); }
+#sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
+.palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
+.pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
+.view-result { display:none; justify-content: center; align-items: center; background: var(--bg-color); width:100%; height:100%; flex-direction:column; position: absolute; top:0; left:0; z-index: 100; }
+.view-result.active { display:flex; }
+.score-card { text-align: center; padding: 30px; background: var(--card-bg); box-shadow: var(--shadow); border: 1px solid var(--border-color); border-radius: 10px; width: 90%; max-width: 400px; overflow-y:auto; max-height:95vh; color: var(--text-primary); }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 20px 0; }
+.stat-item { padding: 10px; border-radius: 5px; background: var(--bg-color); border: 1px solid var(--border-color); }
+.stat-val { font-weight: bold; font-size: 1.2rem; color: var(--text-primary); }
+#pause-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; display: none; flex-direction: column; justify-content: center; align-items: center; color: white; }
+.theme-btn { position: absolute; top: 20px; right: 20px; background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 6px 12px; border-radius: 20px; cursor: pointer; font-weight: 600; font-size: 0.9rem; z-index: 1000; }
