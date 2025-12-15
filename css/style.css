@@ -789,3 +789,61 @@ header {
     border-radius: 8px;
     border: 1px solid var(--border-color);
 }
+
+/* --- IMAGE ZOOM MODAL STYLES --- */
+.img-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 99999; /* Sit on top of everything */
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+/* Zoom Animation */
+.modal-content {  
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* Close Button */
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Mobile: Allow pinch zoom feel by letting width expand */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
