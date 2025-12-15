@@ -37,8 +37,8 @@
                 var div = document.createElement('div');
                 div.className = 'test-item';
                 
-                // NEW: Added a 📄 icon for a professional look
-                //div.innerHTML = "<span>📄 " + f.name + "</span>";
+                // NEW: removing a 📄 icon for a professional look
+                div.innerHTML = "<span>" + f.name + "</span>";
                 
                 var saved = localStorage.getItem(f.file);
                 var btn = document.createElement('button');
