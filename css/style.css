@@ -284,8 +284,8 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
    ========================================= */
 
 .feedback-badge {
-    font-size: 1.5rem;          /* Larger text */
-    font-weight: 900;           /* Extra Bold */
+    font-size: 1rem;          /* Larger text */
+    font-weight: 500;           /* Extra Bold */
     text-transform: uppercase;  /* Make it all CAPS */
     letter-spacing: 2px;        /* Spacing between letters for clean look */
     color: white !important;    /* Force white text */
