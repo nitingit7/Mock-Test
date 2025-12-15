@@ -278,3 +278,29 @@ body.dark-mode .l-not-visit { background: #333; color: white; border-color: #555
 /* Disabled button style */
 .btn-start { width: 100%; margin-top: 15px; opacity: 0.5; pointer-events: none; transition: 0.3s; background-color: var(--blue); color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; }
 .btn-start.active { opacity: 1; pointer-events: auto; cursor: pointer; }
+
+/* =========================================
+   ADD THIS TO STYLE.CSS FOR PROFESSIONAL BADGE
+   ========================================= */
+
+.feedback-badge {
+    font-size: 1.5rem;          /* Larger text */
+    font-weight: 900;           /* Extra Bold */
+    text-transform: uppercase;  /* Make it all CAPS */
+    letter-spacing: 2px;        /* Spacing between letters for clean look */
+    color: white !important;    /* Force white text */
+    
+    padding: 12px 30px;         /* More breathing room */
+    border-radius: 50px;        /* Pill/Rounded shape instead of box */
+    margin: 20px auto;          /* Center it with space */
+    width: fit-content;         /* Shrink to fit text width */
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Soft shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Slight text shadow */
+    transition: transform 0.2s ease;
+}
+
+/* Optional: Slight hover effect */
+.feedback-badge:hover {
+    transform: scale(1.05);
+}
