@@ -12,11 +12,11 @@
     --purple: #6f42c1;
 
     /* --- LIGHT THEME (Default) --- */
-    --bg-color: #ebf4ff;
-    --card-bg: #ffffff;
+    --bg-color: #dfe3eb;
+    --card-bg: #fbfbfb;
     --text-primary: #112D4E;
     --text-secondary: #555555;
-    --border-color: #d0d7de;
+    --border-color: #cfd7de;
     --header-bg: #112D4E; /* Dark Blue */
     --hover-bg: #f3f4f6;
     --shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -64,16 +64,23 @@ header {
 }
 .btn-header-outline:hover { background: rgba(255,255,255,0.1); }
 
-/* MARKS BADGE (Always White Text on Dark Header) */
+/* MARKS BADGE (Updated for visibility) */
 .marks-badge {
     font-size: 0.8rem;
-    background: rgba(255,255,255,0.15);
-    color: white !important;
+    background: #eef3f8;           /* Light gray-blue background */
+    color: var(--dark) !important; /* Dark text (Visible in Light Mode) */
     padding: 5px 12px;
     border-radius: 4px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid #d0d7de;
     font-weight: bold;
     white-space: nowrap;
+}
+
+/* Dark Mode override (Keeps it white when background is black) */
+body.dark-mode .marks-badge {
+    background: rgba(255,255,255,0.15);
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 /* --- GENERAL UI BUTTONS --- */
