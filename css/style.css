@@ -819,10 +819,14 @@ header {
     display: block;
     max-width: 90%;
     max-height: 90vh;
-}
-
-/* Zoom Animation */
-.modal-content {  
+    
+    /* --- THE FIX IS HERE --- */
+    background-color: #ffffff; /* Force white background so charts are readable */
+    padding: 10px;             /* Add a little white frame around the image */
+    border-radius: 8px;        /* Round the corners */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Make it pop */
+    
+    /* Keep animation */
     animation-name: zoom;
     animation-duration: 0.3s;
 }
