@@ -75,7 +75,8 @@
 
     {
       "id": "DI01",
-      "text": "$$\\text{Direction:} The table given below shows the number of guest and number of rooms in five different hotels.\n guests living in 2/3rd of the rooms in D. find the remining number of guests living in per room in D.",
+      "direction": "The table given below shows the number of guest and number of rooms in five different hotels.",
+      "text": "guests living in 2/3rd of the rooms in D. find the remining number of guests living in per room in D.",
       "infoHtml": "<table border='1' style='width:85%; border-collapse:collapse; margin:auto;'><tr><th>Hotels</th><th>Number of rooms</th><th>Number of guests</th></tr><tr><td>A</td><td>34</td><td>72</td></tr><tr><td>B</td><td>39</td><td>51</td></tr><tr><td>C</td><td>52</td><td>60</td></tr><tr><td>D</td><td>39</td><td>77</td></tr><tr><td>E</td><td>40</td><td>100</td></tr></table>",
       "options": ["9", "3", "16", "6", "2"],
       "solution": "Total rooms in D = 39. Total guests in D = 77.\nRooms occupied by 51 guests = $$\\frac{2}{3} \\times 39 = 26$$.\nRemaining rooms = $$39 - 26 = 13$$.\nRemaining guests = $$77 - 51 = 26$$.\nGuests per remaining room = $$\\frac{26}{13} = 2$$."
