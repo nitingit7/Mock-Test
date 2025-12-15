@@ -617,30 +617,6 @@ body.dark-mode .q-extra-info tr:nth-child(even) {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* --- PROFESSIONAL TIMER & REPORT BUTTON STYLES --- */
-
-/* 1. Professional Digital Timer */
-.timer {
-    font-family: 'Courier New', Courier, monospace; /* Digital clock font */
-    font-size: 1.1rem;
-    font-weight: bold;
-    background-color: #222;       /* Dark background */
-    color: #00ff00;               /* Bright green text (Classic digital look) */
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: 2px solid #444;
-    min-width: 80px;
-    text-align: center;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5); /* Inner shadow depth */
-    letter-spacing: 1px;
-}
-
-/* Warning color when time is low (optional, connects to your JS logic) */
-.timer.warning {
-    color: #ff3333; /* Red text */
-    border-color: #ff3333;
-    animation: blink 1s infinite;
-}
 
 @keyframes blink { 50% { opacity: 0.5; } }
 
@@ -676,4 +652,70 @@ body.dark-mode #btn-report {
 body.dark-mode #btn-report:hover {
     background-color: #ff6b6b;
     color: #1a1a1a;
+}
+
+/* --- PROFESSIONAL TIMER & REPORT BUTTON STYLES --- */
+
+/* --- MODERN HEADER LAYOUT --- */
+
+/* 1. Center the Timer (Absolute Position) */
+.timer-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Keeps it perfectly centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Modern Glassy Look */
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 6px 20px;
+    border-radius: 30px; /* Pill shape */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px); /* Optional: Blur effect behind */
+}
+
+/* 2. Clean Typography for Timer */
+.timer {
+    font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; /* Clean font */
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    background: transparent; /* No box background */
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: auto;
+}
+
+/* Optional Icon Styling */
+.timer-icon {
+    font-size: 1.1rem;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+/* 3. Group the Right-Side Buttons */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the buttons */
+    z-index: 10; /* Ensure buttons are clickable */
+}
+
+/* 4. Warning State (Subtle Red Text, no flashing box) */
+.timer.warning {
+    color: #ff6b6b; /* Soft red */
+    animation: none; /* Remove annoying blink */
+}
+.timer-container.warning-bg {
+    border-color: #ff6b6b;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* 5. Mobile Adjustment: Hide Title to fit Timer */
+@media (max-width: 600px) {
+    #exam-title { display: none; }
+    .timer-container { position: relative; left: 0; transform: none; }
 }
