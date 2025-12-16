@@ -373,15 +373,20 @@
             // Part B: Review Toolbar (Only in Review Mode)
             var reviewToolbar = "";
             if (this.isReview) {
-                // Determine Badge Colors
-                var badgeStyle = "background:#e2e6ea; color:#495057;"; // Skipped (Grey)
+                // --- FIX STARTS HERE: Use CSS Variables instead of fixed colors ---
+                
+                // 1. Default Style (Skipped) -> Uses Theme Colors
+                var badgeStyle = "background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);"; 
                 var badgeText = "Skipped";
                 
+                // 2. Correct (Green) -> Keep fixed colors as they look good on both
                 if (r.sel === q.correctIndex) {
-                    badgeStyle = "background:#d4edda; color:#155724;"; // Correct (Green)
+                    badgeStyle = "background:#d4edda; color:#155724; border:1px solid #c3e6cb;"; 
                     badgeText = "Correct";
-                } else if (r.sel !== null) {
-                    badgeStyle = "background:#f8d7da; color:#721c24;"; // Wrong (Red)
+                } 
+                // 3. Wrong (Red) -> Keep fixed colors
+                else if (r.sel !== null) {
+                    badgeStyle = "background:#f8d7da; color:#721c24; border:1px solid #f5c6cb;"; 
                     badgeText = "Wrong";
                 }
 
@@ -394,14 +399,14 @@
                 var checkedState = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) || (toggle && toggle.checked) ? "checked" : "";
                 if(toggle && toggle.checked) checkedState = "checked"; 
 
-                // Build the Clean Toolbar HTML
+                // Build HTML
                 reviewToolbar = `
                     <div class="review-toolbar">
                         <div class="badges-group">
                             <div class="pro-badge" style="${badgeStyle}">
                                 ${badgeText}
                             </div>
-                            <div class="pro-badge" style="background:var(--hover-bg); color:var(--text-secondary);">
+                            <div class="pro-badge" style="background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);">
                                 ⏱ ${timeText}
                             </div>
                         </div>
