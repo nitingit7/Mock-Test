@@ -643,21 +643,15 @@
                 window.onbeforeunload = null;
                 if(this.timerInterval) clearInterval(this.timerInterval);
                 
-                // --- THE FIX ---
-                // Instead of relying on history.go(-2) which is unreliable,
-                // we explicitly tell the browser where to go.
+                // --- SMART RETURN LOGIC ---
+                var lastSubject = localStorage.getItem('last_subject_viewed');
                 
-                // Option A: Go to the main Dashboard
-                //window.location.href = "index.html"; 
-                
-                // Option B: If you use list.html, you can use this instead:
-                //window.location.href = "list.html"; 
-                
-                // Option C: Try to go back safely, but default to index if it fails
-                if (document.referrer.indexOf('exam.html') === -1 && document.referrer !== "") {
-                     window.location.href = document.referrer;
+                if (lastSubject) {
+                    // If we know where they came from, go back to that specific list
+                    window.location.href = "list.html?subject=" + lastSubject;
                 } else {
-                     window.location.href = "index.html";
+                    // Fallback: If no history exists, go to Home
+                    window.location.href = "index.html";
                 }
             }
         },
