@@ -1090,3 +1090,7 @@ body.dark-mode .sec-btn.locked {
         justify-content: space-between; /* Spread toggle across width on phone */
     }
 }
+/* FIX: Make toggle text visible in Dark Mode */
+.toggle-label {
+    color: var(--text-primary) !important; /* Adapts: Dark in Light Mode, White in Dark Mode */
+}
