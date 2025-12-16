@@ -33,28 +33,7 @@
         <div class="exam-body">
             <main class="q-area">
                 <div class="q-content">
-                    <!-- <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:15px;">
-                        <div>
-                            <strong style="color:var(--blue);" id="q-number">Q1</strong>
-                            <span id="btn-report" class="report-link">Report Error</span>
-                        </div>
-                        
-                        <span class="marks-badge">Marks: +1 / -0.25</span>
-                    </div>
-                    
-                    <div id="review-badges" class="review-badges-container" style="display:none;">
-                        <div id="review-status-badge" class="review-badge"></div>
-                        <div id="review-time-badge" class="review-badge"></div>
-                    </div>
-
-                    <div id="practice-toggle-box" class="switch-container" style="display:none;">
-                        <label class="switch">
-                            <input type="checkbox" id="btn-practice-mode">
-                            <span class="slider"></span>
-                        </label>
-                        <span class="practice-label">Re-attempt</span>
-                    </div> -->
-
+                    <div id="header-container"></div> 
                     <div id="q-extra-info" class="q-extra-info"></div>
 
                     <div id="q-text" style="margin-bottom:20px;">Loading...</div>
@@ -359,18 +338,19 @@
 
             if(!this.isReview && r.status === 'not-visited') r.status = 'not-answered';
             
-            // 2. CLEAN UP OLD INJECTIONS (Prevent duplicates)
-            var contentDiv = document.querySelector('.q-content');
-            var oldHeader = document.querySelector('.q-header-dynamic'); if(oldHeader) oldHeader.remove();
+            // 2. TARGET THE NEW CONTAINER
+            var headerContainer = document.getElementById('header-container');
+            if (!headerContainer) {
+                // Safety: If user forgot Step 1, try to find parent
+                console.error("Header Container not found! Please check Step 1.");
+                return;
+            }
             
             // 3. GENERATE PROFESSIONAL HEADER
-            var headerDiv = document.createElement('div');
-            headerDiv.className = "q-header-dynamic";
             
             // Part A: Question Number & Marks
-            // NOTICE: We insert ${this.currQ + 1} directly here. It cannot be wrong.
             var topRow = `
-                <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px;">
+                <div class="q-header-dynamic" style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px;">
                     <div>
                         <strong style="color:var(--blue); font-size:1.1rem;">Q${this.currQ + 1}</strong>
                         <span id="btn-report" class="report-link" onclick="window.app.reportIssue()" style="margin-left:10px; font-size:0.8rem; cursor:pointer; color:var(--red);">Report Error</span>
@@ -382,44 +362,30 @@
             // Part B: Review Toolbar (Only in Review Mode)
             var reviewToolbar = "";
             if (this.isReview) {
-                // --- FIX STARTS HERE: Use CSS Variables instead of fixed colors ---
-                
-                // 1. Default Style (Skipped) -> Uses Theme Colors
                 var badgeStyle = "background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);"; 
                 var badgeText = "Skipped";
                 
-                // 2. Correct (Green) -> Keep fixed colors as they look good on both
                 if (r.sel === q.correctIndex) {
                     badgeStyle = "background:#d4edda; color:#155724; border:1px solid #c3e6cb;"; 
                     badgeText = "Correct";
-                } 
-                // 3. Wrong (Red) -> Keep fixed colors
-                else if (r.sel !== null) {
+                } else if (r.sel !== null) {
                     badgeStyle = "background:#f8d7da; color:#721c24; border:1px solid #f5c6cb;"; 
                     badgeText = "Wrong";
                 }
 
-                // Time Calculation
                 var spent = r.timeSpent || 0;
                 var tm = Math.floor(spent / 60); var ts = Math.floor(spent % 60);
                 var timeText = (tm > 0 ? tm + "m " : "") + ts + "s";
 
-                // Check Toggle State
                 var checkedState = (this.reviewGuesses && this.reviewGuesses[this.currQ] !== undefined) || (toggle && toggle.checked) ? "checked" : "";
                 if(toggle && toggle.checked) checkedState = "checked"; 
 
-                // Build HTML
                 reviewToolbar = `
                     <div class="review-toolbar">
                         <div class="badges-group">
-                            <div class="pro-badge" style="${badgeStyle}">
-                                ${badgeText}
-                            </div>
-                            <div class="pro-badge" style="background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);">
-                                ⏱ ${timeText}
-                            </div>
+                            <div class="pro-badge" style="${badgeStyle}">${badgeText}</div>
+                            <div class="pro-badge" style="background:var(--hover-bg); color:var(--text-primary); border:1px solid var(--border-color);">⏱ ${timeText}</div>
                         </div>
-
                         <div class="toggle-group">
                             <span class="toggle-label">Re-attempt</span>
                             <label class="switch" style="margin:0;">
@@ -431,9 +397,8 @@
                 `;
             }
 
-            // Inject HTML
-            headerDiv.innerHTML = topRow + reviewToolbar;
-            contentDiv.insertBefore(headerDiv, contentDiv.firstChild);
+            // 4. INJECT HTML (This completely refreshes the header area)
+            headerContainer.innerHTML = topRow + reviewToolbar;
 
             // Re-bind Toggle Logic
             if(this.isReview) {
@@ -446,12 +411,8 @@
                  }, 0);
             }
 
-            // ... (Continue with the rest of your standard rendering: Text, Images, Options) ...
-            
-            // [Paste the rest of the standard loadQ function here, starting from:]
-            // var staticHeader = contentDiv.querySelector...
-
             // --- STANDARD RENDERING (Text, Images, Options) ---
+            document.getElementById('q-text').innerText = q.text;
             
             // Update Text (Use existing ID)
             // Note: The previous header injection might have duplicated the Q-Number. 
