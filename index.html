@@ -5,58 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice King</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="module">
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
+        inject();
+    </script>
 </head>
 <body>
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" onchange="toggleTheme()">
+            <input type="checkbox" id="checkbox" onclick="toggleTheme(event)">
             <div class="slider-round"></div>
         </label>
     </div>
 
-    <div class="container">
-        <h2>Practice King <span style="font-size:0.5em; vertical-align:super; opacity:0.6;">BETA</span></h2>
-        
-        <div class="subject-card" onclick="location.href='list.html?subject=quant'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">📊</div> 
-                <div>
-                    <strong>Quantitative Aptitude</strong>
-                </div>
-            </div> 
-            <span>➜</span>
+    <div class="container main-dashboard">
+        <div class="header-section">
+            <div class="title-wrapper">
+                <h2 class="app-title">Practice King</h2>
+                <span class="beta-badge">BETA</span>
+            </div>
+            <p class="subtitle">Select a subject to begin your practice.</p>
         </div>
         
-        <div class="subject-card" onclick="location.href='list.html?subject=reasoning'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">🧩</div> 
-                <div>
-                    <strong>Reasoning Ability</strong>
-                </div>
-            </div> 
-            <span>➜</span>
-        </div>
-        
-        <div class="subject-card" onclick="location.href='list.html?subject=english'">
-            <div style="display:flex; align-items:center;">
-                <div class="icon">📖</div> 
-                <div>
-                    <strong>English Language</strong>
-                </div>
-            </div> 
-            <span>➜</span>
+        <div class="dashboard-grid">
+            
+            <div class="subject-card card-quant" onclick="location.href='list.html?subject=quant'">
+                <div class="card-content">
+                    <div class="icon-box">📊</div> 
+                    <div class="text-group">
+                        <strong>Quantitative Aptitude</strong>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+            
+            <div class="subject-card card-reasoning" onclick="location.href='list.html?subject=reasoning'">
+                <div class="card-content">
+                    <div class="icon-box">🧩</div> 
+                    <div class="text-group">
+                        <strong>Reasoning Ability</strong>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+            
+            <div class="subject-card card-english" onclick="location.href='list.html?subject=english'">
+                <div class="card-content">
+                    <div class="icon-box">📖</div> 
+                    <div class="text-group">
+                        <strong>English Language</strong>
+                    </div>
+                </div> 
+                <div class="arrow-icon">➜</div>
+            </div>
+
         </div>
 
-        <div style="margin-top: 50px; text-align: center; color: var(--text-secondary); font-size: 0.9rem; opacity: 0.8;">
-            <p>💡 <strong>Tip:</strong> Refresh often for new tests!</p>
+        <div class="footer-tip">
+            <p>💡 <strong>Pro Tip:</strong> Toggle the switch top-right for Dark Mode!</p>
         </div>
     </div>
 
     <script>
-        function toggleTheme() {
+        function toggleTheme(event) {
             var chk = document.getElementById('checkbox');
-            var isDark = chk.checked; // Checkbox state determines theme
-        
+            var isDark = chk.checked; 
+            
+            if (!document.startViewTransition) {
+                applyTheme(isDark);
+                return;
+            }
+
+            var x = event.clientX;
+            var y = event.clientY;
+            var endRadius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+
+            var transition = document.startViewTransition(() => {
+                applyTheme(isDark);
+            });
+
+            transition.ready.then(() => {
+                var clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`];
+                document.documentElement.animate(
+                    { clipPath: clipPath },
+                    { duration: 500, easing: 'ease-in', pseudoElement: '::view-transition-new(root)' }
+                );
+            });
+        }
+
+        function applyTheme(isDark) {
             if(isDark) {
                 document.body.classList.add('dark-mode');
                 localStorage.setItem('site-theme', 'dark');
@@ -66,13 +103,12 @@
             }
         }
 
-        // Apply Theme on Load
         (function() {
             var savedTheme = localStorage.getItem('site-theme');
             var chk = document.getElementById('checkbox');
             if(savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
-                if(chk) chk.checked = true; // Set toggle to ON
+                if(chk) chk.checked = true; 
             }
         })();
     </script>

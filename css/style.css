@@ -35,8 +35,17 @@ body.dark-mode {
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg-color); color: var(--text-primary); height: 100vh; display: flex; flex-direction: column; transition: background 0.3s, color 0.3s; }
-
+body { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', sans-serif; 
+    background: var(--bg-color); 
+    color: var(--text-primary); 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    /* transition removed to stop flickering */
+}
 /* --- TYPOGRAPHY FIXES --- */
 h1, h2, h3, h4, h5, h6, strong, b { color: var(--text-primary) !important; }
 .stat-label, p { color: var(--text-secondary) !important; }
@@ -159,13 +168,40 @@ body.dark-mode .opt-row.selected {
 }
 .solution-box { background: var(--bg-color); padding: 15px; border: 1px solid var(--border-color); border-left: 4px solid var(--green); margin-top: 20px; border-radius: 5px; display: none; color: var(--text-primary); }
 
-/* SIDEBAR & RESULT */
+/* --- SMOOTH SIDEBAR ANIMATION --- */
 #sidebar {
-    position: absolute; right: 0; top: 0; bottom: 0; width: 280px;
-    background: var(--card-bg); border-left: 1px solid var(--border-color);
-    transform: translateX(100%); transition: 0.3s; z-index: 10; display: flex;
-    flex-direction: column; color: var(--text-primary);
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    width: 280px;
+    background: var(--card-bg); 
+    border-left: 1px solid var(--border-color);
+    z-index: 1000; /* Ensure it's above everything */
+    display: flex; 
+    flex-direction: column; 
+    color: var(--text-primary);
+    
+    /* 1. Start hidden off-screen to the right */
+    transform: translateX(100%); 
+    
+    /* 2. THE MAGIC SAUCE: Use a custom bezier curve for smoothness */
+    /* This specific curve (fast start, slow stop) feels very "App-like" */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    
+    /* Optional: Add a subtle shadow when opening */
+    box-shadow: none;
 }
+
+/* When the sidebar is open */
+#sidebar.open { 
+    /* 3. Slide it into view */
+    transform: translateX(0); 
+    
+    /* Add a deep shadow so it looks like it's floating above the content */
+    box-shadow: -10px 0 30px rgba(0,0,0,0.3); 
+}
+
 #sidebar.open { transform: translateX(0); box-shadow: -5px 0 15px rgba(0,0,0,0.5); }
 .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 15px; overflow-y: auto; }
 .pal-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--border-color); display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 12px; color: var(--text-primary); background: var(--bg-color); }
@@ -860,4 +896,570 @@ header {
     .modal-content {
         width: 100%;
     }
+}
+
+/* --- FILTER SYSTEM STYLES --- */
+
+/* The Filter Toggle Button */
+.btn-filter {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.2s;
+}
+
+.btn-filter:hover {
+    background: var(--hover-bg);
+    transform: translateY(-1px);
+}
+
+.btn-filter.active {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+}
+
+/* The Dropdown Menu */
+.filter-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 45px; /* Pushes it below the button */
+    width: 220px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+    flex-direction: column;
+}
+
+.filter-dropdown.show {
+    display: flex;
+}
+
+/* The List of Keywords inside */
+.filter-list {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.filter-option {
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    transition: 0.2s;
+    background: var(--bg-color);
+    border: 1px solid transparent;
+}
+
+.filter-option:hover {
+    background: var(--hover-bg);
+}
+
+.filter-option.selected {
+    background: rgba(63, 114, 175, 0.15); /* Light blue tint */
+    color: var(--blue);
+    border-color: var(--blue);
+    font-weight: bold;
+}
+
+/* --- CLEAR FILTER BUTTON STYLES --- */
+.btn-clear-filter {
+    width: 100%;
+    background: var(--card-bg); /* Matches the menu background */
+    border: none;
+    border-top: 1px solid var(--border-color); /* Separator line */
+    color: var(--red);          /* Red text for "Clear" action */
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px; /* Rounded corners at bottom only */
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-clear-filter:hover {
+    background-color: rgba(220, 53, 69, 0.1); /* Light red hover effect */
+}
+
+/* Dark Mode adjustment */
+body.dark-mode .btn-clear-filter {
+    background: var(--card-bg);
+}
+body.dark-mode .btn-clear-filter:hover {
+    background: rgba(220, 53, 69, 0.2);
+}
+
+/* --- SIDEBAR SECTION TABS --- */
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.sec-btn {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.sec-btn:hover {
+    background: var(--hover-bg);
+}
+
+/* The Active Section (The one you are currently viewing) */
+.sec-btn.active {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Locked Sections (Future sections in Test Mode) */
+.sec-btn.locked {
+    opacity: 0.6;
+    background: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+
+body.dark-mode .sec-btn.locked {
+    background: #333;
+    color: #666;
+}
+
+/* Badge inside the button (e.g., "Q: 40") */
+.sec-badge {
+    font-size: 0.75rem;
+    background: rgba(0,0,0,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* --- PROFESSIONAL REVIEW TOOLBAR --- */
+.review-toolbar {
+    display: flex;
+    justify-content: space-between; /* Badges Left, Toggle Right */
+    align-items: center;
+    background: transparent; /* No ugly background box */
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color); /* Subtle divider */
+}
+
+/* Badges Group */
+.badges-group {
+    display: flex;
+    gap: 10px;
+}
+
+.pro-badge {
+    padding: 5px 12px;
+    border-radius: 20px; /* Pill shape is more modern */
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Toggle Group (Right Side) */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Mobile: Stack them if screen is too small */
+@media (max-width: 500px) {
+    .review-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .toggle-group {
+        width: 100%;
+        justify-content: space-between; /* Spread toggle across width on phone */
+    }
+}
+/* FIX: Make toggle text visible in Dark Mode */
+.toggle-label {
+    color: var(--text-primary) !important; /* Adapts: Dark in Light Mode, White in Dark Mode */
+}
+
+/* =========================================
+   SMOOTH THEME TRANSITION FIX 
+   (Add this to the very bottom of style.css)
+   ========================================= */
+
+/* 1. By default, force NO transition on body to stop load flickering */
+body {
+    transition: none !important;
+}
+
+/* 2. We add this class via JavaScript 0.1s after load */
+body.enable-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 3. Ensure all major UI components transition smoothly */
+/* This makes the header, cards, buttons, and sidebar fade nicely */
+body.enable-transition header,
+body.enable-transition .subject-card,
+body.enable-transition .test-item,
+body.enable-transition .q-area,
+body.enable-transition .q-content,
+body.enable-transition .q-footer,
+body.enable-transition #sidebar,
+body.enable-transition .btn,
+body.enable-transition .sec-btn,
+body.enable-transition .opt-row,
+body.enable-transition .timer-container,
+body.enable-transition .marks-badge,
+body.enable-transition .inst-container,
+body.enable-transition .inst-content {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- CIRCULAR REVEAL THEME TRANSITION --- */
+
+/* 1. Allow the animation to sit on top of everything */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none; /* Disable the default browser fade */
+    mix-blend-mode: normal;
+}
+
+/* 2. Order the layers correctly (Dark mode circle on top) */
+::view-transition-old(root) {
+    z-index: 1;
+}
+::view-transition-new(root) {
+    z-index: 9999; /* Ensure the new theme spreads ON TOP */
+}
+
+/* 3. Fallback for browsers that don't support this API yet */
+/* Your existing body.enable-transition code handles this automatically */
+
+/* --- PAUSE SCREEN TEXT FIXES --- */
+
+/* Default (Light Mode): Dark Text */
+.pause-title {
+    color: var(--text-primary); /* Uses your main dark text color */
+    margin-bottom: 10px;
+}
+
+.pause-msg {
+    color: var(--text-secondary); /* Uses your main grey text color */
+    margin-bottom: 30px;
+}
+
+/* Dark Mode Override: White Text */
+body.dark-mode .pause-title {
+    color: #ffffff !important; /* Force White */
+}
+
+body.dark-mode .pause-msg {
+    color: #cccccc !important; /* Force Light Grey */
+}
+
+/* Ensure the overlay background itself is correct */
+#pause-overlay {
+    /* If you want it fully black in dark mode */
+    background: rgba(255, 255, 255, 0.95); /* Light mode background */
+}
+
+body.dark-mode #pause-overlay {
+    background: rgba(0, 0, 0, 0.95); /* Dark mode background */
+}
+
+/* --- PROFESSIONAL RESULT BUTTONS UPGRADE --- */
+
+/* 1. General Button Shape & Feel */
+.score-card .btn {
+    width: 100%;               /* Ensure full width */
+    padding: 14px 20px;        /* Taller, more touch-friendly */
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;     /* Slight spacing for readability */
+    text-transform: uppercase; /* Professional look */
+    border-radius: 12px;       /* Modern rounded corners */
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth movement */
+    
+    /* Subtle Shadow for Depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 12px;       /* Spacing between buttons */
+}
+
+/* 2. Hover Effect (Lift Up) */
+.score-card .btn:hover {
+    transform: translateY(-2px); /* Moves up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Shadow grows */
+}
+
+/* 3. Re-attempt Button (Professional Deep Orange - No Pink) */
+.btn-orange {
+    /* Moves from vibrant orange to deep burnt orange */
+    background: linear-gradient(135deg, #faa538, #e65100); 
+    color: white;
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.2); /* Matching orange shadow */
+}
+
+/* Optional: Hover effect to make it glow slightly */
+.btn-orange:hover {
+    background: linear-gradient(135deg, #ffb74d, #f57c00);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 81, 0, 0.3);
+}
+
+/* 4. Review Solutions Button (Professional Blue) */
+.btn-blue {
+    background: linear-gradient(135deg, #3F72AF, #112D4E);
+    color: white;
+}
+
+/* 5. Back to List Button (The Adaptive Outline) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--border-color); /* Matches theme border */
+    color: var(--text-secondary);          /* Grey text by default */
+    box-shadow: none;                      /* No shadow for flat look */
+}
+
+.btn-outline:hover {
+    border-color: var(--text-primary);     /* Darker border on hover */
+    color: var(--text-primary);            /* Darker text on hover */
+    background: var(--hover-bg);           /* Subtle background fill */
+    transform: translateY(-1px);
+}
+
+/* --- DARK MODE ADJUSTMENTS --- */
+body.dark-mode .btn-outline {
+    border-color: #30363d;       /* Dark grey border */
+    color: #8b949e;              /* Soft grey text */
+}
+
+body.dark-mode .btn-outline:hover {
+    border-color: #f0f6fc;       /* White border on hover */
+    color: #f0f6fc;              /* White text on hover */
+    background: rgba(255,255,255,0.05);
+}
+
+/* =========================================
+   DASHBOARD REFORM (PROFESSIONAL UI)
+   ========================================= */
+
+/* 1. Header Styling */
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #3F72AF, #6f42c1); /* Blue to Purple Gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* --- FIX FOR BETA BADGE VISIBILITY --- */
+/* --- FIX: SOLID BETA BADGE --- */
+.beta-badge {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: white !important;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
+    
+    /* Ensure it behaves like a solid box */
+    display: inline-block;
+    
+    /* These resets ensure the parent gradient doesn't touch it */
+    -webkit-text-fill-color: white !important;
+    text-shadow: none;
+}
+
+/* Double-check for Dark Mode just in case */
+body.dark-mode .beta-badge {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0;
+}
+
+/* 2. Responsive Grid Layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-responsive columns */
+    gap: 20px;
+    width: 100%;
+}
+
+/* 3. Professional Card Styling */
+.subject-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-group strong {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.sub-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Icon Box Styling */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 15px;
+    background: rgba(63, 114, 175, 0.1); /* Light Blue Tint */
+    transition: background 0.3s ease;
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    color: var(--border-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 4. Hover Effects */
+.subject-card:hover {
+    transform: translateY(-5px); /* Lift Up */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Soft shadow */
+    border-color: var(--blue);
+}
+
+.subject-card:hover .icon-box {
+    background: var(--blue);
+    color: white; /* Icon turns white on blue bg */
+}
+
+.subject-card:hover .arrow-icon {
+    color: var(--blue);
+    transform: translateX(5px); /* Arrow moves right */
+}
+
+/* 5. Footer Tip Styling */
+.footer-tip {
+    margin-top: 50px;
+    padding: 15px;
+    background: rgba(63, 114, 175, 0.05);
+    border-radius: 8px;
+    border: 1px dashed var(--border-color);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- DARK MODE SPECIFICS --- */
+body.dark-mode .app-title {
+    background: linear-gradient(135deg, #a2d2ff, #c4a7e7); /* Lighter pastel gradient for dark mode */
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+body.dark-mode .icon-box {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .subject-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Darker shadow */
+    border-color: #58a6ff;
+}
+
+/* --- FIX: HEADER LAYOUT --- */
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between Title and Badge */
+    margin-bottom: 5px;
+}
+
+/* Remove bottom margin from title so it aligns perfectly */
+.app-title {
+    margin-bottom: 0 !important; 
+    /* Keep your existing gradient styles for the text */
+}
+/* Fix Alignment for Simple Cards */
+.card-content strong {
+    margin-bottom: 0 !important; /* Remove spacing reserved for subtitle */
+    font-size: 1.1rem;           /* Keep it readable */
 }
