@@ -1094,3 +1094,37 @@ body.dark-mode .sec-btn.locked {
 .toggle-label {
     color: var(--text-primary) !important; /* Adapts: Dark in Light Mode, White in Dark Mode */
 }
+
+/* =========================================
+   SMOOTH THEME TRANSITION FIX 
+   (Add this to the very bottom of style.css)
+   ========================================= */
+
+/* 1. By default, force NO transition on body to stop load flickering */
+body {
+    transition: none !important;
+}
+
+/* 2. We add this class via JavaScript 0.1s after load */
+body.enable-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 3. Ensure all major UI components transition smoothly */
+/* This makes the header, cards, buttons, and sidebar fade nicely */
+body.enable-transition header,
+body.enable-transition .subject-card,
+body.enable-transition .test-item,
+body.enable-transition .q-area,
+body.enable-transition .q-content,
+body.enable-transition .q-footer,
+body.enable-transition #sidebar,
+body.enable-transition .btn,
+body.enable-transition .sec-btn,
+body.enable-transition .opt-row,
+body.enable-transition .timer-container,
+body.enable-transition .marks-badge,
+body.enable-transition .inst-container,
+body.enable-transition .inst-content {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
