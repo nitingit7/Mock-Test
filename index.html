@@ -65,7 +65,7 @@
     <script>
         function toggleTheme(event) {
             var chk = document.getElementById('checkbox');
-            var isDark = chk.checked; // This is what we are switching TO
+            var isDark = chk.checked; 
             
             // 1. Check if browser supports the animation
             if (!document.startViewTransition) {
@@ -73,11 +73,11 @@
                 return;
             }
 
-            // 2. Get click coordinates for the ripple effect
+            // 2. Get click coordinates
             var x = event.clientX;
             var y = event.clientY;
 
-            // 3. Calculate distance to furthest corner
+            // 3. Calculate radius
             var endRadius = Math.hypot(
                 Math.max(x, window.innerWidth - x),
                 Math.max(y, window.innerHeight - y)
@@ -95,14 +95,18 @@
                     `circle(${endRadius}px at ${x}px ${y}px)`
                 ];
 
+                // --- THE CHANGE IS HERE ---
+                // We removed the conditional logic. 
+                // Now it ALWAYS expands the NEW view (white or dark) on top of the old one.
                 document.documentElement.animate(
                     {
-                        clipPath: isDark ? clipPath : [...clipPath].reverse(),
+                        clipPath: clipPath, 
                     },
                     {
                         duration: 500,
                         easing: 'ease-in',
-                        pseudoElement: isDark ? '::view-transition-new(root)' : '::view-transition-old(root)',
+                        // Always animate the NEW incoming view
+                        pseudoElement: '::view-transition-new(root)', 
                     }
                 );
             });
@@ -118,7 +122,7 @@
             }
         }
 
-        // Apply Theme on Load (Instant, no animation)
+        // Apply Theme on Load
         (function() {
             var savedTheme = localStorage.getItem('site-theme');
             var chk = document.getElementById('checkbox');
