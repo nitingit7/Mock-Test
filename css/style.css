@@ -939,3 +939,34 @@ header {
     border-color: var(--blue);
     font-weight: bold;
 }
+
+/* --- CLEAR FILTER BUTTON STYLES --- */
+.btn-clear-filter {
+    width: 100%;
+    background: var(--card-bg); /* Matches the menu background */
+    border: none;
+    border-top: 1px solid var(--border-color); /* Separator line */
+    color: var(--red);          /* Red text for "Clear" action */
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 0 0 8px 8px; /* Rounded corners at bottom only */
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-clear-filter:hover {
+    background-color: rgba(220, 53, 69, 0.1); /* Light red hover effect */
+}
+
+/* Dark Mode adjustment */
+body.dark-mode .btn-clear-filter {
+    background: var(--card-bg);
+}
+body.dark-mode .btn-clear-filter:hover {
+    background: rgba(220, 53, 69, 0.2);
+}
