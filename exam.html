@@ -893,7 +893,15 @@
         }
     };
 
-    window.onload = function() { window.app.init(); };
+    wwindow.onload = function() { 
+        // 1. Initialize the App Logic
+        window.app.init(); 
+
+        // 2. Enable Smooth Transitions (After a tiny delay to skip loading flicker)
+        setTimeout(function() {
+            document.body.classList.add('enable-transition');
+        }, 100);
+    };
 </script>
 </body>
 </html>
