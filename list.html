@@ -63,6 +63,9 @@
     window.onload = function() {
         var params = new URLSearchParams(window.location.search);
         var subject = params.get('subject');
+
+        // Save the current subject to memory so we can return here later
+        if(subject) localStorage.setItem('last_subject_viewed', subject)
         
         if(!subject || !GITHUB_FILES[subject]) {
             alert("Invalid Subject");
