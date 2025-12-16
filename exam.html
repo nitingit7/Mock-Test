@@ -169,19 +169,27 @@
 
             if(!this.currentFileUrl) { alert("No file specified"); location.href = "index.html"; return; }
 
-            // Handle Back Button
-            history.pushState(null, null, location.href);
-            window.onpopstate = () => {
-                if (document.getElementById('view-result').classList.contains('active')) return;
-                if (this.isReview) { this.exitReview(); return; }
-                if (confirm("⚠️ Quit the test? Progress will be lost.")) {
-                    window.onbeforeunload = null;
-                    if(this.timerInterval) clearInterval(this.timerInterval);
-                    history.back();
-                } else {
-                    history.pushState(null, null, location.href);
-                }
-            };
+            // --- FIX: ONLY TRAP BACK BUTTON IF TAKING THE TEST ---
+            // If we are showing results, let the back button go to the Index/List page naturally.
+            if (showResult !== "true") {
+                history.pushState(null, null, location.href);
+                window.onpopstate = () => {
+                    // If we are in Review Mode inside the test page
+                    if (this.isReview) { 
+                        this.exitReview(); // Go back to Score Card
+                        return; 
+                    }
+                    
+                    // If taking the test, ask confirmation
+                    if (confirm("⚠️ Quit the test? Progress will be lost.")) {
+                        window.onbeforeunload = null;
+                        if(this.timerInterval) clearInterval(this.timerInterval);
+                        history.back(); // Actually go back
+                    } else {
+                        history.pushState(null, null, location.href); // Stay here
+                    }
+                };
+            }
 
             // Bind Buttons
             this.bind('btn-toggle-sidebar', () => this.toggleSidebar());
@@ -191,7 +199,7 @@
             this.bind('btn-save', () => this.saveNext());
             this.bind('btn-clear', () => this.clearResponse());
             this.bind('btn-review', () => this.markReview());
-            this.bind('btn-submit', () => this.submitSection(false)); // Submits Section, not just test
+            this.bind('btn-submit', () => this.submitSection(false)); 
             this.bind('btn-prev', () => this.prevQ());
             this.bind('btn-next', () => this.nextQ());
             this.bind('btn-exit-review', () => this.exitReview());
@@ -359,11 +367,12 @@
             var headerDiv = document.createElement('div');
             headerDiv.className = "q-header-dynamic";
             
-            // Part A: Question Number & Marks (Standard Row)
+            // Part A: Question Number & Marks
+            // NOTICE: We insert ${this.currQ + 1} directly here. It cannot be wrong.
             var topRow = `
                 <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:10px;">
                     <div>
-                        <strong style="color:var(--blue); font-size:1.1rem;" id="q-number">Q${this.currQ + 1}</strong>
+                        <strong style="color:var(--blue); font-size:1.1rem;">Q${this.currQ + 1}</strong>
                         <span id="btn-report" class="report-link" onclick="window.app.reportIssue()" style="margin-left:10px; font-size:0.8rem; cursor:pointer; color:var(--red);">Report Error</span>
                     </div>
                     <span class="marks-badge">Marks: +1 / -0.25</span>
