@@ -1303,15 +1303,35 @@ body.dark-mode .btn-outline:hover {
     display: inline-block;
 }
 
+/* --- FIX FOR BETA BADGE VISIBILITY --- */
 .beta-badge {
-    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    background: linear-gradient(135deg, #ff9966, #ff5e62); /* Orange/Red Gradient */
+    
+    /* FORCE TEXT TO BE SOLID WHITE */
     color: white !important;
-    -webkit-text-fill-color: white !important; /* Override gradient text */
+    -webkit-text-fill-color: white !important; 
+    
+    /* RESET BACKGROUND CLIPPING (Crucial fix) */
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    
+    /* Styling */
     font-size: 0.7rem !important;
-    padding: 2px 8px;
+    padding: 3px 8px;
     border-radius: 12px;
     vertical-align: middle;
     letter-spacing: 1px;
+    margin-left: 8px;
+    
+    /* Ensure it sits on top */
+    position: relative;
+    z-index: 2;
+}
+
+/* Double-check for Dark Mode just in case */
+body.dark-mode .beta-badge {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
 }
 
 .subtitle {
