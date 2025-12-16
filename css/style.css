@@ -1304,28 +1304,23 @@ body.dark-mode .btn-outline:hover {
 }
 
 /* --- FIX FOR BETA BADGE VISIBILITY --- */
+/* --- FIX: SOLID BETA BADGE --- */
 .beta-badge {
-    background: linear-gradient(135deg, #ff9966, #ff5e62); /* Orange/Red Gradient */
-    
-    /* FORCE TEXT TO BE SOLID WHITE */
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
     color: white !important;
-    -webkit-text-fill-color: white !important; 
-    
-    /* RESET BACKGROUND CLIPPING (Crucial fix) */
-    background-clip: border-box !important;
-    -webkit-background-clip: border-box !important;
-    
-    /* Styling */
-    font-size: 0.7rem !important;
-    padding: 3px 8px;
-    border-radius: 12px;
-    vertical-align: middle;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
     letter-spacing: 1px;
-    margin-left: 8px;
+    box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
     
-    /* Ensure it sits on top */
-    position: relative;
-    z-index: 2;
+    /* Ensure it behaves like a solid box */
+    display: inline-block;
+    
+    /* These resets ensure the parent gradient doesn't touch it */
+    -webkit-text-fill-color: white !important;
+    text-shadow: none;
 }
 
 /* Double-check for Dark Mode just in case */
@@ -1447,4 +1442,19 @@ body.dark-mode .icon-box {
 body.dark-mode .subject-card:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,0.4); /* Darker shadow */
     border-color: #58a6ff;
+}
+
+/* --- FIX: HEADER LAYOUT --- */
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between Title and Badge */
+    margin-bottom: 5px;
+}
+
+/* Remove bottom margin from title so it aligns perfectly */
+.app-title {
+    margin-bottom: 0 !important; 
+    /* Keep your existing gradient styles for the text */
 }
