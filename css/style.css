@@ -979,3 +979,61 @@ body.dark-mode .btn-clear-filter {
 body.dark-mode .btn-clear-filter:hover {
     background: rgba(220, 53, 69, 0.2);
 }
+
+/* --- SIDEBAR SECTION TABS --- */
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.sec-btn {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.sec-btn:hover {
+    background: var(--hover-bg);
+}
+
+/* The Active Section (The one you are currently viewing) */
+.sec-btn.active {
+    background: var(--blue);
+    color: white;
+    border-color: var(--blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Locked Sections (Future sections in Test Mode) */
+.sec-btn.locked {
+    opacity: 0.6;
+    background: #eee;
+    color: #999;
+    cursor: not-allowed;
+}
+
+body.dark-mode .sec-btn.locked {
+    background: #333;
+    color: #666;
+}
+
+/* Badge inside the button (e.g., "Q: 40") */
+.sec-badge {
+    font-size: 0.75rem;
+    background: rgba(0,0,0,0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
