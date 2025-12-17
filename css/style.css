@@ -1588,9 +1588,33 @@ body.dark-mode .subject-card:hover {
     transform: scale(1.05);
 }
 
-/* Gradient Green for Start */
-.btn-start {
-    background: linear-gradient(135deg, #28a745, #218838);
+/* --- FIX FOR DULL BUTTONS --- */
+
+/* 1. Renamed class to avoid conflict with disabled buttons */
+.btn-list-start {
+    /* Vibrant Gradient */
+    background: linear-gradient(135deg, #00b09b, #96c93d); 
+    
+    /* Force Opacity to 1 (Fixes the dullness) */
+    opacity: 1 !important; 
+    
+    /* Glow Effect */
+    box-shadow: 0 0 15px rgba(0, 176, 155, 0.6); 
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 2. Hover Effect for Start Button */
+.test-card-modern:hover .btn-list-start {
+    /* Make it shine brighter on hover */
+    box-shadow: 0 0 25px rgba(0, 176, 155, 0.9); 
+    transform: scale(1.05);
+}
+
+/* 3. Keep the Blue Result Button Professional */
+.btn-result {
+    background: linear-gradient(135deg, #3F72AF, #112D4E);
+    opacity: 1 !important;
+    box-shadow: 0 4px 15px rgba(63, 114, 175, 0.3);
 }
 
 /* Gradient Blue for Result */
