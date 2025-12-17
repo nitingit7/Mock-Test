@@ -971,8 +971,8 @@
             if (this.isReview) {
                  window.open(finalUrl, '_blank');
             } else {
-                 // In test mode, confirm first because timer doesn't stop
-                 if(confirm("Report Error in " + qNum + "? (Timer continues)")) {
+                 // In test mode, confirm first
+                 if(confirm("Are you sure you want to go during the test?")) {
                      window.open(finalUrl, '_blank');
                  }
             }
