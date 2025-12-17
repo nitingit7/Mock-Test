@@ -6,6 +6,10 @@
     <title>Select Test</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/config.js"></script>
+    <script type="module">
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics/+esm';
+        inject();
+    </script>
 </head>
 <body>
     <div class="container list-view-container">
@@ -13,7 +17,7 @@
         <div class="list-header-wrapper">
             <div class="text-area">
                 <h2 id="list-title">Select Test</h2>
-                <p class="list-subtitle">Choose a mock test to begin</p>
+                <p class="list-subtitle">Choose a test to start practicing</p>
             </div>
 
             <div style="position: relative;">
@@ -55,10 +59,10 @@
     var currentFilter = null;
 
     window.onload = function() {
-        // --- BROWSER BACK BUTTON TRAP (Retained for navigation) ---
+        // --- 1. BACK BUTTON TRAP (Goes to Home) ---
         history.pushState(null, null, location.href);
         window.onpopstate = function () {
-            window.location.href = "index.html"; // Goes back to Home
+            window.location.href = "index.html"; 
         };
 
         var params = new URLSearchParams(window.location.search);
@@ -78,50 +82,52 @@
         var list = document.getElementById('test-container');
         var files = GITHUB_FILES[subject];
 
-        // 1. Render Professional Test Cards
+        // --- 2. RENDER PROFESSIONAL CARDS ---
         files.forEach(function(f) {
             var div = document.createElement('div');
-            div.className = 'test-card-modern'; // New Class
+            div.className = 'test-card-modern'; 
             div.setAttribute('data-name', f.name.toLowerCase()); 
             
-            // Icon based on name
+            // Determine Icon
             var icon = "📝";
             if(f.name.toLowerCase().includes("speed")) icon = "⚡";
             if(f.name.toLowerCase().includes("full mock")) icon = "🏆";
             if(f.name.toLowerCase().includes("mains")) icon = "🔥";
 
             var saved = localStorage.getItem(f.file);
-            
-            var html = `
+            var btnText = saved ? "Analysis" : "Start";
+            var btnClass = saved ? "btn-action btn-result" : "btn-action btn-start";
+            var statusText = saved ? "Completed" : "Not Attempted";
+            var statusColor = saved ? "var(--green)" : "var(--text-secondary)";
+
+            // HTML Structure
+            div.innerHTML = `
                 <div class="tc-left">
                     <div class="tc-icon">${icon}</div>
                     <div class="tc-info">
                         <span class="tc-title">${f.name}</span>
-                        <span class="tc-status">${saved ? 'Completed' : 'Not Attempted'}</span>
+                        <span class="tc-status" style="color:${statusColor}">${statusText}</span>
                     </div>
                 </div>
+                <button class="${btnClass}">${btnText}</button>
             `;
 
-            var btn = document.createElement('button');
-            if (saved) {
-                btn.className = 'btn-action btn-result'; 
-                btn.innerText = "Analysis"; 
-                btn.onclick = function() { location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file); };
-            } else {
-                btn.className = 'btn-action btn-start'; 
-                btn.innerText = "Start";
-                btn.onclick = function() { location.href = "instructions.html?file=" + encodeURIComponent(f.file); };
-            }
+            // --- CLICK HANDLER (Entire Card works) ---
+            div.onclick = function() {
+                if (saved) {
+                    location.href = "exam.html?showResult=true&file=" + encodeURIComponent(f.file);
+                } else {
+                    location.href = "instructions.html?file=" + encodeURIComponent(f.file);
+                }
+            };
 
-            div.innerHTML = html;
-            div.appendChild(btn);
             list.appendChild(div);
         });
 
         renderFilterOptions();
     };
 
-    // --- FILTER FUNCTIONS (Kept same) ---
+    // --- FILTER FUNCTIONS ---
     function toggleFilterMenu() {
         document.getElementById('filter-dropdown').classList.toggle('show');
     }
@@ -145,7 +151,7 @@
         if(btnElement) btnElement.classList.add('selected');
         document.getElementById('btn-filter-toggle').classList.add('active');
         
-        var items = document.querySelectorAll('.test-card-modern'); // Updated selector
+        var items = document.querySelectorAll('.test-card-modern');
         var visibleCount = 0;
         items.forEach(function(item) {
             var testName = item.getAttribute('data-name');
@@ -163,7 +169,7 @@
 
     function clearFilter() {
         currentFilter = null;
-        var items = document.querySelectorAll('.test-card-modern'); // Updated selector
+        var items = document.querySelectorAll('.test-card-modern');
         items.forEach(item => item.style.display = 'flex');
         var allOpts = document.querySelectorAll('.filter-option');
         allOpts.forEach(el => el.classList.remove('selected'));
@@ -178,6 +184,7 @@
             if (openDropdown.classList.contains('show')) openDropdown.classList.remove('show');
         }
     }
+    
     window.onpageshow = function(event) {
         if (event.persisted) { window.location.reload(); }
     };
