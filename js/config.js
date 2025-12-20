@@ -35,7 +35,8 @@ var GITHUB_FILES = {
         { name: "COMING SOON....", file: BASE_URL + "tests/english/mock1.json" }
     ],
     'full_test': [
-        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" }
+        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
+        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
     ]
 };
 
