@@ -1650,3 +1650,18 @@ body.dark-mode .test-card-modern:hover {
         font-size: 0.95rem;
     }
 }
+/* Disable Text Selection Globally */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Standard */
+}
+
+/* Optional: Allow selection on input fields so users can still type */
+input, textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
