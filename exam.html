@@ -570,7 +570,18 @@
                     row.onclick = function() { r.sel = i; self.loadQ(); };
                 }
                 // row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + opt;
-                row.innerHTML = "<b>" + ['A','B','C','D','E'][i] + "</b> &nbsp; " + self.formatText(opt);
+                // Creates a 2-column layout: [Letter] [Text]
+                var letter = ['A','B','C','D','E'][i];
+                var text = self.formatText(opt); // Uses your bold formatter
+
+                row.innerHTML = `
+                    <div style="width: 30px; font-weight: bold; font-size: 1.1rem; flex-shrink: 0; color: var(--blue);">
+                        ${letter}
+                    </div>
+                    <div style="flex: 1; line-height: 1.5;">
+                        ${text}
+                    </div>
+                `;
                 box.appendChild(row);
             });
 
