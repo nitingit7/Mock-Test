@@ -1777,3 +1777,21 @@ input, textarea {
     margin-top: 5px;
 }
 .btn-text-close:hover { color: var(--red); }
+
+/* Tiny badge inside the test card */
+.tag-badge {
+    background-color: rgba(63, 114, 175, 0.15);
+    color: var(--blue);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+
+/* Dark mode adjustment */
+body.dark-mode .tag-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #a2d2ff;
+}
