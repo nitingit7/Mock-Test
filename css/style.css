@@ -1672,3 +1672,108 @@ input, textarea {
     -ms-user-select: text;
     user-select: text;
 }
+
+/* =========================================
+   SELECTION MODAL STYLES
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Mobile: slide from bottom */
+}
+
+/* On Desktop: Center it */
+@media (min-width: 600px) {
+    .modal-overlay { align-items: center; }
+}
+
+.modal-content {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 20px 20px 0 0; /* Rounded top for mobile */
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid var(--border-color);
+}
+
+/* Active State for Animation */
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+@media (min-width: 600px) {
+    .modal-content {
+        border-radius: 16px; /* Full rounded for desktop */
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    .modal-overlay.active .modal-content {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Modal Buttons */
+.btn-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.btn-modal:active { transform: scale(0.98); }
+
+.btn-sectional {
+    background: linear-gradient(135deg, #3F72AF, #112D4E);
+    box-shadow: 0 4px 15px rgba(63, 114, 175, 0.3);
+}
+
+.btn-topic {
+    background: linear-gradient(135deg, #6f42c1, #4a2c85);
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.btn-modal small {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    font-weight: 400;
+    margin-top: 2px;
+    display: block;
+}
+
+.btn-text-close {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.btn-text-close:hover { color: var(--red); }
