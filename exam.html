@@ -287,13 +287,16 @@
 
         fetchTest: function(url) {
             var self = this;
-            // Add cache busting
             var cleanUrl = url.trim();
             
-            fetch(cleanUrl)
+            // --- FIX: CACHE BUSTING ---
+            // We add "?t=" + timestamp to the end of the URL.
+            // This makes every request unique, forcing the browser to ignore the cache.
+            var finalUrl = cleanUrl + "?t=" + new Date().getTime();
+            
+            fetch(finalUrl)
                 .then(res => { 
                     if(!res.ok) throw new Error("HTTP " + res.status); 
-                    // Check if content type is JSON
                     const contentType = res.headers.get("content-type");
                     if (contentType && contentType.indexOf("application/json") === -1) {
                          throw new Error("File is not JSON (received HTML). Check file path.");
