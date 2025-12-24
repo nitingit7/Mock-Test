@@ -1,0 +1,266 @@
+{
+ "title": "Algebra 1 #QAA001",
+ "timeLimit": 10,
+ "questions": [
+  {
+   "id": 1,
+   "text": "If $$x + \\frac{1}{x} = 4$$, then find the value of $$x^2 + \\frac{1}{x^2}$$",
+   "options": [
+    "14",
+    "16",
+    "12",
+    "18",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Given $$x + \\frac{1}{x} = 4$$\nSquaring both sides:\n$$(x + \\frac{1}{x})^2 = 4^2$$\n$$x^2 + \\frac{1}{x^2} + 2 = 16$$\n$$x^2 + \\frac{1}{x^2} = 16 - 2 = 14$$\n**Shortcut:** If $$x + \\frac{1}{x} = K$$, then $$x^2 + \\frac{1}{x^2} = K^2 - 2$$"
+  },
+  {
+   "id": 2,
+   "text": "If $$x + \\frac{1}{x} = 3$$, then find the value of $$x^2 + \\frac{1}{x^2}$$",
+   "options": [
+    "7",
+    "9",
+    "11",
+    "8",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^2 - 2$$:\n$$3^2 - 2 = 9 - 2 = 7$$"
+  },
+  {
+   "id": 3,
+   "text": "If $$x - \\frac{1}{x} = 5$$, then find the value of $$x^2 + \\frac{1}{x^2}$$",
+   "options": [
+    "23",
+    "27",
+    "25",
+    "29",
+    "None of these"
+   ],
+   "correctIndex": 1,
+   "solution": "Given $$x - \\frac{1}{x} = 5$$\nSquaring both sides:\n$$(x - \\frac{1}{x})^2 = 5^2$$\n$$x^2 + \\frac{1}{x^2} - 2 = 25$$\n$$x^2 + \\frac{1}{x^2} = 25 + 2 = 27$$\n**Shortcut:** If $$x - \\frac{1}{x} = K$$, then $$x^2 + \\frac{1}{x^2} = K^2 + 2$$"
+  },
+  {
+   "id": 4,
+   "text": "If $$x + \\frac{1}{x} = \\sqrt{20}$$, then find the value of $$x^2 + \\frac{1}{x^2}$$",
+   "options": [
+    "18",
+    "20",
+    "22",
+    "16",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^2 - 2$$:\n$$(\\sqrt{20})^2 - 2 = 20 - 2 = 18$$"
+  },
+  {
+   "id": 5,
+   "text": "If $$x^2 + \\frac{1}{x^2} = 14$$, then find the value of $$x + \\frac{1}{x}$$",
+   "options": [
+    "4",
+    "3",
+    "5",
+    "6",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Given $$x^2 + \\frac{1}{x^2} = 14$$\nAdd 2 to both sides to complete the square:\n$$x^2 + \\frac{1}{x^2} + 2 = 14 + 2$$\n$$(x + \\frac{1}{x})^2 = 16$$\n$$x + \\frac{1}{x} = \\sqrt{16} = 4$$"
+  },
+  {
+   "id": 6,
+   "text": "If $$x^2 + \\frac{1}{x^2} = 79$$, then find the value of $$x + \\frac{1}{x}$$",
+   "options": [
+    "9",
+    "7",
+    "8",
+    "6",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$(x + \\frac{1}{x}) = \\sqrt{79 + 2} = \\sqrt{81} = 9$$"
+  },
+  {
+   "id": 7,
+   "text": "If $$x^2 + \\frac{1}{x^2} = 51$$, then find the value of $$x - \\frac{1}{x}$$",
+   "options": [
+    "7",
+    "5",
+    "8",
+    "6",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Given $$x^2 + \\frac{1}{x^2} = 51$$\nSubtract 2 from both sides:\n$$x^2 + \\frac{1}{x^2} - 2 = 51 - 2$$\n$$(x - \\frac{1}{x})^2 = 49$$\n$$x - \\frac{1}{x} = \\sqrt{49} = 7$$"
+  },
+  {
+   "id": 8,
+   "text": "If $$x + \\frac{1}{x} = 3$$, then find the value of $$x^4 + \\frac{1}{x^4}$$",
+   "options": [
+    "47",
+    "49",
+    "45",
+    "51",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Step 1: Find $$x^2 + \\frac{1}{x^2}$$\n$$3^2 - 2 = 7$$\nStep 2: Find $$x^4 + \\frac{1}{x^4}$$ using the result from Step 1\n$$7^2 - 2 = 49 - 2 = 47$$"
+  },
+  {
+   "id": 9,
+   "text": "If $$x - \\frac{1}{x} = 4$$, then find the value of $$x^4 + \\frac{1}{x^4}$$",
+   "options": [
+    "322",
+    "324",
+    "320",
+    "326",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Step 1: Find $$x^2 + \\frac{1}{x^2}$$\n$$4^2 + 2 = 18$$\nStep 2: Find $$x^4 + \\frac{1}{x^4}$$ using the result from Step 1\n$$18^2 - 2 = 324 - 2 = 322$$"
+  },
+  {
+   "id": 10,
+   "text": "If $$\\sqrt{x} + \\frac{1}{\\sqrt{x}} = 3$$, then find the value of $$x^2 + \\frac{1}{x^2}$$",
+   "options": [
+    "47",
+    "49",
+    "45",
+    "51",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Step 1: Squaring given equation gives $$x + \\frac{1}{x}$$\n$$3^2 - 2 = 7$$\nStep 2: Squaring again gives $$x^2 + \\frac{1}{x^2}$$\n$$7^2 - 2 = 47$$"
+  },
+  {
+   "id": 11,
+   "text": "If $$x + \\frac{1}{x} = 3$$, then find the value of $$x^3 + \\frac{1}{x^3}$$",
+   "options": [
+    "18",
+    "27",
+    "21",
+    "24",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^3 - 3K$$\n$$3^3 - 3(3) = 27 - 9 = 18$$"
+  },
+  {
+   "id": 12,
+   "text": "If $$x - \\frac{1}{x} = 4$$, then find the value of $$x^3 - \\frac{1}{x^3}$$",
+   "options": [
+    "76",
+    "64",
+    "52",
+    "68",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^3 + 3K$$\n$$4^3 + 3(4) = 64 + 12 = 76$$"
+  },
+  {
+   "id": 13,
+   "text": "If $$x + \\frac{1}{x} = 5$$, then find the value of $$x^3 + \\frac{1}{x^3}$$",
+   "options": [
+    "110",
+    "125",
+    "115",
+    "120",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^3 - 3K$$\n$$5^3 - 3(5) = 125 - 15 = 110$$"
+  },
+  {
+   "id": 14,
+   "text": "If $$x - \\frac{1}{x} = 6$$, then find the value of $$x^3 - \\frac{1}{x^3}$$",
+   "options": [
+    "234",
+    "216",
+    "198",
+    "222",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Using formula $$K^3 + 3K$$\n$$6^3 + 3(6) = 216 + 18 = 234$$"
+  },
+  {
+   "id": 15,
+   "text": "If $$x^2 + \\frac{1}{x^2} = 23$$, then find the value of $$x^3 + \\frac{1}{x^3}$$",
+   "options": [
+    "110",
+    "115",
+    "125",
+    "120",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Step 1: Find $$x + \\frac{1}{x}$$\n$$x + \\frac{1}{x} = \\sqrt{23 + 2} = \\sqrt{25} = 5$$\nStep 2: Find $$x^3 + \\frac{1}{x^3}$$\n$$5^3 - 3(5) = 125 - 15 = 110$$"
+  },
+  {
+   "id": 16,
+   "text": "If $$x + \\frac{1}{x} = 3$$, then find the value of $$x^5 + \\frac{1}{x^5}$$",
+   "options": [
+    "123",
+    "126",
+    "120",
+    "115",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "Formula: $$(x^2 + \\frac{1}{x^2})(x^3 + \\frac{1}{x^3}) - (x + \\frac{1}{x})$$\n$$x^2 + \\frac{1}{x^2} = 3^2 - 2 = 7$$\n$$x^3 + \\frac{1}{x^3} = 3^3 - 3(3) = 18$$\nResult: $$7 \\times 18 - 3 = 126 - 3 = 123$$"
+  },
+  {
+   "id": 17,
+   "text": "If $$x + \\frac{1}{x} = 4$$, then find the value of $$x^5 + \\frac{1}{x^5}$$",
+   "options": [
+    "724",
+    "728",
+    "720",
+    "716",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "$$x^2 + \\frac{1}{x^2} = 4^2 - 2 = 14$$\n$$x^3 + \\frac{1}{x^3} = 4^3 - 3(4) = 52$$\nResult: $$14 \\times 52 - 4 = 728 - 4 = 724$$"
+  },
+  {
+   "id": 18,
+   "text": "If $$x + \\frac{1}{x} = 3$$, then find the value of $$x^6 + \\frac{1}{x^6}$$",
+   "options": [
+    "322",
+    "324",
+    "320",
+    "318",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "This can be seen as squaring the cubic term:\n$$x^3 + \\frac{1}{x^3} = 18$$\n$$x^6 + \\frac{1}{x^6} = (18)^2 - 2 = 324 - 2 = 322$$"
+  },
+  {
+   "id": 19,
+   "text": "If $$x + \\frac{1}{x} = \\sqrt{3}$$, then find the value of $$x^6$$",
+   "options": [
+    "-1",
+    "1",
+    "0",
+    "3",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "If $$x + \\frac{1}{x} = \\sqrt{3}$$, then cubing both sides gives $$x^3 + \\frac{1}{x^3} = 0$$\n$$\\implies x^6 + 1 = 0$$\n$$\\implies x^6 = -1$$"
+  },
+  {
+   "id": 20,
+   "text": "If $$x + \\frac{1}{x} = 1$$, then find the value of $$x^3$$",
+   "options": [
+    "-1",
+    "1",
+    "0",
+    "3",
+    "None of these"
+   ],
+   "correctIndex": 0,
+   "solution": "If $$x + \\frac{1}{x} = 1$$, then $$x^2 - x + 1 = 0$$\nMultiply both sides by $$(x + 1)$$: $$(x+1)(x^2-x+1) = 0$$\n$$x^3 + 1 = 0 \\implies x^3 = -1$$"
+  }
+ ]
+}
