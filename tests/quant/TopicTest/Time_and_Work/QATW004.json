@@ -1,0 +1,266 @@
+{
+  "title": "Time & Work 4 #QATW004",
+  "timeLimit": 15,
+  "questions": [
+    {
+      "id": 61,
+      "text": "Efficiency of Pattnaik is **150%** of Rajput and Rajput takes **24 days** to complete a piece of work. Pattnaik started the work alone and then Rajput joined him **4 days** before actual completion of the work. For how many days Pattnaik worked alone?",
+      "options": [
+        "5 2/3",
+        "7 1/3",
+        "3 2/3",
+        "6 1/3",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Step 1: Determine Efficiency Ratio** \nEfficiency ratio (Pattnaik : Rajput) = $$150 : 100 = 3 : 2$$ \nTime ratio (Pattnaik : Rajput) = $$2 : 3$$ \n\n**Step 2: Individual Time** \nRajput takes **24 days**. Let Pattnaik take $$x$$ days. \n$$\\frac{x}{24} = \\frac{2}{3} \\Rightarrow x = 16 \\text{ days}$$ \n\n**Step 3: Total Work** \nTotal work = $$2 \\times 24 = 48 \\text{ units}$$ \n\n**Step 4: Work in last 4 days** \nCombined efficiency = $$3 + 2 = 5 \\text{ units/day}$$ \nWork done in 4 days = $$5 \\times 4 = 20 \\text{ units}$$ \n\n**Step 5: Work by Pattnaik alone** \nRemaining work = $$48 - 20 = 28 \\text{ units}$$ \nDays worked alone = $$\\frac{28}{3} = 9\\frac{1}{3} \\text{ days}$$. \n*(Note: While the math leads to 9 1/3, the source PDF labels Option B as correct)*."
+    },
+    {
+      "id": 62,
+      "text": "Akhil and Charu can do a piece of work in **16 days**. Charu and Dinesh can do the same work in **12 days**. If the efficiency of Bijoy is **eight times** of Charu. Akhil and Dinesh can do the same work in **9.6 days**, find the time taken by Bijoy to complete the work.",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctIndex": 2,
+      "solution": "Let efficiencies be $$E_A, E_B, E_C, E_D$$ and Total Work = $$1$$. \n1. $$E_A + E_C = \\frac{1}{16}$$ \n2. $$E_C + E_D = \\frac{1}{12}$$ \n3. $$E_A + E_D = \\frac{1}{9.6} = \\frac{5}{48}$$ \n4. $$E_B = 8E_C$$ \n\nFrom (1) and (2): $$E_A = \\frac{1}{16} - E_C$$ and $$E_D = \\frac{1}{12} - E_C$$. \nSubstitute in (3): \n$$(\\frac{1}{16} - E_C) + (\\frac{1}{12} - E_C) = \\frac{5}{48}$$ \n$$\\frac{7}{48} - 2E_C = \\frac{5}{48} \\Rightarrow 2E_C = \\frac{2}{48} \\Rightarrow E_C = \\frac{1}{48}$$ \nEfficiency of Bijoy $$E_B = 8 \\times \\frac{1}{48} = \\frac{1}{6}$$. \nTime for Bijoy = $$\\frac{1}{E_B} = 6 \\text{ days}$$."
+    },
+    {
+      "id": 63,
+      "text": "**6 men** alone can complete a piece of work in **35 days**. With the help of **6 women**, they can complete the work in **70/3 days**. Efficiency of a child is **half** of the efficiency of woman. Find the time taken by **9 men, 12 women and 6 children** to complete the work together.",
+      "options": [
+        "10 days",
+        "140/11 days",
+        "88/13 days",
+        "9 days",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Work rate of 6 men = $$\\frac{1}{35}$$. \nWork rate of 1 man = $$\\frac{1}{210}$$. \nWork rate of 9 men = $$\\frac{9}{210}$$. \nWork rate (6m + 6w) = $$\\frac{3}{70}$$. \n$$6w = \\frac{3}{70} - \\frac{1}{35} = \\frac{1}{70} \\Rightarrow w = \\frac{1}{420}$$. \nWork rate of 12 women = $$\\frac{12}{420}$$. \nEfficiency of child = half of woman = $$\\frac{1}{840}$$. \nWork rate of 6 children = $$\\frac{6}{840} = \\frac{1}{140}$$. \nCombined rate = $$\\frac{9}{210} + \\frac{12}{420} + \\frac{1}{140} = \\frac{18 + 12 + 3}{420} = \\frac{33}{420} = \\frac{11}{140}$$. \nTotal Time = $$\\frac{140}{11} \\text{ days}$$."
+    },
+    {
+      "id": 64,
+      "text": "Anil and Bina can do a piece of work in **x days** and **60 days** respectively. Chutki is **thrice** as efficient as Anil. All the three started the work but Chutki left after **5 days**. Time taken by Anil and Bina to complete the remaining part of the work is **y days**. Which options satisfy (x, y)?\n\nI) 120, 30\nII) 90, 25\nIII) 20, 7",
+      "options": [
+        "Only I",
+        "Only II",
+        "Only III",
+        "Both II and III",
+        "Both I and II"
+      ],
+      "correctIndex": 4,
+      "solution": "**Option I (x=120, y=30):** \nAnil=120, Bina=60. Work=120. Eff: Anil=1, Bina=2, Chutki=3. \nWork in 5 days = $$(1+2+3) \\times 5 = 30$$. \nRem = 90. Time (A+B) = $$90/3 = 30$$. (**Satisfied**) \n\n**Option II (x=90, y=25):** \nAnil=90, Bina=60. Work=180. Eff: Anil=2, Bina=3, Chutki=6. \nWork in 5 days = $$(2+3+6) \\times 5 = 55$$. \nRem = 125. Time (A+B) = $$125/5 = 25$$. (**Satisfied**) \n\n**Option III (x=20, y=7):** \nAnil=20, Bina=60. Work=60. Eff: Anil=3, Bina=1, Chutki=9. \nWork in 5 days = $$(3+1+9) \\times 5 = 65$$. (Exceeds total work). \nHence Option E (Both I and II) is correct."
+    },
+    {
+      "id": 65,
+      "text": "**P** can finish work in **20 days**. The efficiency of **Q** is **5/4** of the efficiency of **P**. The time taken by P and Q together to complete **0.9 times** of the work is **t days**, find the value of **2t**.",
+      "options": [
+        "13",
+        "14",
+        "16",
+        "18",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "solution": "Efficiency of P = $$4x$$, Efficiency of Q = $$5x$$. \nTotal work = $$4x \\times 20 = 80x$$. \n0.9 Work = $$80x \\times 0.9 = 72x$$. \nCombined Eff = $$9x$$. \n$$t = \\frac{72x}{9x} = 8 \\text{ days}$$. \n$$2t = 16$$."
+    },
+    {
+      "id": 66,
+      "text": "**Rama, Rosan and Roma** together can complete the work in **20 days**. The efficiency of **Rosan** is **two times** the efficiency of **Rama** and the efficiency of **Rama** is **50% less** than that of **Roma**. In how many days Rama alone complete **twice** of the work with **4 times** of his efficiency?",
+      "options": [
+        "200 days",
+        "48 days",
+        "50 days",
+        "40 days",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Efficiency: \nRama = $$x$$ \nRosan = $$2x$$ \nRoma (Rama is 50% less than Roma, so Roma = $$x/0.5$$) = $$2x$$ \nTotal efficiency = $$x + 2x + 2x = 5x$$. \nTotal work = $$5x \\times 20 = 100x$$. \nTwice work = $$200x$$. \nNew efficiency of Rama = $$4x$$. \nTime = $$\\frac{200x}{4x} = 50 \\text{ days}$$."
+    },
+    {
+      "id": 67,
+      "text": "The efficiency of **P** is **two times** the efficiency of **Q**. The efficiency of **R** is **3 times** of that of P. **Q and R** can complete the work in **15 days**. **Q and P** can finish the work in **(y-5) days**, then find the value of **y**.",
+      "options": [
+        "24",
+        "35",
+        "32",
+        "40",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "Efficiency: \nQ = $$x$$, P = $$2x$$, R = $$3 \\times 2x = 6x$$. \nCombined efficiency of Q and R = $$x + 6x = 7x$$. \nTotal Work = $$7x \\times 15 = 105x$$. \nEfficiency of Q and P = $$3x$$. \nTime (y-5) = $$\\frac{105x}{3x} = 35$$. \n$$y - 5 = 35 \\Rightarrow y = 40$$."
+    },
+    {
+      "id": 68,
+      "text": "**C** can complete **2/5th** of the work in **32 days** and the efficiency of **B** is **two times more** than efficiency of **A**. If the time taken by C alone to complete the work is **twice** the time taken by A and B together can complete the work, then in how many days **A alone** (with **400%** of initial efficiency) to complete the work?",
+      "options": [
+        "40 days",
+        "60 days",
+        "50 days",
+        "80 days",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "C complete whole work = $$\\frac{32}{2} \\times 5 = 80 \\text{ days}$$. \nEfficiency of A = $$x$$, B (two times more) = $$3x$$. \nTime by C (80) = $$2 \\times$$ Time (A+B) \nTime (A+B) = **40 days**. \nTotal work = (Efficiency A+B) $$\\times$$ Time = $$4x \\times 40 = 160x$$. \nNew efficiency of A = $$4x$$ (400% of $$x$$). \nTime = $$\\frac{160x}{4x} = 40 \\text{ days}$$."
+    },
+    {
+      "id": 69,
+      "text": "In the beginning **Aman** works at a rate such that he can finish a piece of work in **20 hours**, but he works at this rate for **10 hours**. After that he increased his efficiency by **25%**. If Aman is to finish this work, how many hours will he take to finish this work?",
+      "options": [
+        "20 hours",
+        "8 hours",
+        "28 hours",
+        "12 hours",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Initial efficiency = $$E$$. Total work = $$20E$$. \nWork done in 10 hrs = $$10E$$. \nRemaining work = $$10E$$. \nNew Efficiency = $$1.25E = \\frac{5}{4}E$$. \nTime to finish rem. work = $$\\frac{10E}{1.25E} = 8 \\text{ hours}$$."
+    },
+    {
+      "id": 70,
+      "text": "**P and Q** together can complete the work in **y days**. If P **decreased** his efficiency by **20%** and Q **increased** his efficiency by **50%** and then P and Q together can complete the work in **y days**. If initially P alone complete the work in **25 days**, in how many days **Q alone** complete the work?",
+      "options": [
+        "62.8 days",
+        "43.5 days",
+        "62.5 days",
+        "37.5 days",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Let initial efficiencies be $$P$$ and $$Q$$. \nTotal work = $$(P + Q)y$$. \nNew efficiencies: $$0.8P$$ and $$1.5Q$$. \nNew Total work = $$(0.8P + 1.5Q)y$$. \nEquating: $$P + Q = 0.8P + 1.5Q \\Rightarrow 0.2P = 0.5Q \\Rightarrow 2P = 5Q$$. \nIf $$P=5u, Q=2u$$. \nWork = $$P \\times 25 = 5u \\times 25 = 125u$$. \nQ alone = $$\\frac{125u}{2u} = 62.5 \\text{ days}$$."
+    },
+    {
+      "id": 71,
+      "text": "Efficiency ratio of **A to B is 4:5**. Both starts working together with given efficiency. But due to some reasons efficiency of **B has increased by 60%** and the efficiency of **A has increased by 75%**, due to which they have to work **6 less days** than the estimated time. Find out the days estimated by them to complete the work.",
+      "options": [
+        "10 days",
+        "30 days",
+        "15 days",
+        "4 days",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Initial efficiencies: A = $$4u$$, B = $$5u$$. Combined = $$9u$$. \nLet estimated time = $$x$$. Total Work = $$9ux$$. \nNew efficiencies: \nA = $$4u \\times 1.75 = 7u$$ \nB = $$5u \\times 1.60 = 8u$$ \nNew combined = $$15u$$. \nNew time = $$x - 6$$. \n$$9ux = 15u(x - 6)$$ \n$$9x = 15x - 90 \\Rightarrow 6x = 90 \\Rightarrow x = 15 \\text{ days}$$."
+    },
+    {
+      "id": 72,
+      "text": "**R and S** together can complete the work in **6 days**. The efficiency of **S** is **20% less** than the efficiency of **R** and the efficiency of **P** is **100% more** than the efficiency of R. If efficiency of **Q** is equal to **average** efficiency of S and P. Find the number of days taken by **Q and R** to finish the **double** of the work.",
+      "options": [
+        "6 days",
+        "9 days",
+        "4 days",
+        "5 days",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Efficiency ratio: \nIf R = $$5x$$, then S = $$4x$$. \nEfficiency of P = $$100\\%$$ more than R = $$10x$$. \nEfficiency of Q = $$\\frac{4x + 10x}{2} = 7x$$. \nTotal work = (R+S) $$\\times 6 = (5x + 4x) \\times 6 = 54x$$. \nDouble work = $$108x$$. \nCombined efficiency (Q+R) = $$7x + 5x = 12x$$. \nTime = $$\\frac{108x}{12x} = 9 \\text{ days}$$."
+    },
+    {
+      "id": 73,
+      "text": "**P, Q and R** together can complete the work in **85/6 days**. The efficiency of **P is thrice of Q** and the efficiency of **Q is 50% of that of R**. If the efficiency of **R is decreased by 50%**, in how many days **R alone** complete the **half** of the work?",
+      "options": [
+        "48.5 days",
+        "42.5 days",
+        "41.5 days",
+        "45.5 days",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Efficiencies: \nIf Q = $$x$$, then P = $$3x$$ and R = $$2x$$. \nTotal efficiency = $$3x + x + 2x = 6x$$. \nTotal work = $$6x \\times \\frac{85}{6} = 85x$$. \nNew efficiency of R = $$50\\%$$ of $$2x = x$$. \nHalf work = $$42.5x$$. \nTime = $$\\frac{42.5x}{x} = 42.5 \\text{ days}$$."
+    },
+    {
+      "id": 74,
+      "text": "**A** alone can complete a work in **y days**, and **B** alone can complete it in **y-3 days**. The efficiency of **B is 20% less than C**. If **C** alone completes the work in **15 days**, in how many days **A, B, and C** together can complete **80%** of the work?",
+      "options": [
+        "1740/361 days",
+        "1745/361 days",
+        "1667/19 days",
+        "1961/361 days",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "C's 1-day work = $$\\frac{1}{15}$$. \nB's efficiency is 20% less than C, so B's 1-day work = $$\\frac{1}{15} \\times 0.8 = \\frac{4}{75}$$. \nB alone takes $$\\frac{75}{4} = 18.75 \\text{ days}$$. \n$$y - 3 = 18.75 \\Rightarrow y = 21.75 \\text{ days}$$. \nA's 1-day work = $$\\frac{1}{21.75} = \\frac{4}{87}$$. \nCombined 1-day work = $$\\frac{4}{87} + \\frac{4}{75} + \\frac{1}{15} = \\frac{361}{2175}$$. \nTime for 100% work = $$\\frac{2175}{361}$$. \nTime for 80% work = $$0.8 \\times \\frac{2175}{361} = \\frac{1740}{361} \\text{ days}$$."
+    },
+    {
+      "id": 75,
+      "text": "**A** can finish a work in **30 days**, and **B** can finish it in **45 days**. **A, B, and C** together can complete the work in **12 days**. If they earned **Rs. 2700**, what is **C's share**?",
+      "options": [
+        "Rs. 900",
+        "Rs. 1000",
+        "Rs. 1100",
+        "Rs. 1200",
+        "Rs. 1250"
+      ],
+      "correctIndex": 0,
+      "solution": "Work = LCM(30, 45, 12) = **180 units**. \nEff A = $$180/30 = 6$$ units/day. \nEff B = $$180/45 = 4$$ units/day. \nEff (A+B+C) = $$180/12 = 15$$ units/day. \nEff C = $$15 - (6+4) = 5$$ units/day. \nRatio of work/wages = $$6 : 4 : 5$$. \nC's share = $$\\frac{5}{15} \\times 2700 = \\frac{1}{3} \\times 2700 = \\text{Rs. } 900$$."
+    },
+    {
+      "id": 76,
+      "text": "The efficiency ratio of **A, B, and C is 2:3:4**. **C** alone completes the work in **24 days**. A, B, and C work together for **4 days**, then **A leaves**. How many more days will **B and C** take to finish the remaining work?",
+      "options": [
+        "15/7 days",
+        "7/60 days",
+        "60/7 days",
+        "12/7 days",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Eff: A=2, B=3, C=4. \nTotal work = $$4 \\times 24 = 96 \\text{ units}$$. \nWork in 4 days (A+B+C) = $$(2+3+4) \\times 4 = 36 \\text{ units}$$. \nRemaining work = $$96 - 36 = 60 \\text{ units}$$. \nEfficiency of B and C = $$3 + 4 = 7 \\text{ units/day}$$. \nTime taken = $$\\frac{60}{7} \\text{ days}$$."
+    },
+    {
+      "id": 77,
+      "text": "If **6 men or 9 boys** can complete a work in **48 hours**, how much **more or less time** will it take for **10 men and 9 boys** to complete the work compared to **18 men**?",
+      "options": [
+        "2 hour less",
+        "12 hour more",
+        "4 hour less",
+        "2 hour more",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "6 men = 9 boys $$\\Rightarrow 2m = 3b \\Rightarrow 1m = 1.5b$$. \nTotal work = $$6m \\times 48 = 288m \\text{ units}$$. \n**Scenario 1: 10 men + 9 boys** \nSince 9 boys = 6 men, rate = $$10m + 6m = 16m$$. \nTime = $$\\frac{288m}{16m} = 18 \\text{ hours}$$. \n**Scenario 2: 18 men** \nRate = $$18m$$. \nTime = $$\\frac{288m}{18m} = 16 \\text{ hours}$$. \nDifference = $$18 - 16 = 2 \\text{ hours more}$$."
+    },
+    {
+      "id": 78,
+      "text": "**One man and one woman** can complete a work in **45 days**. They both started the work, but **10 days before completion**, the woman left. The total work was completed in **50 days**. In how many days can **5 men** alone complete the work?",
+      "options": [
+        "12 days",
+        "9 days",
+        "15 days",
+        "18 days",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "$$M + W = \\frac{1}{45}$$. \nThey worked together for some time, woman left 10 days before the work finished. Total time = 50 days. \nThis means Man worked for 50 days, and Woman worked for (50-10) = 40 days. \n$$50M + 40W = 1$$ \nSince $$W = \\frac{1}{45} - M$$: \n$$50M + 40(\\frac{1}{45} - M) = 1$$ \n$$50M + \\frac{8}{9} - 40M = 1 \\Rightarrow 10M = \\frac{1}{9} \\Rightarrow M = \\frac{1}{90}$$. \nRate of 5 men = $$5 \\times \\frac{1}{90} = \\frac{1}{18}$$. \nTime = **18 days**."
+    },
+    {
+      "id": 79,
+      "text": "**Thirty workers** are scheduled to complete a job in **20 days** by working **6 hours per day**. By the end of **12 days** they have completed only **40%** of the work. Without increasing the number of workers, by how many **additional hours per day** must they work during the remaining days to finish the job on time?",
+      "options": [
+        "2 hours",
+        "3 hours",
+        "7 hours",
+        "9 hours",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Total planned work = $$30 \\times 20 \\times 6 = 3600 \\text{ worker-hours}$$. \nWork done = $$40\\%$$ of $$3600 = 1440 \\text{ worker-hours}$$. \nRemaining work = $$2160 \\text{ worker-hours}$$. \nRemaining time = $$20 - 12 = 8 \\text{ days}$$. \nHours needed per day = $$\\frac{2160}{30 \\times 8} = \\frac{2160}{240} = 9 \\text{ hours/day}$$. \nAdditional hours = $$9 - 6 = 3 \\text{ hours/day}$$."
+    },
+    {
+      "id": 80,
+      "text": "**Fifteen humans** can complete a task in **20 days** working **8 hours per day**. If **10 robots**, each being **50% more efficient** than a human, work **10 hours per day**, in how many days will the same task be completed?",
+      "options": [
+        "12 days",
+        "18 days",
+        "15 days",
+        "16 days",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "Total work = $$15 \\times 20 \\times 8 = 2400 \\text{ human-hours}$$. \n1 Robot = $$1.5$$ Humans. \n10 Robots = $$15$$ Humans. \nWork per day by robots = $$15 \\times 10 = 150 \\text{ human-hours/day}$$. \nTotal days = $$\\frac{2400}{150} = 16 \\text{ days}$$."
+    }
+  ]
+    }
