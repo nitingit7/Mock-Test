@@ -30,7 +30,8 @@ var GITHUB_FILES = {
         { name: "Number System 2", tags: "Number System", file: BASE_URL + "tests/quant/TopicTest/Number System/QANS002.json" },
         { name: "Algebra 1", tags: "Algebra", file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA001.json" },
         { name: "Time and Work 1", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW001.json" },
-        { name: "Time and Work 2", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" }
+        { name: "Time and Work 2", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" },
+        { name: "Time and Work 3", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW003.json" }
     ],
 
     // --- 2. REASONING ABILITY ---
