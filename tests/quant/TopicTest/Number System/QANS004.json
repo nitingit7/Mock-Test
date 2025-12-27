@@ -1,0 +1,146 @@
+{
+  "title": "Number System: Advance 1",
+  "timeLimit": 8,
+  "questions": [
+    {
+      "id": 1,
+      "text": "The sum of two odd numbers is **38** and their product is **325**. What will be three times of the larger number?",
+      "options": [
+        "75",
+        "39",
+        "69",
+        "99",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "It is better to solve this question orally. \nUnit's digit in product **325 = 5**. \nPossible pairs: \n$$\\Rightarrow 5 \\text{ and } 33, 15 \\text{ and } 23, 25 \\text{ and } 13$$ \nNow, $$5 \\times 33 = 165$$ \n$$15 \\times 23 = 345$$ \n**$$25 \\times 13 = 325$$** \nRequired pair = **25** and **13**. \nRequired answer = $$3 \\times 25 = 75$$.",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "text": "The sum of three consecutive numbers is **3252**. What is the **31%** of the largest number of them?",
+      "options": [
+        "326.35",
+        "333.65",
+        "335.35",
+        "336.35",
+        "None of these"
+      ],
+      "correctIndex": 3,
+      "solution": "Three consecutive numbers are $$x, x+1 \\text{ and } x+2$$. \n$$\\therefore x + x+1 + x+2 = 3252$$ \n$$\\Rightarrow 3x + 3 = 3252$$ \n$$\\Rightarrow 3x = 3252 - 3 = 3249$$ \n$$x = \\frac{3249}{3} = 1083$$ \n**Largest number** = $$x + 2 = 1085$$. \n**31% of 1085** = $$\\frac{1085 \\times 31}{100} = 336.35$$.",
+      "image": null
+    },
+    {
+      "id": 3,
+      "text": "Ravi bought equal number of **45, 75 and 95** valued tickets for a classical music show. He spent a sum of **3870** for all the tickets. How many of each kind of tickets did he buy?",
+      "options": [
+        "18",
+        "19",
+        "17",
+        "20",
+        "None of these"
+      ],
+      "correctIndex": 0,
+      "solution": "Let **x** tickets of each value be bought. \n$$\\therefore 45x + 75x + 95x = 3870$$ \n$$\\Rightarrow 215x = 3870$$ \n$$\\Rightarrow x = \\frac{3870}{215} = 18$$.",
+      "image": null
+    },
+    {
+      "id": 4,
+      "text": "Father's age is **30 years** more than the son's age. Ten years hence, the father's age will become three times the son's age at that time. What is son's present age (in years)?",
+      "options": [
+        "8",
+        "7",
+        "5",
+        "Cannot be determined",
+        "None of these"
+      ],
+      "correctIndex": 2,
+      "solution": "Let the son's present age be **x** years. \nFather's present age = $$(x + 30)$$ years. \nAfter 10 years: \n$$(x + 30) + 10 = 3(x + 10)$$ \n$$\\Rightarrow x + 40 = 3x + 30$$ \n$$\\Rightarrow 2x = 10$$ \n$$\\Rightarrow x = 5 \\text{ years}$$.",
+      "image": null
+    },
+    {
+      "id": 5,
+      "text": "There are six consecutive positive even numbers. The sum of average of first three consecutive numbers and that of the next three consecutive numbers is **62**. What is the sum of the first three consecutive numbers?",
+      "options": [
+        "84",
+        "94",
+        "86",
+        "92",
+        "90"
+      ],
+      "correctIndex": 0,
+      "solution": "6 consecutive even numbers: $$x, x+2, x+4, x+6, x+8 \\text{ and } x+10$$. \n$$\\frac{x + x+2 + x+4}{3} + \\frac{x+6 + x+8 + x+10}{3} = 62$$ \n$$\\Rightarrow (x+2) + (x+8) = 62$$ \n$$\\Rightarrow 2x + 10 = 62$$ \n$$\\Rightarrow 2x = 52 \\Rightarrow x = 26$$ \n**Required sum** (first three) = $$x + x+2 + x+4 = 3x + 6$$ \n$$= 3 \\times 26 + 6 = 78 + 6 = 84$$.",
+      "image": null
+    },
+    {
+      "id": 6,
+      "text": "Sum of two numbers is equal to sum of square of **11** and cube of **9**. Larger number is $$(5)^2$$ less than square of **25**. What is the value of the sum of twice of **24 percent** of the smaller number and half of the larger number?",
+      "options": [
+        "415",
+        "400",
+        "410",
+        "425",
+        "None of these"
+      ],
+      "correctIndex": 4,
+      "solution": "$$x + y = 11^2 + 9^3$$ \n$$\\Rightarrow x + y = 121 + 729 = 850$$ ... (i) \nWhere **x** = larger number. \n$$x = 25^2 - 5^2 = 625 - 25 = 600$$ \nFrom (i), $$y = 850 - 600 = 250$$ (smaller number). \n**Required sum** = $$2 \\times (24\\% \\text{ of } 250) + \\frac{600}{2}$$ \n$$= \\frac{250 \\times 24 \\times 2}{100} + 300 = 120 + 300 = 420$$.",
+      "image": null
+    },
+    {
+      "id": 7,
+      "text": "The difference between the sum of four consecutive odd numbers and three consecutive even numbers together is **20**. Also, the largest even number is **5** more than the largest odd number. What is the sum of the smallest odd number and the smallest even number?",
+      "options": [
+        "75",
+        "77",
+        "85",
+        "Cannot be determined",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "Let the consecutive odd numbers be: $$x, x+2, x+4 \\text{ and } x+6$$. \nLargest even number = $$ (x+6) + 5 = x + 11$$. \nOther even numbers = $$x+7, x+9$$. \nAccording to question: \n$$(x + x+2 + x+4 + x+6) - (x+7 + x+9 + x+11) = 20$$ \n$$\\Rightarrow (4x + 12) - (3x + 27) = 20$$ \n$$\\Rightarrow x - 15 = 20 \\Rightarrow x = 35$$. \n**Smallest odd** = $$x = 35$$. \n**Smallest even** = $$x + 7 = 42$$. \n**Required sum** = $$35 + 42 = 77$$.",
+      "image": null
+    },
+    {
+      "id": 8,
+      "text": "The sum of six consecutive even numbers of **set-A** is **402**. What is the sum of another **set-B** of four consecutive numbers whose lowest number is **15 less than double** the lowest number of set-A?",
+      "options": [
+        "444",
+        "442",
+        "440",
+        "446",
+        "None of these"
+      ],
+      "correctIndex": 1,
+      "solution": "**Set A:** Let numbers be $$x, x+2, x+4, x+6, x+8, x+10$$. \n$$6x + 30 = 402 \\Rightarrow 6x = 372 \\Rightarrow x = 62$$. \n**Smallest number of Set-B:** \n$$= 2 \\times 62 - 15 = 124 - 15 = 109$$. \n**Required sum of Set-B** (consecutive numbers): \n$$= 109 + 110 + 111 + 112 = 442$$.",
+      "image": null
+    },
+    {
+      "id": 9,
+      "text": "There are three consecutive odd perfect square numbers, whose sum is **7811**. What is the biggest number?",
+      "options": [
+        "4081",
+        "3703",
+        "2809",
+        "3909",
+        "4267"
+      ],
+      "correctIndex": 2,
+      "solution": "Let the roots of the squares be $$x, x+2, x+4$$. \n$$x^2 + (x+2)^2 + (x+4)^2 = 7811$$ \n$$\\Rightarrow 3x^2 + 12x + 20 = 7811$$ \n$$\\Rightarrow 3x^2 + 12x - 7791 = 0 \\Rightarrow x^2 + 4x - 2597 = 0$$ \n$$\\Rightarrow (x+53)(x-49) = 0 \\Rightarrow x = 49$$. \n**Smallest square** = $$49^2 = 2401$$. \n**Biggest number** = $$(x+4)^2 = (53)^2 = 2809$$.",
+      "image": null
+    },
+    {
+      "id": 10,
+      "text": "A number is such that when it is multiplied by **7**, it gives another number which is as much above **260** as the original number itself is below **260**. What is **32%** of the original number?",
+      "options": [
+        "21.2",
+        "18.8",
+        "20.5",
+        "20.8",
+        "21.2"
+      ],
+      "correctIndex": 3,
+      "solution": "Let the required number be **x**. \nAccording to the question: \n$$7x - 260 = 260 - x$$ \n$$\\Rightarrow 8x = 520 \\Rightarrow x = 65$$. \n**32% of 65** = $$\\frac{65 \\times 32}{100} = 20.8$$.",
+      "image": null
+    }
+  ]
+    }
