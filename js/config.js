@@ -31,10 +31,10 @@ var GITHUB_FILES = {
         { name: "Number System: Basic 3", tags: "Number System", file: BASE_URL + "tests/quant/TopicTest/Number System/QANS003.json" },
         { name: "Number System: Advance 1", tags: "Number System", file: BASE_URL + "tests/quant/TopicTest/Number System/QANS004.json" },
         { name: "Algebra 1", tags: "Algebra", file: BASE_URL + "tests/quant/TopicTest/Algebra/QAA001.json" },
-        { name: "Time and Work 1", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW001.json" },
-        { name: "Time and Work 2", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" },
-        { name: "Time and Work 3", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW003.json" },
-        { name: "Time and Work 4", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW004.json" }
+        { name: "Time and Work: Basic 1", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW001.json" },
+        { name: "Time and Work: Basic 2", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW002.json" },
+        { name: "Time and Work: Basic 3", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW003.json" },
+        { name: "Time and Work: Basic 4", tags: "Time and Work", file: BASE_URL + "tests/quant/TopicTest/Time_and_Work/QATW004.json" }
     ],
 
     // --- 2. REASONING ABILITY ---
