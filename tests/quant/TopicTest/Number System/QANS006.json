@@ -4,76 +4,124 @@
   "questions": [
     {
       "id": 81,
-      "text": "If **'X'** is a whole number (not equal to 0), then which of the following options **must** be the factor of **'X'**.",
-      "options": ["1", "2", "3", "0", "None of these"],
+      "text": "If 'X' is whole number (not equal to 0), then which of the following options must be the factor of 'X'.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "**1** is a factor of all natural numbers.\n\nHence, option **A** is correct."
+      "solution": "**1 is factor of all natural numbers.**\nHence, option A is correct."
     },
     {
       "id": 82,
-      "text": "If **'AB'** is a two-digit natural number, then which of the following is true?\n(i) One of the factors of AB is AB.\n(ii) One of the factors of AB is 1.\n(iii) There are more than two factors of AB.",
-      "options": ["Only I and II", "Only II and III", "Only I and III", "All I, II and III", "None of these"],
+      "text": "If 'AB' is a two-digit natural number, then which of the following is true:\n(i) One of the factors of AB is AB.\n(ii) One of the factors of AB is 1.\n(iii) There is more than two factors of AB.",
+      "options": [
+        "Only I and II",
+        "Only II and III",
+        "Only I and III",
+        "All I, II and III",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "1. The number itself is always a factor of itself, so statement **I** is true.\n2. **1** is a factor of all natural numbers, so statement **II** is true.\n3. It is not necessary that the number of factors of AB is more than 2 (e.g., if AB is a prime number like 11, it has only 2 factors), so statement **III** is false.\n\nHence, option **A** is correct."
+      "solution": "The number itself is always a factor of itself, then statement I is true.\n**1 is factor of all-natural number**, so statement II is true.\nIt is not necessary, that the number of factors of AB is more than 2, so it is false\nhence, option A is correct."
     },
     {
       "id": 83,
-      "text": "Which of the following options is **incorrect** about the factors of **'K'** (where K is a natural number)?",
+      "text": "Which of the following option is incorrect about the factors of 'K'. (K is a natural number)",
       "options": [
-        "One of the factors of K is 'A' (A > K).",
+        "One of the factors of K is 'A'. (A>K)",
         "Number of factors of K is infinite.",
-        "If K = 1, then K has only one factor.",
-        "More than 1 option is incorrect",
+        "If $$k=1$$, then K has only one factor.",
+        "More than one option is incorrect",
         "Option A, B and C are correct"
       ],
       "correctIndex": 3,
-      "solution": "● **Option A**: A factor of a number cannot be greater than the number itself. So, this is incorrect.\n● **Option B**: The number of factors of any finite number is always finite, not infinite. So, this is incorrect.\n● **Option C**: If $$K = 1$$, its only factor is 1. This is correct.\n\nSince both A and B are incorrect, option **D** is the right answer."
+      "solution": "**Option A:** Factors itself cannot be more than the number, so option A is incorrect.\n**Option B:** Number of factors of any number cannot be infinite, so this is incorrect.\n**Option C:** $$k=1$$, then it has only 1 factor, so this is correct.\nHence, **option D is correct** (as A and B are incorrect)."
     },
     {
       "id": 84,
-      "text": "If **'M'** is a whole number and it has less than 2 factors, then which of the following can be the value of **M**?",
-      "options": ["1", "0", "2", "Either option A and B", "None of these"],
+      "text": "If 'M' is a whole number and it has less than 2 factors, then which of the following can be the value of M.",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "Either option A and B",
+        "None of these"
+      ],
       "correctIndex": 3,
-      "solution": "● If $$M = 1$$, it has only 1 factor (1).\n● If $$M = 0$$, it is usually considered to have undefined or zero factors in this context (less than 2).\n\nHence, option **D** is correct."
+      "solution": "M can be 1 and 0 also which have less than 2 factors.\nhence, **option D is correct**."
     },
     {
       "id": 85,
-      "text": "If **A** is a double-digit perfect number, then which of the following is/are correct?\n(I) Sum of all the factors of A is equal to 2A.\n(II) Difference of the largest and smallest factor of A is 27.\n(III) Sum of the largest and smallest factor of A is 29.",
-      "options": ["Only I and II", "Only II and III", "Only I and III", "All I, II and III", "None of these"],
+      "text": "If A is a double-digit perfect number, then which of the following is/are correct:\n(I) Sum of all the factors of A is equal to 2A.\n(II) Difference of the largest and smallest factor of A is 27.\n(III) Sum of the largest and smallest factor of A is 29.",
+      "options": [
+        "Only I and II",
+        "Only II and III",
+        "Only I and III",
+        "All I, II and III",
+        "None of these"
+      ],
       "correctIndex": 3,
-      "solution": "A double-digit perfect number is **28**.\nFactors of 28: 1, 2, 4, 7, 14, 28.\n\n(I) Sum of factors: $$1+2+4+7+14+28 = 56$$, which is $$2 \times 28$$. (Correct)\n(II) Largest factor = 28, Smallest factor = 1. Difference: $$28 - 1 = 27$$. (Correct)\n(III) Sum: $$28 + 1 = 29$$. (Correct)\n\nHence, option **D** is correct."
+      "solution": "**I:** Sum of the factors of a perfect number is twice of the number itself, so statement I is correct.\n**II:** $$A=28$$ (Smallest and largest factor = 1 and 28). Difference = $$28-1=27$$. So, it is correct.\n**III:** $$A=28$$ (Smallest and largest factor = 1 and 28). Sum = $$28+1=29$$. So, it is correct.\nHence, **option D is correct**."
     },
     {
       "id": 86,
-      "text": "If the factors of **'K'** are a, b, c, d, and e, and the value of **(a+b+c+d)** is equal to **e**, then which of the following is true about 'K' (given e > a, b, c, d)?",
-      "options": ["Perfect number", "Even number", "Odd number", "Prime number", "None of these"],
+      "text": "If the factors of 'K' is a, b, c, d, and e and the value of $$(a+b+c+d)$$ is equal to e, then which of the following is true about 'K'. ($$e > a, b, c, d$$)",
+      "options": [
+        "Perfect number",
+        "Even number",
+        "Odd number",
+        "Prime number",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "By definition, if the sum of all proper factors of a number is equal to the number itself (where 'e' would be the number itself), it is called a **Perfect number**.\n\nHence, option **A** is correct."
+      "solution": "In this case K is **perfect number**.\nhence, option A is correct."
     },
     {
       "id": 87,
-      "text": "Which of the following numbers has **more than one** prime factor?",
-      "options": ["2", "4", "6", "73", "None of these"],
+      "text": "Which of the following number have more than two prime factors:",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "73",
+        "None of these"
+      ],
       "correctIndex": 2,
-      "solution": "● **2**: Prime factor is 2 (only one).\n● **4**: Prime factor is 2 ($$2^2$$) (only one).\n● **6**: Prime factors are **2** and **3** (two prime factors).\n● **73**: Prime factor is 73 (only one).\n\nHence, option **C** is correct."
+      "solution": "6 have factors = 1, 2, 3, 6\nIt has two prime factors = 2 and 3\nhence, **option C is correct**."
     },
     {
       "id": 88,
-      "text": "If two of the factors of **'K'** are prime factors such that they are also consecutive natural numbers, then find the possible value of **'K'**.",
-      "options": ["6", "10", "18", "72", "Option A, C and D"],
+      "text": "If the two factors out of all factors of 'K' are prime factors, such that the prime factors are consecutive natural number also, then find the possible value of 'K'",
+      "options": [
+        "6",
+        "10",
+        "18",
+        "72",
+        "Option A, C and D"
+      ],
       "correctIndex": 4,
-      "solution": "Consecutive natural numbers that are both prime are only **2** and **3**.\n● 6 is divisible by 2 and 3.\n● 18 is divisible by 2 and 3.\n● 72 is divisible by 2 and 3.\n\nHence, option **E** is correct."
+      "solution": "Consecutive natural numbers which are prime also are 2 and 3 only.\nHence, option A, C and D can be the value of K (as they are multiples of 6).\n**Answer: E**"
     },
     {
       "id": 89,
-      "text": "Which of the following is/are true?\n(I) The factors of 'A' cannot be more than 2 (where A is a prime number).\n(II) Sum of the least two perfect numbers is 34.\n(III) The number of prime factors in 80 is 2.",
-      "options": ["Only I and II", "Only II and III", "Only I and III", "All I, II and III", "None of these"],
+      "text": "Which of the following is/are true:\n(I) The factors of 'A' cannot be more than 2. (A is a prime number)\n(II) Sum of the least two perfect numbers are 34.\n(III) The number of prime factors in 80 is 2.",
+      "options": [
+        "Only I and II",
+        "Only II and III",
+        "Only I and III",
+        "All I, II and III",
+        "None of these"
+      ],
       "correctIndex": 3,
-      "solution": "(I) A prime number has exactly two factors (1 and itself). (True)\n(II) Least two perfect numbers are 6 and 28. Sum: $$6 + 28 = 34$$. (True)\n(III) Prime factorization of 80: $$2^4 \times 5$$. The prime factors are 2 and 5 (total 2). (True)\n\nHence, option **D** is correct."
+      "solution": "**I:** If A is prime number, it has two factors, so it is correct.\n**II:** Least two perfect numbers = 6 and 28. Sum = $$6+28=34$$, so it is correct.\n**III:** Factors of 80 = 1, 2, 4, 5, 8, 10, 16, 20, 40, 80. Two prime factors = 2 and 5, so it is correct.\nhence, **option D is correct**."
     },
     {
       "id": 90,
-      "text": "If the number of factors of **'M'** is 4 (a, b, c and d such that a > b > c > d) and out of these 4 factors 2 are prime factors such that $$(b \times c = a)$$. Which of the following is correct for **'M'**?",
+      "text": "If the number of factors of 'M' is 4 (a, b, c and d such that $$a>b>c>d$$) and out of these 4 factors 2 are prime factors ($$b \\times c=d$$). Which of the following is correct for 'M'.",
       "options": [
         "M is greater than 78 but less than 85.",
         "M is greater than 83 and less than 86.",
@@ -82,77 +130,137 @@
         "None of these"
       ],
       "correctIndex": 2,
-      "solution": "Consider numbers with exactly 4 factors. Such numbers are usually in the form $$p \times q$$ (where p, q are prime) or $$p^3$$.\n● For **82**: Factors are 1, 2, 41, 82. Prime factors are 2 and 41. $$2 \times 41 = 82$$. This fits the condition (82 is between 78 and 85).\n● For **85**: Factors are 1, 5, 17, 85. Prime factors are 5 and 17. $$5 \times 17 = 85$$. This also fits the condition (85 is between 83 and 86).\n\nHence, option **C** is correct."
+      "solution": "If the number of factors of 'M' is 4 and 2 are prime factors ($$b \\times c=d$$).\nIn this case 82 have factors = 1, 2, 41, 82\n85 have = 1, 5, 17, 85\nSo, option A and B are correct, and **option C is right**."
     },
     {
       "id": 91,
-      "text": "A four-digit number is formed by repeating a two-digit number (e.g., 4848). This number will be divisible by **X**. Find the value of **(X + 40)**.",
-      "options": ["145", "151", "161", "141", "None of these"],
+      "text": "A four-digit number is formed by repeating a two-digit number like 4848. Then the resultant number will be divisible by is equal to X, then find the value of (X+40).",
+      "options": [
+        "145",
+        "151",
+        "161",
+        "141",
+        "None of these"
+      ],
       "correctIndex": 3,
-      "solution": "A number in the form 'abab' can be written as:\n$$1000a + 100b + 10a + b = 1010a + 101b = 101(10a + b)$$\nSo, the number is always divisible by **101**. \nThus, $$X = 101$$.\nRequired value: $$101 + 40 = 141$$.\n\nHence, option **D** is correct."
+      "solution": "If we add $$4800+48$$, When we take 48 common: $$48(100+1)$$.\nThis is 101.\nIf we repeat any two-digit number and form 4-digit number, so that will be divisible by only 101.\nAnswer is $$101+40=141$$.\nHence the correct option is **D**."
     },
     {
       "id": 92,
-      "text": "If the 5-digit number **538ab** is divisible by 3, 7, and 11, then the value of the sum of the squares of a and b is what % more or less than 457?",
-      "options": ["97.20%", "97.15%", "96.14%", "98.25%", "None of these"],
+      "text": "If the 5-digit number 538ab is divisible by 3,7,11 then the value of sum of square of a and b both is how much % more or less than 457.",
+      "options": [
+        "97.20%",
+        "97.15%",
+        "96.14%",
+        "98.25%",
+        "None of these"
+      ],
       "correctIndex": 1,
-      "solution": "If a number is divisible by 3, 7, and 11, it must be divisible by their LCM:\n$$LCM(3, 7, 11) = 231$$\nDividing 53800 by 231:\n$$53800 = 231 \times 232 + 208$$\nTo find the next multiple: $$231 \times 233 = 53823$$.\nSo, **a = 2** and **b = 3**.\nSum of squares: $$2^2 + 3^2 = 4 + 9 = 13$$.\nPercentage calculation:\n$$457 - 13 = 444$$\n$$Percentage = (444 / 457) \times 100 \approx 97.15\\%$$\n\nHence, option **B** is correct."
+      "solution": "The 5-digit number 538ab is divisible by 3,7,11.\n$$7 \\times 11 = 77$$, check its divisibility.\nMake it 0538ab/77.\n$$77 \\times 10 = 770$$; $$77 \\times 11 = 847$$.\nIf we add $$770+53=823$$ it is correct.\na, b = 2, 3.\nSquare of them = $$4+9=13$$.\nRequired %: $$\\frac{444}{457} \\times 100 = 97.15\\%$$ (approx).\nHence the correct option is **B**."
     },
     {
       "id": 93,
       "text": "A number is divisible by 11 if the difference between the sum of its digits at odd places and the sum of its digits at even places is divisible by 11. Which of the following numbers is divisible by 11?",
-      "options": ["52713", "72466", "63902", "72454", "None of these"],
+      "options": [
+        "52713",
+        "72466",
+        "63902",
+        "72454",
+        "None of these"
+      ],
       "correctIndex": 1,
-      "solution": "Check option **B (72446)**:\nSum of digits at odd places ($$1^{st}, 3^{rd}, 5^{th}$$): $$7 + 4 + 6 = 17$$\nSum of digits at even places ($$2^{nd}, 4^{th}$$): $$2 + 4 = 6$$\nDifference: $$17 - 6 = 11$$\nSince 11 is divisible by 11, the number is divisible by 11.\n\nHence, option **B** is correct."
+      "solution": "Calculate the sum of digits at odd places and even places for each option.\nGoing through options:\nA) 52713: $$15-3=12$$ (not satisfied)\nB) 72466: $$17-6=11$$ (divisible by 11)\nHence the correct option is **B**."
     },
     {
       "id": 94,
       "text": "Find the largest 4-digit number divisible by both 8 and 12.",
-      "options": ["9984", "9874", "5444", "More than one option", "None of these"],
+      "options": [
+        "9984",
+        "9874",
+        "5444",
+        "More than one option",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "The number must be divisible by $$LCM(8, 12) = 24$$.\nLargest 4-digit number is 9999.\nDividing 9999 by 24:\n$$9999 = 24 \times 416 + 15$$\nSubtract the remainder from 9999:\n$$9999 - 15 = 9984$$\n\nHence, option **A** is correct."
+      "solution": "A number divisible by 8 and 12 must also be divisible by their LCM.\nLCM of them = 24.\nThe largest 4-digit number is 9999.\n$$9999/24=416$$ and remainder 15.\n$$24 \\times 416 = 9984$$ (largest 4-digit number divisible by both 8 and 12).\nHence the correct option is **A**."
     },
     {
       "id": 95,
-      "text": "If the 8-digit number **147856AB** is divisible by 8, then find the total possible pairs of **(AB)**.",
-      "options": ["11", "13", "14", "15", "None of these"],
+      "text": "If the 8-digit number 147856AB is divisible by 8 then find the total possible pairs of (AB).",
+      "options": [
+        "11",
+        "13",
+        "14",
+        "15",
+        "None of these"
+      ],
       "correctIndex": 1,
-      "solution": "Divisibility rule of 8: The last three digits must be divisible by 8.\nLast three digits: **6AB**\nWe need to find values of AB such that 600 + AB is divisible by 8.\nSince 600 is divisible by 8 ($$75 \times 8$$), AB must be a multiple of 8.\nPossible 2-digit values of AB (including 00): 00, 08, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96.\nTotal count = **13**.\n\nHence, option **B** is correct."
+      "solution": "Divisibility rule of 8: if last 2 digits are multiple of 8 and the number just before it is even number.\nFocus on last 3 numbers: 6AB/8.\nAB pairs: 00, 08, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96.\nTotal **13 pairs**.\nHence the correct option is **B**."
     },
     {
       "id": 96,
-      "text": "What is the sum of all the positive values of **Y** for which a seven-digit number **23Y567Y** is divisible by 3?",
-      "options": ["13", "15", "14", "11", "None of these"],
+      "text": "What is the sum of all the positive values of Y for which a seven - digit number 23Y567Y is divisible by 3.",
+      "options": [
+        "13",
+        "15",
+        "14",
+        "11",
+        "None of these"
+      ],
       "correctIndex": 1,
-      "solution": "Sum of digits: $$2 + 3 + Y + 5 + 6 + 7 + Y = 23 + 2Y$$\nFor the number to be divisible by 3, $$(23 + 2Y)$$ must be a multiple of 3.\nPossible values for Y (single digit):\n● If $$Y = 2: 23 + 4 = 27$$ (Divisible)\n● If $$Y = 5: 23 + 10 = 33$$ (Divisible)\n● If $$Y = 8: 23 + 16 = 39$$ (Divisible)\nSum of values: $$2 + 5 + 8 = 15$$\n\nHence, option **B** is correct."
+      "solution": "Divisibility of 3 = If sum of digits is divisible by 3.\nSum of digits of 23Y567Y: $$5+7+3+6=21$$.\nRemaining = $$2+2y$$; it must be divisible by 3.\nY single digit possible values = 2, 5, 8.\nSum of them = 15.\nHence the correct option is **B**."
     },
     {
       "id": 97,
-      "text": "Find the difference between the squares of the greatest value and the smallest value of **T** if the number **98901T** is divisible by 9.",
-      "options": ["81", "64", "36", "25", "None of these"],
+      "text": "Find the difference between squares of greatest value and the smallest value of T if the number 98901T is divisible by 9.",
+      "options": [
+        "81",
+        "64",
+        "36",
+        "25",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "Sum of digits: $$9 + 8 + 9 + 0 + 1 + T = 27 + T$$\nFor divisibility by 9, $$(27 + T)$$ must be a multiple of 9.\nPossible values for T:\n● Smallest value: **0** ($$27 + 0 = 27$$)\n● Greatest value: **9** ($$27 + 9 = 36$$)\nDifference of squares: $$9^2 - 0^2 = 81 - 0 = 81$$.\n\nHence, option **A** is correct."
+      "solution": "Divisibility rule of 9 = If sum of its digits is multiple of 9.\n$$9+8+9+0+1+T = 27+T$$.\nT minimum possible value can be 0 ($$27+0=27$$).\nT maximum possible value can be 9 ($$27+9=36$$).\nRequired difference between T's minimum and maximum values squares:\n$$81 - 0 = 81$$.\nHence the correct option is **A**."
     },
     {
       "id": 98,
-      "text": "If a nine-digit number **378x4238y** is divisible by 72, then find the value of **(x+23)** and **(Y+45)** individually.",
-      "options": ["29, 48", "27, 49", "29, 49", "25, 51", "None of these"],
+      "text": "If a nine-digit number $$378x4238y$$ is divisible by 72, then find the value of $$(x+23)$$ and $$(Y+45)$$ individually.",
+      "options": [
+        "29, 48",
+        "27, 49",
+        "29, 49",
+        "25, 51",
+        "None of these"
+      ],
       "correctIndex": 2,
-      "solution": "Divisibility by $$72 = 8 \times 9$$.\n1. **Divisibility by 8**: Last three digits **38y** must be divisible by 8.\n   $$384 / 8 = 48$$. So, **y = 4**.\n2. **Divisibility by 9**: Sum of digits must be divisible by 9.\n   $$3 + 7 + 8 + x + 4 + 2 + 3 + 8 + 4 = 39 + x$$\n   For $$(39+x)$$ to be divisible by 9, **x = 6** ($$39+6=45$$).\n3. **Calculation**:\n   $$x + 23 = 6 + 23 = 29$$\n   $$y + 45 = 4 + 45 = 49$$\n\nHence, option **C** is correct."
+      "solution": "Check the divisibility rule of 72 = $$9 \\times 8$$.\n**For 8:** Check last 3 digits (38y). $$384/8$$ is divisible, so $$Y=4$$.\n**For 9:** Sum of its digits must be multiple of 9.\n$$378x42384 \\rightarrow 48+x$$.\n$$x=6$$.\n$$x+23 = 6+23 = 29$$.\n$$Y+45 = 4+45 = 49$$.\nHence the correct option is **C**."
     },
     {
       "id": 99,
-      "text": "If the number **78N2630N** is divisible by 6, then find the sum of all possible values of **N**.",
-      "options": ["10", "11", "15", "14", "None of these"],
+      "text": "If the number 78N2630N, is divisible by 6, then find the sum of all possible value of N.",
+      "options": [
+        "10",
+        "11",
+        "15",
+        "14",
+        "None of these"
+      ],
       "correctIndex": 0,
-      "solution": "Divisibility by $$6 = 2 \times 3$$.\n1. **Divisibility by 2**: N must be an even digit (0, 2, 4, 6, 8).\n2. **Divisibility by 3**: Sum of digits must be divisible by 3.\n   Sum = $$7 + 8 + N + 2 + 6 + 3 + 0 + N = 26 + 2N$$\nCheck even values of N:\n● If $$N=0, 26+0=26$$ (No)\n● If **N=2**, $$26+4=30$$ (Yes)\n● If $$N=4, 26+8=34$$ (No)\n● If $$N=6, 26+12=38$$ (No)\n● If **N=8**, $$26+16=42$$ (Yes)\nSum of values: $$2 + 8 = 10$$.\n\nHence, option **A** is correct."
+      "solution": "Divisibility rule of 6 = divisible by both 2 and 3.\nSum of digits (without N) = 26.\nTotal sum = $$26 + 2N$$.\nIf $$N=2$$, sum = 30 (divisible by 3).\nIf $$N=8$$, sum = 42 (divisible by 3).\nNote: N must be even for divisibility by 2. N=5 is not possible.\nSum of possible values of N = $$2+8=10$$.\nHence the correct option is **A**."
     },
     {
       "id": 100,
-      "text": "How many numbers between 1 and 999 are divisible by 17?",
-      "options": ["67", "58", "65", "Cannot be determined", "None of these"],
+      "text": "How many digits between 1 and 999 are divisible by 17.",
+      "options": [
+        "67",
+        "58",
+        "65",
+        "Cannot be determined",
+        "None of these"
+      ],
       "correctIndex": 1,
-      "solution": "To find the count of numbers divisible by 17 up to 999, divide 999 by 17:\n\n$$999 / 17 = 58.76...$$\n\nThe largest integer value is **58**.\n\nHence, option **B** is correct."
+      "solution": "Largest 3-digit number = 999.\n$$999/17 = 58$$ and remainder is 13.\nMeans 58 numbers in between 1 and 999 are divisible by 17.\nHence the correct option is **B**."
     }
   ]
     }
