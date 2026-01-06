@@ -63,6 +63,17 @@ var GITHUB_FILES = {
         { name: "Reading Comprehension 1", tags: "RC", file: BASE_URL + "tests/english/topics/rc1.json" }
     ],
 
+    // --- 4. GENERAL AWARENESS ---
+    'general_sectional': [
+        { name: "Daily Current Affairs: 1st Jan 2025", tags: "Daily CA", file: BASE_URL + "tests/general/daily_1.json" },
+        { name: "Full Mock: General Awareness Set 1", tags: "Mock", file: BASE_URL + "tests/general/mock1.json" }
+    ],
+    'general_topic': [
+        { name: "Current Affairs: January 2025", tags: "Current Affairs", file: BASE_URL + "tests/general/topics/jan25.json" },
+        { name: "Banking Awareness: RB", tags: "Banking", file: BASE_URL + "tests/general/topics/banking1.json" },
+        { name: "Static GK: National Parks", tags: "Static GK", file: BASE_URL + "tests/general/topics/static1.json" }
+    ],
+
     // --- 4. FULL MOCK TESTS (Stays the same) ---
     'full_test': [
         { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
