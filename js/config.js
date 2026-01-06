@@ -69,7 +69,7 @@ var GITHUB_FILES = {
         { name: "Full Mock: General Awareness Set 1", tags: "Mock", file: BASE_URL + "tests/general/mock1.json" }
     ],
     'general_topic': [
-        { name: "Current Affairs: January 2025", tags: "Current Affairs", file: BASE_URL + "tests/general/topics/jan25.json" },
+        { name: "Current Affairs: 1", tags: "Current Affairs", file: BASE_URL + "tests/General Awareness/CA/gaca001.json" },
         { name: "Banking Awareness: RB", tags: "Banking", file: BASE_URL + "tests/general/topics/banking1.json" },
         { name: "Static GK: National Parks", tags: "Static GK", file: BASE_URL + "tests/general/topics/static1.json" }
     ],
