@@ -4,6 +4,12 @@ var BASE_URL = "https://nitingit7.github.io/";
 var GITHUB_FILES = {
     // --- 1. QUANTITATIVE APTITUDE ---
     // Moved existing tests to "quant_sectional"
+
+    'full_test': [
+        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
+        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
+    ],
+        
     'quant_sectional': [
         { name: "Testing", file: BASE_URL + "tests/quant/mock1.json" },
         { name: "RRB Clerk: Speed Math 1", tags: "Speed Math", file: BASE_URL + "tests/quant/mock2.json" },
@@ -72,13 +78,10 @@ var GITHUB_FILES = {
         { name: "Current Affairs: 1", tags: "Current Affairs", file: BASE_URL + "tests/General Awareness/CA/gaca001.json" },
         { name: "Emty", tags: "Banking", file: BASE_URL + "tests/general/topics/banking1.json" },
         { name: "Emty", tags: "Static GK", file: BASE_URL + "tests/general/topics/static1.json" }
-    ],
+    ]
 
     // --- 4. FULL MOCK TESTS (Stays the same) ---
-    'full_test': [
-        { name: "RRB Clerk Prelims: Full Mock 1", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
-        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
-    ]
+    
 };
 
 var GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfcBe23FbEQkCmH2QEWLUvV2Ei0CFezkOv54BXYG40GheCCLw/viewform?usp=pp_url&entry.57428168=TEST_NAME_VAR&entry.1889905698=Q_ID_VAR";
