@@ -1821,7 +1821,7 @@ body.dark-mode .tag-badge {
     touch-action: pan-y; /* Allows vertical scroll but captures horizontal swipes */
 }
 
-.sol-image img {
+#sol-image img {
     margin-top: 12px;
     max-width: 100%;
     border-radius: 6px;
