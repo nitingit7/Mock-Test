@@ -1,0 +1,48 @@
+{
+  "title": "Mains Reasoning Puzzle – Buildings, Floors and Weights",
+  "timeLimit": 25,
+  "questions": [
+    {
+      "id": 0,
+      "text": "**Directions:** Study the following data carefully and answer the questions accordingly.\n\nThere are three buildings in a society i.e. **@, #, and $** from west to east in same order. Certain number of people live in these buildings. Floors are numbered in ascending order starting from **1 from bottom to top**.\n\n**Note:**\n• Each one has a different weight and people in ascending weight lives from bottom to top.\n• Weights are in consecutive numbers such that person living on top floor in **@** has a weight of **50 kgs** then person living on ground floor in **#** has weight of **52 kgs** and so on.\n• Total weight of all the people is **1350 kgs**.\n• Weight of a person is **2 kgs more** than the person living just below him.\n\nWeight of **L** is double of weight of **F**. **I** lives on top floor. **R** does not live on top floor. One person lives between **O** and **N**. **S** lives in **@** and has a weight in **perfect square number (when halved)**. **E** is **12 kgs heavier** than **J**. Total weight of **H** and **F** is same as the weight of **I**. **Three people live between C and D**. Number of people lives below **P** is **one less** than the number of people live above **G** but lives in **different buildings**. **6 people live between E and O**. **D** lives **four floors above G**. **U** lives **two floors above T** and weight of both of them is a **prime number (when halved)**. Total weight of **C and G** is **8 kgs less** than the weight of **Q**. **4 people live below Q**, who lives in **$**. **M and R** lives on **ground floors**. **Two people live between Q and P**, whose weight is **66 kgs**. **Three people live between M and J**. **W** lives just above **X**. **G** does not live in same building with **M and R**. Weight difference of **U and V** is **40 kgs**.",
+      "options": [],
+      "correctIndex": -1,
+      "solution": "This is the main puzzle statement. Students are required to construct the complete arrangement before answering the questions."
+    },
+    {
+      "id": 1,
+      "text": "**Who among the following lives on the top floor of building `$`?**",
+      "options": ["N", "O", "P", "Q", "U"],
+      "correctIndex": 0,
+      "solution": "According to the final arrangement, **N** lives on the top floor of building `$`."
+    },
+    {
+      "id": 2,
+      "text": "**What is the weight (in kg) of the person living on floor 8 of building `@`?**",
+      "options": ["26", "28", "30", "32", "34"],
+      "correctIndex": 2,
+      "solution": "Person **H** lives on floor 8 of building `@` and has a weight of **30 kg**."
+    },
+    {
+      "id": 3,
+      "text": "**Which of the following persons lives on the ground floor of building `#`?**",
+      "options": ["M", "R", "G", "F", "L"],
+      "correctIndex": 0,
+      "solution": "From the final arrangement, **M** lives on the ground floor of building `#`."
+    },
+    {
+      "id": 4,
+      "text": "**How many persons live between `Q` and `P`?**",
+      "options": ["One", "Two", "Three", "Four", "None"],
+      "correctIndex": 1,
+      "solution": "Exactly **two persons** live between **Q** and **P**."
+    },
+    {
+      "id": 5,
+      "text": "**What is the weight difference (in kg) between `U` and `V`?**",
+      "options": ["20", "30", "40", "50", "60"],
+      "correctIndex": 2,
+      "solution": "Weight of **U = 62 kg** and **V = 22 kg**. Difference = **40 kg**."
+    }
+  ]
+}
