@@ -510,7 +510,7 @@ input:checked+.slider:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgb(0, 0, 0);
     z-index: 9999;
     display: none;
     flex-direction: column;
@@ -1567,12 +1567,12 @@ body.dark-mode .pause-msg {
 /* Ensure the overlay background itself is correct */
 #pause-overlay {
     /* If you want it fully black in dark mode */
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(255, 255, 255);
     /* Light mode background */
 }
 
 body.dark-mode #pause-overlay {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgb(0, 0, 0);
     /* Dark mode background */
 }
 
