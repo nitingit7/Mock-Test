@@ -510,7 +510,7 @@ input:checked+.slider:before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgb(0, 0, 0);
     z-index: 9999;
     display: none;
     flex-direction: column;
@@ -1567,7 +1567,7 @@ body.dark-mode .pause-msg {
 /* Ensure the overlay background itself is correct */
 #pause-overlay {
     /* If you want it fully black in dark mode */
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(255, 255, 255);
     /* Light mode background */
 }
 
@@ -2315,97 +2315,3 @@ body.dark-mode .btn-resume:hover {
 body.dark-mode .tc-metadata {
     color: #8b949e;
 }
-<<<<<<< HEAD
-
-/* =========================================
-   SCREENSHOT PREVENTION STYLES
-   ========================================= */
-
-/* Prevent text selection during test */
-#view-exam {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Prevent dragging images */
-#view-exam img {
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    pointer-events: none;
-}
-
-/* Watermark overlay (subtle deterrent) */
-#view-exam::before {
-    content: attr(data-watermark);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    font-size: 4rem;
-    color: rgba(0, 0, 0, 0.03);
-    pointer-events: none;
-    z-index: 9999;
-    white-space: nowrap;
-    font-weight: bold;
-}
-
-body.dark-mode #view-exam::before {
-    color: rgba(255, 255, 255, 0.03);
-}
-
-/* =========================================
-   PAUSE SCREEN STYLES (Restored & Opaque)
-   ========================================= */
-#pause-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* OPAQUE BACKGROUND as requested */
-    background: #ffffff;
-    z-index: 10000;
-    /* Ensure it is on top of everything */
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-primary);
-}
-
-#pause-overlay.active {
-    display: flex;
-}
-
-.pause-title {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: var(--text-primary);
-}
-
-.pause-msg {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 30px;
-}
-
-/* Dark Mode Overrides */
-body.dark-mode #pause-overlay {
-    background: #000000;
-    /* Fully Black */
-}
-
-body.dark-mode .pause-title {
-    color: white !important;
-}
-
-body.dark-mode .pause-msg {
-    color: #cccccc !important;
-}
-=======
->>>>>>> 76394f4a3187a2d9ae7d60300601d0287eee1406
