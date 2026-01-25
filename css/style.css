@@ -1827,3 +1827,21 @@ body.dark-mode .tag-badge {
     border-radius: 6px;
 }
 
+/* =========================================
+   PALETTE CURRENT QUESTION HIGHLIGHT
+   ========================================= */
+
+/* Light Mode: Dark border with shadow for contrast */
+.pal-btn-current {
+    border: 3px solid #1a1a1a !important;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 8px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.1);
+    z-index: 10;
+    position: relative;
+}
+
+/* Dark Mode: Bright white border with shadow for maximum visibility */
+body.dark-mode .pal-btn-current {
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 0 0 2px #0d1117, 0 0 12px rgba(255, 255, 255, 0.6) !important;
+}
