@@ -6,28 +6,28 @@ var GITHUB_FILES = {
     // Moved existing tests to "quant_sectional"
 
     'full_test': [
-        { name: "RRB Clerk Prelims: Full Mock 1", tags: "Full Mock", file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
-        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", tags: "Full Mock", file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
+        { name: "RRB Clerk Prelims: Full Mock 1", tags: "Full Mock", questions: 100, time: 60, marks: 100, file: BASE_URL + "tests/Full_Mock/RRB/RRBQS001.json" },
+        { name: "SBI PO Prelims: Full Mock Based on 4th August 2nd Shift 2025", tags: "Full Mock", questions: 100, time: 60, marks: 100, file: BASE_URL + "tests/Full_Mock/SBI/SBI-PO001.json" }
     ],
 
     'quant_sectional': [
-        { name: "Testing", file: BASE_URL + "tests/quant/mock1.json" },
-        { name: "RRB Clerk: Speed Math 1", tags: "Speed Math", file: BASE_URL + "tests/quant/mock2.json" },
-        { name: "RRB Clerk Quant: [Easy]", tags: "Easy", file: BASE_URL + "tests/quant/mock3.json" },
-        { name: "RRB Clerk: Speed Math 2", tags: "Speed Math", file: BASE_URL + "tests/quant/SM2.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", file: BASE_URL + "tests/quant/hardqa1.json" },
-        { name: "RRB Clerk Prelims: Quant [Easy-Moderate]", tags: "Easy-Moderate", file: BASE_URL + "tests/quant/quanteasymod.json" },
-        { name: "RRB Clerk Prelims: Quant [Easy-Moderate] 2", tags: "Easy-Moderate", file: BASE_URL + "tests/quant/easytomode2.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", file: BASE_URL + "tests/quant/quant5.json" },
-        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", file: BASE_URL + "tests/quant/QA008.json" },
-        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", file: BASE_URL + "tests/quant/QA009.json" },
-        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", file: BASE_URL + "tests/quant/QA010.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", file: BASE_URL + "tests/quant/QA011.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", file: BASE_URL + "tests/quant/QA012.json" },
-        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", file: BASE_URL + "tests/quant/QA013.json" },
-        { name: "RRB Clerk Prelims Quant (7th Dec Shift 1)", tags: "PYQ", file: BASE_URL + "tests/quant/QA014.json" },
-        { name: "RRB Clerk Prelims: Quant (6th Dec Shift 1)", tags: "PYQ", file: BASE_URL + "tests/quant/QA015.json" },
-        { name: "RRB Clerk Prelims: Quant (6th Dec Shift 2)", tags: "PYQ", file: BASE_URL + "tests/quant/QA016.json" },
+        { name: "Testing", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/mock1.json" },
+        { name: "RRB Clerk: Speed Math 1", tags: "Speed Math", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/mock2.json" },
+        { name: "RRB Clerk Quant: [Easy]", tags: "Easy", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/mock3.json" },
+        { name: "RRB Clerk: Speed Math 2", tags: "Speed Math", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/SM2.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/hardqa1.json" },
+        { name: "RRB Clerk Prelims: Quant [Easy-Moderate]", tags: "Easy-Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/quanteasymod.json" },
+        { name: "RRB Clerk Prelims: Quant [Easy-Moderate] 2", tags: "Easy-Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/easytomode2.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/quant5.json" },
+        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA008.json" },
+        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA009.json" },
+        { name: "RRB Clerk: Speed Math [Moderate]", tags: "Speed Math", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA010.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA011.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA012.json" },
+        { name: "RRB Clerk Prelims: Quant [Moderate]", tags: "Moderate", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA013.json" },
+        { name: "RRB Clerk Prelims Quant (7th Dec Shift 1)", tags: "PYQ", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA014.json" },
+        { name: "RRB Clerk Prelims: Quant (6th Dec Shift 1)", tags: "PYQ", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA015.json" },
+        { name: "RRB Clerk Prelims: Quant (6th Dec Shift 2)", tags: "PYQ", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/quant/QA016.json" },
         { name: "RRB Clerk Prelims: Quant (7th Dec Shift 2)", tags: "PYQ", file: BASE_URL + "tests/quant/QA017.json" },
     ],
     // New Topic Tests Category
