@@ -176,7 +176,9 @@
 
                 // --- 1. SWIPE NAVIGATION (Mobile Touch) ---
                 var touchStartX = 0;
+                var touchStartY = 0;
                 var touchEndX = 0;
+                var touchEndY = 0;
                 var minSwipeDistance = 50; // Threshold to prevent accidental swipes
 
                 var qArea = document.querySelector('.q-content'); // Target the question area
@@ -184,20 +186,30 @@
                 if (qArea) {
                     qArea.addEventListener('touchstart', function (e) {
                         touchStartX = e.changedTouches[0].screenX;
+                        touchStartY = e.changedTouches[0].screenY;
                     }, false);
 
                     qArea.addEventListener('touchend', function (e) {
                         touchEndX = e.changedTouches[0].screenX;
+                        touchEndY = e.changedTouches[0].screenY;
                         handleSwipe();
                     }, false);
                 }
 
                 function handleSwipe() {
-                    var distance = touchEndX - touchStartX;
+                    var deltaX = touchEndX - touchStartX;
+                    var deltaY = touchEndY - touchStartY;
 
-                    if (Math.abs(distance) < minSwipeDistance) return; // Ignore small touches
+                    var absX = Math.abs(deltaX);
+                    var absY = Math.abs(deltaY);
 
-                    if (distance < 0) {
+                    // Only trigger swipe if:
+                    // 1. Horizontal movement is greater than minimum threshold
+                    // 2. Horizontal movement is significantly greater than vertical movement
+                    if (absX < minSwipeDistance) return; // Not enough horizontal movement
+                    if (absY > absX * 0.5) return; // Too much vertical movement (scrolling)
+
+                    if (deltaX < 0) {
                         // Swiped LEFT ( Finger moves <--- ) = NEXT Question
                         self.saveNext();
                     } else {
