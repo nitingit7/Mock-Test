@@ -384,6 +384,16 @@
             },
 
             startFullExam: function (jsonObj) {
+                // Check for saved progress first
+                var savedProgress = this.loadProgress();
+
+                if (savedProgress) {
+                    // Auto-resume from saved progress
+                    this.restoreProgress(savedProgress);
+                    return;
+                }
+
+                // No saved progress - start fresh
                 this.fullData = jsonObj;
                 this.sectionResponses = [];
                 this.currentSectionIdx = 0;
@@ -765,6 +775,9 @@
                     };
                     localStorage.setItem(this.currentFileUrl, JSON.stringify(resultObj));
 
+                    // Clear progress data since test is now complete
+                    this.clearProgress();
+
                     // --- THE FIX ---
                     // Instead of showing the result screen immediately (which breaks Review),
                     // we RELOAD the page in "Result Mode". This guarantees everything works.
@@ -854,21 +867,102 @@
             nextQ: function () { if (this.currQ < this.data.questions.length - 1) { this.captureQuestionTime(); this.currQ++; this.loadQ(); } },
 
             exitTest: function () {
-                if (confirm("Exit Test? Progress will be lost.")) {
-                    window.onbeforeunload = null;
-                    if (this.timerInterval) clearInterval(this.timerInterval);
+                // Auto-save progress before exiting
+                this.saveProgress();
 
-                    // --- SMART RETURN LOGIC ---
-                    var lastSubject = localStorage.getItem('last_subject_viewed');
+                window.onbeforeunload = null;
+                if (this.timerInterval) clearInterval(this.timerInterval);
 
-                    if (lastSubject) {
-                        // If we know where they came from, go back to that specific list
-                        window.location.href = "list.html?subject=" + lastSubject;
-                    } else {
-                        // Fallback: If no history exists, go to Home
-                        window.location.href = "index.html";
-                    }
+                // --- SMART RETURN LOGIC ---
+                var lastSubject = localStorage.getItem('last_subject_viewed');
+
+                if (lastSubject) {
+                    // If we know where they came from, go back to that specific list
+                    window.location.href = "list.html?subject=" + lastSubject;
+                } else {
+                    // Fallback: If no history exists, go to Home
+                    window.location.href = "index.html";
                 }
+            },
+
+            // === PROGRESS SAVE/LOAD FUNCTIONS ===
+
+            saveProgress: function () {
+                if (!this.currentFileUrl || this.isReview) return;
+
+                this.captureQuestionTime();
+
+                // Calculate remaining time
+                var now = Date.now();
+                var elapsedSeconds = Math.floor((now - this.startTime - this.accumulatedPauseTime) / 1000);
+                var remainingTime = this.totalTimeSeconds - elapsedSeconds;
+
+                var progressData = {
+                    currentSectionIdx: this.currentSectionIdx,
+                    currentQuestion: this.currQ,
+                    responses: this.responses,
+                    sectionResponses: this.sectionResponses,
+                    remainingTime: remainingTime,
+                    accumulatedPauseTime: this.accumulatedPauseTime,
+                    fullData: this.fullData,
+                    timestamp: Date.now()
+                };
+
+                try {
+                    localStorage.setItem(this.currentFileUrl + '_progress', JSON.stringify(progressData));
+                } catch (e) {
+                    console.error('Failed to save progress:', e);
+                }
+            },
+
+            loadProgress: function () {
+                if (!this.currentFileUrl) return null;
+
+                try {
+                    var savedData = localStorage.getItem(this.currentFileUrl + '_progress');
+                    if (savedData) {
+                        return JSON.parse(savedData);
+                    }
+                } catch (e) {
+                    console.error('Failed to load progress:', e);
+                }
+                return null;
+            },
+
+            clearProgress: function () {
+                if (!this.currentFileUrl) return;
+                localStorage.removeItem(this.currentFileUrl + '_progress');
+            },
+
+            restoreProgress: function (progressData) {
+                // Restore the full test data
+                this.fullData = progressData.fullData;
+                this.currentSectionIdx = progressData.currentSectionIdx;
+                this.sectionResponses = progressData.sectionResponses || [];
+
+                // Load the current section
+                var sec = this.fullData.sections[this.currentSectionIdx];
+                this.data = sec;
+                this.currQ = progressData.currentQuestion || 0;
+                this.responses = progressData.responses || {};
+
+                // Restore timer with remaining time
+                this.totalTimeSeconds = progressData.remainingTime || (sec.timeLimit || 20) * 60;
+                this.startTime = Date.now();
+                this.accumulatedPauseTime = 0;
+                this.questionStartTime = Date.now();
+
+                this.startTimer();
+
+                // Update UI
+                var titleText = this.fullData.title;
+                if (this.fullData.sections && this.fullData.sections.length > 1) {
+                    titleText += " - " + sec.name;
+                }
+                document.getElementById('exam-title').innerText = titleText;
+
+                this.switchView('exam');
+                this.loadQ();
             },
 
             renderPalette: function () {
@@ -1027,6 +1121,7 @@
             reattemptTest: function () {
                 if (confirm("Clear previous result and re-attempt?")) {
                     localStorage.removeItem(this.currentFileUrl);
+                    this.clearProgress(); // Also clear any saved progress
                     var newUrl = "exam.html?file=" + this.currentFileUrl;
                     history.back();
                     setTimeout(function () { location.replace(newUrl); }, 50);

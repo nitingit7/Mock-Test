@@ -2460,3 +2460,18 @@ body.dark-mode .pal-btn-current {
     border: 2px solid #58a6ff !important;
     box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15) !important;
 }
+
+/* =========================================
+   RESUME BUTTON STYLING
+   ========================================= */
+
+/* Resume button for in-progress tests */
+.btn-resume {
+    background: var(--blue) !important;
+    color: white !important;
+}
+
+.btn-resume:hover {
+    background: #2f5a8f !important;
+    transform: translateY(-1px);
+}
