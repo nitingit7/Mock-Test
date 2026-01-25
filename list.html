@@ -127,11 +127,22 @@
                 }
 
 
+                // Build metadata string if available
+                var metadataHTML = '';
+                if (f.questions || f.time || f.marks) {
+                    var metaParts = [];
+                    if (f.questions) metaParts.push(`📝 ${f.questions} Qs`);
+                    if (f.time) metaParts.push(`⏱ ${f.time} min`);
+                    if (f.marks) metaParts.push(`🎯 ${f.marks} marks`);
+                    metadataHTML = `<span class="tc-metadata">${metaParts.join(' • ')}</span>`;
+                }
+
                 div.innerHTML = `
                     <div class="tc-left">
                         <div class="tc-icon">${icon}</div>
                         <div class="tc-info">
                             <span class="tc-title">${f.name}</span>
+                            ${metadataHTML}
                             <span class="tc-status" style="color:${statusColor}">
                                 ${statusText}
                             </span>

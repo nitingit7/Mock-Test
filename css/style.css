@@ -2494,3 +2494,23 @@ body.dark-mode .btn-resume:hover {
     background: linear-gradient(135deg, #3d8fd1 0%, #2a6fa8 100%) !important;
     box-shadow: 0 6px 15px rgba(88, 166, 255, 0.4) !important;
 }
+
+/* =========================================
+   TEST CARD METADATA STYLING
+   ========================================= */
+
+/* Metadata row showing questions, time, marks */
+.tc-metadata {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Dark mode adjustment */
+body.dark-mode .tc-metadata {
+    color: #8b949e;
+}
