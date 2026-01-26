@@ -17,12 +17,7 @@
 </head>
 
 <body>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" onclick="toggleTheme(event)">
-            <div class="slider-round"></div>
-        </label>
-    </div>
+
 
     <div class="container main-dashboard">
         <div class="header-section">
@@ -86,11 +81,27 @@
             </div>
 
         </div>
-
-        <div class="footer-tip">
-            <p>💡 <strong>Pro Tip:</strong> Toggle the switch top-right for Dark Mode!</p>
-        </div>
     </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </a>
+        <a href="tests.html" class="nav-item">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Tests</div>
+        </a>
+        <a href="performance.html" class="nav-item">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Performance</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </a>
+    </nav>
 
     <div id="selection-modal" class="modal-overlay" style="display: none;" onclick="closeSelectionModal(event)">
         <div class="modal-content">

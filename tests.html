@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>All Tests - Practice King</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h2 class="app-title">All Tests</h2>
+            <p class="subtitle">Browse all available practice tests</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="subject-card" onclick="location.href='list.html?subject=full_test'">
+                <div class="card-content">
+                    <div class="icon-box">🏆</div>
+                    <div class="text-group">
+                        <strong>Full Mock Tests</strong>
+                    </div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+
+            <div class="subject-card" onclick="location.href='list.html?subject=quant_sectional'">
+                <div class="card-content">
+                    <div class="icon-box">📊</div>
+                    <div class="text-group">
+                        <strong>Quantitative Aptitude</strong>
+                        <span class="sub-text">Sectional Tests</span>
+                    </div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+
+            <div class="subject-card" onclick="location.href='list.html?subject=reasoning_sectional'">
+                <div class="card-content">
+                    <div class="icon-box">🧩</div>
+                    <div class="text-group">
+                        <strong>Reasoning Ability</strong>
+                        <span class="sub-text">Sectional Tests</span>
+                    </div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+
+            <div class="subject-card" onclick="location.href='list.html?subject=english_sectional'">
+                <div class="card-content">
+                    <div class="icon-box">📖</div>
+                    <div class="text-group">
+                        <strong>English Language</strong>
+                        <span class="sub-text">Sectional Tests</span>
+                    </div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+
+            <div class="subject-card" onclick="location.href='list.html?subject=general_sectional'">
+                <div class="card-content">
+                    <div class="icon-box">🌍</div>
+                    <div class="text-group">
+                        <strong>General Awareness</strong>
+                        <span class="sub-text">Sectional Tests</span>
+                    </div>
+                </div>
+                <div class="arrow-icon">➜</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </a>
+        <a href="tests.html" class="nav-item active">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Tests</div>
+        </a>
+        <a href="performance.html" class="nav-item">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Performance</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </a>
+    </nav>
+
+    <script>
+        // Load saved theme
+        var savedTheme = localStorage.getItem('site-theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+</body>
+
+</html>

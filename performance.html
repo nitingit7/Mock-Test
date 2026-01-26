@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Performance - Practice King</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h2 class="app-title">Performance</h2>
+            <p class="subtitle">Track your progress and statistics</p>
+        </div>
+
+        <div class="profile-section">
+            <h3 class="profile-section-title">Overall Statistics</h3>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-val" id="total-tests">0</div>
+                    <div class="stat-label">Tests Taken</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="avg-score">0%</div>
+                    <div class="stat-label">Avg Score</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="total-questions">0</div>
+                    <div class="stat-label">Questions</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h3 class="profile-section-title">Recent Tests</h3>
+            <div id="recent-tests">
+                <p style="text-align: center; color: var(--text-secondary); padding: 20px;">
+                    No tests completed yet. Start practicing to see your performance!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </a>
+        <a href="tests.html" class="nav-item">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Tests</div>
+        </a>
+        <a href="performance.html" class="nav-item active">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Performance</div>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </a>
+    </nav>
+
+    <script>
+        // Load saved theme
+        var savedTheme = localStorage.getItem('site-theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Calculate and display statistics
+        function loadPerformanceData() {
+            let totalTests = 0;
+            let totalScore = 0;
+            let totalQuestions = 0;
+            const recentTests = [];
+
+            // Scan localStorage for test results
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+
+                // Skip non-result keys
+                if (key.includes('_progress') || key === 'site-theme' || key === 'userData' || key === 'last_subject_viewed') {
+                    continue;
+                }
+
+                try {
+                    const result = JSON.parse(localStorage.getItem(key));
+                    if (result && result.score !== undefined) {
+                        totalTests++;
+                        totalScore += result.score;
+                        totalQuestions += result.total || 0;
+
+                        recentTests.push({
+                            name: key.split('/').pop().replace('.json', ''),
+                            score: result.score,
+                            total: result.total,
+                            percentage: Math.round((result.score / result.total) * 100),
+                            date: result.timestamp || Date.now()
+                        });
+                    }
+                } catch (e) {
+                    // Skip invalid JSON
+                }
+            }
+
+            // Update statistics
+            document.getElementById('total-tests').textContent = totalTests;
+            document.getElementById('total-questions').textContent = totalQuestions;
+
+            if (totalTests > 0) {
+                const avgPercentage = Math.round((totalScore / totalQuestions) * 100);
+                document.getElementById('avg-score').textContent = avgPercentage + '%';
+
+                // Display recent tests
+                displayRecentTests(recentTests);
+            }
+        }
+
+        function displayRecentTests(tests) {
+            if (tests.length === 0) return;
+
+            // Sort by date (most recent first)
+            tests.sort((a, b) => b.date - a.date);
+
+            // Take only the 5 most recent
+            const recentFive = tests.slice(0, 5);
+
+            const container = document.getElementById('recent-tests');
+            container.innerHTML = '';
+
+            recentFive.forEach(test => {
+                const testCard = document.createElement('div');
+                testCard.className = 'test-item';
+                testCard.style.marginBottom = '10px';
+                testCard.innerHTML = `
+                    <div>
+                        <strong>${test.name}</strong><br>
+                        <small style="color: var(--text-secondary);">
+                            Score: ${test.score}/${test.total} (${test.percentage}%)
+                        </small>
+                    </div>
+                    <div style="font-size: 1.5rem; color: ${test.percentage >= 70 ? 'var(--green)' : test.percentage >= 50 ? 'var(--yellow)' : 'var(--red)'};">
+                        ${test.percentage}%
+                    </div>
+                `;
+                container.appendChild(testCard);
+            });
+        }
+
+        // Load data on page load
+        window.onload = loadPerformanceData;
+    </script>
+</body>
+
+</html>

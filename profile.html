@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Profile - Practice King</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <!-- Not Logged In View -->
+        <div id="not-logged-in" style="display: none;">
+            <div class="sign-in-container">
+                <div class="profile-avatar-placeholder">👤</div>
+                <h2 style="margin: 0; color: var(--text-primary);">Welcome to Practice King</h2>
+                <p class="sign-in-message">Sign in with Google to save your progress, track performance, and access your
+                    tests across devices.</p>
+
+                <button class="btn-google-signin" onclick="signInWithGoogle()">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path fill="#4285F4"
+                            d="M19.6 10.23c0-.82-.1-1.42-.25-2.05H10v3.72h5.5c-.15.96-.74 2.31-2.04 3.22v2.45h3.16c1.89-1.73 2.98-4.3 2.98-7.34z" />
+                        <path fill="#34A853"
+                            d="M13.46 15.13c-.83.59-1.96 1-3.46 1-2.64 0-4.88-1.74-5.68-4.15H1.07v2.52C2.72 17.75 6.09 20 10 20c2.7 0 4.96-.89 6.62-2.42l-3.16-2.45z" />
+                        <path fill="#FBBC05"
+                            d="M3.99 10c0-.69.12-1.35.32-1.97V5.51H1.07A9.973 9.973 0 000 10c0 1.61.39 3.14 1.07 4.49l3.24-2.52c-.2-.62-.32-1.28-.32-1.97z" />
+                        <path fill="#EA4335"
+                            d="M10 3.88c1.88 0 3.13.81 3.85 1.48l2.84-2.76C14.96.99 12.7 0 10 0 6.09 0 2.72 2.25 1.07 5.51l3.24 2.52C5.12 5.62 7.36 3.88 10 3.88z" />
+                    </svg>
+                    Sign in with Google
+                </button>
+            </div>
+        </div>
+
+        <!-- Logged In View -->
+        <div id="logged-in" style="display: none;">
+            <div class="profile-header">
+                <img id="user-avatar" class="profile-avatar" src="" alt="Profile Picture">
+                <h2 id="user-name" class="profile-name">User Name</h2>
+                <p id="user-email" class="profile-email">user@example.com</p>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="profile-section">
+                <h3 class="profile-section-title">Settings</h3>
+
+                <div class="theme-toggle-row">
+                    <span class="theme-toggle-label">Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-checkbox" onclick="toggleTheme()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Account Section -->
+            <div class="profile-section">
+                <h3 class="profile-section-title">Account</h3>
+                <button class="btn-signout" onclick="signOut()">Sign Out</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <div class="nav-icon">🏠</div>
+            <div class="nav-label">Home</div>
+        </a>
+        <a href="tests.html" class="nav-item">
+            <div class="nav-icon">📝</div>
+            <div class="nav-label">Tests</div>
+        </a>
+        <a href="performance.html" class="nav-item">
+            <div class="nav-icon">📊</div>
+            <div class="nav-label">Performance</div>
+        </a>
+        <a href="profile.html" class="nav-item active">
+            <div class="nav-icon">👤</div>
+            <div class="nav-label">Profile</div>
+        </a>
+    </nav>
+
+    <script>
+        // Firebase Configuration
+        // TODO: Replace with your Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyBj2QypkekEpL0Gup7zm8XgBm6Xehzbp4Y",
+            authDomain: "practice-king-web.firebaseapp.com",
+            projectId: "practice-king-web",
+            storageBucket: "practice-king-web.firebasestorage.app",
+            messagingSenderId: "628455810469",
+            appId: "1:628455810469:web:d153f9238f60d1de65744c"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Google Auth Provider
+        const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+        // Check auth state on page load
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in
+                showLoggedInView(user);
+            } else {
+                // User is signed out
+                showNotLoggedInView();
+            }
+        });
+
+        function signInWithGoogle() {
+            auth.signInWithPopup(googleProvider)
+                .then((result) => {
+                    const user = result.user;
+                    console.log('Signed in:', user.displayName);
+                    // Save user data to localStorage
+                    saveUserData(user);
+                })
+                .catch((error) => {
+                    console.error('Sign in error:', error);
+                    alert('Sign in failed: ' + error.message);
+                });
+        }
+
+        function signOut() {
+            if (confirm('Are you sure you want to sign out?')) {
+                auth.signOut().then(() => {
+                    console.log('Signed out successfully');
+                    // Clear user data from localStorage
+                    localStorage.removeItem('userData');
+                }).catch((error) => {
+                    console.error('Sign out error:', error);
+                });
+            }
+        }
+
+        function showLoggedInView(user) {
+            document.getElementById('not-logged-in').style.display = 'none';
+            document.getElementById('logged-in').style.display = 'block';
+
+            // Update profile info
+            document.getElementById('user-avatar').src = user.photoURL || 'https://via.placeholder.com/100';
+            document.getElementById('user-name').textContent = user.displayName || 'User';
+            document.getElementById('user-email').textContent = user.email || '';
+
+            // Save user data
+            saveUserData(user);
+        }
+
+        function showNotLoggedInView() {
+            document.getElementById('not-logged-in').style.display = 'block';
+            document.getElementById('logged-in').style.display = 'none';
+        }
+
+        function saveUserData(user) {
+            const userData = {
+                uid: user.uid,
+                name: user.displayName,
+                email: user.email,
+                photo: user.photoURL,
+                lastLogin: new Date().toISOString()
+            };
+            localStorage.setItem('userData', JSON.stringify(userData));
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const checkbox = document.getElementById('theme-checkbox');
+            const isDark = checkbox.checked;
+
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('site-theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('site-theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        window.onload = function () {
+            const savedTheme = localStorage.getItem('site-theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-checkbox').checked = true;
+            }
+        };
+    </script>
+</body>
+
+</html>
