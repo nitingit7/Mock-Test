@@ -737,7 +737,8 @@
             },
 
             submitSection: function (force) {
-                if (!force && !confirm("Submit this SECTION? You cannot return to it.")) return;
+                // Don't show confirmation dialog in review mode
+                if (!this.isReview && !force && !confirm("Submit this SECTION? You cannot return to it.")) return;
 
                 this.captureQuestionTime();
                 this.sectionResponses[this.currentSectionIdx] = this.responses;
