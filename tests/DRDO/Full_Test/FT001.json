@@ -1,0 +1,588 @@
+{
+  "title": "DRDO CEPTAM-10 Sta B Memory Based Paper (Held on 14 Nov 2022, Shift 3)",
+  "isFullMock": true,
+  "sections": [
+    {
+      "name": "General Science",
+      "timeLimit": 45,
+      "questions": [
+        {
+          "id": "GS01",
+          "direction": "The laws of reflection hold true for which of the following mirror(s)?",
+          "text": "(A) Concave mirror, (B) Convex mirror, (C) Plane mirror",
+          "options": ["only A and B", "A, B and C", "Only B and C", "Only a and C"],
+          "correctIndex": 1,
+          "solution": "The laws of reflection are fundamental principles of light and apply universally to all reflecting surfaces. These laws state that: 1. The angle of incidence is equal to the angle of reflection. 2. The incident ray, reflected ray, and the normal all lie in the same plane. These rules are independent of the shape of the reflecting surface. Therefore, the correct answer is all three: (A), (B), and (C)."
+        },
+        {
+          "id": "GS02",
+          "direction": null,
+          "text": "A man stands 10 m in front of a large plane mirror. How far must he walk before he is 5 m away from his image?",
+          "options": ["4 m", "5 m", "7.5 m", "2.5 m"],
+          "correctIndex": 2,
+          "solution": "Initial Setup: The man is 10 m away from the mirror. In a plane mirror, the image is formed at the same distance behind the mirror. Initial total distance = 20 m. Required Condition: The total distance between the man and his image must reduce to 5 m. Let the man walk x meters toward the mirror. His new distance from the mirror will be $$(10-x)$$. The total distance between the man and his image will now be $$2 \\times (10-x)$$. Setting this equal to the desired distance: $$2 \\times (10-x) = 5 \\Rightarrow 20 - 2x = 5 \\Rightarrow 2x = 15 \\Rightarrow x = 7.5$$. The man must walk 7.5 meters toward the mirror."
+        },
+        {
+          "id": "GS03",
+          "direction": null,
+          "text": "The mass of the earth is",
+          "options": ["$$6 \\times 10^{23} kg$$", "$$6 \\times 10^{24} kg$$", "$$6 \\times 10^{25} kg$$", "$$6 \\times 10^{22} kg$$"],
+          "correctIndex": 1,
+          "solution": "The mass of the Earth is approximately $$5.97 \\times 10^{24}$$ kg, which is generally rounded off to $$6 \\times 10^{24}$$ kg. This value is derived from gravitational studies and Earth's average density and radius."
+        },
+        {
+          "id": "GS04",
+          "direction": "Select the correct pair from the following options.",
+          "text": "Object's resistance to change its state of motion is related to:",
+          "options": ["Gravitation", "Inertia", "Momentum", "Acceleration"],
+          "correctIndex": 1,
+          "solution": "An object's resistance to change its state of motion (whether at rest or in uniform motion) is known as inertia. This property is inherent in all matter due to its mass. Newton's First Law of Motion is also called the Law of Inertia."
+        },
+        {
+          "id": "GS05",
+          "direction": null,
+          "text": "The effect of Thrust depends on which of the following?",
+          "options": ["Area", "Volume", "Mass", "Weight"],
+          "correctIndex": 0,
+          "solution": "Thrust is the total force acting perpendicularly on a surface. The effect of thrust on a surface is determined by the area over which it acts. For the same thrust, a smaller area results in greater pressure ($$Pressure = Thrust / Area$$)."
+        },
+        {
+          "id": "GS06",
+          "direction": null,
+          "text": "The point at which all rays converge is termed as",
+          "options": ["principle axis", "pole", "aperture", "focus"],
+          "correctIndex": 3,
+          "solution": "The focus is the point on the principal axis where parallel rays of light after reflection (in mirrors) or refraction (in lenses) converge. It is also known as the focal point."
+        },
+        {
+          "id": "GS07",
+          "direction": null,
+          "text": "When a ray of light travels from a denser medium to a rarer medium, the ray will:",
+          "options": ["slow down and bend away from the normal", "speed up and bend towards the normal", "slow down and bend towards the normal", "speed up and bend away from the normal"],
+          "correctIndex": 3,
+          "solution": "When light passes from a denser medium (like glass) to a rarer medium (like air): Its speed increases and the ray bends away from the normal. This is explained by Snell's Law."
+        },
+        {
+          "id": "GS08",
+          "direction": null,
+          "text": "Which of the following is true for resistors in parallel?",
+          "options": ["The equivalent resistance is greater than the smallest resistance.", "The equivalent resistance is the sum of all resistances.", "They have the same current.", "They have the same voltage."],
+          "correctIndex": 3,
+          "solution": "In a parallel combination of resistors, all resistors are connected across the same two points, so the voltage across each resistor is equal. The equivalent resistance is always less than the smallest individual resistance."
+        },
+        {
+          "id": "GS09",
+          "direction": "Some features of a prokaryotic cell are mentioned below. Select the INCORRECT option.",
+          "text": "Which of the following is NOT a feature of prokaryotic cells?",
+          "options": ["Membrane-bound cell organelles present", "Nuclear region known as nucleoid", "Single chromosome", "Very small in size"],
+          "correctIndex": 0,
+          "solution": "Prokaryotic cells do not have membrane-bound organelles such as the nucleus, mitochondria, or endoplasmic reticulum. Instead, they have a simpler structure with a nucleoid."
+        },
+        {
+          "id": "GS10",
+          "direction": null,
+          "text": "_______ are a kind of waste disposal system of the cell. They help to keep the cell clean by digesting foreign materials and worn-out organelles.",
+          "options": ["Lysosomes", "Golgi", "Plastids", "Mitochondria"],
+          "correctIndex": 0,
+          "solution": "Lysosomes are membrane-bound organelles containing digestive enzymes that break down excess or worn-out cell parts, as well as foreign substances like bacteria."
+        },
+        {
+          "id": "GS11",
+          "direction": null,
+          "text": "What is called the powerhouse of the cell?",
+          "options": ["Nucleus", "Cytoplasm", "Chloroplast", "Mitochondria"],
+          "correctIndex": 3,
+          "solution": "Mitochondria are often referred to as the 'powerhouse of the cell' because they produce adenosine triphosphate (ATP), the primary energy currency of the cell, through cellular respiration."
+        },
+        {
+          "id": "GS12",
+          "direction": null,
+          "text": "Which of the following is the SI unit of electric charge and is equivalent to the charge contained in nearly $$6 \\times 10^{18}$$ electrons?",
+          "options": ["Coulomb", "Siemens", "Becquerel", "Henry"],
+          "correctIndex": 0,
+          "solution": "Coulomb (C) is the SI unit of electric charge. 1 Coulomb is equivalent to the charge of approximately $$6.25 \\times 10^{18}$$ electrons. Charge of one electron is $$1.6 \\times 10^{-19} C$$."
+        },
+        {
+          "id": "GS13",
+          "direction": null,
+          "text": "The most common cause of Goiters (irregular growth of the thyroid gland) worldwide is a lack of",
+          "options": ["Potassium", "Sodium", "Iron", "Iodine"],
+          "correctIndex": 3,
+          "solution": "Goitre is an enlargement of the thyroid gland commonly caused by iodine deficiency. Iodine is essential for the production of thyroid hormones (T3 and T4) that regulate metabolism."
+        },
+        {
+          "id": "GS14",
+          "direction": null,
+          "text": "DNA is a molecule that holds the genetic information in the cells of living organisms. DNA stands for",
+          "options": ["Disulphate Nitric Acid", "Deoxyribonucleic Acid", "Dinitric Acid", "Dioxide Nitrogen Acetate"],
+          "correctIndex": 1,
+          "solution": "DNA stands for Deoxyribonucleic Acid. It carries the genetic instructions used in growth and development and is found in the nucleus of cells."
+        },
+        {
+          "id": "GS15",
+          "direction": null,
+          "text": "Which of the following characteristics corresponding to plant functions is true for angiosperms?",
+          "options": ["They lack vascular tissue for nutrient transport", "They produce seeds enclosed within fruits.", "They reproduce using spores", "They predominantly rely on wind for pollination."],
+          "correctIndex": 1,
+          "solution": "Angiosperms, or flowering plants, are characterized by the production of seeds enclosed within fruits. This distinguishes them from gymnosperms, which have exposed seeds."
+        },
+        {
+          "id": "GS16",
+          "direction": null,
+          "text": "Which biomolecules are responsible for catalysing biochemical reactions?",
+          "options": ["Polysaccharides", "Enzymes", "Nucleotides", "Phospholipids"],
+          "correctIndex": 1,
+          "solution": "Enzymes act as biological catalysts, accelerating biochemical reactions inside living organisms without being consumed. Most enzymes are proteins."
+        },
+        {
+          "id": "GS17",
+          "direction": null,
+          "text": "Which functional group is polar, containing an unsymmetrical distribution of charge between oxygen and hydrogen atoms?",
+          "options": ["Ethers", "Alcohols", "Carboxylic acids", "Esters"],
+          "correctIndex": 1,
+          "solution": "Alcohols contain a hydroxyl group (-OH). This group is polar because oxygen is more electronegative than hydrogen, resulting in an unsymmetrical distribution of charge."
+        },
+        {
+          "id": "GS18",
+          "direction": "Which of the following statements about the resistivity of metals is INCORRECT?",
+          "text": "Identify the false statement regarding resistivity.",
+          "options": ["Resistivity is inversely proportional to the cross-sectional area of the metal", "Resistivity is inversely proportional to the number density of electrons.", "Resistivity is directly proportional to the mass of the electron.", "Resistivity is inversely proportional to the relaxation time of the electrons."],
+          "correctIndex": 2,
+          "solution": "Resistivity in metals is not directly proportional to the mass of the electron. It depends on factors like electron density and relaxation time. Note: Inverse proportionality to cross-sectional area is a property of Resistance, not Resistivity, but the specific memory-based answer key marks (C) as the intended error regarding electron mass."
+        },
+        {
+          "id": "GS19",
+          "direction": "Which of the following statements is NOT correct regarding drugs?",
+          "text": "Identify the incorrect statement.",
+          "options": ["Birth control pills essentially contain a mixture of synthetic estrogen and progesterone derivatives", "Disinfectants are applied to inanimate objects such as floors, drainage systems, etc.", "Norethindrone is an example of a synthetic progesterone derivative used as an antifertility drug", "Chlorine in concentration of 0.2 to 0.4 ppm and sulphur dioxide in very low concentrations are analgesics"],
+          "correctIndex": 3,
+          "solution": "Statement (d) is incorrect because chlorine and sulphur dioxide are disinfectants/germicidal agents, NOT analgesics. Analgesics are pain-relieving drugs like aspirin."
+        },
+        {
+          "id": "GS20",
+          "direction": null,
+          "text": "Which of the following is a soapy liquid with large molecular size of the order of $$10^{-9}$$ m?",
+          "options": ["Palmitic acid", "Stearic acid", "Lauric acid", "Oleic acid"],
+          "correctIndex": 3,
+          "solution": "Oleic acid is a long-chain unsaturated fatty acid ($$C_{18}H_{34}O_{2}$$) that forms soapy, oily liquids. It remains liquid at room temperature due to its double bond."
+        },
+        {
+          "id": "GS21",
+          "direction": null,
+          "text": "How many oxygen molecules are there in Carbon Monoxide gas?",
+          "options": ["Three", "One", "Two", "Four"],
+          "correctIndex": 1,
+          "solution": "Carbon monoxide formula is CO, containing 1 carbon atom and 1 oxygen atom. It is a colorless, toxic gas produced from incomplete combustion."
+        },
+        {
+          "id": "GS22",
+          "direction": null,
+          "text": "The conversion between the solid and the gaseous phases of matter, with no intermediate liquid state, is called:",
+          "options": ["Sublimation", "Solidification", "Deposition", "Vaporisation"],
+          "correctIndex": 0,
+          "solution": "Sublimation is the transition from solid to gas directly. Examples include camphor and dry ice. The reverse process (gas to solid) is deposition."
+        },
+        {
+          "id": "GS23",
+          "direction": null,
+          "text": "Which of the following statements best represents the mass number of an atom?",
+          "options": ["The average mass of all the isotopes of the element", "The number of electrons in an atom", "The total number of protons and neutrons in the nucleus", "The number of protons in the nucleus"],
+          "correctIndex": 2,
+          "solution": "Mass number is the sum of protons and neutrons present in the nucleus. These particles (nucleons) contribute almost the entire mass of the atom."
+        },
+        {
+          "id": "GS24",
+          "direction": null,
+          "text": "The oxidation reaction that produces heat and light is",
+          "options": ["Endotherm", "Combustion", "Exothermic", "Neutral"],
+          "correctIndex": 1,
+          "solution": "Combustion is an oxidation reaction that releases heat and light energy, usually involving a substance reacting rapidly with oxygen to produce a flame."
+        }
+      ]
+    },
+    {
+      "name": "General Awareness",
+      "timeLimit": 30,
+      "questions": [
+        {
+          "id": "GA01",
+          "direction": null,
+          "text": "The Kulsi River is a tributary of which major river?",
+          "options": ["Ganga", "Yamuna", "Brahmaputra", "Godavari"],
+          "correctIndex": 2,
+          "solution": "The Kulsi River is a south-bank tributary of the Brahmaputra River, flowing through the Assam-Meghalaya region."
+        },
+        {
+          "id": "GA02",
+          "direction": null,
+          "text": "Who has been appointed as the second Chief of Defence Staff (CDS) in India?",
+          "options": ["Admiral R Hari Kumar", "General Manoj Pande", "General Manoj Mukund Naravane", "Lt General Anil Chauhan"],
+          "correctIndex": 3,
+          "solution": "Lt General Anil Chauhan was appointed as the second CDS of India in September 2022, succeeding the first CDS, General Bipin Rawat."
+        },
+        {
+          "id": "GA03",
+          "direction": null,
+          "text": "On World Tourism Day, the Ministry of Tourism launched which scheme?",
+          "options": ["Paryatan Saathi", "Paryatan Saarthi", "Paryatan Mitra", "Paryatan Bot"],
+          "correctIndex": 2,
+          "solution": "The Ministry of Tourism launched 'Paryatan Mitra' and 'Paryatan Didi', initiatives aimed at empowering local communities to serve as destination ambassadors."
+        },
+        {
+          "id": "GA04",
+          "direction": null,
+          "text": "The Battle of Haldighati was fought in:",
+          "options": ["1568", "1576", "1552", "1584"],
+          "correctIndex": 1,
+          "solution": "The Battle of Haldighati was fought on June 18, 1576, between Maharana Pratap of Mewar and the Mughal army led by Man Singh I."
+        },
+        {
+          "id": "GA05",
+          "direction": null,
+          "text": "Admission and allocation of new states is mentioned in which of the following Articles of the Indian Constitution?",
+          "options": ["Article 2", "Article 1", "Article 3", "Article 4"],
+          "correctIndex": 0,
+          "solution": "Article 2 deals with the admission or establishment of new states into the Union of India (adding states from outside existing territory)."
+        },
+        {
+          "id": "GA06",
+          "direction": null,
+          "text": "On 22 May 2025, Israeli forces reportedly fired warning shots near a delegation of diplomats visiting which area?",
+          "options": ["Gaza Strip", "Sinai Peninsula", "Golan Heights", "West Bank"],
+          "correctIndex": 0,
+          "solution": "The incident involving Israeli forces firing warning shots near UN and foreign diplomats occurred on the edge of the Gaza Strip near the Rafah border crossing."
+        },
+        {
+          "id": "GA07",
+          "direction": null,
+          "text": "Which of the following language is used for webpage development?",
+          "options": ["FORTRAN", "C or C++", "BASIC", "HTML"],
+          "correctIndex": 3,
+          "solution": "HTML (HyperText Markup Language) is the standard markup language used for structuring and formatting content on webpages."
+        },
+        {
+          "id": "GA08",
+          "direction": null,
+          "text": "When was the Rural Landless Employment Guarantee Programme (RLEGP) launched?",
+          "options": ["2 October 1985", "15 August 1983", "1 April 1980", "26 January 1982"],
+          "correctIndex": 1,
+          "solution": "RLEGP was launched on August 15, 1983, with the aim of generating gainful employment for the landless in rural areas."
+        },
+        {
+          "id": "GA09",
+          "direction": null,
+          "text": "What is the motto of INS Aravali?",
+          "options": ["'Ever Onward, Ever Secure'", "'Strength through Vigilance'", "'Maritime Security through Collaboration'", "'Victory at Sea'"],
+          "correctIndex": 2,
+          "solution": "The motto of INS Aravali is 'Maritime Security through Collaboration' (सामुद्रिकसुरक्षायाः सहयोग)."
+        },
+        {
+          "id": "GA10",
+          "direction": null,
+          "text": "World water day is celebrated on",
+          "options": ["26 August", "15 August", "8 March", "22 March"],
+          "correctIndex": 3,
+          "solution": "World Water Day is celebrated on 22 March. The theme for 2024 was 'Water for Peace'."
+        },
+        {
+          "id": "GA11",
+          "direction": null,
+          "text": "The Vice-President of India is elected by the:",
+          "options": ["members of the houses of parliament and state legislative assemblies", "members of the Rajya Sabha", "members of the Lok Sabha", "members of both houses of parliament"],
+          "correctIndex": 3,
+          "solution": "The Vice-President is chosen by an electoral college consisting of all members (elected and nominated) of both the Rajya Sabha and the Lok Sabha."
+        },
+        {
+          "id": "GA12",
+          "direction": null,
+          "text": "Which state hosts the Nehru trophy boat race?",
+          "options": ["Karnataka", "Tamil Nadu", "Kerala", "Goa"],
+          "correctIndex": 2,
+          "solution": "The Nehru Trophy Boat Race is held annually on Punnamada Lake near Alappuzha, Kerala, featuring traditional 'snake boats'."
+        },
+        {
+          "id": "GA13",
+          "direction": null,
+          "text": "In which year did RBI introduce the Base Rate system to enhance loan pricing transparency?",
+          "options": ["2012", "2008", "2010", "2014"],
+          "correctIndex": 2,
+          "solution": "The RBI introduced the Base Rate system effective from July 1, 2010, replacing the earlier Benchmark Prime Lending Rate (BPLR) system."
+        },
+        {
+          "id": "GA14",
+          "direction": null,
+          "text": "When was the cement industry in India totally decontrolled?",
+          "options": ["1982", "1991", "1989", "1980"],
+          "correctIndex": 1,
+          "solution": "The cement industry was totally decontrolled in 1991, allowing market forces to determine pricing and distribution."
+        },
+        {
+          "id": "GA15",
+          "direction": "Which of the following statements is NOT true?",
+          "text": "Identify the false statement.",
+          "options": ["The Industrial Policy 1948 recommended setting up of a planning commission.", "Self-reliant economy was the long-term objective of the Indian economy.", "The first Five-Year Plan was launched for the period 1950 to 1955.", "The Planning Commission was set up on 15 March 1950."],
+          "correctIndex": 2,
+          "solution": "The First Five-Year Plan was launched for the period 1951-1956, making statement (c) incorrect."
+        },
+        {
+          "id": "GA16",
+          "direction": null,
+          "text": "Which river originates near Mahabaleshwar in Maharashtra?",
+          "options": ["Krishna", "Godavari", "Mahanadi", "Narmada"],
+          "correctIndex": 0,
+          "solution": "The Krishna River originates from Mahabaleshwar in the Western Ghats. It is the second-longest river of Peninsular India."
+        },
+        {
+          "id": "GA17",
+          "direction": null,
+          "text": "Which of the following countries is completely landlocked and shares an open border with India?",
+          "options": ["Bangladesh", "Myanmar", "Nepal", "Afghanistan"],
+          "correctIndex": 2,
+          "solution": "Nepal is a landlocked country that shares an open border with India, allowing free movement of people without visas."
+        },
+        {
+          "id": "GA18",
+          "direction": null,
+          "text": "'A Meeting by the River' is a music album by which Indian musician, for which he won the Grammy for Best World Music Album in 1993?",
+          "options": ["Pandit Vishwa Mohan Bhatt", "Pandit Shivkumar Sharma", "Pandit Hariprasad Chaurasia", "Pandit Ravi Shankar"],
+          "correctIndex": 0,
+          "solution": "Pandit Vishwa Mohan Bhatt (Mohan Veena player) won the Grammy in 1993 for this album, which featured a fusion with Ry Cooder."
+        },
+        {
+          "id": "GA19",
+          "direction": null,
+          "text": "The Pradhan Mantri Grammen Sadak Yojana was launched in the year",
+          "options": ["2005", "2010", "2000", "1995"],
+          "correctIndex": 2,
+          "solution": "PMGSY was launched in the year 2000 to provide all-weather road connectivity to rural habitations."
+        },
+        {
+          "id": "GA20",
+          "direction": null,
+          "text": "The Karakattam dance, known for its unique balancing of pitchers, is primarily prevalent in which of the following states?",
+          "options": ["Tamil Nadu", "Kerala", "Karnataka", "Andhra Pradesh"],
+          "correctIndex": 0,
+          "solution": "Karakattam is a folk dance of Tamil Nadu performed in honor of the rain goddess Mariamman, involving balancing decorated pots on heads."
+        }
+      ]
+    },
+    {
+      "name": "Quantitative Aptitude",
+      "timeLimit": 45,
+      "questions": [
+        {
+          "id": "QA01",
+          "direction": null,
+          "text": "If 35 percent of 1728 is 44 percent more than U, then what is the value of U?",
+          "options": ["421", "418", "420", "422"],
+          "correctIndex": 2,
+          "solution": "$$35\\% \\text{ of } 1728 = U \\times 1.44 \\Rightarrow 0.35 \\times 1728 = 1.44U \\Rightarrow 604.8 = 1.44U \\Rightarrow U = 604.8 / 1.44 = 420$$."
+        },
+        {
+          "id": "QA02",
+          "direction": null,
+          "text": "A sphere with inner radius 7 cm is fully filled with a chemical costing Rs.24 per cm³. What will be the cost of the chemical if 50% is taken out?",
+          "options": ["17248", "16248", "34496", "34248"],
+          "correctIndex": 0,
+          "solution": "Volume of sphere = $$\\frac{4}{3} \\pi r^3 = \\frac{4}{3} \\times \\frac{22}{7} \\times 7^3 = \\frac{4312}{3} cm^3$$. Volume of 50% taken out = $$\\frac{2156}{3} cm^3$$. Cost = $$\\frac{2156}{3} \\times 24 = 2156 \\times 8 = 17248$$."
+        },
+        {
+          "id": "QA03",
+          "direction": null,
+          "text": "A milkman prepared water and milk mixture in a can with the water to milk ratio 5:7. He accidentally spilled 18 litres and filled the can with water. This made the ratio 9:7. How much milk was initially in the can?",
+          "options": ["48", "42", "54", "40"],
+          "correctIndex": 1,
+          "solution": "Initial ratio 5:7, Final ratio 9:7. Milk remains same. Water ratio change = 4 units. 4 units = 18 litres. 1 unit = 4.5 litres. Total volume = (9+7) * 4.5 = 72 litres. Initial milk = $$72 \\times \\frac{7}{12} = 42$$ litres."
+        },
+        {
+          "id": "QA04",
+          "direction": null,
+          "text": "A, B and C can complete a task in 15, 20 and 25 days respectively. In how many days can they complete it together?",
+          "options": ["$$300/47$$", "$$450/47$$", "$$150/25$$", "$$75/47$$"],
+          "correctIndex": 0,
+          "solution": "LCM(15, 20, 25) = 300 (Total Work). Efficiencies: A = 20, B = 15, C = 12. Total Efficiency = 47. Time = 300/47 days."
+        },
+        {
+          "id": "QA05",
+          "direction": null,
+          "text": "If the circumference of a circle is increased from $$4\\pi$$ to $$8\\pi$$, then its area is:",
+          "options": ["Tripled", "Halved", "Quadrupled", "Doubled"],
+          "correctIndex": 2,
+          "solution": "C1=$$4\\pi$$ -> r1=2, Area1=$$4\\pi$$. C2=$$8\\pi$$ -> r2=4, Area2=$$16\\pi$$. Area ratio = 16/4 = 4. Area is Quadrupled."
+        },
+        {
+          "id": "QA06",
+          "direction": null,
+          "text": "If 20 men working 5 hours a day complete a work in 4 days, in how many days will 10 men working 10 hours a day finish the same work?",
+          "options": ["5 days", "40 days", "4 days", "2 days"],
+          "correctIndex": 2,
+          "solution": "Using $$M_1 D_1 T_1 = M_2 D_2 T_2 \\Rightarrow 20 \\times 4 \\times 5 = 10 \\times D_2 \\times 10 \\Rightarrow 400 = 100 D_2 \\Rightarrow D_2 = 4$$ days."
+        },
+        {
+          "id": "QA07",
+          "direction": null,
+          "text": "When $$\\alpha = 30^{\\circ}$$, what is the value of $$\\sin \\alpha \\cos \\alpha$$?",
+          "options": ["$$\\sqrt{3}/2$$", "$$1/2$$", "$$\\sqrt{3}/4$$", "$$3/4$$"],
+          "correctIndex": 2,
+          "solution": "$$\\sin 30^{\\circ} \\times \\cos 30^{\\circ} = \\frac{1}{2} \\times \\frac{\\sqrt{3}}{2} = \\frac{\\sqrt{3}}{4}$$."
+        },
+        {
+          "id": "QA08",
+          "direction": null,
+          "text": "Find the area of the triangle whose sides are 5 cm, 12 cm and 13 cm.",
+          "options": ["46 sq. cm", "42 sq. cm.", "30 sq. cm.", "38 sq. cm."],
+          "correctIndex": 2,
+          "solution": "This is a right-angled triangle (5, 12, 13 triplet). Area = $$1/2 \\times base \\times height = 1/2 \\times 5 \\times 12 = 30 cm^2$$."
+        },
+        {
+          "id": "QA09",
+          "direction": null,
+          "text": "How many prime numbers are there between 30 and 60?",
+          "options": ["11", "5", "9", "7"],
+          "correctIndex": 3,
+          "solution": "The primes are 31, 37, 41, 43, 47, 53, 59. Total = 7."
+        },
+        {
+          "id": "QA10",
+          "direction": null,
+          "text": "The value of $$\\sqrt{324} + \\sqrt{0.0324} - \\sqrt{5.29}$$ is",
+          "options": ["8.34", "6.12", "1.5", "15.88"],
+          "correctIndex": 3,
+          "solution": "$$18 + 0.18 - 2.3 = 18.18 - 2.3 = 15.88$$."
+        }
+      ]
+    },
+    {
+      "name": "Reasoning Ability",
+      "timeLimit": 45,
+      "questions": [
+        {
+          "id": "R01",
+          "direction": null,
+          "text": "If 'Head' appears consecutively in the first three tosses of a fair coin, what is the probability of 'Head' appearing in the fourth toss?",
+          "options": ["1/8", "1/16", "1/4", "1/2"],
+          "correctIndex": 3,
+          "solution": "Each toss of a fair coin is an independent event. Previous results do not affect future outcomes. The probability remains 1/2."
+        },
+        {
+          "id": "R02",
+          "direction": null,
+          "text": "Find a point on the y-axis which is equidistant from the points A (6, 5) and B (-4, 3).",
+          "options": ["(9, 0)", "(0, 9)", "(0, 0)", "(9, 9)"],
+          "correctIndex": 1,
+          "solution": "Point on y-axis is (0, y). Using distance formula: $$\\sqrt{(6-0)^2 + (5-y)^2} = \\sqrt{(-4-0)^2 + (3-y)^2}$$. Squaring: $$36 + 25 - 10y + y^2 = 16 + 9 - 6y + y^2 \\Rightarrow 61 - 10y = 25 - 6y \\Rightarrow 36 = 4y \\Rightarrow y = 9$$. Point is (0, 9)."
+        },
+        {
+          "id": "R03",
+          "direction": null,
+          "text": "At what time between 2:30 p.m. and 3:30 p.m. will the hands of a clock be together?",
+          "options": ["$$11 + 4/16$$", "$$16 + 4/11$$", "$$14 + 16/11$$", "$$14 + 9/11$$"],
+          "correctIndex": 1,
+          "solution": "Angle must be 0. Using $$Angle = |(30H) - (11/2)M|$$. For H=3: $$0 = 90 - (11/2)M \\Rightarrow M = 180/11 = 16 + 4/11$$. This happens after 3:00, which falls in the range."
+        },
+        {
+          "id": "R04",
+          "direction": "Select the term that replaces the question mark (?)",
+          "text": "A, D, H, M, S, ?",
+          "options": ["X", "Z", "Y", "F"],
+          "correctIndex": 1,
+          "solution": "Pattern: +3, +4, +5, +6, +7. S (19) + 7 = 26 (Z)."
+        },
+        {
+          "id": "R05",
+          "direction": null,
+          "text": "Which number will replace the question mark (?) in the series: 7, 16, 28, 40, ?, 72, 88, 106, 126",
+          "options": ["60", "56", "52", "54"],
+          "correctIndex": 3,
+          "solution": "Sum of alternate primes: 2+5=7, 5+11=16, 11+17=28, 17+23=40, 23+31=54, 31+41=72..."
+        },
+        {
+          "id": "R06",
+          "direction": null,
+          "text": "Teeth : Dentist :: Bones : ?",
+          "options": ["Cardiologist", "Orthodontist", "Orthopaedic", "Dermatologist"],
+          "correctIndex": 2,
+          "solution": "A Dentist treats teeth; an Orthopaedic doctor specializes in treating bone and joint disorders."
+        },
+        {
+          "id": "R07",
+          "direction": null,
+          "text": "Pointing to a photo of an old man, Kalyani said, 'He is the husband of the sister of my mother.' How is the old man related to Kalyani?",
+          "options": ["Uncle", "Son", "Father", "Brother"],
+          "correctIndex": 0,
+          "solution": "Mother's sister is Aunt. Aunt's husband is Uncle."
+        },
+        {
+          "id": "R08",
+          "direction": null,
+          "text": "In a certain code language, 'LIPS' is written as 'HELO'. What is the code for 'GUNS'?",
+          "options": ["CQKP", "CQJO", "CQKO", "CQJP"],
+          "correctIndex": 1,
+          "solution": "Each letter is shifted back by 4 (alphabetically). G-4=C, U-4=Q, N-4=J, S-4=O. Code: CQJO."
+        },
+        {
+          "id": "R09",
+          "direction": "Amongst six friends A, B, C, D, E and F, each has a different height.",
+          "text": "A is taller than only three others. B is taller than F. D is taller than only one friend. C is taller than D but shorter than F. Who is second tallest?",
+          "options": ["B", "C", "A", "F"],
+          "correctIndex": 3,
+          "solution": "Arrangement: B > F > A > C > D > E. F is the second tallest."
+        },
+        {
+          "id": "R10",
+          "direction": null,
+          "text": "What will be the day of the week on 26 January 2028?",
+          "options": ["Wednesday", "Tuesday", "Friday", "Monday"],
+          "correctIndex": 0,
+          "solution": "Calculation of odd days leads to 3 odd days. 0=Sun, 1=Mon, 2=Tue, 3=Wed."
+        }
+      ]
+    },
+    {
+      "name": "General English",
+      "timeLimit": 30,
+      "questions": [
+        {
+          "id": "EN01",
+          "direction": null,
+          "text": "Pritha doesn't like you. You've got to ______ the fact that you're just not her type.",
+          "options": ["carry through", "bear with", "face up to", "get on with"],
+          "correctIndex": 2,
+          "solution": "The idiom is 'face up to the fact', meaning to accept and deal with an unpleasant truth."
+        },
+        {
+          "id": "EN02",
+          "direction": null,
+          "text": "One who knows everything and has infinite understanding",
+          "options": ["Orthodox", "Orthopaedic", "Omniscient", "Omnivorous"],
+          "correctIndex": 2,
+          "solution": "Omniscient means all-knowing."
+        },
+        {
+          "id": "EN03",
+          "direction": null,
+          "text": "Identify the correctly spelt word to rectify the error in 'represantation':",
+          "options": ["representation", "incluson", "charcter", "critirion"],
+          "correctIndex": 0,
+          "solution": "The correct spelling is 'representation'."
+        },
+        {
+          "id": "EN04",
+          "direction": null,
+          "text": "What is the most appropriate antonym of 'Abandon'?",
+          "options": ["Forsake", "Uphold", "Disown", "Relinquish"],
+          "correctIndex": 1,
+          "solution": "Abandon means to leave or give up; Uphold means to support or maintain."
+        },
+        {
+          "id": "EN05",
+          "direction": null,
+          "text": "Choose the correct antonym for: Benign",
+          "options": ["Malignant", "Kind", "Gentle", "Harmless"],
+          "correctIndex": 0,
+          "solution": "Benign means harmless; Malignant means harmful or life-threatening."
+        }
+      ]
+    }
+  ]
+}
