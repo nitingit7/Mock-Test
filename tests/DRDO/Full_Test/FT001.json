@@ -1,6 +1,8 @@
 {
   "title": "DRDO CEPTAM-10 Sta B Memory Based Paper (Held on 14 Nov 2022, Shift 3)",
   "isFullMock": true,
+  "isSectionalTiming": false,
+  "timeLimit": 120,
   "sections": [
     {
       "name": "General Science",
