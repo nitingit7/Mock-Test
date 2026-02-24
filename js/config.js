@@ -83,7 +83,8 @@ var GITHUB_FILES = {
         { name: "RRB Assistant: English Mock 1", tags: "Sectional", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/english/mock1.json" }
     ],
     'english_topic': [
-        { name: "Reading Comprehension 1", tags: "RC", questions: 10, time: 12, marks: 10, file: BASE_URL + "tests/english/topics/rc1.json" }
+        { name: "Test (Empty)", tags: "RC", questions: 10, time: 12, marks: 10, file: BASE_URL + "tests/english/topics/rc1.json" },
+        { name: "Vocab 1", tags: "Vocab", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/english/vocab001.json" }
     ],
 
     // --- 4. GENERAL AWARENESS ---
