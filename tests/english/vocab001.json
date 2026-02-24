@@ -1,126 +1,126 @@
 {
-  "title": "Enhanced Daily Vocabulary Mock Test #EV001",
+  "title": "Daily Vocabulary 1 #EV001",
   "timeLimit": 15,
   "questions": [
     {
       "text": "Choose the word that best fits the blank: The constant noise _____ the neighbors.",
       "options": ["soothed", "vexed", "delighted", "pacified", "pleased"],
       "correctIndex": 1,
-      "solution": "Correct answer: 'vexed'. From the PDF (Word 1 - Vex): Meaning = to annoy or irritate persistently. Exact original example: 'The constant noise vexed the neighbors.' Etymology (Latin vexāre = to shake/agitate) explains why it feels like mental 'shaking'. Options 0,2,3,4 are antonyms (soothe/please/delights/pacify) – common trap in SSC/Bank exams to test antonym confusion."
+      "solution": "Correct answer: **vexed**\n\n**English Meaning:** To annoy or irritate persistently.\n**Hindi Meaning:** खीजाना, परेशान करना\n**Synonyms:** Annoy, Irritate, Provoke, Exasperate\n**Antonyms:** Soothe, Please, Delight, Calm\n**Example:** The constant noise vexed the neighbors.\n\nThis fits perfectly because the sentence shows persistent irritation caused by noise. Other options are direct opposites (antonyms) and would reverse the meaning."
     },
     {
       "text": "Choose the most appropriate synonym for 'Imprecation':",
       "options": ["Blessing", "Praise", "Curse", "Benediction", "Invocation"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Curse'. PDF (Word 2 - Imprecation): Detailed meaning = a spoken curse/invocation of evil. Synonyms listed: Curse, Malediction, Hex. Etymology (Latin imprecārī = to pray evil upon) helps remember it as 'praying harm'. Other options are exact antonyms from PDF (Blessing, Benediction, Praise)."
+      "solution": "Correct answer: **Curse**\n\n**English Meaning:** A spoken curse or invocation of evil.\n**Hindi Meaning:** श्राप, अपशब्द\n**Synonyms:** Curse, Malediction, Hex, Execration\n**Antonyms:** Blessing, Benediction, Praise\n**Example:** The villagers uttered imprecations against the corrupt official.\n\nThe word describes angry spoken curses, exactly matching the negative emotion in the options. Remaining choices are pure antonyms."
     },
     {
       "text": "Choose the word that is the ANTONYM of 'Prodigal':",
       "options": ["Wasteful", "Extravagant", "Thrifty", "Lavish", "Spendthrift"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Thrifty'. PDF (Word 3 - Prodigal): Meaning = wastefully spending money. Antonyms explicitly given: Thrifty, Frugal, Economical. Biblical allusion ('prodigal son') noted in PDF. Other options are exact synonyms. High-frequency SSC pattern."
+      "solution": "Correct answer: **Thrifty**\n\n**English Meaning:** Wastefully spending money.\n**Hindi Meaning:** फिजूलखर्च, अपव्ययी\n**Synonyms:** Wasteful, Extravagant, Lavish, Spendthrift\n**Antonyms:** Thrifty, Frugal, Economical\n**Example:** His prodigal lifestyle drained his fortune.\n\n'Prodigal' means wasteful spending, so its direct opposite is 'Thrifty'. All other options are exact synonyms."
     },
     {
       "text": "Fill in the blank with the most suitable word: Many city-dwellers dream of an _____ retirement in the hills.",
       "options": ["urban", "metropolitan", "arcadian", "hectic", "cosmopolitan"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'arcadian'. PDF (Word 4 - Arcadian): Meaning = ideal, peaceful countryside. Exact example from PDF: 'Many city-dwellers dream of an arcadian retirement in the hills.' Etymology (Greek Arkadia = pastoral paradise) makes it memorable. Other options are direct antonyms (urban, metropolitan, hectic, cosmopolitan)."
+      "solution": "Correct answer: **arcadian**\n\n**English Meaning:** Ideal, peaceful countryside.\n**Hindi Meaning:** शांत ग्रामीण, सादा-सुहाना\n**Synonyms:** Rustic, Bucolic, Idyllic, Pastoral\n**Antonyms:** Urban, Metropolitan, Hectic, Cosmopolitan\n**Example:** The poet admired the arcadian beauty of the valley.\n\nIt describes peaceful rural life – the dream of city people. Other options are direct antonyms (city-related words)."
     },
     {
       "text": "Choose the word closest in meaning to 'Importunate':",
       "options": ["Reluctant", "Hesitant", "Persistent", "Unassertive", "Indifferent"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Persistent'. PDF (Word 5 - Importunate): Meaning = persistently demanding in an annoying way. Synonyms: Persistent, Insistent, Demanding. Etymology (Latin importūnus = no harbour/refuse) shows why it feels 'hard to refuse'. Other options are exact antonyms from PDF."
+      "solution": "Correct answer: **Persistent**\n\n**English Meaning:** Persistently demanding or begging in an annoying way.\n**Hindi Meaning:** दबाव डालने वाला, लगातार आग्रह करने वाला\n**Synonyms:** Persistent, Insistent, Demanding\n**Antonyms:** Reluctant, Hesitant, Unassertive\n**Example:** The importunate beggar refused to leave.\n\nIt shows annoying repeated demands. All other options are exact antonyms."
     },
     {
       "text": "Select the correct synonym for 'Taciturn':",
       "options": ["Talkative", "Garrulous", "Reserved", "Chatty", "Voluble"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Reserved'. PDF (Word 6 - Taciturn): Meaning = quiet and not talkative. Synonyms: Silent, Reserved, Reticent. Mnemonic from PDF: TACIT-URN (keeps words inside). Other options are exact antonyms (talkative/garrulous/chatty/voluble)."
+      "solution": "Correct answer: **Reserved**\n\n**English Meaning:** Quiet and not talkative.\n**Hindi Meaning:** कम बोलने वाला, मौनप्रिय\n**Synonyms:** Silent, Reserved, Reticent, Laconic\n**Antonyms:** Talkative, Garrulous, Chatty, Voluble\n**Example:** The taciturn man spoke only when necessary.\n\nIt means someone who speaks very little. Remaining choices are exact antonyms (talkative words)."
     },
     {
       "text": "Choose the word that is the ANTONYM of 'Untoward':",
       "options": ["Unfavourable", "Adverse", "Favourable", "Troublesome", "Inauspicious"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Favourable'. PDF (Word 7 - Untoward): Meaning = unexpected and unfavourable. Antonyms: Favourable, Convenient, Advantageous. Etymology (Old English 'not toward') clarifies direction. Other options are synonyms."
+      "solution": "Correct answer: **Favourable**\n\n**English Meaning:** Unexpected and unfavourable.\n**Hindi Meaning:** अनुचित, अशुभ\n**Synonyms:** Unfavourable, Adverse, Troublesome\n**Antonyms:** Favourable, Convenient, Advantageous\n**Example:** The untoward incident disrupted the meeting.\n\n'Untoward' means unfavourable, so opposite is 'Favourable'. Other options are synonyms."
     },
     {
       "text": "Fill in the blank: The project ran _____ the aegis of UNESCO.",
       "options": ["over", "above", "under", "behind", "beside"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'under'. PDF (Word 8 - Aegis): Fixed collocation = 'under the aegis of' (meaning protection/sponsorship). Exact original example: 'The project ran under the aegis of UNESCO.' Etymology (Greek aigís = shield of Zeus) explains protection imagery. This phrase appears in 90% of editorial-based exams."
+      "solution": "Correct answer: **under**\n\n**English Meaning:** Protection or support.\n**Hindi Meaning:** संरक्षण, आश्रय\n**Synonyms:** Protection, Patronage, Sponsorship\n**Antonyms:** Oppression, Neglect, Vulnerability\n**Example:** The project ran under the aegis of UNESCO.\n\nFixed phrase 'under the aegis of' means under protection. This is the only correct preposition that fits the standard usage."
     },
     {
       "text": "Choose the closest meaning of 'Obduracy':",
       "options": ["Flexibility", "Gentleness", "Stubbornness", "Yielding", "Compliance"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Stubbornness'. PDF (Word 9 - Obduracy): Meaning = stubborn refusal to change. Synonyms: Stubbornness, Inflexibility, Obstinacy. Etymology (Latin obdūrāre = to harden) + mnemonic (OB-DUR-ACY = hard like rock). Other options are exact antonyms."
+      "solution": "Correct answer: **Stubbornness**\n\n**English Meaning:** Stubborn refusal to change opinion or course of action.\n**Hindi Meaning:** हठधर्मिता, ज़िद्दीपन\n**Synonyms:** Stubbornness, Inflexibility, Obstinacy\n**Antonyms:** Flexibility, Gentleness, Yielding\n**Example:** His obduracy prevented reconciliation.\n\nIt describes hard-hearted stubbornness. All other options are exact antonyms."
     },
     {
       "text": "Select the best word for the blank: She gave a _____ summary of the topic.",
       "options": ["wordy", "verbose", "pithy", "diffuse", "rambling"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'pithy'. PDF (Word 10 - Pithy): Meaning = short but meaningful. Exact example: 'She gave a pithy summary of the topic.' Etymology (Middle English 'pith' = core/essence). Other options are exact antonyms (wordy/verbose/diffuse/rambling)."
+      "solution": "Correct answer: **pithy**\n\n**English Meaning:** Short but meaningful.\n**Hindi Meaning:** संक्षिप्त, सारगर्भित\n**Synonyms:** Concise, Terse, Succinct\n**Antonyms:** Wordy, Verbose, Diffuse\n**Example:** She gave a pithy summary of the topic.\n\nIt means brief yet full of substance. Other options are exact antonyms (long-winded words)."
     },
     {
       "text": "One-word substitute: A person who makes maps.",
       "options": ["Astrologer", "Astronomer", "Cartographer", "Cosmologist", "Geographer"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Cartographer'. PDF One-Word Substitutes section: 'Cartographer – A person who makes maps.' Expanded example: 'The cartographer’s accurate maps helped in disaster management.' Direct match from PDF."
+      "solution": "Correct answer: **Cartographer**\n\n**English Meaning:** A person who makes maps.\n**Hindi Meaning:** मानचित्रकार\n**Example:** The cartographer drew accurate maps.\n\nThis is the precise single word for map-maker. Other options relate to stars/universe but not maps."
     },
     {
       "text": "Choose the correct one-word substitute: Scientific study of celestial bodies.",
       "options": ["Astrology", "Cosmology", "Astronomy", "Cartography", "Geography"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Astronomy'. PDF: 'Astronomy – Scientific study of celestial bodies.' Expanded: 'ISRO’s achievements have boosted India’s astronomy research.' Distinguishes from Astrology (belief-based) as highlighted in PDF."
+      "solution": "Correct answer: **Astronomy**\n\n**English Meaning:** Scientific study of celestial bodies.\n**Hindi Meaning:** खगोल विज्ञान\n**Example:** Astronomy explains planetary motion.\n\nIt is the scientific (not belief-based) study of stars and planets. Astrology is the non-scientific belief version."
     },
     {
       "text": "Choose the correct meaning of the phrasal verb 'Break through':",
       "options": ["End a relationship", "Escape from jail", "Force a way through / achieve success", "Disperse a meeting", "Reject tradition"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Force a way through / achieve success'. PDF Phrasal Verbs (BREAK): 'Break through – Force a way through / achieve a major success.' Examples: 'Scientists finally broke through in cancer research.' Common in RC & cloze tests."
+      "solution": "Correct answer: **Force a way through / achieve success**\n\n**English Meaning:** Force a way through or achieve major success.\n**Hindi Meaning:** बाधा तोड़कर आगे बढ़ना / सफलता प्राप्त करना\n**Example:** The army broke through enemy lines.\n\nThis phrasal verb shows breakthrough or success. Other options belong to different 'break' phrasal verbs."
     },
     {
       "text": "The meeting _____ at 5 pm. (Choose correct phrasal verb)",
       "options": ["broke through", "broke out of", "broke up", "broke with", "broke in"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'broke up'. PDF: 'Break up – Disperse / end.' Exact example: 'The meeting broke up at 5 pm.' Tests particle change in meaning – frequent Bank/SSC pattern."
+      "solution": "Correct answer: **broke up**\n\n**English Meaning:** Disperse or end.\n**Hindi Meaning:** समाप्त होना / बिखर जाना\n**Example:** The meeting broke up at 5 pm.\n\n'Broke up' specifically means the meeting ended and people left. Other options change the meaning completely."
     },
     {
       "text": "Choose the correct meaning of 'A thorn in one’s side':",
       "options": ["Taking dangerous risks", "Secret enemy", "Constant source of trouble", "No good options", "Risky situation"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Constant source of trouble'. PDF Idioms (Danger/Risk): 'A thorn in one’s side – Someone or something that constantly causes trouble.' Exact example: 'The rival company has been a thorn in our side for years.'"
+      "solution": "Correct answer: **Constant source of trouble**\n\n**English Meaning:** Someone or something that constantly causes trouble.\n**Hindi Meaning:** लगातार परेशानी का कारण\n**Example:** The rival company has been a thorn in our side for years.\n\nIt is a constant annoyance. Other options are different danger idioms."
     },
     {
       "text": "The idiom 'Playing with fire' means:",
       "options": ["Constant trouble", "Secret plotting", "Taking dangerous risks", "Difficult dilemma", "Risky but safe"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Taking dangerous risks'. PDF: 'Playing with fire – Taking dangerous risks.' Example: 'Investing all savings in one crypto coin is playing with fire.' High-frequency danger idiom in editorials."
+      "solution": "Correct answer: **Taking dangerous risks**\n\n**English Meaning:** Taking dangerous risks.\n**Hindi Meaning:** खतरनाक जोखिम उठाना\n**Example:** Investing all savings in one crypto coin is playing with fire.\n\nIt warns of risky behaviour. Other options belong to different idioms."
     },
     {
       "text": "'A snake in the grass' refers to:",
       "options": ["Constant annoyance", "Dangerous risk", "Someone secretly plotting against you", "No good options", "Delicate situation"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Someone secretly plotting against you'. PDF: 'A snake in the grass – Someone who is secretly plotting against you.' Example: 'The trusted assistant turned out to be a snake in the grass.'"
+      "solution": "Correct answer: **Someone secretly plotting against you**\n\n**English Meaning:** Someone who is secretly plotting against you.\n**Hindi Meaning:** छिपा हुआ दुश्मन\n**Example:** The trusted assistant turned out to be a snake in the grass.\n\nIt means hidden traitor. Other options are different idioms."
     },
     {
       "text": "Choose the meaning of 'Between a rock and a hard place':",
       "options": ["Constant trouble", "Taking risks", "Being in a difficult situation where both options are bad", "Secret enemy", "Skating on thin ice"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'Being in a difficult situation where both options are bad'. PDF: 'Between a rock and a hard place – No good options; difficult dilemma.' Example: 'The CEO was between a rock and a hard place – sack employees or face losses.'"
+      "solution": "Correct answer: **Being in a difficult situation where both options are bad**\n\n**English Meaning:** No good options; difficult dilemma.\n**Hindi Meaning:** दोनों विकल्प बुरे होने की स्थिति\n**Example:** The CEO was between a rock and a hard place – sack employees or face losses.\n\nIt describes a tough choice with no good outcome."
     },
     {
       "text": "The idiom 'Skating on thin ice' means:",
       "options": ["Secret plotting", "Constant trouble", "To be in a dangerous or risky situation", "No good options", "Taking dangerous risks"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'To be in a dangerous or risky situation'. PDF: 'Skating on thin ice – To be in a dangerous or risky situation.' Example: 'Commenting on politics at the office party is skating on thin ice.'"
+      "solution": "Correct answer: **To be in a dangerous or risky situation**\n\n**English Meaning:** To be in a dangerous or risky situation.\n**Hindi Meaning:** खतरनाक या जोखिम भरी स्थिति में होना\n**Example:** Commenting on politics at the office party is skating on thin ice.\n\nIt means being on the edge of trouble."
     },
     {
       "text": "In the sentence 'His _____ prevented reconciliation', the blank is best filled by:",
       "options": ["pithy", "arcadian", "obduracy", "aegis", "imprecation"],
       "correctIndex": 2,
-      "solution": "Correct answer: 'obduracy'. PDF (Word 9): Exact example 'His obduracy prevented reconciliation.' Meaning = stubborn refusal to change. Tests full recall of example + meaning together – ultimate competitive exam skill."
+      "solution": "Correct answer: **obduracy**\n\n**English Meaning:** Stubborn refusal to change.\n**Hindi Meaning:** हठधर्मिता, ज़िद्दीपन\n**Synonyms:** Stubbornness, Inflexibility, Obstinacy\n**Antonyms:** Flexibility, Gentleness, Yielding\n**Example:** His obduracy prevented reconciliation.\n\nIt exactly matches the sentence about refusal to agree. Other words do not fit the context of stubbornness."
     }
   ]
 }
