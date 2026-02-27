@@ -97,9 +97,35 @@ var GITHUB_FILES = {
         { name: "Current Affairs: 1", tags: "Current Affairs", questions: 15, time: 12, marks: 15, file: BASE_URL + "tests/General Awareness/CA/gaca001.json" },
         { name: "Emty", tags: "Banking", questions: 15, time: 12, marks: 15, file: BASE_URL + "tests/general/topics/banking1.json" },
         { name: "Emty", tags: "Static GK", questions: 15, time: 12, marks: 15, file: BASE_URL + "tests/general/topics/static1.json" }
-    ]
+    ],
 
     // --- 4. FULL MOCK TESTS (Stays the same) ---
+
+    // --- 5. BIOLOGY ---
+    'biology_sectional': [
+        { name: "Biology Test 1", tags: "Bio", questions: 20, time: 15, marks: 20, file: BASE_URL + "tests/DRDO/Biology/bt001.json" },
+        // Add your full biology tests here
+        // { name: "Biology Mock 1", tags: "Sectional", questions: 30, time: 20, marks: 30, file: BASE_URL + "tests/biology/mock1.json" }
+    ],
+    'biology_topic': [
+        // Add your chapter-wise biology tests here
+    ],
+
+    // --- 6. CHEMISTRY ---
+    'chemistry_sectional': [
+        // Add your full chemistry tests here
+    ],
+    'chemistry_topic': [
+        // Add your chapter-wise chemistry tests here
+    ],
+
+    // --- 7. PHYSICS ---
+    'physics_sectional': [
+        // Add your full physics tests here
+    ],
+    'physics_topic': [
+        // Add your chapter-wise physics tests here
+    ]
 
 };
 
