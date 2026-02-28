@@ -137,18 +137,29 @@
                     metadataHTML = `<span class="tc-metadata">${metaParts.join(' • ')}</span>`;
                 }
 
+                // New Biology-style card
+                div.className = 'biology-test-card';
+
                 div.innerHTML = `
-                    <div class="tc-left">
-                        <div class="tc-icon">${icon}</div>
-                        <div class="tc-info">
-                            <span class="tc-title">${f.name}</span>
-                            ${metadataHTML}
-                            <span class="tc-status" style="color:${statusColor}">
-                                ${statusText}
-                            </span>
+                    <div style="display:flex; align-items:center; gap:18px; flex:1;">
+                        <div style="width:44px;height:44px;background:rgba(63,114,175,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">
+                            📄
+                        </div>
+                        <div style="flex:1;min-width:0;">
+                            <div style="font-weight:700;font-size:1.07rem;color:var(--text-primary);margin-bottom:6px;">${f.name}</div>
+                            
+                            <div style="color:var(--text-secondary);font-size:0.88rem;line-height:1.4;">
+                                ${f.questions ? `📝 ${f.questions} Qs` : ''} 
+                                ${f.time ? ` • ⏱ ${f.time} min` : ''} 
+                                ${f.marks ? ` • 🎯 ${f.marks} marks` : ''}
+                            </div>
+                            
+                            <div style="margin-top:8px;font-size:0.82rem;font-weight:600;color:#e74c3c;letter-spacing:0.4px;">
+                                ● ${statusText}
+                            </div>
                         </div>
                     </div>
-                    <button class="${btnClass}">${btnText}</button>
+                    <button class="${btnClass}" style="padding:12px 34px;border-radius:50px;font-weight:700;font-size:0.93rem;white-space:nowrap;">${btnText}</button>
                 `;
 
                 div.onclick = function () {
